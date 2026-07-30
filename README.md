@@ -1,0 +1,2 @@
+# shonan-news
+Shonan News

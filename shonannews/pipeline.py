@@ -26,6 +26,12 @@ def _derive_source_date(entry, run_time):
     return datetime.fromtimestamp(epoch, tz=timezone.utc).astimezone(JST)
 
 
+def _prefer_https(url):
+    if url.startswith("http://"):
+        return "https://" + url[len("http://"):]
+    return url
+
+
 def _parse_int(value):
     try:
         return int(value)
@@ -104,7 +110,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             state_mod.mark_processed(current_state, feed_url, key)
             continue
 
-        source_url = entry.get("link", "")
+        source_url = _prefer_https(entry.get("link", ""))
         image_url = _extract_image(entry)
         slug = writer.slugify(result.title, key)
         path = writer.build_filename(date_str, slug, posts_dir, key)

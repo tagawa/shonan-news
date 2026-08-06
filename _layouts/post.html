@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="item">
+  <h1 class="item-title">{{ page.title }}</h1>
+  {% include japanese-title.html text=page.source_title %}
+  {% assign item_date = page.source_date | default: page.date %}
+  {% include meta-line.html date=item_date %}
+  {% if page.image_url %}
+    <img class="item-image" src="{{ page.image_url }}" alt="">
+  {% endif %}
+  <div class="item-body">
+    {{ content }}
+  </div>
+  {% assign source_name = page.source_name | default: site.source_name %}
+  <p class="item-footer">{% include source-link.html source_url=page.source_url source_name=source_name %}</p>
+</article>
+<p><a href="{{ '/' | relative_url }}">&larr; All summaries</a></p>

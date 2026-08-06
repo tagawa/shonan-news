@@ -1,0 +1,12 @@
+title: Shonan News
+url: "https://shonannews.com"
+description: English summaries of Japanese local news for the Shonan area, machine-translated from RSS feeds.
+source_name: 湘南・横須賀イベント＆ニュース  # Legacy fallback only, for posts published before per-post source_name front matter existed. Item pages read page.source_name first; new feeds set source_name in _data/feeds.json instead of here.
+timezone: Asia/Tokyo
+exclude:
+  - data/
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+plugins:
+  - jekyll-feed

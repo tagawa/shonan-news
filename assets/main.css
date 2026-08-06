@@ -1,0 +1,275 @@
+/* Shonan News: design tokens and site styles per
+   docs/spec-shonan-news-redesign-v6.md.
+   Browser baseline is April 2017 (Edge 15, Chrome 49, Firefox 31, Safari 10).
+   The CSS ships verbatim with no build step, so: no Grid gap, no logical
+   properties, no :focus-visible, no clamp/min/max, no :is/:where.
+   Edge 15 fails silently on var() inside shorthand properties (border,
+   background, font, margin, padding), so those are always split into
+   their longhand equivalents below, even when only one side needs the
+   variable and the rest are a literal 0. */
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --radius: 8px;
+  --measure: 40rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --ink: #0f172a;
+  --body: #334155;
+  --muted: #475569;
+  --rule: #e2e8f0;
+  --link: #2563eb;
+  --link-hover: #1e40af;
+}
+
+/* browsers below the baseline skip this and keep the light scheme above.
+   Existing behaviour, retained and remapped, not new scope: see spec
+   section 5.1.2. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --ink: #f1f5f9;
+    --body: #e2e8f0;
+    --muted: #cbd5e1;
+    --rule: #334155;
+    --link: #93c5fd;
+    --link-hover: #bfdbfe;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* unscaled: 1rem tracks the reader's own browser font-size setting rather
+   than overriding it, and so does --measure above. */
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--body);
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+/* :focus, not :focus-visible, which is above the baseline. Never removed. */
+a:focus,
+button:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--link-hover);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding-top: var(--space-2);
+  padding-right: var(--space-3);
+  padding-bottom: var(--space-2);
+  padding-left: var(--space-3);
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  width: 100%;
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+}
+
+.site-header {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-3);
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  color: var(--ink);
+}
+
+.site-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-main {
+  padding-bottom: var(--space-5);
+}
+
+.day-group {
+  margin-bottom: var(--space-5);
+}
+
+.day-heading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  color: var(--muted);
+  margin: 0;
+  margin-bottom: var(--space-4);
+}
+
+/* Between-item spacing and hairline only apply on the index, where
+   multiple items sit inside a .day-group. The item page has exactly one
+   .item and no hairline before its own back link.
+   padding-bottom puts 32px of air above the rule, margin-bottom puts
+   32px below it, so the rule reads as sitting between two items rather
+   than attached to the one above. :last-child drops the rule so it
+   doesn't draw immediately before the next day heading or the footer. */
+.day-group .item {
+  padding-bottom: var(--space-5);
+  margin-bottom: var(--space-5);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--rule);
+}
+
+.day-group .item:last-child {
+  border-bottom-style: none;
+}
+
+.item-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: var(--space-2);
+  color: var(--ink);
+}
+
+.item-title a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.item-title-ja {
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 0;
+  margin-bottom: var(--space-2);
+}
+
+.meta-line {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+  margin-bottom: var(--space-3);
+}
+
+.item-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: var(--space-3);
+}
+
+/* var() cannot appear inside an @media feature condition, so this repeats
+   --measure's value (40rem) literally; keep the two in sync by hand if
+   --measure ever changes. Root font-size is unscaled (100%, tracks the
+   browser default), and media-query rem units resolve against that same
+   default, so 40rem here means the same thing as --measure does in the
+   document. */
+@media (min-width: 40rem) {
+  .item-image {
+    float: right;
+    max-width: 50%;
+    margin-left: var(--space-2);
+  }
+}
+
+.item-lede,
+.item-body {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--body);
+  margin: 0;
+  margin-bottom: var(--space-3);
+}
+
+/* the summary is Jekyll-rendered content and opens with a <p>; without
+   this its user-agent top margin collapses upward past .item-body's own
+   margin, throwing off the 16px gap after the meta line. */
+.item-body p:first-child {
+  margin-top: 0;
+}
+
+.item-footer {
+  clear: both;
+  margin: 0;
+}
+
+/* CSS-only arrow, so it is not announced by screen readers. The leading
+   \00a0 is a non-breaking space so the arrow never orphans onto its own
+   line when the link text wraps. */
+.source-link::after {
+  content: "\00a0\2192";
+}
+
+.site-footer {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--rule);
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+
+.site-footer-links {
+  margin: 0;
+  margin-bottom: var(--space-3);
+}
+
+.disclosure {
+  background-color: var(--surface);
+  color: var(--body);
+  border-radius: var(--radius);
+  padding-top: var(--space-3);
+  padding-right: var(--space-3);
+  padding-bottom: var(--space-3);
+  padding-left: var(--space-3);
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}

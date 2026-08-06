@@ -6,7 +6,7 @@ date: 2026-08-04 18:36:43 +0900
 source_url: https://shonanjin.com/news/odawara-solar-sharing-renewable-energy/
 source_title: 【小田原市】小田原かなごてファームのソーラーシェアリング余剰電力が横浜商科大学の再エネ100%化を支援
 source_name: 湘南人
-lede: On an unspecified recent date in Odawara, solar-sharing power from Odawara Kanagote
+lede: In Odawara, solar-sharing power from Odawara Kanagote
   Farm began supplying Yokohama College of Commerce campuses.
 guid: guid:https://shonanjin.com/?p=493028
 source_date: '2026-08-04 18:36:43 +0900'

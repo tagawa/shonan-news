@@ -32,7 +32,7 @@ jobs:
 
       - name: DEBUG shonanjin.com fetch with browser UA
         run: |
-          curl -sD headers.txt -o body.xml -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" "https://shonanjin.com/feed/"
+          curl -sD headers.txt -o body.xml --max-time 20 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" "https://shonanjin.com/feed/" || echo "curl exit code: $?"
           echo "=== response headers ==="
           cat headers.txt
           echo "=== body: line count and byte count ==="

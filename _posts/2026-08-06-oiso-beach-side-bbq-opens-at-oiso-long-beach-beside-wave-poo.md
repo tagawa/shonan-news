@@ -3,7 +3,7 @@ layout: post
 title: OISO BEACH SIDE BBQ opens at Oiso Long Beach beside Wave Pool
 date: 2026-08-06 17:29:13 +0900
 source_date: '2026-07-30 16:41:10 +0900'
-source_url: http://shonan.keizai.biz/headline/3557/
+source_url: https://shonan.keizai.biz/headline/3557/
 source_title: 大磯ロングビーチ「波のプール」横にバーベキュー施設　用途別に3エリア
 source_name: 湘南経済新聞
 image_url: https://images.keizai.biz/shonan_keizai/headline/1785398249.jpg

@@ -4,7 +4,7 @@ title: Parent-child mural event at Potofu Hiratsuka Nursery with Chigasaki artis
   Tomio Yamanaka
 date: 2026-08-06 17:29:16 +0900
 source_date: '2026-08-01 12:01:26 +0900'
-source_url: http://shonan.keizai.biz/headline/3558/
+source_url: https://shonan.keizai.biz/headline/3558/
 source_title: 平塚の保育園の壁に親子でお絵描き　茅ヶ崎の画家・山中冨生さんと描く
 source_name: 湘南経済新聞
 image_url: https://images.keizai.biz/shonan_keizai/headline/1785566563.jpg

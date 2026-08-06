@@ -3,7 +3,7 @@ layout: post
 title: Spicy Ramen Pop-up Opens at AOSHIRO RESORT on Katase Nishihama Beach
 date: 2026-08-06 17:29:00 +0900
 source_date: '2026-07-23 11:10:24 +0900'
-source_url: http://shonan.keizai.biz/headline/3552/
+source_url: https://shonan.keizai.biz/headline/3552/
 source_title: 片瀬西浜の海の家に「辛ラーメン」のポップアップ　自動調理器で漢江体験
 source_name: 湘南経済新聞
 image_url: https://images.keizai.biz/shonan_keizai/headline/1784773628.jpg

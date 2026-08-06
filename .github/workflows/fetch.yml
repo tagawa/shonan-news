@@ -30,6 +30,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: DEBUG shonanjin.com fetch
+        run: |
+          curl -sD headers.txt -o body.xml -A "ShonanNewsBot/1.0 (+https://github.com/kyokodaniel/shonannews)" "https://shonanjin.com/feed/"
+          echo "=== response headers ==="
+          cat headers.txt
+          echo "=== body: line count and byte count ==="
+          wc -lc body.xml
+          echo "=== body: lines 135-150 ==="
+          sed -n '135,150p' body.xml
+          echo "=== well-formedness check ==="
+          python3 -c "import xml.etree.ElementTree as ET; ET.parse('body.xml')" && echo "WELL-FORMED" || echo "PARSE ERROR (see above)"
+
       - name: Run pipeline
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

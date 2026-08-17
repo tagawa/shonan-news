@@ -1,7 +1,7 @@
 {
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1b8b-65930afbe3bd9\"",
-    "modified": "Sun, 16 Aug 2026 21:25:02 GMT",
+    "etag": "\"1b1b-65944cd9a0b1d\"",
+    "modified": "Mon, 17 Aug 2026 21:25:02 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -16,7 +16,8 @@
       "link:http://shonan.keizai.biz/headline/3562/",
       "link:http://shonan.keizai.biz/headline/3563/",
       "link:http://shonan.keizai.biz/headline/3564/",
-      "link:http://shonan.keizai.biz/headline/3565/"
+      "link:http://shonan.keizai.biz/headline/3565/",
+      "link:http://shonan.keizai.biz/headline/3566/"
     ]
   },
   "https://shonanevent.blogspot.com/feeds/posts/summary": {

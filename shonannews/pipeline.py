@@ -10,6 +10,7 @@ logger = logging.getLogger("shonannews")
 JST = ZoneInfo("Asia/Tokyo")
 DESCRIPTION_MAX_CHARS = 600
 IMAGE_MIN_WIDTH = 240
+MAX_ITEMS_PER_RUN = 15
 
 
 def _default_now():
@@ -83,11 +84,20 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
     new_count = 0
     # Feeds list newest-first; process oldest-first so the newest item gets the latest timestamp.
     for entry in reversed(parsed.get("entries", [])):
+        if new_count >= MAX_ITEMS_PER_RUN:
+            break
+
         key = identity.identity_key(entry)
         if state_mod.is_processed(current_state, feed_url, key):
             continue
 
         title = entry.get("title", "")
+        normalized_title = identity.normalize_title(title)
+        if state_mod.is_source_title_posted(current_state, normalized_title):
+            logger.info("Skipping %s: source title already posted via another feed", key)
+            state_mod.mark_processed(current_state, feed_url, key)
+            continue
+
         raw_description = entry.get("summary") or entry.get("description") or ""
         description = clean.truncate(
             clean.strip_feed_boilerplate(clean.strip_html(raw_description)),
@@ -128,6 +138,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         body = writer.build_body(result.summary)
         writer.write_post(path, front_matter, body)
 
+        state_mod.mark_source_title_posted(current_state, normalized_title)
         state_mod.mark_processed(current_state, feed_url, key)
         new_count += 1
 

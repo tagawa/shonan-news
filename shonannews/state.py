@@ -36,3 +36,19 @@ def mark_processed(state, feed_url, key, cap=500):
         processed.append(key)
     if len(processed) > cap:
         feed_state["processed"] = processed[-cap:]
+
+
+def is_source_title_posted(state, normalized_title):
+    if not normalized_title:
+        return False
+    return normalized_title in state.get("posted_source_titles", [])
+
+
+def mark_source_title_posted(state, normalized_title, cap=750):
+    if not normalized_title:
+        return
+    titles = state.setdefault("posted_source_titles", [])
+    if normalized_title not in titles:
+        titles.append(normalized_title)
+    if len(titles) > cap:
+        state["posted_source_titles"] = titles[-cap:]

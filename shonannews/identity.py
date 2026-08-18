@@ -7,6 +7,10 @@ def normalize_link(link):
     return urlunsplit((parts.scheme.lower(), parts.netloc.lower(), parts.path, "", ""))
 
 
+def normalize_title(title):
+    return " ".join(title.split())
+
+
 def identity_key(entry):
     guid = entry.get("id")
     if guid:

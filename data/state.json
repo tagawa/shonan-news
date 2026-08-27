@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1cca-659e5bc4e72fa\"",
-    "modified": "Tue, 25 Aug 2026 21:25:01 GMT",
+    "etag": "\"1cca-659fc5de1f74f\"",
+    "modified": "Thu, 27 Aug 2026 00:25:01 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -16,8 +16,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1b14-659e5bc563389\"",
-    "modified": "Tue, 25 Aug 2026 21:25:02 GMT",
+    "etag": "\"1b14-659fc5de120cf\"",
+    "modified": "Thu, 27 Aug 2026 00:25:01 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -39,8 +39,8 @@
     ]
   },
   "https://shonanevent.blogspot.com/feeds/posts/summary": {
-    "etag": "W/\"549621f6f84cc13cc96b977a92657919b8e955c8874b87bbd2142a0919e30d6d\"",
-    "modified": "Fri, 21 Aug 2026 10:56:04 GMT",
+    "etag": "W/\"a2a22a3cf6f58e8b75deb5f2b5882e83e0307530863f4133292ec0e8e480edeb\"",
+    "modified": "Wed, 26 Aug 2026 11:17:47 GMT",
     "processed": [
       "guid:tag:blogger.com,1999:blog-4455448106422886136.post-3190196431226633370",
       "guid:tag:blogger.com,1999:blog-4455448106422886136.post-3486712295100160150",
@@ -217,7 +217,7 @@
   },
   "https://www.townnews.co.jp/0601/index.xml": {
     "etag": null,
-    "modified": "Tue, 25 Aug 2026 15:43:39 GMT",
+    "modified": "Wed, 26 Aug 2026 16:00:22 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0601/2026/08/06/847658.html",
       "guid:https://www.townnews.co.jp/0601/2026/08/07/846440.html",
@@ -311,7 +311,8 @@
       "guid:https://www.townnews.co.jp/0601/2026/08/22/849862.html",
       "guid:https://www.townnews.co.jp/0601/2026/08/23/849863.html",
       "guid:https://www.townnews.co.jp/0601/2026/08/25/850234.html",
-      "guid:https://www.townnews.co.jp/0601/2026/08/26/850489.html"
+      "guid:https://www.townnews.co.jp/0601/2026/08/26/850489.html",
+      "guid:https://www.townnews.co.jp/0601/2026/08/27/850485.html"
     ]
   },
   "https://www.townnews.co.jp/0602/index.xml": {
@@ -371,7 +372,7 @@
   },
   "https://www.townnews.co.jp/0603/index.xml": {
     "etag": null,
-    "modified": "Tue, 25 Aug 2026 15:44:13 GMT",
+    "modified": "Wed, 26 Aug 2026 16:01:42 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0603/2026/08/06/848054.html",
       "guid:https://www.townnews.co.jp/0603/2026/08/07/844023.html",
@@ -446,12 +447,13 @@
       "guid:https://www.townnews.co.jp/0603/2026/08/22/849845.html",
       "guid:https://www.townnews.co.jp/0603/2026/08/24/849899.html",
       "guid:https://www.townnews.co.jp/0603/2026/08/25/850145.html",
-      "guid:https://www.townnews.co.jp/0603/2026/08/26/850422.html"
+      "guid:https://www.townnews.co.jp/0603/2026/08/26/850422.html",
+      "guid:https://www.townnews.co.jp/0603/2026/08/27/850644.html"
     ]
   },
   "https://www.townnews.co.jp/0605/index.xml": {
     "etag": null,
-    "modified": "Tue, 25 Aug 2026 15:44:46 GMT",
+    "modified": "Wed, 26 Aug 2026 08:53:21 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0605/2026/08/06/847987.html",
       "guid:https://www.townnews.co.jp/0605/2026/08/07/844024.html",
@@ -533,8 +535,8 @@
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"1bc7-659e5bc5bbd02\"",
-    "modified": "Tue, 25 Aug 2026 21:25:02 GMT",
+    "etag": "\"1bc7-659fc5df1e201\"",
+    "modified": "Thu, 27 Aug 2026 00:25:03 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",
@@ -927,6 +929,8 @@
     "\u3044\u3058\u3081\u9632\u6b62\u30dd\u30b9\u30bf\u30fc\u5bc4\u8d08 \u5e02\u5185\u5c0f\u4e2d\u5b66\u6821\u3078\u5553\u767a",
     "\u7537\u5b50\u4e2d\u5b66\u30d0\u30ec\u30fc\u770c\u5927\u4f1a \u85e4\u6ca2\u30af\u30e9\u30d6\u304c\uff14\u5f37\u5165\u308a \u95a2\u6771\u5927\u4f1a\u306b\u3082\u51fa\u5834",
     "\u300c\u66f8\u4f5c\u54c1\u306e\u4f5c\u308a\u65b9\u300d\u8b1b\u5ea7 \uff19\u670813\u65e5\u306b\u8305\u30f6\u5d0e\u5e02\u5f79\u6240\u3067",
-    "\u5973\u5b50\u9678\u4e0a\u6adb\u6e15\u3055\u3093 \u300c\u3042\u3068\u4e00\u6b69\u5c4a\u304b\u306a\u304b\u3063\u305f\u300d \u30a4\u30f3\u30cf\u30a4\uff19\u4f4d \u30ea\u30d9\u30f3\u30b8\u8a93\u3046"
+    "\u5973\u5b50\u9678\u4e0a\u6adb\u6e15\u3055\u3093 \u300c\u3042\u3068\u4e00\u6b69\u5c4a\u304b\u306a\u304b\u3063\u305f\u300d \u30a4\u30f3\u30cf\u30a4\uff19\u4f4d \u30ea\u30d9\u30f3\u30b8\u8a93\u3046",
+    "\u6e58\u5357\u53f0\u99c5\u5730\u4e0b\u3067\u590f\u796d\u308a 30\u65e5 \u30ef\u30af\u30ef\u30af\u5e83\u5834",
+    "\u3055\u3080\u304b\u308f\u30aa\u30ec\u30f3\u30b8\u30d5\u30a7\u30b9\u30bf \uff19\u670812\u65e5 \u5bd2\u5ddd\u7dcf\u5408\u4f53\u80b2\u9928"
   ]
 }

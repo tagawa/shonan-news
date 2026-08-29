@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1cca-65a26b1fb4c95\"",
-    "modified": "Sat, 29 Aug 2026 02:55:01 GMT",
+    "etag": "\"1cca-65a377589248a\"",
+    "modified": "Sat, 29 Aug 2026 22:55:01 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -16,8 +16,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1afc-65a26b205102b\"",
-    "modified": "Sat, 29 Aug 2026 02:55:02 GMT",
+    "etag": "\"1b7d-65a377588c278\"",
+    "modified": "Sat, 29 Aug 2026 22:55:01 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -37,7 +37,8 @@
       "link:http://shonan.keizai.biz/headline/3567/",
       "link:http://shonan.keizai.biz/headline/3568/",
       "link:http://shonan.keizai.biz/headline/3569/",
-      "link:http://shonan.keizai.biz/headline/3570/"
+      "link:http://shonan.keizai.biz/headline/3570/",
+      "link:http://shonan.keizai.biz/headline/3571/"
     ]
   },
   "https://shonanevent.blogspot.com/feeds/posts/summary": {
@@ -678,8 +679,8 @@
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"1bc7-65a26b20a2b80\"",
-    "modified": "Sat, 29 Aug 2026 02:55:02 GMT",
+    "etag": "\"163a-65a3775942a58\"",
+    "modified": "Sat, 29 Aug 2026 22:55:02 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",
@@ -1204,6 +1205,7 @@
     "\u5973\u6027\u533b\u5e2b\u306b\u3088\u308b\u8a3a\u7642\u3068\u5185\u8996\u93e1\u691c\u67fb \uff19\u6708\uff11\u65e5 \u5e73\u585a\u3042\u3084\u3079\u80c3\u5927\u8178\u5185\u8996\u93e1\u30af\u30ea\u30cb\u30c3\u30af\u304c\u65b0\u898f\u958b\u9662",
     "\u5e73\u585a\u5e02\u5ca1\u5d0e \u738b\u5fa1\u4f4f\u904b\u52d5\u5e83\u5834\u3092\u518d\u6574\u5099 \u793e\u4f1a\u4eba\u91ce\u7403\u30c1\u30fc\u30e0\u304c\u5c3d\u529b",
     "\u30d9\u30eb\u30de\u30ac\u901a\u4fe1 \uff13\u8a66\u5408\u7121\u5931\u70b9\u3067\uff12\u4f4d\u6d6e\u4e0a \u771f\u7530\u306e\u597d\u30bb\u30fc\u30d6\u304c\u5149\u308b\uff2a\uff12\u7b2c\uff13\u7bc0 vs\u30c6\u30b2\u30d0\u30b8\u30e3\u30fc\u30ed\u5bae\u5d0e \u6e58\u5357\uff10\u2015\uff10\u5bae\u5d0e",
-    "\u4fdd\u80b2\u5712\u306e\u58c1\u306b\u300c\u304a\u7d75\u63cf\u304d\u300d \u5712\u5150\u308930\u4eba\u304c\u53c2\u52a0"
+    "\u4fdd\u80b2\u5712\u306e\u58c1\u306b\u300c\u304a\u7d75\u63cf\u304d\u300d \u5712\u5150\u308930\u4eba\u304c\u53c2\u52a0",
+    "\u85e4\u6ca2\u3067\u300c\u6e58\u5357\u7d19\u829d\u5c45\u307e\u3064\u308a\u300d \u4f5c\u5bb6\u306e\u5b9f\u6f14\u3084\u30c8\u30fc\u30af\u3067\u7d19\u829d\u5c45\u306e\u9b45\u529b\u767a\u4fe1"
   ]
 }

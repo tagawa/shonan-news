@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1cca-65a377589248a\"",
-    "modified": "Sat, 29 Aug 2026 22:55:01 GMT",
+    "etag": "\"1cca-65a4bfeab5750\"",
+    "modified": "Sun, 30 Aug 2026 23:25:01 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -16,8 +16,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1b7d-65a377588c278\"",
-    "modified": "Sat, 29 Aug 2026 22:55:01 GMT",
+    "etag": "\"1b7d-65a4bfeabb84e\"",
+    "modified": "Sun, 30 Aug 2026 23:25:01 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -451,7 +451,7 @@
   },
   "https://www.townnews.co.jp/0603/index.xml": {
     "etag": null,
-    "modified": "Fri, 28 Aug 2026 15:44:52 GMT",
+    "modified": "Sun, 30 Aug 2026 15:36:48 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0603/2026/08/06/848054.html",
       "guid:https://www.townnews.co.jp/0603/2026/08/07/844023.html",
@@ -559,12 +559,13 @@
       "guid:https://www.townnews.co.jp/0603/2026/08/28/850394.html",
       "guid:https://www.townnews.co.jp/0603/2026/08/28/850395.html",
       "guid:https://www.townnews.co.jp/0603/2026/08/28/850396.html",
-      "guid:https://www.townnews.co.jp/0603/2026/08/29/850803.html"
+      "guid:https://www.townnews.co.jp/0603/2026/08/29/850803.html",
+      "guid:https://www.townnews.co.jp/0603/2026/08/31/850863.html"
     ]
   },
   "https://www.townnews.co.jp/0605/index.xml": {
     "etag": null,
-    "modified": "Sat, 29 Aug 2026 00:13:58 GMT",
+    "modified": "Sun, 30 Aug 2026 15:37:24 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0605/2026/08/06/847987.html",
       "guid:https://www.townnews.co.jp/0605/2026/08/07/844024.html",
@@ -675,12 +676,13 @@
       "guid:https://www.townnews.co.jp/0605/2026/08/28/850391.html",
       "guid:https://www.townnews.co.jp/0605/2026/08/28/850392.html",
       "guid:https://www.townnews.co.jp/0605/2026/08/28/850659.html",
-      "guid:https://www.townnews.co.jp/0605/2026/08/29/850800.html"
+      "guid:https://www.townnews.co.jp/0605/2026/08/29/850800.html",
+      "guid:https://www.townnews.co.jp/0605/2026/08/31/850852.html"
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"163a-65a3775942a58\"",
-    "modified": "Sat, 29 Aug 2026 22:55:02 GMT",
+    "etag": "\"163a-65a4bfeb09e5d\"",
+    "modified": "Sun, 30 Aug 2026 23:25:02 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",
@@ -1206,6 +1208,8 @@
     "\u5e73\u585a\u5e02\u5ca1\u5d0e \u738b\u5fa1\u4f4f\u904b\u52d5\u5e83\u5834\u3092\u518d\u6574\u5099 \u793e\u4f1a\u4eba\u91ce\u7403\u30c1\u30fc\u30e0\u304c\u5c3d\u529b",
     "\u30d9\u30eb\u30de\u30ac\u901a\u4fe1 \uff13\u8a66\u5408\u7121\u5931\u70b9\u3067\uff12\u4f4d\u6d6e\u4e0a \u771f\u7530\u306e\u597d\u30bb\u30fc\u30d6\u304c\u5149\u308b\uff2a\uff12\u7b2c\uff13\u7bc0 vs\u30c6\u30b2\u30d0\u30b8\u30e3\u30fc\u30ed\u5bae\u5d0e \u6e58\u5357\uff10\u2015\uff10\u5bae\u5d0e",
     "\u4fdd\u80b2\u5712\u306e\u58c1\u306b\u300c\u304a\u7d75\u63cf\u304d\u300d \u5712\u5150\u308930\u4eba\u304c\u53c2\u52a0",
-    "\u85e4\u6ca2\u3067\u300c\u6e58\u5357\u7d19\u829d\u5c45\u307e\u3064\u308a\u300d \u4f5c\u5bb6\u306e\u5b9f\u6f14\u3084\u30c8\u30fc\u30af\u3067\u7d19\u829d\u5c45\u306e\u9b45\u529b\u767a\u4fe1"
+    "\u85e4\u6ca2\u3067\u300c\u6e58\u5357\u7d19\u829d\u5c45\u307e\u3064\u308a\u300d \u4f5c\u5bb6\u306e\u5b9f\u6f14\u3084\u30c8\u30fc\u30af\u3067\u7d19\u829d\u5c45\u306e\u9b45\u529b\u767a\u4fe1",
+    "\u8305\u30f6\u5d0e\u5e02\u306e\u6bbf\u5c71\u6c34\u6cf3\u30d7\u30fc\u30eb\uff06\u6d5c\u9808\u8cc0\u6c34\u6cf3\u30d7\u30fc\u30eb\u3067\u4e94\u8f2a\u9078\u624b\u3068\u6cf3\u3054\u3046 \uff19\u6708\uff15\u30fb\uff16\u65e5\u306b\u6c34\u6cf3\u6559\u5ba4 \u53c2\u52a0\u8005\u52df\u96c6",
+    "\u571f\u5c4b\u3067\u3070\u3089\u306e\u4e18\u6587\u5316\u796d \uff19\u670821\u65e5\u30ed\u30fc\u30ba\u30d2\u30eb"
   ]
 }

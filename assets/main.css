@@ -164,6 +164,20 @@ button:focus {
   border-bottom-style: none;
 }
 
+/* Archive pages list bare titles under the index's day headings: no ledes,
+   so a busy month stays light enough for old handsets. */
+.archive-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.archive-list li {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-2);
+}
+
 .item-title {
   font-size: 1.5rem;
   font-weight: 700;

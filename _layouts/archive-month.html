@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+{% assign by_month = site.posts | group_by_exp: "post", "post.source_date | default: post.date | date: '%Y-%m'" %}
+{% assign month = by_month | where: "name", page.month | first %}
+{% comment %}A stub can outlive its posts (deleted by hand); sorting a missing month fails the whole build.{% endcomment %}
+{% if month == nil %}
+<p>No summaries this month.</p>
+{% else %}
+{% assign day_groups = month.items | group_by_exp: "post", "post.source_date | default: post.date | date: '%Y-%m-%d'" | sort: "name" | reverse %}
+{% for day in day_groups %}
+  <section class="day-group">
+    {% assign sorted_items = day.items | sort: "source_date" | reverse %}
+    <h2 class="day-heading"><time datetime="{{ day.name }}">{{ sorted_items.first.source_date | default: sorted_items.first.date | date: '%-d %B %Y' }}</time></h2>
+    <ul class="archive-list">
+      {% for post in sorted_items %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}
+{% endif %}

@@ -6,7 +6,7 @@ Preserve names, dates, and numbers exactly as given. Do not round numbers, inven
 
 Always respond in English, even if the source text below is already in English.
 
-Write plain prose only: no markdown formatting, no bullet points, no inline URLs. The output will be read aloud by text-to-speech, so it must be clean spoken sentences.
+Write plain prose only: no markdown formatting, no bullet points, no inline URLs. The output will be read aloud by text-to-speech, so it must be clean spoken sentences. Inside the title, lede, and summary, put quoted names in single quotes, never double quotes.
 
 The lede is a single standalone sentence, maximum 30 words, that answers what happened, when, and where, on its own. It is not the first sentence of the summary reworded into a teaser. If the source does not specify a date, omit the "when" from the lede rather than using a placeholder phrase like "on an unspecified date".
 

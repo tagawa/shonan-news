@@ -4,6 +4,9 @@ import re
 
 MAX_SUMMARY_LENGTH = 2000
 MAX_LEDE_WORDS = 30
+# A sentence end, optionally inside closing quotes or a bracket. Missing means the
+# model closed the JSON string early, where it meant to open a double-quoted name.
+TERMINAL_PUNCTUATION = re.compile(r"[.!?]['\"’”)]*$")
 
 logger = logging.getLogger("shonannews")
 
@@ -50,6 +53,9 @@ def validate_response(raw_text):
     title = title.strip()
     summary = summary.strip()
 
+    if not TERMINAL_PUNCTUATION.search(summary):
+        return ValidationResult(ok=False, error="summary_truncated")
+
     raw_lede = data.get("lede")
     lede = raw_lede.strip() if isinstance(raw_lede, str) else ""
 
@@ -65,6 +71,9 @@ def validate_response(raw_text):
         lede = _derive_lede(summary)
     elif lede == title:
         logger.warning("lede identical to title; deriving from summary's first sentence")
+        lede = _derive_lede(summary)
+    elif not TERMINAL_PUNCTUATION.search(lede):
+        logger.warning("lede cut off mid-sentence; deriving from summary's first sentence")
         lede = _derive_lede(summary)
 
     return ValidationResult(ok=True, title=title, summary=summary, lede=lede)

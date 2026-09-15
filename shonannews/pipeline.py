@@ -108,13 +108,17 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         date_str = run_time.strftime("%Y-%m-%d")
         source_date = _derive_source_date(entry, run_time)
 
+        # One retry on a bad response: the observed failure (a string closed early) is
+        # intermittent per item, so a second identical call often succeeds.
         try:
-            raw_response = llm.call_llm(create_fn, title, description, date_str)
+            result = validate.validate_response(llm.call_llm(create_fn, title, description, date_str))
+            if not result.ok:
+                logger.warning("Validation failed for %s: %s; retrying once", key, result.error)
+                result = validate.validate_response(llm.call_llm(create_fn, title, description, date_str))
         except llm.LLMCallError as exc:
             logger.warning("LLM call failed for %s: %s", key, exc)
             continue
 
-        result = validate.validate_response(raw_response)
         if not result.ok:
             logger.error("Validation failed for %s: %s", key, result.error)
             state_mod.mark_processed(current_state, feed_url, key)

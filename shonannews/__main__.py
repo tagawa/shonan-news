@@ -7,13 +7,14 @@ from pathlib import Path
 import feedparser
 import openai
 
-from . import pipeline
+from . import pipeline, writer
 
 logger = logging.getLogger("shonannews")
 
 FEEDS_PATH = Path("_data/feeds.json")
 STATE_PATH = Path("data/state.json")
 POSTS_DIR = Path("_posts")
+ARCHIVE_DIR = Path("archive")
 
 
 def main():
@@ -42,6 +43,9 @@ def main():
             logger.error("Unhandled error processing feed %s", feed["url"], exc_info=True)
             code = 1
         exit_codes.append(code)
+
+    # Runs even when a feed failed: the other feeds may still have written posts in a new month.
+    writer.ensure_archive_stubs(POSTS_DIR, ARCHIVE_DIR)
 
     sys.exit(1 if any(exit_codes) else 0)
 

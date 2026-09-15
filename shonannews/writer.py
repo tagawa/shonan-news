@@ -1,8 +1,14 @@
 import hashlib
 import re
+from datetime import date
 from pathlib import Path
 
 import yaml
+
+FRONT_MATTER = re.compile(r"---\n(.*?)\n---", re.DOTALL)
+# Reads the written digits, not a parsed instant: the pipeline writes JST, and the site renders JST.
+SOURCE_MONTH = re.compile(r"^source_date:\s*'?(\d{4}-\d{2})", re.MULTILINE)
+DATE_MONTH = re.compile(r"^date:\s*'?(\d{4}-\d{2})", re.MULTILINE)
 
 
 def slugify(title, fallback_key, max_length=60):
@@ -50,3 +56,26 @@ def build_body(summary):
 def write_post(path, front_matter, body):
     content = f"---\n{front_matter}---\n\n{body}\n"
     Path(path).write_text(content, encoding="utf-8")
+
+
+def _post_month(text):
+    front_matter = FRONT_MATTER.match(text).group(1)
+    match = SOURCE_MONTH.search(front_matter) or DATE_MONTH.search(front_matter)
+    return match.group(1)
+
+
+def ensure_archive_stubs(posts_dir, archive_dir):
+    months = {_post_month(path.read_text(encoding="utf-8")) for path in Path(posts_dir).glob("*.md")}
+    archive_dir = Path(archive_dir)
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    for month in sorted(months):
+        path = archive_dir / f"{month}.md"
+        # Existing stubs are left alone, so a hand edit survives the next run.
+        if path.exists():
+            continue
+        # %B is English regardless of the runner: Python keeps LC_TIME at the C locale unless told otherwise.
+        title = date(int(month[:4]), int(month[5:]), 1).strftime("%B %Y")
+        path.write_text(
+            f"---\nlayout: archive-month\ntitle: {title}\nmonth: '{month}'\npermalink: /archive/{month}/\n---\n",
+            encoding="utf-8",
+        )

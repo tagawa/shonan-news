@@ -1,0 +1,29 @@
+{% comment %}
+Ancestor pages only: the current page is the h1 right below. Item and archive month pages only, since
+anywhere else the trail would be just "Home", which the wordmark above already is. Structured data is
+emitted only alongside a visible trail, and adds the current page as its last, unlinked entry.
+{% endcomment %}
+{% if page.layout == "post" or page.layout == "archive-month" %}
+  {% assign month_page = nil %}
+  {% if page.layout == "post" %}
+    {% assign crumb_date = page.source_date | default: page.date %}
+    {% assign month_url = crumb_date | date: "/archive/%Y-%m/" %}
+    {% comment %}Link the month only if its stub page was published: a breadcrumb to a 404 is worse than none.{% endcomment %}
+    {% assign month_page = site.pages | where: "url", month_url | first %}
+  {% endif %}
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><span class="breadcrumbs-separator" aria-hidden="true">/</span><a href="{{ '/archive/' | relative_url }}">Archive</a></li>
+      {% if month_page %}<li><span class="breadcrumbs-separator" aria-hidden="true">/</span><a href="{{ month_url | relative_url }}">{{ month_page.title }}</a></li>{% endif %}
+    </ol>
+  </nav>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": {{ '/' | absolute_url | jsonify }}},
+    {"@type": "ListItem", "position": 2, "name": "Archive", "item": {{ '/archive/' | absolute_url | jsonify }}},
+    {% if month_page %}{"@type": "ListItem", "position": 3, "name": {{ month_page.title | jsonify }}, "item": {{ month_url | absolute_url | jsonify }}},
+    {"@type": "ListItem", "position": 4, "name": {{ page.title | jsonify }}}{% else %}{"@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}}{% endif %}
+  ]}
+  </script>
+{% endif %}

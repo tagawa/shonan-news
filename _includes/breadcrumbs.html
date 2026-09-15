@@ -14,8 +14,8 @@ emitted only alongside a visible trail, and adds the current page as its last, u
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
       <li><a href="{{ '/' | relative_url }}">Home</a></li>
-      <li><span class="breadcrumbs-separator" aria-hidden="true">/</span><a href="{{ '/archive/' | relative_url }}">Archive</a></li>
-      {% if month_page %}<li><span class="breadcrumbs-separator" aria-hidden="true">/</span><a href="{{ month_url | relative_url }}">{{ month_page.title }}</a></li>{% endif %}
+      <li><span class="breadcrumbs-separator" aria-hidden="true">›</span><a href="{{ '/archive/' | relative_url }}">Archive</a></li>
+      {% if month_page %}<li><span class="breadcrumbs-separator" aria-hidden="true">›</span><a href="{{ month_url | relative_url }}">{{ month_page.title }}</a></li>{% endif %}
     </ol>
   </nav>
   <script type="application/ld+json">

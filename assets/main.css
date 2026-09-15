@@ -98,6 +98,7 @@ button:focus {
 }
 
 .site-header,
+.breadcrumbs,
 .site-main,
 .site-footer {
   width: 100%;
@@ -124,6 +125,27 @@ button:focus {
 .site-title a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Inline items rather than flexbox: the trail wraps naturally on a narrow
+   screen and needs no gap, which is above the browser baseline. */
+.breadcrumbs ol {
+  margin: 0;
+  margin-bottom: var(--space-3);
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.breadcrumbs li {
+  display: inline;
+}
+
+.breadcrumbs-separator {
+  color: var(--muted);
+  margin-left: var(--space-2);
+  margin-right: var(--space-2);
 }
 
 .site-main {

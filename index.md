@@ -3,7 +3,23 @@ layout: default
 title: Shonan News
 ---
 
-{% assign day_groups = site.posts | group_by_exp: "post", "post.source_date | default: post.date | date: '%Y-%m-%d'" %}
+{% comment %}
+Which posts: everything fetched within 24 hours of the newest post (the latest daily run), topped
+up to the 40 newest when that run was quiet. Chosen by fetch date so a late batch still reaches
+the homepage, then shown under source-date headings as before. Everything else is in /archive/.
+{% endcomment %}
+{% assign newest = site.posts.first.date | date: "%s" | plus: 0 %}
+{% assign cutoff = newest | minus: 86400 %}
+{% assign floor_post = site.posts[39] | default: site.posts.last %}
+{% assign floor = floor_post.date | date: "%s" | plus: 0 %}
+{% if floor < cutoff %}{% assign cutoff = floor %}{% endif %}
+{% assign recent = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign fetched = post.date | date: "%s" | plus: 0 %}
+  {% if fetched < cutoff %}{% break %}{% endif %}
+  {% assign recent = recent | push: post %}
+{% endfor %}
+{% assign day_groups = recent | group_by_exp: "post", "post.source_date | default: post.date | date: '%Y-%m-%d'" %}
 {% assign day_groups = day_groups | sort: "name" | reverse %}
 {% for day in day_groups %}
   <section class="day-group">
@@ -18,3 +34,4 @@ title: Shonan News
     {% endfor %}
   </section>
 {% endfor %}
+<p><a href="{{ '/archive/' | relative_url }}">Older summaries</a></p>

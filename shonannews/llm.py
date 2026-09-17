@@ -1,6 +1,6 @@
 PROMPT_TEMPLATE = """You are translating and summarizing a short Japanese local news item for an English-speaking audience.
 
-Today's date is {today}. Use whatever tense is factually correct relative to today: past tense if the event described has already happened, present or future tense if it has not.
+Today's date is {today}. Use whatever tense is factually correct relative to today: past tense if the event described has already happened, present or future tense if it has not. An event dated later than today has not happened yet, so describe it in the future tense.
 
 Preserve names, dates, and numbers exactly as given. Do not round numbers, invent details, or drop proper nouns.
 

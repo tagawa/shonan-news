@@ -20,4 +20,4 @@ exclude:
   - pytest.ini
 plugins:
   - jekyll-feed
-  - jekyll-sitemap  # Also writes robots.txt, since the source has none.
+  - jekyll-sitemap  # Skips its own robots.txt, because the source has one.

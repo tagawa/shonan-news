@@ -8,5 +8,15 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  # Dev-only files. docs/ also breaks the Pages build: jekyll-optional-front-matter renders its Liquid-looking samples.
+  - docs
+  - CLAUDE.md
+  - README.md
+  - tests
+  - scripts
+  - shonannews
+  - requirements.txt
+  - requirements-dev.txt
+  - pytest.ini
 plugins:
   - jekyll-feed

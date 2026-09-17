@@ -123,8 +123,17 @@ button:focus {
 }
 
 .site-title a {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: inherit;
+}
+
+/* em, not rem, so the icon stays the wordmark's height; margin rather than gap, which is above the baseline. */
+.site-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: var(--space-2);
 }
 
 /* Inline items rather than flexbox: the trail wraps naturally on a narrow

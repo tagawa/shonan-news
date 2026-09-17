@@ -11,6 +11,9 @@ JST = ZoneInfo("Asia/Tokyo")
 DESCRIPTION_MAX_CHARS = 600
 IMAGE_MIN_WIDTH = 240
 MAX_ITEMS_PER_RUN = 15
+# Town News category terms for paid placements (advertorials and political opinion ads).
+# Exact match after strip: no other spelling seen in any edition on 2026-09-17.
+AD_TAGS = {"ピックアップ（PR）", "意見広告"}
 
 
 def _default_now():
@@ -38,6 +41,11 @@ def _parse_int(value):
         return int(value)
     except (TypeError, ValueError):
         return None
+
+
+def _is_ad(entry):
+    # term can be None: feedparser keeps a tag that has only a scheme or label.
+    return any((tag.get("term") or "").strip() in AD_TAGS for tag in entry.get("tags", []))
 
 
 def _extract_image(entry):
@@ -89,6 +97,11 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
 
         key = identity.identity_key(entry)
         if state_mod.is_processed(current_state, feed_url, key):
+            continue
+
+        if _is_ad(entry):
+            logger.info("Skipping %s: tagged as an advertisement", key)
+            state_mod.mark_processed(current_state, feed_url, key)
             continue
 
         title = entry.get("title", "")

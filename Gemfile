@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
-gem "jekyll-feed", "~> 0.17"
+# Same gem set GitHub Pages builds with (Jekyll 3.10 and its plugins), so local builds match production.
+gem "github-pages", group: :jekyll_plugins

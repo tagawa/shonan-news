@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1cca-65ba9f07338be\"",
-    "modified": "Thu, 17 Sep 2026 08:55:01 GMT",
+    "etag": "\"1cca-65bab9d9b9150\"",
+    "modified": "Thu, 17 Sep 2026 10:55:02 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -16,8 +16,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1d84-65ba9f0760e7e\"",
-    "modified": "Thu, 17 Sep 2026 08:55:02 GMT",
+    "etag": "\"1d84-65bab9d9f6a48\"",
+    "modified": "Thu, 17 Sep 2026 10:55:02 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -1030,8 +1030,8 @@
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"163b-65ba9f08364bc\"",
-    "modified": "Thu, 17 Sep 2026 08:55:03 GMT",
+    "etag": "\"163b-65bab9da79edf\"",
+    "modified": "Thu, 17 Sep 2026 10:55:02 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",

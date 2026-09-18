@@ -1,0 +1,358 @@
+/* Shonan News: design tokens and site styles. See the frontend spec,
+   "Design tokens" and "Item anatomy".
+   Browser baseline is April 2017 (Edge 15, Chrome 49, Firefox 31, Safari 10).
+   The CSS ships verbatim with no build step, so: no Grid gap, no logical
+   properties, no :focus-visible, no clamp/min/max, no :is/:where.
+   Edge 15 fails silently on var() inside shorthand properties (border,
+   background, font, margin, padding), so those are always split into
+   their longhand equivalents below, even when only one side needs the
+   variable and the rest are a literal 0. */
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --radius: 8px;
+  --measure: 40rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  /* No webfont: a condensed face is picked from what the OS already has, and
+     falls back to the normal-width system sans, which loses flavour but not
+     function. The CJK faces match --font-sans so a stray Japanese glyph inside
+     an English headline falls back somewhere chosen rather than anywhere. */
+  --font-condensed: "Arial Narrow", "Helvetica Neue Condensed",
+    "Liberation Sans Narrow", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,
+    sans-serif;
+
+  --bg: #f2ebdd;
+  --surface: #fbf7ef;
+  --ink: #14110d;
+  --body: #3d3730;
+  --muted: #5c554b;
+  --rule: #8d7b56;
+  --link: #b3350e;
+  --link-hover: #7d2409;
+}
+
+/* browsers below the baseline skip this and keep the light scheme above.
+   The accent keeps its hue across schemes and shifts only in lightness, so
+   both modes read as the same publication. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14110d;
+    --surface: #211c16;
+    --ink: #faf6ee;
+    --body: #e6ded1;
+    --muted: #c9bfae;
+    --rule: #7a6e5d;
+    --link: #ff8a5c;
+    --link-hover: #ffb495;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* unscaled: 1rem tracks the reader's own browser font-size setting rather
+   than overriding it, and so does --measure above. */
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--body);
+}
+
+/* The archive, archive-month, about and 404 pages carry bare headings with no
+   class of their own, so the condensed face is set on the elements. The classed
+   headings below (.site-title, .day-heading, .item-title) all override this by
+   specificity, so order here does not matter. */
+h1,
+h2,
+h3 {
+  font-family: var(--font-condensed);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+/* :focus, not :focus-visible, which is above the baseline. Never removed. */
+a:focus,
+button:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--link-hover);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding-top: var(--space-2);
+  padding-right: var(--space-3);
+  padding-bottom: var(--space-2);
+  padding-left: var(--space-3);
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+}
+
+.site-header,
+.breadcrumbs,
+.site-main,
+.site-footer {
+  width: 100%;
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+}
+
+.site-header {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-3);
+}
+
+.site-title {
+  font-family: var(--font-condensed);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* On the index the masthead is the page's own h1, so it carries full weight.
+   Elsewhere it is a secondary <p> and steps down rather than outranking the
+   item headline underneath it. */
+h1.site-title {
+  font-size: 2.5rem;
+}
+
+.site-title a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* em, not rem, so the icon stays the wordmark's height; margin rather than gap, which is above the baseline. */
+.site-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: var(--space-2);
+}
+
+/* Inline items rather than flexbox: the trail wraps naturally on a narrow
+   screen and needs no gap, which is above the browser baseline. */
+.breadcrumbs ol {
+  margin: 0;
+  margin-bottom: var(--space-3);
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.breadcrumbs li {
+  display: inline;
+}
+
+.breadcrumbs-separator {
+  color: var(--muted);
+  margin-left: var(--space-2);
+  margin-right: var(--space-2);
+}
+
+.site-main {
+  padding-bottom: var(--space-5);
+}
+
+.day-group {
+  margin-bottom: var(--space-5);
+}
+
+/* Tracked caps over a rule. The rule is the page's one structural mark, so it
+   is set at 3:1 against the background rather than the decorative weight a
+   hairline would take. */
+.day-heading {
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0;
+  padding-bottom: var(--space-2);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--rule);
+}
+
+/* The day rule carries the grouping, so items inside a group are separated by
+   space alone: one separator system rather than two competing ones. Scoped to
+   .day-group because the item page has exactly one .item and no day heading. */
+.day-group .item {
+  padding-top: var(--space-4);
+}
+
+/* Archive pages list bare titles under the index's day headings: no ledes,
+   so a busy month stays light enough for old handsets. Titles stay --link
+   here: in a dense list of nothing but links, colour aids scanning, and the
+   "every heading is accented" problem does not arise at body size. */
+.archive-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.archive-list li {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-2);
+}
+
+/* Tracking relieves the density of the condensed face without changing the
+   glyphs: at 1.5rem and forty items to a page, the face reads as squashed set
+   solid. Not applied to the wordmark or the day heading, which already carry
+   their own tracking and appear once per page and once per group. */
+.item-title {
+  font-family: var(--font-condensed);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.015em;
+  margin: 0;
+  margin-bottom: var(--space-2);
+  color: var(--ink);
+}
+
+/* Ink, not --link: on the index every title is a link, so accenting them all
+   emphasises nothing. The underline still carries the affordance, so colour is
+   never the sole signal (1.4.1). --link is reserved for the Japanese title
+   below, where it comes to mean "this one leaves the site". */
+.item-title a {
+  color: var(--ink);
+}
+
+.item-title a:hover {
+  color: var(--link-hover);
+}
+
+.item-title-ja {
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 0;
+  margin-bottom: var(--space-2);
+}
+
+.meta-line {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+  margin-bottom: var(--space-3);
+}
+
+.item-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: var(--space-3);
+}
+
+/* var() cannot appear inside an @media feature condition, so this repeats
+   --measure's value (40rem) literally; keep the two in sync by hand if
+   --measure ever changes. Root font-size is unscaled (100%, tracks the
+   browser default), and media-query rem units resolve against that same
+   default, so 40rem here means the same thing as --measure does in the
+   document. */
+@media (min-width: 40rem) {
+  .item-image {
+    float: right;
+    max-width: 50%;
+    margin-left: var(--space-2);
+  }
+}
+
+.item-lede,
+.item-body {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--body);
+  margin: 0;
+  margin-bottom: var(--space-3);
+}
+
+/* the summary is Jekyll-rendered content and opens with a <p>; without
+   this its user-agent top margin collapses upward past .item-body's own
+   margin, throwing off the 16px gap after the meta line. */
+.item-body p:first-child {
+  margin-top: 0;
+}
+
+.item-footer {
+  clear: both;
+  margin: 0;
+}
+
+/* CSS-only arrow, so it is not announced by screen readers. The leading
+   \00a0 is a non-breaking space so the arrow never orphans onto its own
+   line when the link text wraps. */
+.source-link::after {
+  content: "\00a0\2192";
+}
+
+.site-footer {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--rule);
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+
+.site-footer-links {
+  margin: 0;
+  margin-bottom: var(--space-3);
+}
+
+.disclosure {
+  background-color: var(--surface);
+  color: var(--body);
+  border-radius: var(--radius);
+  padding-top: var(--space-3);
+  padding-right: var(--space-3);
+  padding-bottom: var(--space-3);
+  padding-left: var(--space-3);
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}

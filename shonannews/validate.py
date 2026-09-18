@@ -7,6 +7,12 @@ MAX_LEDE_WORDS = 30
 # A sentence end, optionally inside closing quotes or a bracket. Missing means the
 # model closed the JSON string early, where it meant to open a double-quoted name.
 TERMINAL_PUNCTUATION = re.compile(r"[.!?]['\"’”)]*$")
+# Two or more trailing dots mean the model copied the feed's own truncation rather
+# than finishing the sentence. Town News cuts every description at 87 characters, so
+# the shape is in front of the model every run. "The doors open at 5:00 p.m." ends in
+# one dot and is fine; "to 5:00 p.m...." is not. A lone "…" needs no rule here: it is
+# not terminal punctuation, so the check above already rejects it.
+TRAILING_ELLIPSIS = re.compile(r"(?:\.{2,}|…)['\"’”)]*$")
 
 logger = logging.getLogger("shonannews")
 
@@ -18,6 +24,10 @@ class ValidationResult:
         self.summary = summary
         self.lede = lede
         self.error = error
+
+
+def _ends_complete_sentence(text):
+    return bool(TERMINAL_PUNCTUATION.search(text)) and not TRAILING_ELLIPSIS.search(text)
 
 
 def _derive_lede(summary):
@@ -53,7 +63,7 @@ def validate_response(raw_text):
     title = title.strip()
     summary = summary.strip()
 
-    if not TERMINAL_PUNCTUATION.search(summary):
+    if not _ends_complete_sentence(summary):
         return ValidationResult(ok=False, error="summary_truncated")
 
     raw_lede = data.get("lede")
@@ -72,7 +82,7 @@ def validate_response(raw_text):
     elif lede == title:
         logger.warning("lede identical to title; deriving from summary's first sentence")
         lede = _derive_lede(summary)
-    elif not TERMINAL_PUNCTUATION.search(lede):
+    elif not _ends_complete_sentence(lede):
         logger.warning("lede cut off mid-sentence; deriving from summary's first sentence")
         lede = _derive_lede(summary)
 

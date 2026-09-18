@@ -4,6 +4,8 @@ Today's date is {today}. Use whatever tense is factually correct relative to tod
 
 Preserve names, dates, and numbers exactly as given. Do not round numbers, invent details, or drop proper nouns.
 
+The description is often cut off mid-sentence. Cover only what the title and description actually state: never attribute a statement, plan or intention to anyone unless the source text contains it, and never add background, significance, or expected reactions of your own.
+
 Always respond in English, even if the source text below is already in English.
 
 Write plain prose only: no markdown formatting, no bullet points, no inline URLs. The output will be read aloud by text-to-speech, so it must be clean spoken sentences. Inside the title, lede, and summary, put quoted names in single quotes, never double quotes. Write dates in the lede and summary in words, e.g. 19 September, never in numbers.
@@ -11,7 +13,7 @@ Write plain prose only: no markdown formatting, no bullet points, no inline URLs
 The lede is a single standalone sentence, maximum 30 words, that answers what happened, when, and where, on its own. It is not the first sentence of the summary reworded into a teaser. If the source does not specify a date, omit the "when" from the lede rather than using a placeholder phrase like "on an unspecified date".
 
 Respond with a single JSON object and nothing else, in this exact form:
-{{"event_date": "<the event's date as YYYY-MM-DD, or null if the source gives none>", "has_happened": <true if the event has already happened as of today, otherwise false>, "title": "<English title>", "lede": "<one standalone sentence, max 30 words, covering what/when/where>", "summary": "<2 to 4 sentence English summary>"}}
+{{"event_date": "<the event's date as YYYY-MM-DD, or null if the source gives none>", "has_happened": <true if the event has already happened as of today, otherwise false>, "title": "<English title>", "lede": "<one standalone sentence, max 30 words, covering what/when/where>", "summary": "<1 to 3 sentence English summary>"}}
 
 Title: {title}
 Description: {description}

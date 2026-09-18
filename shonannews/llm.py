@@ -8,7 +8,7 @@ The description is often cut off mid-sentence. Cover only what the title and des
 
 Always respond in English, even if the source text below is already in English.
 
-Write plain prose only: no markdown formatting, no bullet points, no inline URLs. The output will be read aloud by text-to-speech, so it must be clean spoken sentences. Inside the title, lede, and summary, put quoted names in single quotes, never double quotes. Write dates in the lede and summary in words, e.g. 19 September, never in numbers.
+Write plain prose only: no markdown formatting, no bullet points, no inline URLs. The output will be read aloud by text-to-speech, so it must be clean spoken sentences. Inside the title, lede, and summary, put quoted names in single quotes, never double quotes. Write dates in the lede and summary in words, e.g. 19 September, never in numbers. When the source gives the day of the week, keep it in parentheses after the date, e.g. 19 September (Sat); never work out a day of the week yourself. Never state a year unless the source states it.
 
 The lede is a single standalone sentence, maximum 30 words, that answers what happened, when, and where, on its own. It is not the first sentence of the summary reworded into a teaser. If the source does not specify a date, omit the "when" from the lede rather than using a placeholder phrase like "on an unspecified date".
 

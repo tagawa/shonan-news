@@ -1,5 +1,5 @@
-/* Shonan News: design tokens and site styles per
-   docs/spec-shonan-news-redesign-v6.md.
+/* Shonan News: design tokens and site styles. See the frontend spec,
+   "Design tokens" and "Item anatomy".
    Browser baseline is April 2017 (Edge 15, Chrome 49, Firefox 31, Safari 10).
    The CSS ships verbatim with no build step, so: no Grid gap, no logical
    properties, no :focus-visible, no clamp/min/max, no :is/:where.
@@ -18,30 +18,37 @@
   --measure: 40rem;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
     "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  /* No webfont: a condensed face is picked from what the OS already has, and
+     falls back to the normal-width system sans, which loses flavour but not
+     function. The CJK faces match --font-sans so a stray Japanese glyph inside
+     an English headline falls back somewhere chosen rather than anywhere. */
+  --font-condensed: "Arial Narrow", "Helvetica Neue Condensed",
+    "Liberation Sans Narrow", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,
+    sans-serif;
 
-  --bg: #ffffff;
-  --surface: #f8fafc;
-  --ink: #0f172a;
-  --body: #334155;
-  --muted: #475569;
-  --rule: #e2e8f0;
-  --link: #2563eb;
-  --link-hover: #1e40af;
+  --bg: #f2ebdd;
+  --surface: #fbf7ef;
+  --ink: #14110d;
+  --body: #3d3730;
+  --muted: #5c554b;
+  --rule: #8d7b56;
+  --link: #b3350e;
+  --link-hover: #7d2409;
 }
 
 /* browsers below the baseline skip this and keep the light scheme above.
-   Existing behaviour, retained and remapped, not new scope: see spec
-   section 5.1.2. */
+   The accent keeps its hue across schemes and shifts only in lightness, so
+   both modes read as the same publication. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f172a;
-    --surface: #1e293b;
-    --ink: #f1f5f9;
-    --body: #e2e8f0;
-    --muted: #cbd5e1;
-    --rule: #334155;
-    --link: #93c5fd;
-    --link-hover: #bfdbfe;
+    --bg: #14110d;
+    --surface: #211c16;
+    --ink: #faf6ee;
+    --body: #e6ded1;
+    --muted: #c9bfae;
+    --rule: #7a6e5d;
+    --link: #ff8a5c;
+    --link-hover: #ffb495;
   }
 }
 
@@ -63,6 +70,18 @@ body {
   line-height: 1.6;
   background-color: var(--bg);
   color: var(--body);
+}
+
+/* The archive, archive-month, about and 404 pages carry bare headings with no
+   class of their own, so the condensed face is set on the elements. The classed
+   headings below (.site-title, .day-heading, .item-title) all override this by
+   specificity, so order here does not matter. */
+h1,
+h2,
+h3 {
+  font-family: var(--font-condensed);
+  line-height: 1.2;
+  color: var(--ink);
 }
 
 a {
@@ -115,11 +134,20 @@ button:focus {
 }
 
 .site-title {
-  font-size: 1.25rem;
+  font-family: var(--font-condensed);
+  font-size: 1.75rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.1;
+  text-transform: uppercase;
   margin: 0;
   color: var(--ink);
+}
+
+/* On the index the masthead is the page's own h1, so it carries full weight.
+   Elsewhere it is a secondary <p> and steps down rather than outranking the
+   item headline underneath it. */
+h1.site-title {
+  font-size: 2.5rem;
 }
 
 .site-title a {
@@ -165,38 +193,35 @@ button:focus {
   margin-bottom: var(--space-5);
 }
 
+/* Tracked caps over a rule. The rule is the page's one structural mark, so it
+   is set at 3:1 against the background rather than the decorative weight a
+   hairline would take. */
 .day-heading {
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.12em;
   line-height: 1.4;
-  color: var(--muted);
+  color: var(--ink);
   margin: 0;
-  margin-bottom: var(--space-4);
-}
-
-/* Between-item spacing and hairline only apply on the index, where
-   multiple items sit inside a .day-group. The item page has exactly one
-   .item and no hairline before its own back link.
-   padding-bottom puts 32px of air above the rule, margin-bottom puts
-   32px below it, so the rule reads as sitting between two items rather
-   than attached to the one above. :last-child drops the rule so it
-   doesn't draw immediately before the next day heading or the footer. */
-.day-group .item {
-  padding-bottom: var(--space-5);
-  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-2);
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--rule);
 }
 
-.day-group .item:last-child {
-  border-bottom-style: none;
+/* The day rule carries the grouping, so items inside a group are separated by
+   space alone: one separator system rather than two competing ones. Scoped to
+   .day-group because the item page has exactly one .item and no day heading. */
+.day-group .item {
+  padding-top: var(--space-4);
 }
 
 /* Archive pages list bare titles under the index's day headings: no ledes,
-   so a busy month stays light enough for old handsets. */
+   so a busy month stays light enough for old handsets. Titles stay --link
+   here: in a dense list of nothing but links, colour aids scanning, and the
+   "every heading is accented" problem does not arise at body size. */
 .archive-list {
   margin: 0;
   padding-left: 0;
@@ -210,17 +235,25 @@ button:focus {
 }
 
 .item-title {
+  font-family: var(--font-condensed);
   font-size: 1.5rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
   margin: 0;
   margin-bottom: var(--space-2);
   color: var(--ink);
 }
 
+/* Ink, not --link: on the index every title is a link, so accenting them all
+   emphasises nothing. The underline still carries the affordance, so colour is
+   never the sole signal (1.4.1). --link is reserved for the Japanese title
+   below, where it comes to mean "this one leaves the site". */
 .item-title a {
-  color: var(--link);
-  text-decoration: underline;
+  color: var(--ink);
+}
+
+.item-title a:hover {
+  color: var(--link-hover);
 }
 
 .item-title-ja {

@@ -234,11 +234,16 @@ h1.site-title {
   margin-bottom: var(--space-2);
 }
 
+/* Tracking relieves the density of the condensed face without changing the
+   glyphs: at 1.5rem and forty items to a page, the face reads as squashed set
+   solid. Not applied to the wordmark or the day heading, which already carry
+   their own tracking and appear once per page and once per group. */
 .item-title {
   font-family: var(--font-condensed);
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: 0.015em;
   margin: 0;
   margin-bottom: var(--space-2);
   color: var(--ink);

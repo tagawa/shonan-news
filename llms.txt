@@ -1,0 +1,20 @@
+# Shonan News
+
+> English summaries of Japanese local news for the Shonan area of Japan, machine-translated from RSS feeds.
+
+A script fetches public RSS feeds from local news and event sources each day, and a large language model writes a short English summary of each item's title and excerpt. Summaries are published automatically, without human review, and may contain errors, especially in names, dates and numbers.
+
+No article bodies are fetched or reproduced. Only each feed item's title and excerpt are used, so a summary is derivative-with-attribution and is not a substitute for the source. Every summary links to the original Japanese article, which is the authority for anything that matters: cite and link that, not the summary.
+
+Usage preferences are declared in [robots.txt](https://shonannews.com/robots.txt) with Content Signals: search yes, AI answers yes, model training no.
+
+## Pages
+
+- [Latest summaries](https://shonannews.com/): the most recent daily run, newest first.
+- [Archive](https://shonannews.com/archive/): every summary so far, by month.
+- [About](https://shonannews.com/about/): how the pipeline works and what it does not do.
+
+## Machine-readable
+
+- [Atom feed](https://shonannews.com/feed.xml): recent summaries, each leading with the original article link.
+- [Sitemap](https://shonannews.com/sitemap.xml): every page and every summary permalink.

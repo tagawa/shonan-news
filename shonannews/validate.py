@@ -14,7 +14,23 @@ TERMINAL_PUNCTUATION = re.compile(r"[.!?]['\"’”)]*$")
 # not terminal punctuation, so the check above already rejects it.
 TRAILING_ELLIPSIS = re.compile(r"(?:\.{2,}|…)['\"’”)]*$")
 
+# CLAUDE.md bans dashes in generated content and the model reaches for them anyway:
+# 5 of 61 titles on 2026-09-18, and 2 of 8 posts on 2026-09-19. A prompt rule was
+# measured instead and could not be scored at all, because none of the 30 sampled
+# items provoked a dash; see the backend spec, "Dash normalisation". Doing it here
+# is deterministic and costs no posts, where rejecting the response would drop one.
+# Written as escapes so this file stays clean under a grep for literal dashes.
+# An en dash between two alphanumerics is a compound or a range, so it becomes a
+# hyphen ("public-private", "10-17"). Every other dash is parenthetical punctuation
+# and becomes a comma, absorbing the space around it so none is left doubled.
+EN_DASH_COMPOUND = re.compile(r"(?<=[0-9A-Za-z])\u2013(?=[0-9A-Za-z])")
+PARENTHETICAL_DASH = re.compile(r"\s*(?:\u2014|\u2013|--)\s*")
+
 logger = logging.getLogger("shonannews")
+
+
+def _normalize_dashes(text):
+    return PARENTHETICAL_DASH.sub(", ", EN_DASH_COMPOUND.sub("-", text))
 
 
 class ValidationResult:
@@ -60,14 +76,14 @@ def validate_response(raw_text):
     if len(summary) > MAX_SUMMARY_LENGTH:
         return ValidationResult(ok=False, error="summary_too_long")
 
-    title = title.strip()
-    summary = summary.strip()
+    title = _normalize_dashes(title).strip()
+    summary = _normalize_dashes(summary).strip()
 
     if not _ends_complete_sentence(summary):
         return ValidationResult(ok=False, error="summary_truncated")
 
     raw_lede = data.get("lede")
-    lede = raw_lede.strip() if isinstance(raw_lede, str) else ""
+    lede = _normalize_dashes(raw_lede).strip() if isinstance(raw_lede, str) else ""
 
     # _derive_lede's output is never itself word-capped: a long-but-complete
     # first sentence reads better than one truncated mid-word, and the

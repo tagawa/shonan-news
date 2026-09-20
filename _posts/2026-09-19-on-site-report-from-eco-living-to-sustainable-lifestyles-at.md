@@ -12,5 +12,5 @@ lede: A guided inspection tour of the public–private 'Fujisawa SST' in Tsujid�
 guid: guid:https://www.townnews.co.jp/0601/2026/09/18/853570.html
 ---
 
-A guided inspection tour of the town created on the former Panasonic factory site, 'Fujisawa SST', took place on 11 September in Tsujisawa Motomachi. Members of the morning-activity group 'あさびや' and others active in Fujisawa City participated in the tour.
+A guided inspection tour of the town created on the former Panasonic factory site, 'Fujisawa SST', took place on 11 September in Tsujidō Motomachi. Members of the morning-activity group 'あさびや' and others active in Fujisawa City participated in the tour.
 

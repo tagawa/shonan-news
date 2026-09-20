@@ -11,5 +11,5 @@ lede: A special exhibit for the 50th Hiratsuka Folk Performing Arts Festival run
 guid: guid:https://www.townnews.co.jp/0605/2026/08/18/849498.html
 ---
 
-The special exhibit commemorating the 50th Hira-tsuka Folk Performing Arts Festival is being held from August 20 to September 8 in the multipurpose space on the first floor of Hiratsuka City Hall main building. The event is organized by the Hiratsuka City Social Welfare Council and related local groups to showcase festival history and local folk performing arts. Visitors can view festival artifacts and displays that highlight regional traditions as part of the city’s anniversary programming.
+The special exhibit commemorating the 50th Hiratsuka Folk Performing Arts Festival is being held from August 20 to September 8 in the multipurpose space on the first floor of Hiratsuka City Hall main building. The event is organized by the Hiratsuka City Social Welfare Council and related local groups to showcase festival history and local folk performing arts. Visitors can view festival artifacts and displays that highlight regional traditions as part of the city’s anniversary programming.
 

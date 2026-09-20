@@ -7,7 +7,7 @@ source_date: '2026-08-07 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0605/2026/08/07/847816.html
 source_title: 中井町社協　８月23日に福祉の夏まつり　各種体験や展示も
 source_name: タウンニュース（平塚・大磯・二宮・中井）
-lede: Nakanoi Town will hold a 'Welfare Summer Festival' at Nakanoi Town Health and
+lede: Nakai Town will hold a 'Welfare Summer Festival' at Nakai Town Health and
   Welfare Center on August 23 from 10:00 to 14:00.
 guid: guid:https://www.townnews.co.jp/0605/2026/08/07/847816.html
 ---

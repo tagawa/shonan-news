@@ -2,7 +2,7 @@ PROMPT_TEMPLATE = """You are translating and summarizing a short Japanese local 
 
 Today's date is {today}. Use whatever tense is factually correct relative to today: past tense if the event described has already happened, present or future tense if it has not. An event dated later than today has not happened yet, so describe it in the future tense.
 
-Preserve names, dates, and numbers exactly as given. Do not round numbers, invent details, or drop proper nouns.
+Preserve names, dates, and numbers exactly as given. Do not round numbers, invent details, or drop proper nouns. Write every Japanese name in Latin letters, never in Japanese characters.
 
 The description is often cut off mid-sentence. Cover only what the title and description actually state: never attribute a statement, plan or intention to anyone unless the source text contains it, and never add background, significance, or expected reactions of your own.
 

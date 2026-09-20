@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nakainai Town Inokuchi Community Center to Hold Cheer Dance Trial Class
+title: Nakai Town Inokuchi Community Center to Hold Cheer Dance Trial Class
 date: 2026-08-24 06:35:50 +0900
 source_date: '2026-08-21 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0605/2026/08/21/849413.html

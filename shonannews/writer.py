@@ -30,13 +30,18 @@ def build_filename(date_str, slug, posts_dir, identity_key):
 
 
 def build_front_matter(title, date, source_date, source_url, source_title, source_name, lede, guid,
-                        image_url=None):
+                        image_url=None, event_date=None):
     head = {"layout": "post", "title": title, "date": date}
     tail = {
         "source_url": source_url,
         "source_title": source_title,
         "source_name": source_name,
     }
+    # An ISO string, never a date object: safe_dump quotes the string and leaves a
+    # date bare, and the quoted form is what Jekyll's date filter was verified against.
+    # Omitted when absent, so nothing downstream has to tell "none" from "not stated".
+    if event_date:
+        tail["event_date"] = event_date
     if image_url:
         tail["image_url"] = image_url
     tail["lede"] = lede

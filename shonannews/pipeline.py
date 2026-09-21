@@ -1,6 +1,8 @@
 import calendar
 import logging
-from datetime import datetime, timezone
+import re
+import unicodedata
+from datetime import date, datetime, timezone
 from zoneinfo import ZoneInfo
 
 from . import clean, fetch, identity, llm, state as state_mod, validate, writer
@@ -18,6 +20,39 @@ AD_TAGS = {"ピックアップ（PR）", "意見広告"}
 
 def _default_now():
     return datetime.now(JST)
+
+
+def _corroborated_day(title, description, day):
+    # The model's whole input is the title plus the description, so a day that does
+    # not appear there was invented rather than read, and the key is dropped. This is
+    # the only thing standing between a dateless source and a confident
+    # "Coming up 1 October (Thu)". See the backend spec, "Fabrication guard".
+    #
+    # Lookbehind: day 9 must not match inside 19日. Lookahead: 3日間 is a duration,
+    # not a date. NFKC first, because the sources mix full-width digits with ASCII
+    # (35 of 230 live markers depend on that alone) and a few titles use the Kangxi
+    # radicals U+2F49 and U+2F47, which render identically to 月 and 日.
+    source = unicodedata.normalize("NFKC", f"{title}\n{description}")
+    return bool(re.search(rf"(?<!\d){day}\s*\u65e5(?!\u9593)", source))
+
+
+def _derive_event_date(month_day, source_date):
+    # The model's own year is discarded upstream: it was wrong in almost every
+    # measured miss. The nearest year to the source date is right instead, and it
+    # handles the December-to-January rollover without a special case.
+    month, day = month_day
+    candidates = []
+    for year in (source_date.year - 1, source_date.year, source_date.year + 1):
+        try:
+            candidates.append(date(year, month, day))
+        except ValueError:
+            continue  # 29 February in a non-leap year, or an impossible day like 02-30
+    if not candidates:
+        return None
+    source_day = source_date.date()
+    # On an exact tie the later date, since a notice is far more often about
+    # something ahead than something behind.
+    return min(candidates, key=lambda c: (abs((c - source_day).days), -c.toordinal()))
 
 
 def _derive_source_date(entry, run_time):
@@ -137,6 +172,13 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             state_mod.mark_processed(current_state, feed_url, key)
             continue
 
+        # Only keep a date the source itself states: the model's input is exactly this
+        # title and description, so an uncorroborated day was invented, not read.
+        event_date = None
+        if result.event_month_day and _corroborated_day(title, description, result.event_month_day[1]):
+            derived = _derive_event_date(result.event_month_day, source_date)
+            event_date = derived.isoformat() if derived else None
+
         source_url = _prefer_https(entry.get("link", ""))
         image_url = _extract_image(entry)
         slug = writer.slugify(result.title, key)
@@ -151,6 +193,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             lede=result.lede,
             guid=key,
             image_url=image_url,
+            event_date=event_date,
         )
         body = writer.build_body(result.summary)
         writer.write_post(path, front_matter, body)

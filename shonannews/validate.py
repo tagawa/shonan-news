@@ -26,6 +26,13 @@ TRAILING_ELLIPSIS = re.compile(r"(?:\.{2,}|…)['\"’”)]*$")
 EN_DASH_COMPOUND = re.compile(r"(?<=[0-9A-Za-z])\u2013(?=[0-9A-Za-z])")
 PARENTHETICAL_DASH = re.compile(r"\s*(?:\u2014|\u2013|--)\s*")
 
+# Only the month and day survive; the model's own year is discarded because it was
+# wrong in almost every measured miss (2020 for a 2026 event), and source_date gives
+# a better one. Strict on purpose: the junk the model actually returned in place of
+# null was <unspecified>, [REDACTED], <null>, 202? and YYYY-10-10, and none of it
+# matches this. See the backend spec, "Event-date extraction".
+EVENT_DATE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
+
 logger = logging.getLogger("shonannews")
 
 
@@ -34,12 +41,13 @@ def _normalize_dashes(text):
 
 
 class ValidationResult:
-    def __init__(self, ok, title=None, summary=None, lede=None, error=None):
+    def __init__(self, ok, title=None, summary=None, lede=None, error=None, event_month_day=None):
         self.ok = ok
         self.title = title
         self.summary = summary
         self.lede = lede
         self.error = error
+        self.event_month_day = event_month_day
 
 
 def _ends_complete_sentence(text):
@@ -53,6 +61,20 @@ def _derive_lede(summary):
     # accepted rather than worked around.
     match = re.search(r"[^.!?]*[.!?]", summary)
     return (match.group(0) if match else summary).strip()
+
+
+def _extract_event_month_day(raw):
+    if not isinstance(raw, str):
+        return None
+    match = EVENT_DATE.match(raw)
+    if not match:
+        return None
+    month, day = int(match.group(2)), int(match.group(3))
+    # Bounds only. 02-30 is impossible in every year but needs one to prove it, so
+    # year derivation rejects it instead, where a real date can be constructed.
+    if not (1 <= month <= 12 and 1 <= day <= 31):
+        return None
+    return month, day
 
 
 def validate_response(raw_text):
@@ -102,4 +124,10 @@ def validate_response(raw_text):
         logger.warning("lede cut off mid-sentence; deriving from summary's first sentence")
         lede = _derive_lede(summary)
 
-    return ValidationResult(ok=True, title=title, summary=summary, lede=lede)
+    return ValidationResult(
+        ok=True,
+        title=title,
+        summary=summary,
+        lede=lede,
+        event_month_day=_extract_event_month_day(data.get("event_date")),
+    )

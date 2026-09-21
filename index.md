@@ -27,6 +27,7 @@ the homepage, then shown under source-date headings as before. Everything else i
     <h2 class="day-heading"><time datetime="{{ day.name }}">{{ sorted_items.first.source_date | default: sorted_items.first.date | date: '%-d %B %Y' }}</time></h2>
     {% for post in sorted_items %}
       <article class="item">
+        {% include coming-up.html event_date=post.event_date %}
         <h3 class="item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         {% include japanese-title.html text=post.source_title url=post.source_url %}
         <p class="item-lede">{{ post.lede | default: post.excerpt | strip_html }}</p>

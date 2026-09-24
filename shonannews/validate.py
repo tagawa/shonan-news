@@ -33,6 +33,11 @@ PARENTHETICAL_DASH = re.compile(r"\s*(?:\u2014|\u2013|--)\s*")
 # matches this. See the backend spec, "Event-date extraction".
 EVENT_DATE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
 
+# Town News heads its police safety-campaign series with 【STOP！交通事故】 and
+# 【STOP！詐欺被害】, and the model carries the label into the English headline as
+# "STOP! ...", which reads as hyperbole. Title only, and only at the start.
+STOP_LABEL = re.compile(r"^\s*STOP[!\uFF01]\s*")
+
 logger = logging.getLogger("shonannews")
 
 
@@ -88,6 +93,10 @@ def validate_response(raw_text):
 
     title = data.get("title")
     summary = data.get("summary")
+
+    # Stripped before the emptiness check, so a title that was only the label fails.
+    if isinstance(title, str):
+        title = STOP_LABEL.sub("", title)
 
     if not isinstance(title, str) or not title.strip():
         return ValidationResult(ok=False, error="missing_title")

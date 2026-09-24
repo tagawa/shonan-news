@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'STOP! Beware of Scams: Fake Police Calls Increasing in Fujisawa'
+title: 'Beware of Scams: Fake Police Calls Increasing in Fujisawa'
 date: 2026-09-23 04:54:17 +0900
 source_date: '2026-09-23 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0601/2026/09/23/854058.html

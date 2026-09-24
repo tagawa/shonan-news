@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'STOP! Traffic accidents: legal speed limit lowered from 60 km/h to 30 km/h
+title: 'Traffic accidents: legal speed limit lowered from 60 km/h to 30 km/h
   on residential streets'
 date: 2026-09-22 05:39:04 +0900
 source_date: '2026-09-22 00:00:00 +0900'

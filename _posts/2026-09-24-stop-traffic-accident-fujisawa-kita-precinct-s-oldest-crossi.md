@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'STOP! Traffic accident: Fujisawa Kita precinct''s oldest crossing guard, age
+title: 'Traffic accident: Fujisawa Kita precinct''s oldest crossing guard, age
   81, protects pedestrians with a single swing'
 date: 2026-09-24 04:50:14 +0900
 source_date: '2026-09-24 00:00:00 +0900'

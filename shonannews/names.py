@@ -11,7 +11,10 @@ CANONICAL = {
     "三郎助": "Saburōsuke",
     # Published once as "Hira-tsuka" and fixed by hand by the owner, 2026-09-25.
     "平塚": "Hiratsuka",
-    "しおかぜ": "Shiokaze"
+    "しおかぜ": "Shiokaze",
+    # gpt-6-luna wrote "Kamakura Intel" in 3 of 4 responses in the 2026-09-25 model round.
+    # Keyed on the club's full name, since インテル alone is also Intel Corporation.
+    "鎌倉インテル": "Inter",
 }
 
 # Hyphenated parts are included so a split name ("Hira-tsuka") is seen whole; a

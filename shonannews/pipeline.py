@@ -36,6 +36,15 @@ def _corroborated_day(title, description, day):
     return bool(re.search(rf"(?<!\d){day}\s*\u65e5(?!\u9593)", source))
 
 
+def _single_source_month_day(title, description):
+    # A fallback for a null event_date, which gpt-6-luna returns on some future events
+    # where gpt-5-mini never did. Only one stated date is safe to take: with two, which
+    # one is the event is a judgement for the model. See the backend spec, "Event date fallback".
+    source = unicodedata.normalize("NFKC", f"{title}\n{description}")
+    found = {(int(m), int(d)) for m, d in re.findall(r"(?<!\d)(\d{1,2})\s*月\s*(\d{1,2})\s*日(?!間)", source)}
+    return found.pop() if len(found) == 1 else None
+
+
 def _derive_event_date(month_day, source_date):
     # The model's own year is discarded upstream: it was wrong in almost every
     # measured miss. The nearest year to the source date is right instead, and it
@@ -178,8 +187,9 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         # Only keep a date the source itself states: the model's input is exactly this
         # title and description, so an uncorroborated day was invented, not read.
         event_date = None
-        if result.event_month_day and _corroborated_day(title, description, result.event_month_day[1]):
-            derived = _derive_event_date(result.event_month_day, source_date)
+        month_day = result.event_month_day or _single_source_month_day(title, description)
+        if month_day and _corroborated_day(title, description, month_day[1]):
+            derived = _derive_event_date(month_day, source_date)
             event_date = derived.isoformat() if derived else None
 
         source_url = _prefer_https(entry.get("link", ""))

@@ -11,6 +11,7 @@ CANONICAL = {
     "三郎助": "Saburōsuke",
     # Published once as "Hira-tsuka" and fixed by hand by the owner, 2026-09-25.
     "平塚": "Hiratsuka",
+    "しおかぜ": "Shiokaze"
 }
 
 # Hyphenated parts are included so a split name ("Hira-tsuka") is seen whole; a

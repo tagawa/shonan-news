@@ -40,6 +40,19 @@ EVENT_DATE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
 # "STOP! ...", which reads as hyperbole. Title only, and only at the start.
 STOP_LABEL = re.compile(r"^\s*STOP[!\uFF01]\s*")
 
+# The fidelity rule tells the model its input is cut off, and it says so in the
+# summary: "The description is cut off and provides no further details." 25 of 69
+# posts on 2026-09-25. See the backend spec, "Cut-off narration strip". Only a
+# "cut off" with a source noun before it counts, so a road cut off by a typhoon stays.
+CUT_OFF = re.compile(r"\bcuts? off\b")
+SOURCE_NOUN = re.compile(r"\b(?:description|source|text|announcement|article|notice)\b")
+# Where narration joins real content: "Activities run from 10:00 to 15:00, and the
+# description provided is cut off before listing programs."
+NARRATION_JOIN = re.compile(r"(?:;|,? (?:and|but|before|with)) ")
+# A capital after the break, so "a.m. to" stays one sentence; a false split on
+# "Mt. Fuji" is harmless, since the pieces are rejoined with the same space.
+SENTENCE_BREAK = re.compile(r"(?<=[.!?])\s+(?=[A-Z])")
+
 logger = logging.getLogger("shonannews")
 
 
@@ -49,6 +62,23 @@ def _normalize_dashes(text):
 
 def _clean(text, source):
     return enforce_canonical(_normalize_dashes(text), source).strip()
+
+
+def _drop_cut_off_narration(summary):
+    kept = []
+    for sentence in SENTENCE_BREAK.split(summary):
+        cut = CUT_OFF.search(sentence)
+        nouns = list(SOURCE_NOUN.finditer(sentence, 0, cut.start())) if cut else []
+        if not nouns:
+            kept.append(sentence)
+            continue
+        # Cut at the join before the source noun, not the one before "cut off": in
+        # "104-1; the description lists ... but is cut off" the narration starts at ";".
+        joins = list(NARRATION_JOIN.finditer(sentence, 0, nouns[-1].start()))
+        head = sentence[: joins[-1].start()].rstrip() if joins else ""
+        if head:
+            kept.append(head if head.endswith((".", "!", "?")) else head + ".")
+    return " ".join(kept)
 
 
 class ValidationResult:
@@ -114,7 +144,11 @@ def validate_response(raw_text, source=""):
         return ValidationResult(ok=False, error="summary_too_long")
 
     title = _clean(title, source)
-    summary = _clean(summary, source)
+    summary = _drop_cut_off_narration(_clean(summary, source))
+
+    # Narration was all there was; the retry may get a summary with content.
+    if not summary:
+        return ValidationResult(ok=False, error="missing_summary")
 
     if not _ends_complete_sentence(summary):
         return ValidationResult(ok=False, error="summary_truncated")

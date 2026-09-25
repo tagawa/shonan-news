@@ -7,3 +7,9 @@ noindex: true
 
 <h1>Page not found</h1>
 <p><a href="{{ '/' | relative_url }}">Go home</a>.</p>
+<script>
+  // Fathom's script is deferred, so it only exists once the page has loaded.
+  window.addEventListener("load", function () {
+    if (window.fathom) window.fathom.trackEvent("404 page shown");
+  });
+</script>

@@ -28,7 +28,7 @@ def build_prompt(title, description, today):
     return PROMPT_TEMPLATE.format(title=title, description=description or "(no description provided)", today=today)
 
 
-def call_llm(create_fn, title, description, today, model="gpt-5-mini", max_completion_tokens=4000, reasoning_effort="minimal"):
+def call_llm(create_fn, title, description, today, model="gpt-6-luna", max_completion_tokens=4000, reasoning_effort="low"):
     prompt = build_prompt(title, description, today)
     try:
         response = create_fn(

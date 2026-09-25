@@ -9,11 +9,14 @@ CANONICAL = {
     # Nakajima Saburōsuke, the Town News Yokosuka series 三郎助を追う. Episodes 57 to 62
     # were published as "Sabrosuke" and 55 to 56 as "Saburōsuke" (live, 2026-09-25).
     "三郎助": "Saburōsuke",
-    "平塚": "Hiratsuka"
+    # Published once as "Hira-tsuka" and fixed by hand by the owner, 2026-09-25.
+    "平塚": "Hiratsuka",
 }
 
-# No apostrophe or hyphen, so a possessive or compound keeps its ending on correction.
-NAME_TOKEN = re.compile(r"\b[A-Z][A-Za-zāīūēō]{3,}\b")
+# Hyphenated parts are included so a split name ("Hira-tsuka") is seen whole; a
+# compound on the real name ("Hiratsuka-based") then contains it and is left alone.
+# No apostrophe, so a possessive keeps its "'s" on correction.
+NAME_TOKEN = re.compile(r"\b[A-Z][A-Za-zāīūēō]{3,}(?:-[A-Za-zāīūēō]+)*\b")
 
 
 def normalize(text):
@@ -43,10 +46,10 @@ def enforce_canonical(text, source, table=CANONICAL):
             continue
 
         def fix(match):
-            token = match.group(0)
+            token = match.group(0).replace("-", "")
             # Stricter than the audit's shortlist threshold, since this rewrites without review.
             same_name = normalize(token) == normalize(expected) or is_near_miss(token, expected, 3, 0.8)
-            return expected if same_name else token
+            return expected if same_name else match.group(0)
 
         text = NAME_TOKEN.sub(fix, text)
     return text

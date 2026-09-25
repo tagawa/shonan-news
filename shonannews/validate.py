@@ -2,6 +2,8 @@ import json
 import logging
 import re
 
+from shonannews.names import enforce_canonical
+
 MAX_SUMMARY_LENGTH = 2000
 MAX_LEDE_WORDS = 30
 # A sentence end, optionally inside closing quotes or a bracket. Missing means the
@@ -45,6 +47,10 @@ def _normalize_dashes(text):
     return PARENTHETICAL_DASH.sub(", ", EN_DASH_COMPOUND.sub("-", text))
 
 
+def _clean(text, source):
+    return enforce_canonical(_normalize_dashes(text), source).strip()
+
+
 class ValidationResult:
     def __init__(self, ok, title=None, summary=None, lede=None, error=None, event_month_day=None):
         self.ok = ok
@@ -82,7 +88,7 @@ def _extract_event_month_day(raw):
     return month, day
 
 
-def validate_response(raw_text):
+def validate_response(raw_text, source=""):
     try:
         data = json.loads(raw_text)
     except (json.JSONDecodeError, TypeError):
@@ -107,14 +113,14 @@ def validate_response(raw_text):
     if len(summary) > MAX_SUMMARY_LENGTH:
         return ValidationResult(ok=False, error="summary_too_long")
 
-    title = _normalize_dashes(title).strip()
-    summary = _normalize_dashes(summary).strip()
+    title = _clean(title, source)
+    summary = _clean(summary, source)
 
     if not _ends_complete_sentence(summary):
         return ValidationResult(ok=False, error="summary_truncated")
 
     raw_lede = data.get("lede")
-    lede = _normalize_dashes(raw_lede).strip() if isinstance(raw_lede, str) else ""
+    lede = _clean(raw_lede, source) if isinstance(raw_lede, str) else ""
 
     # _derive_lede's output is never itself word-capped: a long-but-complete
     # first sentence reads better than one truncated mid-word, and the

@@ -1,5 +1,6 @@
 import hashlib
 import re
+import unicodedata
 from datetime import date
 from pathlib import Path
 
@@ -12,7 +13,8 @@ DATE_MONTH = re.compile(r"^date:\s*'?(\d{4}-\d{2})", re.MULTILINE)
 
 
 def slugify(title, fallback_key, max_length=60):
-    ascii_title = title.encode("ascii", "ignore").decode("ascii")
+    # NFKD first splits ō into o plus a combining macron, so only the macron is dropped.
+    ascii_title = unicodedata.normalize("NFKD", title).encode("ascii", "ignore").decode("ascii")
     slug = re.sub(r"[^a-z0-9]+", "-", ascii_title.lower()).strip("-")
     if not slug:
         slug = fallback_key.replace(":", "-")

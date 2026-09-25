@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Chasing Sabrosuke: The Other Last Samurai (No. 58) by Hiroaki Fujino'
+title: 'Chasing Saburōsuke: The Other Last Samurai (No. 58) by Hiroaki Fujino'
 date: 2026-08-28 14:24:09 +0900
 source_date: '2026-08-28 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0501/2026/08/28/850449.html
@@ -11,5 +11,5 @@ lede: Around ten years after the arrival of the Black Ships, the British retalia
 guid: guid:https://www.townnews.co.jp/0501/2026/08/28/850449.html
 ---
 
-Hiroaki Fujino recounts how Edo Bay and Uraga nearly faced British retaliation for the Namamugi Incident, a crisis that was narrowly avoided, allowing the bay to return to calm. The essay situates this episode about ten years after the arrival of the Black Ships and reflects on the shock of seeing a foreign power directly threaten Edo. Fujino combines narrative and photographs to follow Sabrosuke’s story against the backdrop of Japan’s changing encounters with foreign powers.
+Hiroaki Fujino recounts how Edo Bay and Uraga nearly faced British retaliation for the Namamugi Incident, a crisis that was narrowly avoided, allowing the bay to return to calm. The essay situates this episode about ten years after the arrival of the Black Ships and reflects on the shock of seeing a foreign power directly threaten Edo. Fujino combines narrative and photographs to follow Saburōsuke’s story against the backdrop of Japan’s changing encounters with foreign powers.
 

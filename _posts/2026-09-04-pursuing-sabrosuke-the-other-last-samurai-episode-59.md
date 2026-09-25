@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Pursuing Sabrosuke: The Other Last Samurai — Episode 59'
+title: 'Pursuing Saburōsuke: The Other Last Samurai — Episode 59'
 date: 2026-09-04 08:16:39 +0900
 source_date: '2026-09-04 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0501/2026/09/04/851318.html

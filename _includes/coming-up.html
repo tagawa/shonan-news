@@ -1,7 +1,0 @@
-{% comment %}
-Renders only while the event still lies ahead. site.time is the build instant, normalised to
-midnight so an event happening today still counts as upcoming, and both sides resolve in
-Asia/Tokyo because _config.yml sets timezone. The marker therefore decays at the next build
-rather than being baked in at write time, which would freeze it at the date it was written.
-See the frontend spec, "Upcoming marker".
-{% endcomment %}{% if include.event_date %}{% assign today = site.time | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}{% assign event = include.event_date | date: "%s" | plus: 0 %}{% if event >= today %}<p class="coming-up"><span class="coming-up-label">Coming up</span> <time datetime="{{ include.event_date }}">{{ include.event_date | date: "%-d %B (%a)" }}</time></p>{% endif %}{% endif %}

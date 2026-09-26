@@ -357,25 +357,30 @@ h1.site-title {
   line-height: 1.5;
 }
 
-/* Upcoming-event marker. Weight carries the label, not caps: the day heading is
-   0.75rem uppercase condensed, and an identical treatment a few lines above an
-   item read as the start of a new day group. Inline elements with a margin, never
-   flexbox gap, which is unsupported on Safari before 14.1 and does not degrade.
-   Margin shorthands are split because var() may not sit inside one, which is
-   pinned by a test rather than left as a preference. */
-.coming-up {
+/* Item labels: the line above an item's headline. Weight carries the label, not
+   caps: the day heading is 0.75rem uppercase condensed, and an identical treatment
+   a few lines above an item read as the start of a new day group. Inline elements
+   with a margin, never flexbox gap, which is unsupported on Safari before 14.1 and
+   does not degrade. Margin shorthands are split because var() may not sit inside
+   one, which is pinned by a test rather than left as a preference. */
+.item-labels {
   margin-top: 0;
   margin-bottom: var(--space-1);
   font-size: 0.875rem;
   line-height: 1.5;
 }
 
-.coming-up-label {
+.item-label {
   font-weight: 700;
   color: var(--ink);
 }
 
-.coming-up time {
+/* No margins: real spaces sit either side of it, outside the aria-hidden span. */
+.item-labels-separator {
+  color: var(--muted);
+}
+
+.item-labels time {
   margin-left: var(--space-1);
   color: var(--muted);
 }

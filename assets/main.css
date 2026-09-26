@@ -26,14 +26,14 @@
     "Liberation Sans Narrow", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,
     sans-serif;
 
-  --bg: #f2ebdd;
-  --surface: #fbf7ef;
-  --ink: #14110d;
-  --body: #3d3730;
-  --muted: #5c554b;
-  --rule: #8d7b56;
-  --link: #b3350e;
-  --link-hover: #7d2409;
+  --bg: #edf3f8;
+  --surface: #f8fbfd;
+  --ink: #0f172a;
+  --body: #2b3a4f;
+  --muted: #4a5a70;
+  --rule: #6b89ab;
+  --link: #1d4ed8;
+  --link-hover: #1e3a8a;
 }
 
 /* browsers below the baseline skip this and keep the light scheme above.
@@ -41,14 +41,14 @@
    both modes read as the same publication. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14110d;
-    --surface: #211c16;
-    --ink: #faf6ee;
-    --body: #e6ded1;
-    --muted: #c9bfae;
-    --rule: #7a6e5d;
-    --link: #ff8a5c;
-    --link-hover: #ffb495;
+    --bg: #0f172a;
+    --surface: #1a2438;
+    --ink: #f1f5f9;
+    --body: #d7dfea;
+    --muted: #a9b6c8;
+    --rule: #5d7aa0;
+    --link: #93c5fd;
+    --link-hover: #c6e0fe;
   }
 }
 

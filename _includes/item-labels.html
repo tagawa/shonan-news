@@ -1,0 +1,9 @@
+{% comment %}
+The line above an item's headline: a subject label, the upcoming-event marker, or both, label
+first. Nothing renders when neither applies. Both variables are reset on every call because
+Jekyll includes share the page scope, so a value assigned for one item would otherwise reach the
+next. The marker renders only while the event still lies ahead: site.time is the build instant,
+normalised to midnight so an event happening today still counts, and both sides resolve in
+Asia/Tokyo because _config.yml sets timezone. The spaces sit outside the hidden separator, so a
+screen reader still hears two words. See the frontend spec, "Item labels".
+{% endcomment %}{% assign label_text = false %}{% if include.label == "sport" %}{% assign label_text = "Sport" %}{% elsif include.label == "safety" %}{% assign label_text = "Safety" %}{% endif %}{% assign upcoming = false %}{% if include.event_date %}{% assign today = site.time | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}{% assign event = include.event_date | date: "%s" | plus: 0 %}{% if event >= today %}{% assign upcoming = true %}{% endif %}{% endif %}{% if label_text or upcoming %}<p class="item-labels">{% if label_text %}<span class="item-label">{{ label_text }}</span>{% endif %}{% if label_text and upcoming %} <span class="item-labels-separator" aria-hidden="true">·</span> {% endif %}{% if upcoming %}<span class="item-label">Coming up</span> <time datetime="{{ include.event_date }}">{{ include.event_date | date: "%-d %B (%a)" }}</time>{% endif %}</p>{% endif %}

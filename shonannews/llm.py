@@ -12,8 +12,10 @@ Write plain prose only: no markdown formatting, no bullet points, no inline URLs
 
 The lede is a single standalone sentence, maximum 30 words, that answers what happened, when, and where, on its own. It is not the first sentence of the summary reworded into a teaser. If the source does not specify a date, omit the "when" from the lede rather than using a placeholder phrase like "on an unspecified date".
 
+Also classify the item. Set label to 'sport' only for competition results, athletes and sports teams, or sports events, clinics or lessons people take part in; not for board games such as shogi, fitness classes, yabusame or other ritual performances, or firefighters' rescue competitions. Set label to 'safety' only for disasters, disaster preparedness and drills, crime and fraud warnings, police and fire service news, or public-health warnings; not for a business promoting its own product or service, and not for an elected official's report or opinion column, even one about disasters. In every other case, and whenever unsure, set label to null.
+
 Respond with a single JSON object and nothing else, in this exact form:
-{{"event_date": "<the event's date as YYYY-MM-DD, or null if the source gives none>", "has_happened": <true if the event has already happened as of today, otherwise false>, "title": "<English title>", "lede": "<one standalone sentence, max 30 words, covering what/when/where>", "summary": "<1 to 3 sentence English summary>"}}
+{{"event_date": "<the event's date as YYYY-MM-DD, or null if the source gives none>", "has_happened": <true if the event has already happened as of today, otherwise false>, "title": "<English title>", "lede": "<one standalone sentence, max 30 words, covering what/when/where>", "summary": "<1 to 3 sentence English summary>", "label": <"sport", "safety", or null>}}
 
 Title: {title}
 Description: {description}

@@ -35,6 +35,10 @@ PARENTHETICAL_DASH = re.compile(r"\s*(?:\u2014|\u2013|--)\s*")
 # matches this. See the backend spec, "Event-date extraction".
 EVENT_DATE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
 
+# The only subjects a post may be labelled with. Anything else the model returns
+# means no label, never a failure. See the backend spec, "Item labels".
+LABELS = ("sport", "safety")
+
 # Town News heads its police safety-campaign series with 【STOP！交通事故】 and
 # 【STOP！詐欺被害】, and the model carries the label into the English headline as
 # "STOP! ...", which reads as hyperbole. Title only, and only at the start.
@@ -82,13 +86,14 @@ def _drop_cut_off_narration(summary):
 
 
 class ValidationResult:
-    def __init__(self, ok, title=None, summary=None, lede=None, error=None, event_month_day=None):
+    def __init__(self, ok, title=None, summary=None, lede=None, error=None, event_month_day=None, label=None):
         self.ok = ok
         self.title = title
         self.summary = summary
         self.lede = lede
         self.error = error
         self.event_month_day = event_month_day
+        self.label = label
 
 
 def _ends_complete_sentence(text):
@@ -116,6 +121,14 @@ def _extract_event_month_day(raw):
     if not (1 <= month <= 12 and 1 <= day <= 31):
         return None
     return month, day
+
+
+def _extract_label(raw):
+    if isinstance(raw, str) and raw.strip().lower() in LABELS:
+        return raw.strip().lower()
+    if raw is not None:
+        logger.warning("label %r is not one of %s; dropped", raw, LABELS)
+    return None
 
 
 def validate_response(raw_text, source=""):
@@ -179,4 +192,5 @@ def validate_response(raw_text, source=""):
         summary=summary,
         lede=lede,
         event_month_day=_extract_event_month_day(data.get("event_date")),
+        label=_extract_label(data.get("label")),
     )

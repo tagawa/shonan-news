@@ -207,6 +207,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             guid=key,
             image_url=image_url,
             event_date=event_date,
+            label=result.label,
         )
         body = writer.build_body(result.summary)
         writer.write_post(path, front_matter, body)

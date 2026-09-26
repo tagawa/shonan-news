@@ -32,7 +32,7 @@ def build_filename(date_str, slug, posts_dir, identity_key):
 
 
 def build_front_matter(title, date, source_date, source_url, source_title, source_name, lede, guid,
-                        image_url=None, event_date=None):
+                        image_url=None, event_date=None, label=None):
     head = {"layout": "post", "title": title, "date": date}
     tail = {
         "source_url": source_url,
@@ -44,6 +44,9 @@ def build_front_matter(title, date, source_date, source_url, source_title, sourc
     # Omitted when absent, so nothing downstream has to tell "none" from "not stated".
     if event_date:
         tail["event_date"] = event_date
+    # Omitted when absent, like event_date: an unlabelled post asserts nothing.
+    if label:
+        tail["label"] = label
     if image_url:
         tail["image_url"] = image_url
     tail["lede"] = lede

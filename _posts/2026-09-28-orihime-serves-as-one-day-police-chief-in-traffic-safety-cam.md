@@ -13,5 +13,5 @@ lede: A campaign calling for the prevention of traffic accidents was held on 18 
 guid: guid:https://www.townnews.co.jp/0605/2026/09/28/854726.html
 ---
 
-The campaign took place during the Autumn National Traffic Safety Campaign period, from 21 to 30 September. The title identifies an Orihime as serving as one-day police chief, and the description names Reina Yamanaka of Shonan Hiratsuka Orihime.
+The campaign was timed to coincide with the Autumn National Traffic Safety Campaign, which runs from 21 to 30 September. The title identifies an Orihime as serving as one-day police chief, and the description names Reina Yamanaka of Shonan Hiratsuka Orihime.
 

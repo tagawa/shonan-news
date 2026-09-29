@@ -45,11 +45,27 @@ def _single_source_month_day(title, description):
     return found.pop() if len(found) == 1 else None
 
 
-def _derive_event_date(month_day, source_date):
+def _stated_next_year(title, description, month_day):
+    # 来年 written directly before this date. Nearest-year cannot see it: a date more
+    # than about six months ahead is nearer last year's copy (来年４月17日 from 29
+    # September came out 2026-04-17, live 2026-09-29). 来年 elsewhere in the text says
+    # nothing about this date, and 再来年 is two years on. See the backend spec,
+    # "Year derivation".
+    month, day = month_day
+    source = unicodedata.normalize("NFKC", f"{title}\n{description}")
+    return bool(re.search(rf"(?<!再)来年\s*の?\s*0?{month}\s*月\s*0?{day}\s*日", source))
+
+
+def _derive_event_date(month_day, source_date, next_year=False):
     # The model's own year is discarded upstream: it was wrong in almost every
     # measured miss. The nearest year to the source date is right instead, and it
     # handles the December-to-January rollover without a special case.
     month, day = month_day
+    if next_year:
+        try:
+            return date(source_date.year + 1, month, day)
+        except ValueError:
+            return None
     candidates = []
     for year in (source_date.year - 1, source_date.year, source_date.year + 1):
         try:
@@ -189,7 +205,8 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         event_date = None
         month_day = result.event_month_day or _single_source_month_day(title, description)
         if month_day and _corroborated_day(title, description, month_day[1]):
-            derived = _derive_event_date(month_day, source_date)
+            derived = _derive_event_date(month_day, source_date,
+                                         next_year=_stated_next_year(title, description, month_day))
             event_date = derived.isoformat() if derived else None
 
         source_url = _prefer_https(entry.get("link", ""))

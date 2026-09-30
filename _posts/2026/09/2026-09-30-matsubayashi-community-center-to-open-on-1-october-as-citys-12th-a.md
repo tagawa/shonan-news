@@ -13,5 +13,5 @@ lede: The Matsubayashi Community Center will open on 1 October in the Matsubayas
 guid: guid:https://www.townnews.co.jp/0603/2026/09/30/854714.html
 ---
 
-The center, at Takada 2-14-28, will be the 12th community center in Chigasaki. It will promote the continuation and creation of local culture through交流 across generations.
+The center, at Takada 2-14-28, will be the 12th community center in Chigasaki. It will promote the continuation and creation of local culture across generations.
 

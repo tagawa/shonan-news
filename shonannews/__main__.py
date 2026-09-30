@@ -28,6 +28,9 @@ def main():
 
     feeds = json.loads(FEEDS_PATH.read_text(encoding="utf-8"))
 
+    # Before the feeds, so a same-day filename collision is checked in the month folder.
+    conflicts = writer.file_loose_posts(POSTS_DIR)
+
     exit_codes = []
     for feed in feeds:
         try:
@@ -47,7 +50,7 @@ def main():
     # Runs even when a feed failed: the other feeds may still have written posts in a new month.
     writer.ensure_archive_stubs(POSTS_DIR, ARCHIVE_DIR)
 
-    sys.exit(1 if any(exit_codes) else 0)
+    sys.exit(1 if any(exit_codes) or conflicts else 0)
 
 
 if __name__ == "__main__":

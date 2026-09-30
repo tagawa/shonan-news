@@ -1,10 +1,13 @@
 import hashlib
+import logging
 import re
 import unicodedata
 from datetime import date
 from pathlib import Path
 
 import yaml
+
+logger = logging.getLogger("shonannews")
 
 FRONT_MATTER = re.compile(r"---\n(.*?)\n---", re.DOTALL)
 # Reads the written digits, not a parsed instant: the pipeline writes JST, and the site renders JST.
@@ -22,7 +25,9 @@ def slugify(title, fallback_key, max_length=60):
 
 
 def build_filename(date_str, slug, posts_dir, identity_key):
-    posts_dir = Path(posts_dir)
+    # One folder per run month: github.com lists at most 1,000 files in a folder.
+    posts_dir = Path(posts_dir) / date_str[:4] / date_str[5:7]
+    posts_dir.mkdir(parents=True, exist_ok=True)
     base = f"{date_str}-{slug}"
     path = posts_dir / f"{base}.md"
     if path.exists():
@@ -74,8 +79,22 @@ def _post_month(text):
     return match.group(1)
 
 
+def file_loose_posts(posts_dir):
+    conflicts = []
+    for path in sorted(Path(posts_dir).glob("*.md")):
+        target = path.parent / path.name[:4] / path.name[5:7] / path.name
+        # Never overwrite: a human decides which copy to keep, and the run reports it.
+        if target.exists():
+            logger.error("Loose post %s left in place: %s already exists", path, target)
+            conflicts.append(path)
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        path.rename(target)
+    return conflicts
+
+
 def ensure_archive_stubs(posts_dir, archive_dir):
-    months = {_post_month(path.read_text(encoding="utf-8")) for path in Path(posts_dir).glob("*.md")}
+    months = {_post_month(path.read_text(encoding="utf-8")) for path in Path(posts_dir).rglob("*.md")}
     archive_dir = Path(archive_dir)
     archive_dir.mkdir(parents=True, exist_ok=True)
     for month in sorted(months):

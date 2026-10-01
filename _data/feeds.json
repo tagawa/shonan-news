@@ -1,13 +1,13 @@
 [
-  {"url": "https://shonanevent.blogspot.com/feeds/posts/summary", "name": "湘南・横須賀イベント＆ニュース"},
-  {"url": "https://shonan.keizai.biz/rss.xml", "name": "湘南経済新聞"},
-  {"url": "https://kamakura.keizai.biz/rss.xml", "name": "鎌倉経済新聞"},
-  {"url": "https://yokosuka.keizai.biz/rss.xml", "name": "横須賀経済新聞"},
-  {"url": "https://zushi-hayama.keizai.biz/rss.xml", "name": "逗子葉山経済新聞"},
-  {"url": "https://www.townnews.co.jp/0501/index.xml", "name": "タウンニュース（横須賀・三浦）"},
-  {"url": "https://www.townnews.co.jp/0503/index.xml", "name": "タウンニュース（逗子・葉山）"},
-  {"url": "https://www.townnews.co.jp/0601/index.xml", "name": "タウンニュース（藤沢）"},
-  {"url": "https://www.townnews.co.jp/0602/index.xml", "name": "タウンニュース（鎌倉）"},
-  {"url": "https://www.townnews.co.jp/0603/index.xml", "name": "タウンニュース（茅ヶ崎・寒川）"},
-  {"url": "https://www.townnews.co.jp/0605/index.xml", "name": "タウンニュース（平塚・大磯・二宮・中井）"}
+  {"url": "https://shonanevent.blogspot.com/feeds/posts/summary", "name": "湘南・横須賀イベント＆ニュース", "towns": []},
+  {"url": "https://shonan.keizai.biz/rss.xml", "name": "湘南経済新聞", "towns": []},
+  {"url": "https://kamakura.keizai.biz/rss.xml", "name": "鎌倉経済新聞", "towns": ["Kamakura"]},
+  {"url": "https://yokosuka.keizai.biz/rss.xml", "name": "横須賀経済新聞", "towns": ["Yokosuka"]},
+  {"url": "https://zushi-hayama.keizai.biz/rss.xml", "name": "逗子葉山経済新聞", "towns": ["Zushi", "Hayama"]},
+  {"url": "https://www.townnews.co.jp/0501/index.xml", "name": "タウンニュース（横須賀・三浦）", "towns": ["Yokosuka", "Miura"]},
+  {"url": "https://www.townnews.co.jp/0503/index.xml", "name": "タウンニュース（逗子・葉山）", "towns": ["Zushi", "Hayama"]},
+  {"url": "https://www.townnews.co.jp/0601/index.xml", "name": "タウンニュース（藤沢）", "towns": ["Fujisawa"]},
+  {"url": "https://www.townnews.co.jp/0602/index.xml", "name": "タウンニュース（鎌倉）", "towns": ["Kamakura"]},
+  {"url": "https://www.townnews.co.jp/0603/index.xml", "name": "タウンニュース（茅ヶ崎・寒川）", "towns": ["Chigasaki", "Samukawa"]},
+  {"url": "https://www.townnews.co.jp/0605/index.xml", "name": "タウンニュース（平塚・大磯・二宮・中井）", "towns": ["Hiratsuka", "Oiso", "Ninomiya", "Nakai"]}
 ]

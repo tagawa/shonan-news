@@ -26,12 +26,23 @@ class LLMCallError(Exception):
     pass
 
 
-def build_prompt(title, description, today):
-    return PROMPT_TEMPLATE.format(title=title, description=description or "(no description provided)", today=today)
+# Added only when an item has place readings, so an item without any gets the prompt it had
+# before. Measured in two rounds; see the backend spec, "Place readings".
+NAMES_SENTENCE = "Write every Japanese name in Latin letters, never in Japanese characters."
+READINGS_SENTENCE = "When place readings are listed after the description, write those places with the readings given."
 
 
-def call_llm(create_fn, title, description, today, model="gpt-6-luna", max_completion_tokens=4000, reasoning_effort="low"):
-    prompt = build_prompt(title, description, today)
+def build_prompt(title, description, today, readings=()):
+    prompt = PROMPT_TEMPLATE.format(title=title, description=description or "(no description provided)", today=today)
+    if not readings:
+        return prompt
+    prompt = prompt.replace(NAMES_SENTENCE, f"{NAMES_SENTENCE} {READINGS_SENTENCE}", 1)
+    return prompt + "Place readings: " + "; ".join(f"{key} = {reading}" for key, reading in readings) + "\n"
+
+
+def call_llm(create_fn, title, description, today, model="gpt-6-luna", max_completion_tokens=4000, reasoning_effort="low",
+             readings=()):
+    prompt = build_prompt(title, description, today, readings)
     try:
         response = create_fn(
             model=model,

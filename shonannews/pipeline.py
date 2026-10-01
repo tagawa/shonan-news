@@ -5,7 +5,7 @@ import unicodedata
 from datetime import date, datetime, timezone
 from zoneinfo import ZoneInfo
 
-from . import clean, fetch, identity, llm, state as state_mod, validate, writer
+from . import clean, fetch, identity, llm, places, state as state_mod, validate, weekdays, writer
 
 logger = logging.getLogger("shonannews")
 
@@ -124,7 +124,7 @@ def _extract_image(entry):
     return None
 
 
-def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_fn=_default_now):
+def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_fn=_default_now, towns=()):
     try:
         current_state = state_mod.load_state(state_path)
     except state_mod.StateCorruptError as exc:
@@ -148,6 +148,10 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
 
     feed_state["etag"] = parsed.get("etag") or feed_state.get("etag")
     feed_state["modified"] = parsed.get("modified") or feed_state.get("modified")
+
+    gazetteer = places.load_places()
+    # A feed's own towns scope its place readings; an empty list (no fixed area) keeps them all.
+    edition = {places.MUNICIPALITIES[town] for town in towns}
 
     new_count = 0
     # Feeds list newest-first; process oldest-first so the newest item gets the latest timestamp.
@@ -184,13 +188,18 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         # The model's whole input, so a canonical name is only enforced where the source has it.
         source = f"{title} {description}"
 
+        # Official readings of the districts the source names. See the backend spec, "Place readings".
+        readings = places.scoped_hints(source, gazetteer, edition)
+
         # One retry on a bad response: the observed failure (a string closed early) is
         # intermittent per item, so a second identical call often succeeds.
         try:
-            result = validate.validate_response(llm.call_llm(create_fn, title, description, date_str), source)
+            result = validate.validate_response(
+                llm.call_llm(create_fn, title, description, date_str, readings=readings), source)
             if not result.ok:
                 logger.warning("Validation failed for %s: %s; retrying once", key, result.error)
-                result = validate.validate_response(llm.call_llm(create_fn, title, description, date_str), source)
+                result = validate.validate_response(
+                    llm.call_llm(create_fn, title, description, date_str, readings=readings), source)
         except llm.LLMCallError as exc:
             logger.warning("LLM call failed for %s: %s", key, exc)
             continue
@@ -199,6 +208,11 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             logger.error("Validation failed for %s: %s", key, result.error)
             state_mod.mark_processed(current_state, feed_url, key)
             continue
+
+        # Puts back a weekday the source states and the model dropped. See the backend spec,
+        # "Weekday restoration".
+        result.lede = weekdays.restore_weekdays(result.lede, source, source_date)
+        result.summary = weekdays.restore_weekdays(result.summary, source, source_date)
 
         # Only keep a date the source itself states: the model's input is exactly this
         # title and description, so an uncorroborated day was invented, not read.

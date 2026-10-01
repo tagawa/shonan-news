@@ -41,6 +41,7 @@ def main():
                 posts_dir=POSTS_DIR,
                 parse_fn=feedparser.parse,
                 create_fn=client.chat.completions.create,
+                towns=feed["towns"],
             )
         except Exception:
             logger.error("Unhandled error processing feed %s", feed["url"], exc_info=True)

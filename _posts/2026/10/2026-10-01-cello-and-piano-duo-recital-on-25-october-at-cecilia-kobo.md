@@ -12,5 +12,5 @@ lede: A cello and piano duo recital will be held at Cecilia Kobo in Oiso Town on
 guid: guid:https://www.townnews.co.jp/0605/2026/10/01/855374.html
 ---
 
-The recital will begin at 2 p.m. at Cecilia Kobo, 744-8 Kounoshinjuku, Oiso Town. It will feature Ryoichi Fujimori, principal cellist of the NHK Symphony Orchestra, and a pianist.
+The recital will begin at 2 p.m. at Cecilia Kobo, 744-8 Kokufu-Shinshuku, Oiso Town. It will feature Ryoichi Fujimori, principal cellist of the NHK Symphony Orchestra, and a pianist.
 

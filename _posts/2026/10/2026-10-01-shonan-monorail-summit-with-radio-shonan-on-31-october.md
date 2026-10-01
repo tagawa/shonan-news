@@ -8,7 +8,7 @@ source_title: 【10月31日（土）】モノレールサミット with レデ�
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-10-31'
 lede: The Shonan Monorail Summit with Radio Shonan will take place on 31 October (Sat)
-  at Shonan-Enoshima Station in Kamakura.
+  at Shonan-Enoshima Station in Fujisawa.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-555001301168110779
 ---
 

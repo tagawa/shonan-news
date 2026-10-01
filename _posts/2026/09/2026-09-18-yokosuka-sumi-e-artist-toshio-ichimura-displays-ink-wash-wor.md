@@ -12,5 +12,5 @@ lede: '''Toshio Ichimura'', a 79-year-old sumi-e artist from Yokosuka, is exhibi
 guid: guid:https://www.townnews.co.jp/0501/2026/09/18/853727.html
 ---
 
-A solo exhibition of sumi-e works by 79-year-old artist 'Toshio Ichimura' from Kamicho, Yokosuka is being held on the third floor of the Comprehensive Welfare Hall at Honcho 2-1. The show highlights Ichimura's technique of creating three-dimensional effect through variations of ink density and stark black-and-white contrasts. The exhibition runs through 30 September. Visitors can view pieces that reflect Ichimura's long trajectory as a sumi-e painter.
+A solo exhibition of sumi-e works by 79-year-old artist 'Toshio Ichimura' from Uwamachi, Yokosuka is being held on the third floor of the Comprehensive Welfare Hall at Honcho 2-1. The show highlights Ichimura's technique of creating three-dimensional effect through variations of ink density and stark black-and-white contrasts. The exhibition runs through 30 September. Visitors can view pieces that reflect Ichimura's long trajectory as a sumi-e painter.
 

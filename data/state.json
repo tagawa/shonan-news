@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1cca-65ce1bf08dcd4\"",
-    "modified": "Fri, 02 Oct 2026 20:55:02 GMT",
+    "etag": "\"1cca-65cf49b0362fc\"",
+    "modified": "Sat, 03 Oct 2026 19:25:02 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -16,8 +16,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1591-65ce1bf0a0341\"",
-    "modified": "Fri, 02 Oct 2026 20:55:02 GMT",
+    "etag": "\"1591-65cf49b04c7e7\"",
+    "modified": "Sat, 03 Oct 2026 19:25:02 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -489,7 +489,7 @@
   },
   "https://www.townnews.co.jp/0601/index.xml": {
     "etag": null,
-    "modified": "Fri, 02 Oct 2026 15:46:14 GMT",
+    "modified": "Sat, 03 Oct 2026 15:36:22 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0601/2026/08/06/847658.html",
       "guid:https://www.townnews.co.jp/0601/2026/08/07/846440.html",
@@ -776,7 +776,8 @@
       "guid:https://www.townnews.co.jp/0601/2026/10/02/855454.html",
       "guid:https://www.townnews.co.jp/0601/2026/10/02/855455.html",
       "guid:https://www.townnews.co.jp/0601/2026/10/02/855607.html",
-      "guid:https://www.townnews.co.jp/0601/2026/10/03/855763.html"
+      "guid:https://www.townnews.co.jp/0601/2026/10/03/855763.html",
+      "guid:https://www.townnews.co.jp/0601/2026/10/04/855766.html"
     ]
   },
   "https://www.townnews.co.jp/0602/index.xml": {
@@ -1435,8 +1436,8 @@
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"1645-65ce1bf02e293\"",
-    "modified": "Fri, 02 Oct 2026 20:55:02 GMT",
+    "etag": "\"1645-65cf49b07a175\"",
+    "modified": "Sat, 03 Oct 2026 19:25:03 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",
@@ -1452,8 +1453,8 @@
     ]
   },
   "https://zushi-hayama.keizai.biz/rss.xml": {
-    "etag": "\"172d-65ce1bf01b690\"",
-    "modified": "Fri, 02 Oct 2026 20:55:02 GMT",
+    "etag": "\"172d-65cf49b030b7f\"",
+    "modified": "Sat, 03 Oct 2026 19:25:02 GMT",
     "processed": [
       "link:http://zushi-hayama.keizai.biz/headline/1093/",
       "link:http://zushi-hayama.keizai.biz/headline/1094/",
@@ -1468,7 +1469,6 @@
     ]
   },
   "posted_source_titles": [
-    "\uff19\u57fa\u306e\u4eba\u5f62\u5c71\u8eca \u52e2\u305e\u308d\u3044 \u7687\u5927\u795e\u5bae\u3067\u4f8b\u5927\u796d\u658e\u884c",
     "\u300c\u85e4\u6ca2\u7523\u306e\u85cd\u300d\u4f7f\u3063\u3066\u9152\u9020\u308a \u5730\u57df\u9023\u643a\u3067\u5e74\u5185\u5546\u54c1\u5316\u3078",
     "\u79cb\u8449\u53f0\u516c\u5712\u7403\u6280\u5834 \u4eba\u5de5\u829d\u6539\u4fee\u306b\u30af\u30e9\u30d5\u30a1\u30f3 \u5b89\u5168\u306a\u30d7\u30ec\u30fc\u3078\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u59cb\u52d5",
     "\u85e4\u6ca2\u306e\u5e7c\u7a1a\u5712\u3067\u50cd\u3053\u3046 \u5546\u5de5\u4f1a\u9928\u3067\u5c31\u8077\u30d5\u30a7\u30a2",
@@ -2217,6 +2217,7 @@
     "\u8305\u30f6\u5d0e\u5e02 \u5e02\u767a\u5c55\u306e\u529f\u52b4\u8005\u3092\u8868\u5f70 13\u56e3\u4f53\u306824\u4eba\u304c\u9078\u51fa",
     "\u5927\u4e95\u753a\u3067\u30af\u30e9\u30b7\u30c3\u30af\u3092 \uff2e\u97ff\u30e1\u30f3\u30d0\u30fc\u306b\u3088\u308b\u6f14\u594f\u4f1a",
     "\u6e58\u5357\u30d3\u30e5\u30fc\u30c6\u30a3\u30fc\u30ab\u30ec\u30c3\u30b8 \u4ed5\u4e8b\u3068\u5b66\u696d\u306e\u4e21\u7acb\u7d4c\u3066\u7406\u5bb9\u30fb\u7f8e\u5bb9\u306e\u9053\u3078 \u901a\u4fe1\u8ab2\u7a0b\u306e\u5352\u696d\u5f0f",
-    "\u795e\u5948\u5ddd\u770c\u7acb\u5e73\u585a\u76f2\u5b66\u6821 10\u670831\u65e5\u306b\u6587\u5316\u796d \u5b66\u7fd2\u5c55\u793a\u767a\u8868\u306a\u3069 \u4e8b\u524d\u7533\u3057\u8fbc\u307f\u5236"
+    "\u795e\u5948\u5ddd\u770c\u7acb\u5e73\u585a\u76f2\u5b66\u6821 10\u670831\u65e5\u306b\u6587\u5316\u796d \u5b66\u7fd2\u5c55\u793a\u767a\u8868\u306a\u3069 \u4e8b\u524d\u7533\u3057\u8fbc\u307f\u5236",
+    "\u5c11\u5e74\u306e\u68ee\u3067\u81ea\u7136\u3092\u6e80\u55ab 10\u65e5 \u4f53\u9a13\u30a4\u30d9\u30f3\u30c8"
   ]
 }

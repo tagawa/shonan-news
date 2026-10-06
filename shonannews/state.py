@@ -26,7 +26,10 @@ def get_feed_state(state, feed_url):
 
 
 def is_processed(state, feed_url, key):
-    return key in state.get(feed_url, {}).get("processed", [])
+    processed = state.get(feed_url, {}).get("processed", [])
+    # Link keys stored before identity.normalize_link folded http to https still say http.
+    legacy = key.replace("link:https://", "link:http://", 1)
+    return key in processed or legacy in processed
 
 
 def mark_processed(state, feed_url, key, cap=500):

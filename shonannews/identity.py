@@ -5,7 +5,9 @@ from urllib.parse import urlsplit, urlunsplit
 
 def normalize_link(link):
     parts = urlsplit(link)
-    return urlunsplit((parts.scheme.lower(), parts.netloc.lower(), parts.path, "", ""))
+    # A publisher moving to https must not make every item look new (Keizai, 2026-10-06).
+    scheme = "https" if parts.scheme.lower() == "http" else parts.scheme.lower()
+    return urlunsplit((scheme, parts.netloc.lower(), parts.path, "", ""))
 
 
 # Town News labels a story carried in another town's edition with 〈藤沢市〉, so without

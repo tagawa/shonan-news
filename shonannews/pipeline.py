@@ -72,25 +72,36 @@ def _weekday_month_day(title, description, source_date):
     return fits[0] if len(fits) == 1 else None
 
 
-def _stated_next_year(title, description, month_day):
-    # 来年 written directly before this date. Nearest-year cannot see it: a date more
-    # than about six months ahead is nearer last year's copy (来年４月17日 from 29
-    # September came out 2026-04-17, live 2026-09-29). 来年 elsewhere in the text says
-    # nothing about this date, and 再来年 is two years on. See the backend spec,
-    # "Year derivation".
+def _stated_year(title, description, month_day, source_date):
+    # The year the source writes directly before this date, or None. Nearest-year cannot
+    # see 来年: a date more than about six months ahead is nearer last year's copy
+    # (来年４月17日 from 29 September came out 2026-04-17, live 2026-09-29). Nor a
+    # numbered year (２０２７年10月１日 came out 2026-10-01, live 2026-10-09), and a past
+    # one would show a false "Coming up". A year elsewhere in the text says nothing about
+    # this date, 再来年 is two years on, and 年度 is a fiscal year, never matched because
+    # 度 sits between 年 and the month. See the backend spec, "Year derivation".
     month, day = month_day
     source = unicodedata.normalize("NFKC", f"{title}\n{description}")
-    return bool(re.search(rf"(?<!再)来年\s*の?\s*0?{month}\s*月\s*0?{day}\s*日", source))
+    date_part = rf"年\s*の?\s*0?{month}\s*月\s*0?{day}\s*日"
+    if re.search(rf"(?<!再)来{date_part}", source):
+        return source_date.year + 1
+    found = re.search(rf"(?<!\d)(\d{{4}})\s*{date_part}", source)
+    if found:
+        return int(found.group(1))
+    found = re.search(rf"令和\s*(\d{{1,2}}|元)\s*{date_part}", source)
+    if found:
+        return 2018 + (1 if found.group(1) == "元" else int(found.group(1)))
+    return None
 
 
-def _derive_event_date(month_day, source_date, next_year=False):
+def _derive_event_date(month_day, source_date, year=None):
     # The model's own year is discarded upstream: it was wrong in almost every
     # measured miss. The nearest year to the source date is right instead, and it
     # handles the December-to-January rollover without a special case.
     month, day = month_day
-    if next_year:
+    if year:
         try:
-            return date(source_date.year + 1, month, day)
+            return date(year, month, day)
         except ValueError:
             return None
     candidates = []
@@ -248,7 +259,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
                      or _weekday_month_day(title, description, source_date))
         if month_day and _corroborated_day(title, description, month_day[1]):
             derived = _derive_event_date(month_day, source_date,
-                                         next_year=_stated_next_year(title, description, month_day))
+                                         year=_stated_year(title, description, month_day, source_date))
             event_date = derived.isoformat() if derived else None
 
         source_url = _prefer_https(entry.get("link", ""))

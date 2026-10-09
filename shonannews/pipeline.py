@@ -16,6 +16,9 @@ MAX_ITEMS_PER_RUN = 15
 # Town News category terms for paid placements (advertorials and political opinion ads).
 # Exact match after strip: no other spelling seen in any edition on 2026-09-17.
 AD_TAGS = {"ピックアップ（PR）", "意見広告"}
+# Matched after NFKC. 3日間 is a duration, not a date.
+FULL_DATE = re.compile(r"(?<!\d)(\d{1,2})\s*月\s*(\d{1,2})\s*日(?!間)")
+DAY_WITH_WEEKDAY = re.compile(r"(?<!\d)(\d{1,2})\s*日\s*\(([月火水木金土日])(?:・祝)?\)")
 
 
 def _default_now():
@@ -41,8 +44,32 @@ def _single_source_month_day(title, description):
     # where gpt-5-mini never did. Only one stated date is safe to take: with two, which
     # one is the event is a judgement for the model. See the backend spec, "Event date fallback".
     source = unicodedata.normalize("NFKC", f"{title}\n{description}")
-    found = {(int(m), int(d)) for m, d in re.findall(r"(?<!\d)(\d{1,2})\s*月\s*(\d{1,2})\s*日(?!間)", source)}
+    found = {(int(m), int(d)) for m, d in FULL_DATE.findall(source)}
     return found.pop() if len(found) == 1 else None
+
+
+def _weekday_month_day(title, description, source_date):
+    # The fallback after _single_source_month_day, for 12日（月） with no month: the weekday
+    # fixes the month within a month either side of the source date. Any full date makes the
+    # day-only one a range's end (10月24日（土）・25日（日）), so it is never used then.
+    # See the backend spec, "Event date fallback".
+    source = unicodedata.normalize("NFKC", f"{title}\n{description}")
+    if FULL_DATE.search(source):
+        return None
+    found = {(int(d), weekdays.WEEKDAYS.index(w)) for d, w in DAY_WITH_WEEKDAY.findall(source)}
+    if len(found) != 1:
+        return None
+    day, weekday = found.pop()
+    fits = []
+    for offset in (-1, 0, 1):
+        year, month = divmod(source_date.year * 12 + source_date.month - 1 + offset, 12)
+        try:
+            candidate = date(year, month + 1, day)
+        except ValueError:
+            continue
+        if candidate.weekday() == weekday:
+            fits.append((candidate.month, candidate.day))
+    return fits[0] if len(fits) == 1 else None
 
 
 def _stated_next_year(title, description, month_day):
@@ -217,7 +244,8 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         # Only keep a date the source itself states: the model's input is exactly this
         # title and description, so an uncorroborated day was invented, not read.
         event_date = None
-        month_day = result.event_month_day or _single_source_month_day(title, description)
+        month_day = (result.event_month_day or _single_source_month_day(title, description)
+                     or _weekday_month_day(title, description, source_date))
         if month_day and _corroborated_day(title, description, month_day[1]):
             derived = _derive_event_date(month_day, source_date,
                                          next_year=_stated_next_year(title, description, month_day))

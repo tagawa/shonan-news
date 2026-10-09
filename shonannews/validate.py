@@ -37,7 +37,7 @@ EVENT_DATE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
 
 # The only subjects a post may be labelled with. Anything else the model returns
 # means no label, never a failure. See the backend spec, "Item labels".
-LABELS = ("sport", "safety")
+LABELS = ("sport", "safety", "politics")
 
 # Town News heads its police safety-campaign series with 【STOP！交通事故】 and
 # 【STOP！詐欺被害】, and the model carries the label into the English headline as

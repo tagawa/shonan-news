@@ -57,7 +57,23 @@ NARRATION_JOIN = re.compile(r"(?:;|,? (?:and|but|before|with)) ")
 # "Mt. Fuji" is harmless, since the pieces are rejoined with the same space.
 SENTENCE_BREAK = re.compile(r"(?<=[.!?])\s+(?=[A-Z])")
 
+# Kana and kanji the model left in its English. Shared with scripts/audit_names.py,
+# so the offline audit and the pipeline agree on what counts.
+JAPANESE_RUN = re.compile(r"[぀-ヿ一-鿿]+")
+KANJI_ONLY = re.compile(r"^[一-鿿]+$")
+PUNCTUATION_ONLY = re.compile(r"^[・ー〜]+$")
+
 logger = logging.getLogger("shonannews")
+
+
+def japanese_runs(text):
+    runs = []
+    for run in JAPANESE_RUN.findall(text):
+        # A lone kana is debris from a half-romanised address, not a name worth reading.
+        if run in runs or PUNCTUATION_ONLY.match(run) or (len(run) == 1 and not KANJI_ONLY.match(run)):
+            continue
+        runs.append(run)
+    return runs
 
 
 def _normalize_dashes(text):
@@ -86,7 +102,8 @@ def _drop_cut_off_narration(summary):
 
 
 class ValidationResult:
-    def __init__(self, ok, title=None, summary=None, lede=None, error=None, event_month_day=None, label=None):
+    def __init__(self, ok, title=None, summary=None, lede=None, error=None, event_month_day=None, label=None,
+                 japanese=()):
         self.ok = ok
         self.title = title
         self.summary = summary
@@ -94,6 +111,9 @@ class ValidationResult:
         self.error = error
         self.event_month_day = event_month_day
         self.label = label
+        # Japanese left in the English. Not a failure: the response is usable, and the
+        # pipeline decides what to do. See the backend spec, "Japanese left in".
+        self.japanese = list(japanese)
 
 
 def _ends_complete_sentence(text):
@@ -193,4 +213,5 @@ def validate_response(raw_text, source=""):
         lede=lede,
         event_month_day=_extract_event_month_day(data.get("event_date")),
         label=_extract_label(data.get("label")),
+        japanese=japanese_runs(" ".join((title, lede, summary))),
     )

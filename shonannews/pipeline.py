@@ -230,14 +230,18 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         readings = places.scoped_hints(source, gazetteer, edition)
 
         # One retry on a bad response: the observed failure (a string closed early) is
-        # intermittent per item, so a second identical call often succeeds.
+        # intermittent per item, so a second identical call often succeeds. Japanese left
+        # in the English gets the same retry. See the backend spec, "Japanese left in".
         try:
             result = validate.validate_response(
                 llm.call_llm(create_fn, title, description, date_str, readings=readings), source)
-            if not result.ok:
-                logger.warning("Validation failed for %s: %s; retrying once", key, result.error)
-                result = validate.validate_response(
+            if not result.ok or result.japanese:
+                logger.warning("Validation failed for %s: %s; retrying once", key, result.error or "japanese_left_in")
+                retry = validate.validate_response(
                     llm.call_llm(create_fn, title, description, date_str, readings=readings), source)
+                # A usable first response is only given up for another usable one.
+                if retry.ok or not result.ok:
+                    result = retry
         except llm.LLMCallError as exc:
             logger.warning("LLM call failed for %s: %s", key, exc)
             continue
@@ -246,6 +250,10 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             logger.error("Validation failed for %s: %s", key, result.error)
             state_mod.mark_processed(current_state, feed_url, key)
             continue
+
+        # Published anyway: a stray Japanese word is a smaller defect than a lost story.
+        if result.japanese:
+            logger.warning("Publishing %s with Japanese left in: %s", key, " ".join(result.japanese))
 
         # Puts back a weekday the source states and the model dropped. See the backend spec,
         # "Weekday restoration".

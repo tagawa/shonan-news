@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Para-swimmer Naoe aims for Asia’s top spot; City Support donates activity funds
+title: Para-swimmer Naoi aims for Asia’s top spot; City Support donates activity funds
 date: 2026-10-10 06:19:59 +0900
 source_date: '2026-10-10 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0501/2026/10/10/856784.html

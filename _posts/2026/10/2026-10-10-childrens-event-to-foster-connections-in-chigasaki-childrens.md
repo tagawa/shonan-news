@@ -13,5 +13,5 @@ lede: 'The ''Youth Festival: Children’s Friendship Festival'' will be held on 
 guid: guid:https://www.townnews.co.jp/0603/2026/10/10/856825.html
 ---
 
-Youth development groups in Chigasaki will hold the event together with local government and community members to foster children’s development and promote awareness and交流 among the groups. The event will feature VR experiences and stage performances.
+Youth development groups in Chigasaki will hold the event together with local government and community members to foster children’s development and promote awareness and exchange among the groups. The event will feature VR experiences and stage performances.
 

@@ -7,8 +7,7 @@ source_url: https://www.townnews.co.jp/0602/2026/10/14/857502.html
 source_title: 「第４回モノレールサミット」10月31日に湘南江の島駅で開催
 source_name: タウンニュース（鎌倉）
 event_date: '2026-10-31'
-lede: The Fourth Monorail Summit with Radio Shonan will be held on Saturday, 31 October
-  (Sat), at Shonan-Enoshima Station.
+lede: The Fourth Monorail Summit with Radio Shonan will be held on Saturday, 31 October, at Shonan-Enoshima Station.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/14/857502.html
 ---
 

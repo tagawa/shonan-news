@@ -12,6 +12,8 @@ MONTHS = ("January", "February", "March", "April", "May", "June", "July", "Augus
 # Every 「M月D日」 or bare 「D日」, so a range's second date (「～9日(金)」) inherits the month
 # even when the first date carries no weekday. Digits before 日 keep 「(日)」 from counting.
 SOURCE_DATE = re.compile(r"(?:(\d{1,2})\s*月\s*)?(\d{1,2})\s*日(?:\s*\(([月火水木金土日])(・祝)?\))?")
+# A weekday the model wrote in front of the date itself: "Saturday, 31 October", "Sat. 31 October".
+WEEKDAY_BEFORE = re.compile(r"\b(?:Mon|Tues?|Wed(?:nes)?|Thu(?:rs)?|Fri|Sat(?:ur)?|Sun)(?:day)?\.?,?\s+$")
 
 
 def source_weekdays(source, reference):
@@ -37,8 +39,10 @@ def restore_weekdays(text, source, reference):
     for (month, day), weekday in source_weekdays(source, reference).items():
         name = MONTHS[month - 1]
         matches = list(re.finditer(rf"(?<!\d)(?:{day} {name}|{name} {day})(?!\d)", text))
-        # Twice in one field is left alone, as is a date already followed by a parenthesis.
-        if len(matches) != 1 or re.match(r"\s*\(", text[matches[0].end():]):
+        # Twice in one field is left alone, as is a date that already has a weekday: a
+        # parenthesis after it, or a weekday's name directly before it.
+        if (len(matches) != 1 or re.match(r"\s*\(", text[matches[0].end():])
+                or WEEKDAY_BEFORE.search(text[:matches[0].start()])):
             continue
         end = matches[0].end()
         text = f"{text[:end]} ({weekday}){text[end:]}"

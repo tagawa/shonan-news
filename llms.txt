@@ -12,6 +12,7 @@ Usage preferences are declared in [robots.txt](https://shonannews.com/robots.txt
 
 - [Latest summaries](https://shonannews.com/): the most recent daily run, newest first.
 - [Archive](https://shonannews.com/archive/): every summary so far, by month.
+- [What's on](https://shonannews.com/whats-on/): upcoming events from the summaries, by date.
 - [About](https://shonannews.com/about/): how the pipeline works and what it does not do.
 
 ## Machine-readable

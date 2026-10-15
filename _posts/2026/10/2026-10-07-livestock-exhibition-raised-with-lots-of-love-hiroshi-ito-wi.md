@@ -13,5 +13,5 @@ lede: The 74th Hiratsuka City Livestock Exhibition was held on 29 September at S
 guid: guid:https://www.townnews.co.jp/0605/2026/10/07/856445.html
 ---
 
-The event evaluated dairy cows with superior body types that allow them to produce milk for a long time while remaining healthy. Hosted by the Hiratsuka City Agriculture, Forestry and Fisheries Division, it was held at Sengen Green Space, where Hiroshi Ito achieved his sixth consecutive title.
+The event evaluated dairy cows with superior body types that allow them to produce milk for a long time while remaining healthy. Hosted by the Hiratsuka City Agriculture and Fisheries Division, it was held at Sengen Green Space, where Hiroshi Ito achieved his sixth consecutive title.
 

@@ -41,17 +41,33 @@ def mark_processed(state, feed_url, key, cap=500):
         feed_state["processed"] = processed[-cap:]
 
 
-def is_source_title_posted(state, normalized_title):
-    if not normalized_title:
+def _is_listed(state, list_key, value):
+    if not value:
         return False
-    return normalized_title in state.get("posted_source_titles", [])
+    return value in state.get(list_key, [])
+
+
+def _mark_listed(state, list_key, value, cap):
+    if not value:
+        return
+    values = state.setdefault(list_key, [])
+    if value not in values:
+        values.append(value)
+    if len(values) > cap:
+        state[list_key] = values[-cap:]
+
+
+def is_source_title_posted(state, normalized_title):
+    return _is_listed(state, "posted_source_titles", normalized_title)
 
 
 def mark_source_title_posted(state, normalized_title, cap=750):
-    if not normalized_title:
-        return
-    titles = state.setdefault("posted_source_titles", [])
-    if normalized_title not in titles:
-        titles.append(normalized_title)
-    if len(titles) > cap:
-        state["posted_source_titles"] = titles[-cap:]
+    _mark_listed(state, "posted_source_titles", normalized_title, cap)
+
+
+def is_source_description_posted(state, key):
+    return _is_listed(state, "posted_source_descriptions", key)
+
+
+def mark_source_description_posted(state, key, cap=750):
+    _mark_listed(state, "posted_source_descriptions", key, cap)

@@ -1,5 +1,6 @@
 import hashlib
 import re
+import unicodedata
 from urllib.parse import urlsplit, urlunsplit
 
 
@@ -18,6 +19,13 @@ ANGLE_LABEL = re.compile(r"^\s*〈[^〉]*〉")
 
 def normalize_title(title):
     return " ".join(ANGLE_LABEL.sub("", title).split())
+
+
+# Town News descriptions are a fixed teaser of the body, so a retitled copy of one article
+# in another edition still has the same one. Hashed to keep state.json small.
+def description_key(description):
+    text = " ".join(unicodedata.normalize("NFKC", description).split())
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()[:16] if text else ""
 
 
 def identity_key(entry):

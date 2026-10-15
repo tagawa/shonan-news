@@ -229,6 +229,12 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             clean.strip_feed_boilerplate(clean.strip_html(raw_description)),
             DESCRIPTION_MAX_CHARS,
         )
+        # Catches a retitled copy that title dedup misses. See the backend spec, "Description dedup".
+        description_key = identity.description_key(description)
+        if state_mod.is_source_description_posted(current_state, description_key):
+            logger.info("Skipping %s: source description already posted", key)
+            state_mod.mark_processed(current_state, feed_url, key)
+            continue
 
         run_time = now_fn()
         date_str = run_time.strftime("%Y-%m-%d")
@@ -304,6 +310,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         writer.write_post(path, front_matter, body)
 
         state_mod.mark_source_title_posted(current_state, normalized_title)
+        state_mod.mark_source_description_posted(current_state, description_key)
         state_mod.mark_processed(current_state, feed_url, key)
         new_count += 1
 

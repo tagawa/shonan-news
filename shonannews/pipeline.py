@@ -5,7 +5,7 @@ import unicodedata
 from datetime import date, datetime, timezone
 from zoneinfo import ZoneInfo
 
-from . import clean, fetch, identity, llm, places, state as state_mod, validate, weekdays, writer
+from . import clean, fetch, identity, llm, merge, places, shortlist, state as state_mod, validate, weekdays, writer
 
 logger = logging.getLogger("shonannews")
 
@@ -118,6 +118,17 @@ def _derive_event_date(month_day, source_date, year=None):
     return min(candidates, key=lambda c: (abs((c - source_day).days), -c.toordinal()))
 
 
+def _event_date(result, title, description, source_date):
+    # Only keep a date the source itself states: the model's input is exactly this
+    # title and description, so an uncorroborated day was invented, not read.
+    month_day = (result.event_month_day or _single_source_month_day(title, description)
+                 or _weekday_month_day(title, description, source_date))
+    if not (month_day and _corroborated_day(title, description, month_day[1])):
+        return None
+    derived = _derive_event_date(month_day, source_date, year=_stated_year(title, description, month_day, source_date))
+    return derived.isoformat() if derived else None
+
+
 def _derive_source_date(entry, run_time):
     parsed = entry.get("published_parsed")
     if parsed is None:
@@ -173,6 +184,61 @@ def _extract_thumb(entry):
     return None
 
 
+def _shadow(current_state, posts, new_path, key, title, description, source_name, source_date, date_str, readings,
+            result, event_date, create_fn):
+    # Release 1 of the story merge: decide and record, never write. See the backend spec, "Story merge shadow".
+    base = {"guid": key, "post": new_path.name}
+    try:
+        text = shortlist.post_text(result.title, result.lede, result.summary)
+        # The post just written is excluded before scoring: in the corpus it would skew the IDF.
+        candidates = shortlist.shortlist(text, source_date.date(), [p for p in posts if p.path != new_path])
+        new_event_day = date.fromisoformat(event_date) if event_date else None
+        for score, post in candidates:
+            entry = {**base, "candidate": post.path.name, "score": round(score, 3)}
+            old_event = post.front.get("event_date")
+            old_event_day = date.fromisoformat(str(old_event)[:10]) if old_event else None
+            if merge.blocked_by_event_date(post.source_day, old_event_day, source_date.date(), new_event_day):
+                entry["guard"] = "event_date"
+            elif merge.blocked_by_stated_dates(shortlist.post_text(post.front.get("title", ""), post.front.get("lede"),
+                                                                   post.body), post.source_day, text, source_date.date()):
+                entry["guard"] = "stated_date"
+            elif merge.blocked_by_profile(post.front.get("source_title"), title):
+                entry["guard"] = "profile"
+            else:
+                entry["guard"] = None
+            if entry["guard"]:
+                state_mod.record_merge_shadow(current_state, entry)
+                continue
+            try:
+                judge = lambda: llm.call_judge(create_fn, post.front, post.body, title, description,
+                                               source_date.date(), event_date)
+                verdict = llm.parse_judge(judge())
+                if verdict is None:
+                    verdict = llm.parse_judge(judge())
+            except llm.LLMCallError:
+                state_mod.record_merge_shadow(current_state, {**entry, "judge": "error"})
+                return
+            entry["judge"] = verdict
+            if not verdict:
+                state_mod.record_merge_shadow(current_state, entry)
+                continue
+            try:
+                outcome = merge.merge_into(post, title, description, source_name, source_date, date_str, readings,
+                                           create_fn, _event_date)
+            except llm.LLMCallError:
+                state_mod.record_merge_shadow(current_state, {**entry, "outcome": "merge_error"})
+                return
+            state_mod.record_merge_shadow(current_state, {**entry, "outcome": outcome.kind, "reason": outcome.reason,
+                                                          "missing": outcome.missing, "title": outcome.title,
+                                                          "lede": outcome.lede, "summary": outcome.summary,
+                                                          "event_date": outcome.event_date,
+                                                          "corrections": outcome.corrections})
+            return
+    except Exception as exc:  # the shadow must never cost a post
+        logger.warning("Merge shadow failed for %s: %s", key, exc)
+        state_mod.record_merge_shadow(current_state, {**base, "outcome": "error", "error": repr(exc)})
+
+
 def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_fn=_default_now, towns=()):
     try:
         current_state = state_mod.load_state(state_path)
@@ -203,6 +269,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
     edition = {places.MUNICIPALITIES[town] for town in towns}
 
     new_count = 0
+    posts = None
     # Feeds list newest-first; process oldest-first so the newest item gets the latest timestamp.
     for entry in reversed(parsed.get("entries", [])):
         if new_count >= MAX_ITEMS_PER_RUN:
@@ -277,15 +344,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         result.lede = weekdays.restore_weekdays(result.lede, source, source_date)
         result.summary = weekdays.restore_weekdays(result.summary, source, source_date)
 
-        # Only keep a date the source itself states: the model's input is exactly this
-        # title and description, so an uncorroborated day was invented, not read.
-        event_date = None
-        month_day = (result.event_month_day or _single_source_month_day(title, description)
-                     or _weekday_month_day(title, description, source_date))
-        if month_day and _corroborated_day(title, description, month_day[1]):
-            derived = _derive_event_date(month_day, source_date,
-                                         year=_stated_year(title, description, month_day, source_date))
-            event_date = derived.isoformat() if derived else None
+        event_date = _event_date(result, title, description, source_date)
 
         source_url = _prefer_https(entry.get("link", ""))
         image_url = _extract_image(entry)
@@ -312,6 +371,13 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         state_mod.mark_source_title_posted(current_state, normalized_title)
         state_mod.mark_source_description_posted(current_state, description_key)
         state_mod.mark_processed(current_state, feed_url, key)
+        # Loaded once per feed (the first load includes this post); later items add only their own file.
+        if posts is None:
+            posts = shortlist.load_posts(posts_dir)
+        else:
+            posts += [post for post in [shortlist.load_post(path)] if post]
+        _shadow(current_state, posts, path, key, title, description, source_name, source_date, date_str, readings,
+                result, event_date, create_fn)
         new_count += 1
 
     state_mod.save_state(state_path, current_state)

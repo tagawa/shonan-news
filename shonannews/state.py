@@ -71,3 +71,11 @@ def is_source_description_posted(state, key):
 
 def mark_source_description_posted(state, key, cap=750):
     _mark_listed(state, "posted_source_descriptions", key, cap)
+
+
+def record_merge_shadow(state, entry, cap=200):
+    # Temporary: the story merge shadow's record, read at the morning check. Removed at release 2.
+    entries = state.setdefault("merge_shadow", [])
+    entries.append(entry)
+    if len(entries) > cap:
+        state["merge_shadow"] = entries[-cap:]

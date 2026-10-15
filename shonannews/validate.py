@@ -84,7 +84,7 @@ def _clean(text, source):
     return enforce_canonical(_normalize_dashes(text), source).strip()
 
 
-def _drop_cut_off_narration(summary):
+def drop_cut_off_narration(summary):
     kept = []
     for sentence in SENTENCE_BREAK.split(summary):
         cut = CUT_OFF.search(sentence)
@@ -177,7 +177,7 @@ def validate_response(raw_text, source=""):
         return ValidationResult(ok=False, error="summary_too_long")
 
     title = _clean(title, source)
-    summary = _drop_cut_off_narration(_clean(summary, source))
+    summary = drop_cut_off_narration(_clean(summary, source))
 
     # Narration was all there was; the retry may get a summary with content.
     if not summary:

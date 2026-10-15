@@ -395,6 +395,12 @@ h1.site-title {
   margin-bottom: var(--space-2);
 }
 
+/* A feed's own small thumbnail (72px on blogspot) shows at its natural size:
+   stretched to 6rem it would blur. */
+.item-thumb-small {
+  width: auto;
+}
+
 /* Keeps a tall thumbnail inside its own item. Block, not table: an empty
    block lets the lede's bottom margin collapse through it when nothing is
    floated, so items without a thumbnail do not move. */

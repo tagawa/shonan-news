@@ -1,0 +1,40 @@
+{% comment %}One month: a Monday-first grid, then its event days from today, each a heading and a list of titles. include.month_start is the epoch of the 1st at 00:00 JST; include.events is that month's admitted posts, or nil.{% endcomment %}
+{% assign month = include.month_start | date: "%Y-%m" %}
+{% assign no_events = "" | split: "" %}
+{% assign month_events = include.events | default: no_events %}
+{% assign days = month_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}
+<section class="calendar-month" id="{{ month }}">
+  <h2>{{ include.month_start | date: "%B %Y" }}</h2>
+  {% comment %}Monday first: %u is 1 for Monday. Hidden words sit between the visible ones, so a link reads "18 October, 11 events" and still contains its visible text, in order (WCAG 2.5.3).{% endcomment %}
+  {% assign lead = include.month_start | date: "%u" | minus: 1 %}
+  {% assign column = lead %}
+  <table class="calendar">
+    <thead><tr><th scope="col"><abbr title="Monday">Mon</abbr></th><th scope="col"><abbr title="Tuesday">Tue</abbr></th><th scope="col"><abbr title="Wednesday">Wed</abbr></th><th scope="col"><abbr title="Thursday">Thu</abbr></th><th scope="col"><abbr title="Friday">Fri</abbr></th><th scope="col"><abbr title="Saturday">Sat</abbr></th><th scope="col"><abbr title="Sunday">Sun</abbr></th></tr></thead>
+    <tbody>
+      <tr>{% for blank in (1..lead) %}<td></td>{% endfor %}
+      {%- for offset in (0..30) -%}
+        {%- assign day_epoch = offset | times: 86400 | plus: include.month_start -%}
+        {%- assign day = day_epoch | date: "%Y-%m-%d" -%}
+        {%- assign day_month = day | slice: 0, 7 -%}
+        {%- if day_month != month %}{% break %}{% endif -%}
+        {%- if column == 7 %}</tr>
+      <tr>{% assign column = 0 %}{% endif -%}
+        {%- assign day_group = days | where: "name", day | first -%}
+        {%- capture cell -%}<span class="calendar-date">{{ day_epoch | date: "%-d" }}</span><span class="visually-hidden"> {{ day_epoch | date: "%B" }}{% if day == whats_on_today %}, today{% endif %}{% if day_group %},{% endif %}</span>{% if day_group %} <span class="calendar-count">{{ day_group.items.size }}<span class="visually-hidden"> {% if day_group.items.size == 1 %}event{% else %}events{% endif %}</span></span>{% endif %}{%- endcapture -%}
+        <td{% if day == whats_on_today %} class="calendar-today" aria-current="date"{% elsif day < whats_on_today %} class="calendar-past"{% endif %}>{% if day_group %}<a href="#{{ day }}">{{ cell }}</a>{% else %}{{ cell }}{% endif %}</td>
+        {%- assign column = column | plus: 1 -%}
+      {%- endfor -%}
+      {%- for blank in (column..6) %}<td></td>{% endfor %}</tr>
+    </tbody>
+  </table>
+  {% for day_group in days %}
+  <section class="day-group">
+    <h3 class="day-heading" id="{{ day_group.name }}"><time datetime="{{ day_group.name }}">{% if day_group.name == whats_on_today %}Today, {% endif %}{{ day_group.name | date: "%A %-d %B" }}</time></h3>
+    {% comment %}By date, which every post has: a missing source_date would break sort.{% endcomment %}
+    {% assign day_posts = day_group.items | sort: "date" | reverse %}
+    <ul class="archive-list">
+      {% for post in day_posts %}<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</section>

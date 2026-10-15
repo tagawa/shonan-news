@@ -1,0 +1,8 @@
+{% comment %}
+The calendar's admission rule, kept here and nowhere else. A post is an upcoming event when its
+event_date is strictly after the day it was published, so reports written after the fact stay off,
+and on or after the build's day. Both days are in Asia/Tokyo: `date` formats in the zone _config.yml
+sets. `| date` also normalises an event_date YAML parsed as a Date. See the frontend spec, "What's on".
+Sets whats_on_events (unsorted: sorting on event_date raises when YAML gave one post a Date and
+another a string, so callers group on the normalised day and sort the group names) and whats_on_today.
+{% endcomment %}{% assign whats_on_today = site.time | date: "%Y-%m-%d" %}{% assign whats_on_events = "" | split: "" %}{% for post in site.posts %}{% if post.event_date %}{% assign event_day = post.event_date | date: "%Y-%m-%d" %}{% assign published_day = post.source_date | default: post.date | date: "%Y-%m-%d" %}{% if event_day > published_day and event_day >= whats_on_today %}{% assign whats_on_events = whats_on_events | push: post %}{% endif %}{% endif %}{% endfor %}

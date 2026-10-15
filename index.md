@@ -29,6 +29,7 @@ the homepage, then shown under source-date headings as before. Everything else i
       <article class="item">
         {% include item-labels.html event_date=post.event_date label=post.label %}
         <h3 class="item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.image_url %}<img class="item-thumb" src="{{ post.image_url | escape }}" alt="" loading="lazy">{% endif %}
         {% include japanese-title.html text=post.source_title url=post.source_url %}
         <p class="item-lede">{{ post.lede | default: post.excerpt | strip_html }}</p>
       </article>

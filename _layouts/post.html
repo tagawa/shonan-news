@@ -8,7 +8,7 @@ layout: default
   {% assign item_date = page.source_date | default: page.date %}
   {% include meta-line.html date=item_date %}
   {% if page.image_url %}
-    <img class="item-image" src="{{ page.image_url }}" alt="">
+    <img class="item-image" src="{{ page.image_url | escape }}" alt="">
   {% endif %}
   <div class="item-body">
     {{ content }}

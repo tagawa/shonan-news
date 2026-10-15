@@ -312,6 +312,28 @@ h1.site-title {
   }
 }
 
+/* Index thumbnail: uncropped at a fixed width, since a crop would cut flyer
+   text and object-fit is above the baseline. The cap stops 6rem taking the
+   text column when the reader enlarges text on a narrow screen. */
+.item-thumb {
+  float: right;
+  width: 6rem;
+  max-width: 33%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-left: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+/* Keeps a tall thumbnail inside its own item. Block, not table: an empty
+   block lets the lede's bottom margin collapse through it when nothing is
+   floated, so items without a thumbnail do not move. */
+.day-group .item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .item-lede,
 .item-body {
   font-size: 1.125rem;

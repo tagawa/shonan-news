@@ -244,6 +244,74 @@ h1.site-title {
   margin-bottom: var(--space-2);
 }
 
+/* What's on. Text stays at 1rem: the site never shrinks text. `separate`, because
+   the collapsed model ignores border-radius on cells. */
+.calendar {
+  width: 100%;
+  max-width: 28rem;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: var(--space-4);
+}
+
+.calendar th {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding-bottom: var(--space-1);
+}
+
+.calendar abbr {
+  text-decoration: none;
+  border-bottom-width: 0;
+}
+
+/* Every cell carries a transparent border, so today's visible one changes no
+   row's height. The height is the measured two-line (date and count) cell. */
+.calendar td {
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  height: 48px;
+  padding: 0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.calendar-date,
+.calendar-count {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.calendar td a {
+  display: block;
+}
+
+.calendar .calendar-past {
+  color: var(--muted);
+}
+
+/* Two classes, to outrank `.calendar td`'s transparent border. */
+.calendar .calendar-today {
+  border-color: var(--ink);
+  border-radius: var(--radius);
+}
+
+/* Clip pattern rather than clip-path, which is above the baseline. nowrap stops
+   the words wrapping in the 1px box, which some screen readers then run together. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 /* Tracking relieves the density of the condensed face without changing the
    glyphs: at 1.5rem and forty items to a page, the face reads as squashed set
    solid. Not applied to the wordmark or the day heading, which already carry

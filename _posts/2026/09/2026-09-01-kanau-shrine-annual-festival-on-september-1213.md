@@ -6,6 +6,7 @@ source_date: '2026-09-01 00:09:00 +0900'
 source_url: https://shonanevent.blogspot.com/2026/09/91213.html
 source_title: 【9月12日（土）・13日（日）】叶神社 例大祭
 source_name: 湘南・横須賀イベント＆ニュース
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrcHfUxNMiEy8BxdnqdpkY0YJuy4PzPyszIBugtWVe2kF_lSOAZ2JtK7fvxp6iuXCPdumKk3ReQZEnf__y96EiAVGP5DmZSI_gkALkqiIE3DiDSotFAi0D54b1Cw1xGYU32TvXzVbN6foOy4sAgVBXqMHidpCi4pygwEVZsOEXXrBku9KfqcQ1zhyGvs4/s72-c/web_info202609_08.png
 lede: Kanau Shrine’s lively annual festival will take place on September 12 and 13
   in Uraga at the West and East Kanau Shrines.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-6641094663347272976

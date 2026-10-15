@@ -6,6 +6,7 @@ source_date: '2026-09-01 00:13:00 +0900'
 source_url: https://shonanevent.blogspot.com/2026/09/96_01931427274.html
 source_title: 【9月6日（日）】ほのぼのビーチ茅ヶ崎クリーンアップ
 source_name: 湘南・横須賀イベント＆ニュース
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVVB2CLYXVIEiCQ6dHAjL6JFfXVUHYrqK19-0PKluFkhnOYV7vMCuwUDGBHGSxEE6X-gExr6jzCxMWE2lu7s0L4dH5-15cA3DKfrK8ArAXlG8yf0DuQruIALECRExPj77o95U3Q2KGcIo6yrEwh_xbEKtplI2jP-pXY_HDy1AaGn2ZBREZmJJtByJBL-M/s72-c/web_info202609_04.png
 lede: A community beach cleanup organized by Honobono Beach Chigasaki will be held
   on September 6 from 9:00 to 10:00 at Chigasaki Headland Beach.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-1559545502647922227

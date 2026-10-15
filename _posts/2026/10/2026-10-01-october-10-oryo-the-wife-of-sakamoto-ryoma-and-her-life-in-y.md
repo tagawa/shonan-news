@@ -7,6 +7,7 @@ source_url: https://shonanevent.blogspot.com/2026/10/1010_0334856862.html
 source_title: 【10月10日（土）】坂本龍馬の妻お龍と横須賀での暮らし
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-10-10'
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz3tN3TyxJiSQkH7pWs30DfbLP9onzXPao1Sz26PCyCOQ9Iu2ONHMuai0pn7M8GGakt8jNPwGr2CCUIu_YdnI7QsNO2J_tUbx_hpTgS7d9pk0BfXUhMV_8G6buqXv35GcloehqiLJweCrLgSLbhQSl7YK77JY7taxmJMLSj4d_NLXy9ENfviTX2C1XF-U/s72-c/web_info202610_13.png
 lede: A guided tour of places connected to Oryo will run on 10 October (Sat) in Yokosuka,
   beginning at Keikyu Otsu Station’s Oryo Park and ending at Yokosuka-Chuo Station.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-350918302931671700

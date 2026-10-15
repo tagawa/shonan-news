@@ -7,6 +7,7 @@ source_url: https://shonanevent.blogspot.com/2026/10/10102026.html
 source_title: 【10月10日（土）】うわまつり2026
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-10-10'
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6RCQiotACjMjBp-EIfxQF5cmfPVhrtAfqDMb2a1cXtRBgiT69b3dUbLR8dch6jX_acFLX87_4qD-iFs3eF0WRUUcWzK6F76-kWd6Uk9nDzdtjCkKKO4Y3ClOB4eAzK-fclTgRfgp9o2dLDlgM8EpGCWwKXt5iCQVsc5s3R7_CBwbrtYsn5gYRlPUhI7U/s72-c/web_info202610_14.png
 lede: Uwamatsuri 2026 will take place on 10 October (Sat) throughout the Uwamatsuri
   shopping district in Yokosuka’s Uwamachi area.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-1391217255113662433

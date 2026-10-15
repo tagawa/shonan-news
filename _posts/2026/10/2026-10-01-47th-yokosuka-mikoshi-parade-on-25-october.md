@@ -7,6 +7,7 @@ source_url: https://shonanevent.blogspot.com/2026/10/102547.html
 source_title: 【10月25日（日）】第47回 よこすかみこしパレード
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-10-25'
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjx6Tdw8txPFSbtXr6njwBb289QD_fhvuPrlbMmQ3TevsatVR0q2cV_KJg95C7oSRNRVDRvrYbvBZaRKopNY0ChcWtXQBaibq17VyKttWjk6rpN337Wim2F2IXynqCAmznv6FbdtwG5jlzkVQoVzT_WvsSv5Fymw1dbbqroBsMNyvuWHdJ9eD1mQRaIFfM/s72-c/web_info202610_04.png
 lede: The 47th Yokosuka Mikoshi Parade will be held on 25 October along Yokosuka Chuo
   Odori and at the parking lot of the Kyushu-bound ferry terminal.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-3411472598754890098

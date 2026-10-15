@@ -6,6 +6,7 @@ source_date: '2026-09-01 00:16:00 +0900'
 source_url: https://shonanevent.blogspot.com/2026/09/952.html
 source_title: 【9月5日（土）】第2回 鴨居みなとまつり花火大会
 source_name: 湘南・横須賀イベント＆ニュース
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4OB9SuvMvRaQSd5yLPBbCU-oEk-DldL9YtrMFhYbKwjnvXP9n4wqxGm3ob3WOl-RdUchJyGTjRAq1CRxKgVE-07l9KiSKiLrZuReDB1MM2G2Cc4Mp0hgaJGa-LGG-2Aj4bgC6k6Et_TFCvcsqlAoYq3pMj-4AdYJqToQGRcr4x4k60onN6ybH2QpW2q8/s72-c/web_info202609_01.png
 lede: A community-led fireworks display was held on September 5 at Kamoi Port beach
   in Yokosuka.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-1331250468585370732

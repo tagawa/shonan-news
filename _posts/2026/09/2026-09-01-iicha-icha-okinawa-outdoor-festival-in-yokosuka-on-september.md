@@ -6,6 +6,7 @@ source_date: '2026-09-01 00:15:00 +0900'
 source_url: https://shonanevent.blogspot.com/2026/09/956.html
 source_title: 【9月5日（土）・6日（日）】いーちゃ・イチャ フェスティバル
 source_name: 湘南・横須賀イベント＆ニュース
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaCSJGcfk4hur_vy4ecIc3uDZookvUrUcIXdXV1uXYXTpZghTJsOLZYEYRHTg_72MyK2tUxPhnVceFzHA-vN1tP0cebdg6yppyduZlit-uYKEKtHrTb-UoykLkDQNz2_wgX0SIyzLap-O0vXl8wroEa8cOeoPb2ReGmDYWqNkTW5e_LSY6i46rkJZ8p3Y/s72-c/web_info202609_02.png
 lede: An Okinawa-themed outdoor festival will be held in Yokosuka on September 5 and
   6, featuring food stalls, Eisa dance, sanshin music, and a U.S. Navy band.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-9033060106159315741

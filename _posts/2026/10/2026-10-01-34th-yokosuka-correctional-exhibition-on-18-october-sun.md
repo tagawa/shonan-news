@@ -7,6 +7,7 @@ source_url: https://shonanevent.blogspot.com/2026/10/101834.html
 source_title: 【10月18日（日）】第34回 横須賀矯正展
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-10-18'
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjR-uyTqKGt9qaRv1sWCuuPWSC8F7v2Hm39Z0iz7xbX28I04_xadA-vAsYy0U5SiWJsbYQx9_2xi2plqoBFDEA1DHQmfnBbpcbD3811O36K-3Y4niBi92pFPeyJzmG2LbK62Fk0Z0IcbHlEchr_x0kk-6skJbP2AiigyX4YPUVEk-ktNeQlR0nPHRxqCLc/s72-c/web_info202610_09.png
 lede: The 34th Yokosuka Correctional Exhibition will be held on 18 October (Sun) at
   the Yokosuka Prison Branch in Yokosuka.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-28162589419780982

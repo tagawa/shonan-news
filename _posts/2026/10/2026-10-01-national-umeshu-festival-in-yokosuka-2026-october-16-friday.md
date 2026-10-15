@@ -7,6 +7,7 @@ source_url: https://shonanevent.blogspot.com/2026/10/101618in2026.html
 source_title: 【10月16日（金）～18日（日）】全国梅酒まつりin横須賀2026
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-10-16'
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEDp4aDuJFBxoWvPD5jWPcm9goy8YsFP93Ifw1bWaWUHiiLVRRpZDSyKa9udj9M_pVUDdNNWxxxlXx5ZxNgITTXblGSdiUbq6o27xk-PWu20rjdA2nD80aP_iLNCL3udNDaFrncCOx6-sQVkBX2PbqNLfjzuMfpvp-VqyQGxLUjWR201PHgGtP_mEKUes/s72-c/web_info202610_10.png
 lede: The National Umeshu Festival in Yokosuka will run from 16 October (Friday) to
   18 October (Sunday) at Verny Park in Yokosuka.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-7068210531243543080

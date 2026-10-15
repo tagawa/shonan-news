@@ -6,6 +6,7 @@ source_date: '2026-10-01 00:05:00 +0900'
 source_url: https://shonanevent.blogspot.com/2026/10/1024111sea.html
 source_title: 【10月24日（土）～11月1日（日）】チェルSeaみうらフェスティバル
 source_name: 湘南・横須賀イベント＆ニュース
+thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUH2gpXKc_xfqg5E77l-cNvKCOoUh1eOU77pWUOpamh5gmd581mFGe3D8w3LEngtRVixshOqJw-c9ho6OrjD4ywMLDUfISVIzyO5ExEBBI3oqtKy51aVUTjM6IGfJ1rt_RPUP8ztiGyIk5QW1CaeBcgZjhinxwdhm4e-FWfjSbXizYlrCW5P4iQaoaP4M/s72-c/web_info202610_06.png
 lede: The ChelSea Miura Festival will run from 24 October (Sat) to 1 November (Sun)
   at the ChelSea Miura building in Miura.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-1176891577611584504

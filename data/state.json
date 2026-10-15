@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1cce-65ddfad137706\"",
-    "modified": "Thu, 15 Oct 2026 11:52:03 GMT",
+    "etag": "\"1cce-65de018699a97\"",
+    "modified": "Thu, 15 Oct 2026 12:22:03 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -17,8 +17,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1b31-65ddfb7d70859\"",
-    "modified": "Thu, 15 Oct 2026 11:55:03 GMT",
+    "etag": "\"1b31-65de023165116\"",
+    "modified": "Thu, 15 Oct 2026 12:25:02 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -1685,8 +1685,8 @@
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"1bf8-65ddfb7d6e6ac\"",
-    "modified": "Thu, 15 Oct 2026 11:55:03 GMT",
+    "etag": "\"1bf8-65de0231baf28\"",
+    "modified": "Thu, 15 Oct 2026 12:25:03 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",
@@ -1712,8 +1712,8 @@
     ]
   },
   "https://zushi-hayama.keizai.biz/rss.xml": {
-    "etag": "\"1b70-65ddfb7d35e4e\"",
-    "modified": "Thu, 15 Oct 2026 11:55:03 GMT",
+    "etag": "\"1b70-65de02322c4b9\"",
+    "modified": "Thu, 15 Oct 2026 12:25:03 GMT",
     "processed": [
       "link:http://zushi-hayama.keizai.biz/headline/1093/",
       "link:http://zushi-hayama.keizai.biz/headline/1094/",

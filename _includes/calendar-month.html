@@ -5,7 +5,7 @@
 {% assign days = month_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}
 <section class="calendar-month" id="{{ month }}">
   <h2>{{ include.month_start | date: "%B %Y" }}</h2>
-  {% comment %}Monday first: %u is 1 for Monday. Hidden words sit between the visible ones, so a link reads "18 October, 11 events" and still contains its visible text, in order (WCAG 2.5.3).{% endcomment %}
+  {% comment %}Monday first: %u is 1 for Monday. The count is spoken, not shown: a visible count under the date read as a fraction, and the list below gives it. A link reads "18 October, 11 events" and still starts with its visible text (WCAG 2.5.3).{% endcomment %}
   {% assign lead = include.month_start | date: "%u" | minus: 1 %}
   {% assign column = lead %}
   <table class="calendar">
@@ -20,7 +20,7 @@
         {%- if column == 7 %}</tr>
       <tr>{% assign column = 0 %}{% endif -%}
         {%- assign day_group = days | where: "name", day | first -%}
-        {%- capture cell -%}<span class="calendar-date">{{ day_epoch | date: "%-d" }}</span><span class="visually-hidden"> {{ day_epoch | date: "%B" }}{% if day == whats_on_today %}, today{% endif %}{% if day_group %},{% endif %}</span>{% if day_group %} <span class="calendar-count">{{ day_group.items.size }}<span class="visually-hidden"> {% if day_group.items.size == 1 %}event{% else %}events{% endif %}</span></span>{% endif %}{%- endcapture -%}
+        {%- capture cell -%}<span class="calendar-date">{{ day_epoch | date: "%-d" }}</span><span class="visually-hidden"> {{ day_epoch | date: "%B" }}{% if day == whats_on_today %}, today{% endif %}{% if day_group %}, {{ day_group.items.size }} {% if day_group.items.size == 1 %}event{% else %}events{% endif %}{% endif %}</span>{%- endcapture -%}
         <td{% if day == whats_on_today %} class="calendar-today" aria-current="date"{% elsif day < whats_on_today %} class="calendar-past"{% endif %}>{% if day_group %}<a href="#{{ day }}">{{ cell }}</a>{% else %}{{ cell }}{% endif %}</td>
         {%- assign column = column | plus: 1 -%}
       {%- endfor -%}

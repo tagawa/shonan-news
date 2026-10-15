@@ -268,7 +268,7 @@ h1.site-title {
 }
 
 /* Every cell carries a transparent border, so today's visible one changes no
-   row's height. The height is the measured two-line (date and count) cell. */
+   row's height. */
 .calendar td {
   font-size: 1rem;
   text-align: center;
@@ -280,15 +280,17 @@ h1.site-title {
   border-color: transparent;
 }
 
-.calendar-date,
-.calendar-count {
-  display: block;
+.calendar-date {
   font-size: 1rem;
-  line-height: 1.25;
 }
 
+/* The cell inside its two 2px borders, so a tap anywhere in it lands. Bold plus
+   the underline marks a day with events, never colour alone. */
 .calendar td a {
   display: block;
+  height: 44px;
+  line-height: 44px;
+  font-weight: 700;
 }
 
 .calendar .calendar-past {

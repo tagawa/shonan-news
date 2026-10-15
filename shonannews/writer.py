@@ -37,7 +37,7 @@ def build_filename(date_str, slug, posts_dir, identity_key):
 
 
 def build_front_matter(title, date, source_date, source_url, source_title, source_name, lede, guid,
-                        image_url=None, event_date=None, label=None):
+                        image_url=None, event_date=None, label=None, thumb_url=None):
     head = {"layout": "post", "title": title, "date": date}
     tail = {
         "source_url": source_url,
@@ -54,6 +54,8 @@ def build_front_matter(title, date, source_date, source_url, source_title, sourc
         tail["label"] = label
     if image_url:
         tail["image_url"] = image_url
+    if thumb_url:
+        tail["thumb_url"] = thumb_url
     tail["lede"] = lede
     tail["guid"] = guid
     dump_kwargs = dict(sort_keys=False, allow_unicode=True, default_flow_style=False)

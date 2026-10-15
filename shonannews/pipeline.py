@@ -162,6 +162,17 @@ def _extract_image(entry):
     return None
 
 
+def _extract_thumb(entry):
+    # The feed's own small thumbnail (blogspot's 72px crop), for the index only:
+    # too small for the permalink image or a link preview, so it never becomes image_url.
+    thumbnails = entry.get("media_thumbnail")
+    if thumbnails:
+        url = thumbnails[0].get("url")
+        if url and url.startswith("https://"):
+            return url
+    return None
+
+
 def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_fn=_default_now, towns=()):
     try:
         current_state = state_mod.load_state(state_path)
@@ -272,6 +283,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
 
         source_url = _prefer_https(entry.get("link", ""))
         image_url = _extract_image(entry)
+        thumb_url = None if image_url else _extract_thumb(entry)
         slug = writer.slugify(result.title, key)
         path = writer.build_filename(date_str, slug, posts_dir, key)
         front_matter = writer.build_front_matter(
@@ -284,6 +296,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             lede=result.lede,
             guid=key,
             image_url=image_url,
+            thumb_url=thumb_url,
             event_date=event_date,
             label=result.label,
         )

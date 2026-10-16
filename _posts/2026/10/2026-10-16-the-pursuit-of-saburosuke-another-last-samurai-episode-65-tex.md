@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'The Pursuit of Sanrosuke: Another Last Samurai, Episode 65, Text and Photographs
+title: 'The Pursuit of Saburōsuke: Another Last Samurai, Episode 65, Text and Photographs
   by Hiroaki Fujino'
 date: 2026-10-16 01:10:22 +0900
 source_date: '2026-10-16 00:00:00 +0900'

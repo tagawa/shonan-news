@@ -27,6 +27,18 @@ TRAILING_ELLIPSIS = re.compile(r"(?:\.{2,}|…)['\"’”)]*$")
 # and becomes a comma, absorbing the space around it so none is left doubled.
 EN_DASH_COMPOUND = re.compile(r"(?<=[0-9A-Za-z])\u2013(?=[0-9A-Za-z])")
 PARENTHETICAL_DASH = re.compile(r"\s*(?:\u2014|\u2013|--)\s*")
+# A dash just before a closing quote or bracket is dropped, not turned into a comma, or a
+# subtitle set off by dashes comes out "'HEAT, Painting, '" (2026-10-16). A straight quote
+# counts as closing only when no letter follows it, since a dash before 'Breathing Garden'
+# opens one.
+CLOSING_DASH = re.compile(r"\s*(?:\u2014|\u2013|--)\s*(?=[\u2019\u201d)\]]|['\"](?!\w))")
+
+# Plain Hepburn, owner decision 2026-10-12; 5 macrons still slipped through on 2026-10-16.
+# Only o and u, the long vowels Hepburn marks, and only in a word with no other accented
+# letter, so "Maori" and a Lithuanian surname in a live post keep theirs. Folded before
+# canonical names, which put back the one exception, Saburosuke's.
+LONG_VOWEL = str.maketrans("\u014d\u016b\u014c\u016a", "ouOU")
+ACCENTED_WORD = re.compile(r"\w*[^\W\d_A-Za-z]\w*")
 
 # Only the month and day survive; the model's own year is discarded because it was
 # wrong in almost every measured miss (2020 for a 2026 event), and source_date gives
@@ -77,11 +89,20 @@ def japanese_runs(text):
 
 
 def _normalize_dashes(text):
-    return PARENTHETICAL_DASH.sub(", ", EN_DASH_COMPOUND.sub("-", text))
+    return PARENTHETICAL_DASH.sub(", ", CLOSING_DASH.sub("", EN_DASH_COMPOUND.sub("-", text)))
+
+
+def _fold_long_vowels(text):
+    def fold(match):
+        word = match.group(0)
+        folded = word.translate(LONG_VOWEL)
+        return folded if folded.isascii() else word
+
+    return ACCENTED_WORD.sub(fold, text)
 
 
 def _clean(text, source):
-    return enforce_canonical(_normalize_dashes(text), source).strip()
+    return enforce_canonical(_fold_long_vowels(_normalize_dashes(text)), source).strip()
 
 
 def drop_cut_off_narration(summary):

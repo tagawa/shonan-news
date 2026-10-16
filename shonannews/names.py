@@ -51,8 +51,9 @@ def enforce_canonical(text, source, table=CANONICAL):
 
         def fix(match):
             token = match.group(0).replace("-", "")
-            # Stricter than the audit's shortlist threshold, since this rewrites without review.
-            same_name = normalize(token) == normalize(expected) or is_near_miss(token, expected, 3, 0.8)
+            # Stricter ratio than the audit's shortlist, since this rewrites without review. The
+            # prefix was 3 until "Sanrosuke" (2026-10-16); at 2 it changed no other live post.
+            same_name = normalize(token) == normalize(expected) or is_near_miss(token, expected, 2, 0.8)
             return expected if same_name else match.group(0)
 
         text = NAME_TOKEN.sub(fix, text)

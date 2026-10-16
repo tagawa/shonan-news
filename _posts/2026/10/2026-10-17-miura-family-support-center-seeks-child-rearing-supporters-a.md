@@ -14,5 +14,5 @@ lede: A three-day training session for people interested in supporting local chi
 guid: guid:https://www.townnews.co.jp/0501/2026/10/17/858090.html
 ---
 
-Miura Family Support Center, known as Famisapo, will hold the session for people who want to support child-rearing in their community from 18 November (Wed) to 20 November (Fri). The venue information is cut off in the source.
+Miura Family Support Center, known as Famisapo, will hold the session for people who want to support child-rearing in their community from 18 November (Wed) to 20 November (Fri).
 

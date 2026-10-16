@@ -18,25 +18,20 @@
   --measure: 40rem;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
     "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  /* No webfont: a condensed face is picked from what the OS already has, and
-     falls back to the normal-width system sans, which loses flavour but not
-     function. The CJK faces match --font-sans so a stray Japanese glyph inside
-     an English headline falls back somewhere chosen rather than anywhere. */
-  --font-condensed: "Arial Narrow", "Helvetica Neue Condensed",
-    "Liberation Sans Narrow", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,
-    sans-serif;
 
-  --bg: #edf3f8;
-  /* where the page background's fade ends; see body */
-  --bg-end: #ffffff;
-  /* the disclosure box: on the white page bottom a near-white fill would vanish */
-  --surface: #edf3f8;
-  --ink: #0f172a;
-  --body: #2b3a4f;
-  --muted: #4a5a70;
-  --rule: #6b89ab;
-  --link: #1d4ed8;
-  --link-hover: #1e3a8a;
+  --bg: #ffffff;
+  --surface: #eef4fa;
+  /* decorative only: the line under the header */
+  --border: #e2e6eb;
+  --ink: #1d2633;
+  --body: #1d2633;
+  --muted: #4a5568;
+  /* structural, so 3:1 or better: the day heading's line carries the grouping */
+  --rule: #7b8a9e;
+  --link: #1c5d99;
+  --link-hover: #123e66;
+  /* graphics only (nav bar, focus ring): 3.6:1 is too low for small text */
+  --accent: #e8590c;
 }
 
 /* browsers below the baseline skip this and keep the light scheme above.
@@ -44,16 +39,16 @@
    both modes read as the same publication. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f172a;
-    /* equal to --bg, so dark mode stays solid navy */
-    --bg-end: #0f172a;
-    --surface: #1a2438;
+    --bg: #141b24;
+    --surface: #1d2633;
+    --border: #2c3646;
     --ink: #f1f5f9;
     --body: #d7dfea;
     --muted: #a9b6c8;
-    --rule: #5d7aa0;
-    --link: #93c5fd;
-    --link-hover: #c6e0fe;
+    --rule: #5f6f85;
+    --link: #8cbcec;
+    --link-hover: #c4ddf5;
+    --accent: #f0782f;
   }
 }
 
@@ -73,23 +68,15 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   line-height: 1.6;
-  /* --bg at the top fading to --bg-end half a screen below the fold, then solid.
-     The colour is also the fallback for a browser that drops the gradient. */
-  background-color: var(--bg-end);
-  background-image: linear-gradient(var(--bg), var(--bg-end));
-  background-repeat: no-repeat;
-  background-size: 100% 150vh;
+  background-color: var(--bg);
   color: var(--body);
 }
 
 /* The archive, archive-month, about and 404 pages carry bare headings with no
-   class of their own, so the condensed face is set on the elements. The classed
-   headings below (.site-title, .day-heading, .item-title) all override this by
-   specificity, so order here does not matter. */
+   class of their own. The classed headings below override this by specificity. */
 h1,
 h2,
 h3 {
-  font-family: var(--font-condensed);
   line-height: 1.2;
   color: var(--ink);
 }
@@ -102,10 +89,10 @@ a {
 /* :focus, not :focus-visible, which is above the baseline. Never removed. */
 a:focus,
 button:focus {
-  outline-width: 2px;
+  outline-width: 3px;
   outline-style: solid;
-  outline-color: var(--link-hover);
-  outline-offset: 2px;
+  outline-color: var(--accent);
+  outline-offset: 4px;
 }
 
 .skip-link {
@@ -126,7 +113,7 @@ button:focus {
   top: var(--space-2);
 }
 
-.site-header,
+.site-header-inner,
 .breadcrumbs,
 .site-main,
 .site-footer {
@@ -138,40 +125,125 @@ button:focus {
   padding-right: var(--space-3);
 }
 
+/* Full width so its bottom line runs edge to edge; the inner box holds the
+   content to --measure like everything below it. */
 .site-header {
-  padding-top: var(--space-4);
-  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--border);
 }
 
+.site-header-inner {
+  padding-top: var(--space-4);
+}
+
+/* Icon, name and tagline are one link home. Margins, never gap. */
+.site-brand {
+  display: flex;
+  align-items: center;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* rem, so the icon follows the reader's font size; flex: none stops a long
+   tagline squeezing it on a narrow screen. */
+.site-icon {
+  flex: none;
+  width: 3rem;
+  height: 3rem;
+  margin-right: var(--space-3);
+}
+
+/* The same size as an h1 on the index and a p elsewhere, so the header never
+   moves between pages. */
 .site-title {
-  font-family: var(--font-condensed);
   font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 1.1;
-  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin: 0;
   color: var(--ink);
 }
 
-/* On the index the masthead is the page's own h1, so it carries full weight.
-   Elsewhere it is a secondary <p> and steps down rather than outranking the
-   item headline underneath it. */
-h1.site-title {
-  font-size: 2.5rem;
+.site-tagline {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--muted);
 }
 
-.site-title a {
-  display: inline-flex;
-  align-items: center;
+/* Mobile first: four equal columns, icon over label, no hamburger menu.
+   flex-basis 0% rather than 0, which some older engines read as auto. */
+.main-nav {
+  margin-top: var(--space-2);
+}
+
+.main-nav ul {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* li is itself flex so each link stretches to the row's height: on a 320px
+   screen "What's on" wraps to two lines, and the bars must still line up. */
+.main-nav li {
+  flex: 1 1 0%;
+  display: flex;
+}
+
+/* No underline: a labelled nav bar is recognised by position and form. The
+   4px bottom border is always there, transparent unless current, so marking
+   the current page moves nothing. */
+.main-nav a {
+  display: block;
+  flex: 1 1 auto;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
   text-decoration: none;
-  color: inherit;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
 }
 
-/* em, not rem, so the icon stays the wordmark's height; margin rather than gap, which is above the baseline. */
-.site-icon {
-  width: 1em;
-  height: 1em;
-  margin-right: var(--space-2);
+.main-nav a:hover {
+  color: var(--link-hover);
+}
+
+.main-nav a[aria-current] {
+  border-bottom-color: var(--accent);
+}
+
+.main-nav svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-1);
+}
+
+/* 600px at the default font size: room for four icon-and-label rows. */
+@media (min-width: 37.5rem) {
+  .main-nav li {
+    flex: none;
+  }
+
+  .main-nav a {
+    display: flex;
+    align-items: center;
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  .main-nav svg {
+    margin-left: 0;
+    margin-right: var(--space-2);
+    margin-bottom: 0;
+  }
 }
 
 /* Inline items rather than flexbox: the trail wraps naturally on a narrow
@@ -207,7 +279,6 @@ h1.site-title {
    is set at 3:1 against the background rather than the decorative weight a
    hairline would take. */
 .day-heading {
-  font-family: var(--font-condensed);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -314,27 +385,21 @@ h1.site-title {
   white-space: nowrap;
 }
 
-/* Tracking relieves the density of the condensed face without changing the
-   glyphs: at 1.5rem and forty items to a page, the face reads as squashed set
-   solid. Not applied to the wordmark or the day heading, which already carry
-   their own tracking and appear once per page and once per group. */
 .item-title {
-  font-family: var(--font-condensed);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.015em;
   margin: 0;
   margin-bottom: var(--space-2);
   color: var(--ink);
 }
 
-/* Ink, not --link: on the index every title is a link, so accenting them all
-   emphasises nothing. The underline still carries the affordance, so colour is
-   never the sole signal (1.4.1). --link is reserved for the Japanese title
-   below, where it comes to mean "this one leaves the site". */
+/* Blue without an underline, the owner's choice: a bold headline is
+   recognisable as a link by position and form, as the nav is. Not running
+   text, so 1.4.1 does not need the underline here. */
 .item-title a {
-  color: var(--ink);
+  color: var(--link);
+  text-decoration: none;
 }
 
 .item-title a:hover {

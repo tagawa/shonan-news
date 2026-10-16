@@ -50,12 +50,21 @@
     </div>
   </header>
   {% include breadcrumbs.html %}
-  <main id="main" class="site-main">
-    {{ content }}
-  </main>
+  {% comment %}The panel comes first on the home page, so phones see it on top, and after the main content elsewhere. On wide screens CSS puts it on the right either way. Cached: it loops over every post. See the frontend spec, "Page columns".{% endcomment %}
+  {% assign show_panel = true %}{% if page.whats_on_panel == false %}{% assign show_panel = false %}{% endif %}
+  <div class="page-body">
+    {% if show_panel and page.url == "/" %}{% include_cached whats-on-panel.html %}{% endif %}
+    <main id="main" class="site-main">
+      {{ content }}
+    </main>
+    {% if show_panel and page.url != "/" %}{% include_cached whats-on-panel.html %}{% endif %}
+  </div>
   <footer class="site-footer">
+    <div class="site-footer-inner">
+    <p class="site-footer-brand"><img class="site-footer-icon" src="{{ '/assets/site-icon.svg' | relative_url }}" alt="" width="32" height="32">{{ site.title }}</p>
     <p class="site-footer-links"><a href="{{ '/about/' | relative_url }}">About</a> &middot; <a href="{{ '/archive/' | relative_url }}">Archive</a> &middot; <a href="{{ '/whats-on/' | relative_url }}">What's on</a> &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
     <p class="disclosure">English summaries are machine-generated from Japanese sources and may contain errors. Always read the original.</p>
+    </div>
   </footer>
 </body>
 </html>

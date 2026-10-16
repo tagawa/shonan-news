@@ -3,6 +3,7 @@ import logging
 import re
 import unicodedata
 from datetime import date, datetime, timezone
+from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 from . import clean, fetch, identity, llm, merge, places, shortlist, state as state_mod, validate, weekdays, writer
@@ -25,6 +26,11 @@ SKIP_TAGS = {
     "あっとほーむデスク": "a column",
     "人物風土記": "a profile",
 }
+# A volume number in a Town News title marks a serial, whatever its tags; the event blog
+# numbers real concerts the same way, so only Town News is matched. Matched after NFKC.
+# See the backend spec, "Serial skip".
+SERIAL_TITLE = re.compile(r"(?<![a-z])vol\.?\s*\d", re.I)
+SERIAL_HOST = "townnews.co.jp"
 # Matched after NFKC. 3日間 is a duration, not a date.
 FULL_DATE = re.compile(r"(?<!\d)(\d{1,2})\s*月\s*(\d{1,2})\s*日(?!間)")
 DAY_WITH_WEEKDAY = re.compile(r"(?<!\d)(\d{1,2})\s*日\s*\(([月火水木金土日])(?:・祝)?\)")
@@ -170,6 +176,13 @@ def _skip_tag(entry):
     return None
 
 
+def _is_serial(entry, feed_url):
+    host = urlsplit(feed_url).hostname or ""
+    if host != SERIAL_HOST and not host.endswith("." + SERIAL_HOST):
+        return False
+    return bool(SERIAL_TITLE.search(unicodedata.normalize("NFKC", entry.get("title", ""))))
+
+
 def _extract_image(entry):
     thumbnails = entry.get("media_thumbnail")
     if thumbnails:
@@ -295,6 +308,11 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         skip_reason = _skip_tag(entry)
         if skip_reason:
             logger.info("Skipping %s: tagged as %s", key, skip_reason)
+            state_mod.mark_processed(current_state, feed_url, key)
+            continue
+
+        if _is_serial(entry, feed_url):
+            logger.info("Skipping %s: a numbered serial", key)
             state_mod.mark_processed(current_state, feed_url, key)
             continue
 

@@ -13,5 +13,5 @@ lede: The Fujisawa Charity Kickboxing Tournament, Shonan Fight Challenge (SFC) 2
 guid: guid:https://www.townnews.co.jp/0601/2026/10/16/857601.html
 ---
 
-The tournament was held on the 12th at Chichibunomiya Memorial Gymnasium. The title describes cross-generational bouts, including competitors in their 60s.
+The tournament was held on the 12th at Chichibunomiya Memorial Gymnasium. Competitors spanned the generations, including some in their 60s.
 

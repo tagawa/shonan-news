@@ -26,3 +26,4 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-sitemap  # Skips its own robots.txt, because the source has one.
+  - jekyll-include-cache  # The What's on panel is on every page; this renders it once per build.

@@ -2,6 +2,8 @@
 layout: default
 title: What's on
 permalink: /whats-on/
+# The page is events already; a panel of them beside it would repeat itself.
+whats_on_panel: false
 ---
 {% include whats-on-events.html %}
 <h1>What's on</h1>

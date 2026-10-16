@@ -21,15 +21,19 @@ the homepage, then shown under source-date headings as before. Everything else i
 {% endfor %}
 {% assign day_groups = recent | group_by_exp: "post", "post.source_date | default: post.date | date: '%Y-%m-%d'" %}
 {% assign day_groups = day_groups | sort: "name" | reverse %}
-{% include whats-on-panel.html %}
+<section class="latest-news" aria-labelledby="latest-news-heading">
+<div class="section-head">
+  <h2 id="latest-news-heading">Latest news</h2>
+  <a href="{{ '/archive/' | relative_url }}">Archive</a>
+</div>
 {% for day in day_groups %}
   <section class="day-group">
     {% assign sorted_items = day.items | sort: "source_date" | reverse %}
-    <h2 class="day-heading"><time datetime="{{ day.name }}">{{ sorted_items.first.source_date | default: sorted_items.first.date | date: '%-d %B %Y' }}</time></h2>
+    <h3 class="day-heading"><time datetime="{{ day.name }}">{{ sorted_items.first.source_date | default: sorted_items.first.date | date: '%-d %B %Y' }}</time></h3>
     {% for post in sorted_items %}
       <article class="item">
         {% include item-labels.html event_date=post.event_date label=post.label %}
-        <h3 class="item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <h4 class="item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
         {% if post.image_url %}<img class="item-thumb" src="{{ post.image_url | escape }}" alt="" loading="lazy">{% elsif post.thumb_url %}<img class="item-thumb item-thumb-small" src="{{ post.thumb_url | escape }}" alt="" loading="lazy">{% endif %}
         {% include japanese-title.html text=post.source_title url=post.source_url %}
         <p class="item-lede">{{ post.lede | default: post.excerpt | strip_html }}</p>
@@ -38,3 +42,4 @@ the homepage, then shown under source-date headings as before. Everything else i
   </section>
 {% endfor %}
 <p><a href="{{ '/archive/' | relative_url }}">Older summaries</a></p>
+</section>

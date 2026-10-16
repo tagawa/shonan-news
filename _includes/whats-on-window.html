@@ -9,10 +9,7 @@ a Sunday. Japan has no daylight saving, so a day is always 86400 seconds. See th
 {% assign window_events = "" | split: "" %}{% for post in whats_on_events %}{% assign event_day = post.event_date | date: "%Y-%m-%d" %}{% if event_day >= window_start and event_day <= window_end %}{% assign window_events = window_events | push: post %}{% endif %}{% endfor %}
 {% assign window_days = window_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}
 {% if window_days.size > 0 %}
-<ul class="event-list">
-  {% for window_day in window_days %}{% assign window_posts = window_day.items | sort: "date" | reverse %}{% for window_post in window_posts %}
-  {% include event-row.html post=window_post day=window_day.name %}{% endfor %}{% endfor %}
-</ul>
+{% include event-days.html days=window_days level="h2" %}
 {% else %}
 <p>Nothing listed for these days.</p>
 {% endif %}

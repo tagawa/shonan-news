@@ -1,4 +1,4 @@
-{% comment %}One month: a Monday-first grid, then its event days from today, each a heading and a list of titles. include.month_start is the epoch of the 1st at 00:00 JST; include.events is that month's admitted posts, or nil.{% endcomment %}
+{% comment %}One month: a Monday-first grid, then its event days from today, grouped by event-days.html. include.month_start is the epoch of the 1st at 00:00 JST; include.events is that month's admitted posts, or nil.{% endcomment %}
 {% assign month = include.month_start | date: "%Y-%m" %}
 {% assign no_events = "" | split: "" %}
 {% assign month_events = include.events | default: no_events %}
@@ -27,14 +27,5 @@
       {%- for blank in (column..6) %}<td></td>{% endfor %}</tr>
     </tbody>
   </table>
-  {% for day_group in days %}
-  <section class="day-group">
-    <h3 class="day-heading" id="{{ day_group.name }}"><time datetime="{{ day_group.name }}">{% if day_group.name == whats_on_today %}Today, {% endif %}{{ day_group.name | date: "%A %-d %B" }}</time></h3>
-    {% comment %}By date, which every post has: a missing source_date would break sort.{% endcomment %}
-    {% assign day_posts = day_group.items | sort: "date" | reverse %}
-    <ul class="archive-list">
-      {% for post in day_posts %}<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}
-    </ul>
-  </section>
-  {% endfor %}
+  {% include event-days.html days=days level="h3" %}
 </section>

@@ -1,0 +1,15 @@
+{% comment %}
+Upcoming events grouped by day: one date tile per day beside that day's rows, so a busy day does not
+repeat its date on every row. include.days is a group_by_exp result sorted by name (YYYY-MM-DD),
+include.level the heading tag for the days ("h2" or "h3"), include.limit an optional cap on rows.
+The heading is visually hidden: it is what a screen reader hears and what the calendar's day links
+target, and the tile, which says the same, is hidden from screen readers. Needs whats_on_today, set by
+whats-on-events.html. See the frontend spec, "Event days".
+{% endcomment %}{% assign days_limit = include.limit | default: 100000 %}{% assign days_shown = 0 %}{% for event_day in include.days %}{% if days_shown >= days_limit %}{% break %}{% endif %}{% assign day_posts = event_day.items | sort: "date" | reverse %}
+<div class="event-day">
+  <{{ include.level }} class="visually-hidden" id="{{ event_day.name }}"><time datetime="{{ event_day.name }}">{% if event_day.name == whats_on_today %}Today, {% endif %}{{ event_day.name | date: "%A %-d %B" }}</time></{{ include.level }}>
+  <span class="date-tile" aria-hidden="true"><span class="date-tile-day">{{ event_day.name | date: "%a" }}</span> <span class="date-tile-number">{{ event_day.name | date: "%-d" }}</span></span>
+  <ul class="event-list">
+    {% for day_post in day_posts %}{% if days_shown >= days_limit %}{% break %}{% endif %}{% include event-row.html post=day_post %}{% assign days_shown = days_shown | plus: 1 %}{% endfor %}
+  </ul>
+</div>{% endfor %}

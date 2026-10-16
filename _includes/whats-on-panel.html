@@ -1,20 +1,16 @@
 {% comment %}
-The index's What's on panel: the four soonest upcoming events, admitted by whats-on-events.html's rule
+The What's on panel, beside every page's main content except the What's on pages: the four soonest upcoming events, admitted by whats-on-events.html's rule
 like the calendar. Grouped on the normalised day and sorted by group name, because sorting on
 event_date raises when YAML gave posts mixed types. Each row is one link. See the frontend spec,
 "What's on panel".
-{% endcomment %}{% include whats-on-events.html %}{% assign panel_days = whats_on_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}{% assign panel_shown = 0 %}
-<section class="whats-on-panel" aria-labelledby="whats-on-panel-heading">
+{% endcomment %}{% include whats-on-events.html %}{% assign panel_days = whats_on_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}
+<aside class="whats-on-panel" aria-labelledby="whats-on-panel-heading">
   <h2 id="whats-on-panel-heading">What's on</h2>
   {% include whats-on-filters.html %}
   {% if panel_days.size > 0 %}
-  <ul class="event-list">
-    {% for panel_day in panel_days %}{% assign panel_posts = panel_day.items | sort: "date" | reverse %}{% for panel_post in panel_posts %}{% if panel_shown == 4 %}{% break %}{% endif %}
-    {% include event-row.html post=panel_post day=panel_day.name %}
-    {% assign panel_shown = panel_shown | plus: 1 %}{% endfor %}{% if panel_shown == 4 %}{% break %}{% endif %}{% endfor %}
-  </ul>
+  {% include event-days.html days=panel_days level="h3" limit=4 %}
   {% else %}
   <p>Nothing listed yet.</p>
   {% endif %}
   <p class="whats-on-panel-more"><a href="{{ '/whats-on/' | relative_url }}">All events</a></p>
-</section>
+</aside>

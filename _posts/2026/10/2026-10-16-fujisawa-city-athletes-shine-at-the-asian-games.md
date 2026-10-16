@@ -6,6 +6,7 @@ source_date: '2026-10-16 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0601/2026/10/16/857587.html
 source_title: アジア大会で藤沢市の選手ら躍動
 source_name: タウンニュース（藤沢）
+label: sport
 lede: The 20th Asian Games were held from 19 September to 4 October in Nagoya, Aichi
   Prefecture.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/16/857587.html

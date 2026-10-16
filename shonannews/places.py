@@ -56,7 +56,7 @@ def romanise(kana):
     return out
 
 
-def _short_name(municipality):
+def short_name(municipality):
     # 三浦郡葉山町 is written 葉山 or 葉山町 in a source; 横須賀市 as 横須賀.
     return re.sub(r"[市町]$", "", municipality.split("郡")[-1])
 
@@ -65,7 +65,7 @@ def _short_name(municipality):
 # They win over a district of the same name (藤沢, 鎌倉): a source means the town, which is
 # read correctly almost always, and town-name misreads (中井) are audit_names.py's job.
 MUNICIPALITY_NAMES = {name for m in MUNICIPALITIES.values()
-                      for name in (m, m.split("郡")[-1], _short_name(m)) if len(name) >= MIN_KEY}
+                      for name in (m, m.split("郡")[-1], short_name(m)) if len(name) >= MIN_KEY}
 # Compounds that contain a district but never mean it: 湘南藤沢 (Keio's SFC campus, a hospital)
 # is not 南藤沢.
 CONSUMED = MUNICIPALITY_NAMES | {"湘南藤沢"}
@@ -98,7 +98,7 @@ def _resolve(by_municipality, source):
     distinct = {r for readings in by_municipality.values() for r in readings}
     if len(distinct) == 1:
         return distinct.pop()
-    named = [m for m in by_municipality if _short_name(m) in source and len(by_municipality[m]) == 1]
+    named = [m for m in by_municipality if short_name(m) in source and len(by_municipality[m]) == 1]
     return by_municipality[named[0]][0] if len(named) == 1 else None
 
 

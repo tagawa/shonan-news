@@ -39,7 +39,7 @@ def build_filename(date_str, slug, posts_dir, identity_key):
 
 
 def build_front_matter(title, date, source_date, source_url, source_title, source_name, lede, guid,
-                        image_url=None, event_date=None, label=None, thumb_url=None):
+                        image_url=None, event_date=None, label=None, thumb_url=None, town=None):
     head = {"layout": "post", "title": title, "date": date}
     tail = {
         "source_url": source_url,
@@ -54,6 +54,9 @@ def build_front_matter(title, date, source_date, source_url, source_title, sourc
     # Omitted when absent, like event_date: an unlabelled post asserts nothing.
     if label:
         tail["label"] = label
+    # Omitted when absent: no town is better than a wrong one. See the backend spec, "Event town".
+    if town:
+        tail["town"] = town
     if image_url:
         tail["image_url"] = image_url
     if thumb_url:

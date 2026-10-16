@@ -11,5 +11,5 @@ lede: In a computer room, the series presents an episode about siblings’ feeli
 guid: guid:https://www.townnews.co.jp/0501/2026/10/16/856810.html
 ---
 
-The series shares various episodes, including how Urara appears to her older brother Ren, who was born with a disability, and what Ren has felt as a sibling of a child with a disability.
+The series shares various episodes, including how Urara, who was born with a disability, appears to her older brother Ren, and what Ren has felt as a sibling of a child with a disability.
 

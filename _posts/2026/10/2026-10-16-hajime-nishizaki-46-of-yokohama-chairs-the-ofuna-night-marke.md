@@ -11,5 +11,5 @@ lede: The Ofuna Night Market will be held on 3 November in Ofuna.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/16/857608.html
 ---
 
-Nishizaki is the executive committee chair for the Ofuna Night Market, which will be held on 3 November and is now in its fifth year. He has been involved as a core member since its first edition in 2019; in 23, after the COVID-19 pandemic, he said, 'Let's do it again,' to his friends.
+Nishizaki is the executive committee chair for the Ofuna Night Market, which will be held on 3 November and is now in its fifth year. He has been involved as a core member since its first edition in 2019; in 2023, after the COVID-19 pandemic, he said, 'Let's do it again,' to his friends.
 

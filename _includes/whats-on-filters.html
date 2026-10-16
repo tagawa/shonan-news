@@ -1,0 +1,6 @@
+{% comment %}The three date filters, as plain links to pages the daily build writes. include.current is the slug of the page showing them, or empty on the index panel. See the frontend spec, "Today, Weekend and Next 7 days".{% endcomment %}
+<ul class="whats-on-filters">
+  <li><a href="{{ '/whats-on/today/' | relative_url }}"{% if include.current == "today" %} aria-current="page"{% endif %}>Today</a></li>
+  <li><a href="{{ '/whats-on/weekend/' | relative_url }}"{% if include.current == "weekend" %} aria-current="page"{% endif %}>Weekend</a></li>
+  <li><a href="{{ '/whats-on/next-7-days/' | relative_url }}"{% if include.current == "next-7-days" %} aria-current="page"{% endif %}>Next 7 days</a></li>
+</ul>

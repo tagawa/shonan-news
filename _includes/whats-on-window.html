@@ -1,0 +1,19 @@
+{% comment %}
+One date-window page: Today, Weekend or Next 7 days (include.window is the slug). Days are whole
+days in Asia/Tokyo, counted from the build's day, since the site only changes when it is rebuilt.
+Weekend is the coming Saturday and Sunday, or today and tomorrow on a Saturday, or today alone on
+a Sunday. Japan has no daylight saving, so a day is always 86400 seconds. See the frontend spec,
+"Today, Weekend and Next 7 days".
+{% endcomment %}{% include whats-on-events.html %}{% assign window_today = whats_on_today | date: "%s" | plus: 0 %}{% assign weekday = whats_on_today | date: "%u" | plus: 0 %}{% assign start_offset = 0 %}{% assign end_offset = 0 %}{% if include.window == "weekend" %}{% if weekday == 6 %}{% assign end_offset = 1 %}{% elsif weekday < 6 %}{% assign start_offset = 6 | minus: weekday %}{% assign end_offset = 7 | minus: weekday %}{% endif %}{% elsif include.window == "next-7-days" %}{% assign end_offset = 6 %}{% endif %}{% assign start_epoch = start_offset | times: 86400 | plus: window_today %}{% assign end_epoch = end_offset | times: 86400 | plus: window_today %}{% assign window_start = start_epoch | date: "%Y-%m-%d" %}{% assign window_end = end_epoch | date: "%Y-%m-%d" %}
+{% include whats-on-filters.html current=include.window %}
+{% assign window_events = "" | split: "" %}{% for post in whats_on_events %}{% assign event_day = post.event_date | date: "%Y-%m-%d" %}{% if event_day >= window_start and event_day <= window_end %}{% assign window_events = window_events | push: post %}{% endif %}{% endfor %}
+{% assign window_days = window_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}
+{% if window_days.size > 0 %}
+<ul class="event-list">
+  {% for window_day in window_days %}{% assign window_posts = window_day.items | sort: "date" | reverse %}{% for window_post in window_posts %}
+  {% include event-row.html post=window_post day=window_day.name %}{% endfor %}{% endfor %}
+</ul>
+{% else %}
+<p>Nothing listed for these days.</p>
+{% endif %}
+<p><a href="{{ '/whats-on/' | relative_url }}">All events</a></p>

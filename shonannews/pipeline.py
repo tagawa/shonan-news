@@ -13,9 +13,16 @@ JST = ZoneInfo("Asia/Tokyo")
 DESCRIPTION_MAX_CHARS = 600
 IMAGE_MIN_WIDTH = 240
 MAX_ITEMS_PER_RUN = 15
-# Town News category terms for paid placements (advertorials and political opinion ads).
-# Exact match after strip: no other spelling seen in any edition on 2026-09-17.
-AD_TAGS = {"ピックアップ（PR）", "意見広告"}
+# Town News category terms skipped at intake, with the reason logged. Exact match after
+# strip. Paid placements (advertorials, political opinion ads): no other spelling seen in
+# any edition on 2026-09-17. Columns and serials are not news or events (owner, 2026-10-16);
+# あっとほーむデスク is the editor's column. See the backend spec, "Tag skip".
+SKIP_TAGS = {
+    "ピックアップ（PR）": "an advertisement",
+    "意見広告": "an advertisement",
+    "コラム": "a column",
+    "あっとほーむデスク": "a column",
+}
 # Matched after NFKC. 3日間 is a duration, not a date.
 FULL_DATE = re.compile(r"(?<!\d)(\d{1,2})\s*月\s*(\d{1,2})\s*日(?!間)")
 DAY_WITH_WEEKDAY = re.compile(r"(?<!\d)(\d{1,2})\s*日\s*\(([月火水木金土日])(?:・祝)?\)")
@@ -152,9 +159,13 @@ def _parse_int(value):
         return None
 
 
-def _is_ad(entry):
-    # term can be None: feedparser keeps a tag that has only a scheme or label.
-    return any((tag.get("term") or "").strip() in AD_TAGS for tag in entry.get("tags", []))
+def _skip_tag(entry):
+    for tag in entry.get("tags", []):
+        # term can be None: feedparser keeps a tag that has only a scheme or label.
+        reason = SKIP_TAGS.get((tag.get("term") or "").strip())
+        if reason:
+            return reason
+    return None
 
 
 def _extract_image(entry):
@@ -279,8 +290,9 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         if state_mod.is_processed(current_state, feed_url, key):
             continue
 
-        if _is_ad(entry):
-            logger.info("Skipping %s: tagged as an advertisement", key)
+        skip_reason = _skip_tag(entry)
+        if skip_reason:
+            logger.info("Skipping %s: tagged as %s", key, skip_reason)
             state_mod.mark_processed(current_state, feed_url, key)
             continue
 

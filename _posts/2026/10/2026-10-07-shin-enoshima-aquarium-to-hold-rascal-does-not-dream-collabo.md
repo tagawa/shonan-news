@@ -16,3 +16,4 @@ guid: link:https://shonan.keizai.biz/headline/3597/
 
 Shin-Enoshima Aquarium will hold the Enoshima and Shonan-area event, 'Rascal Does Not Dream of a Drifting Jellyfish,' starting 16 October. The event will also feature life-size panels.
 
+The film is the final installment in the popular ‘Rascal Does Not Dream’ anime series, which features Enoshima and Shonan, and will be released on 16 October (Fri).

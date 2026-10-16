@@ -15,13 +15,15 @@ IMAGE_MIN_WIDTH = 240
 MAX_ITEMS_PER_RUN = 15
 # Town News category terms skipped at intake, with the reason logged. Exact match after
 # strip. Paid placements (advertorials, political opinion ads): no other spelling seen in
-# any edition on 2026-09-17. Columns and serials are not news or events (owner, 2026-10-16);
-# あっとほーむデスク is the editor's column. See the backend spec, "Tag skip".
+# any edition on 2026-09-17. Columns, serials and the weekly profile are features, not news
+# or events (owner, 2026-10-16); あっとほーむデスク is the editor's column and 人物風土記 the
+# profile. See the backend spec, "Tag skip".
 SKIP_TAGS = {
     "ピックアップ（PR）": "an advertisement",
     "意見広告": "an advertisement",
     "コラム": "a column",
     "あっとほーむデスク": "a column",
+    "人物風土記": "a profile",
 }
 # Matched after NFKC. 3日間 is a duration, not a date.
 FULL_DATE = re.compile(r"(?<!\d)(\d{1,2})\s*月\s*(\d{1,2})\s*日(?!間)")

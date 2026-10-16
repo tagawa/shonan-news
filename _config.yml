@@ -1,6 +1,8 @@
 title: Shonan News
 url: "https://shonannews.com"
 description: English summaries of Japanese local news for the Shonan area of Japan, machine-translated from RSS feeds.
+# Shown under the site name on every page; description stays the longer text for search engines.
+tagline: Local news from Shonan, in English
 source_name: 湘南・横須賀イベント＆ニュース  # Legacy fallback only, for posts published before per-post source_name front matter existed. Item pages read page.source_name first; new feeds set source_name in _data/feeds.json instead of here.
 timezone: Asia/Tokyo
 # feed.xml reads this. The default of 10 is fewer than most runs write; a Friday run has reached 81.

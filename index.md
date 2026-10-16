@@ -21,7 +21,6 @@ the homepage, then shown under source-date headings as before. Everything else i
 {% endfor %}
 {% assign day_groups = recent | group_by_exp: "post", "post.source_date | default: post.date | date: '%Y-%m-%d'" %}
 {% assign day_groups = day_groups | sort: "name" | reverse %}
-<p><a href="{{ '/whats-on/' | relative_url }}">What's on</a>: upcoming events by date</p>
 {% for day in day_groups %}
   <section class="day-group">
     {% assign sorted_items = day.items | sort: "source_date" | reverse %}

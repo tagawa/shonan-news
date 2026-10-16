@@ -38,12 +38,16 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    {% capture site_link %}<a href="{{ '/' | relative_url }}"><img class="site-icon" src="{{ '/assets/site-icon.svg' | relative_url }}" alt="" width="20" height="20">{{ site.title }}</a>{% endcapture %}
-    {% if page.url == "/" %}
-      <h1 class="site-title">{{ site_link }}</h1>
-    {% else %}
-      <p class="site-title">{{ site_link }}</p>
-    {% endif %}
+    <div class="site-header-inner">
+      <a class="site-brand" href="{{ '/' | relative_url }}">
+        <img class="site-icon" src="{{ '/assets/site-icon.svg' | relative_url }}" alt="" width="48" height="48">
+        <div>
+          {% if page.url == "/" %}<h1 class="site-title">{{ site.title }}</h1>{% else %}<p class="site-title">{{ site.title }}</p>{% endif %}
+          <p class="site-tagline">{{ site.tagline }}</p>
+        </div>
+      </a>
+      {% include main-nav.html %}
+    </div>
   </header>
   {% include breadcrumbs.html %}
   <main id="main" class="site-main">

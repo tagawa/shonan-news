@@ -20,7 +20,6 @@
     "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
 
   --bg: #ffffff;
-  --surface: #eef4fa;
   /* decorative only: the line under the header */
   --border: #e2e6eb;
   --ink: #1d2633;
@@ -35,6 +34,16 @@
   /* the date tile's band, under white text (5.2:1); the same in both schemes */
   --accent-strong: #c2410c;
   --panel-warm: #fff4eb;
+  /* label chips: subject on blue (7.4:1), "Coming up" on orange (6.2:1) */
+  --blue-tint: #dcebf8;
+  --blue-tint-ink: #164b7d;
+  --accent-tint: #ffe8d6;
+  --accent-tint-ink: #9a3412;
+  /* the footer band: white on the mockup's ink */
+  --footer-bg: #1d2633;
+  --footer-panel: #2b3646;
+  --footer-ink: #ffffff;
+  --footer-hover: #c4ddf5;
 }
 
 /* browsers below the baseline skip this and keep the light scheme above.
@@ -43,7 +52,6 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #141b24;
-    --surface: #1d2633;
     --border: #2c3646;
     --ink: #f1f5f9;
     --body: #d7dfea;
@@ -53,6 +61,14 @@
     --link-hover: #c4ddf5;
     --accent: #f0782f;
     --panel-warm: #30241a;
+    --blue-tint: #1f3a56;
+    --blue-tint-ink: #c4ddf5;
+    --accent-tint: #4a2a17;
+    --accent-tint-ink: #ffc9a3;
+    /* darker than the page, with the --border line on top to mark where it starts */
+    --footer-bg: #0b1017;
+    --footer-panel: #1d2633;
+    --footer-ink: #f1f5f9;
   }
 }
 
@@ -68,7 +84,13 @@ html {
   font-size: 100%;
 }
 
+/* A column with the main area taking the slack, so on a short page (About,
+   404) the footer band reaches the window's bottom edge instead of stopping
+   mid-screen above a white gap. */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -119,8 +141,8 @@ button:focus {
 
 .site-header-inner,
 .breadcrumbs,
-.site-main,
-.site-footer {
+.page-body,
+.site-footer-inner {
   width: 100%;
   max-width: var(--measure);
   margin-left: auto;
@@ -271,8 +293,45 @@ button:focus {
   margin-right: var(--space-2);
 }
 
+/* Takes the slack in the body's column, so the footer reaches the bottom. */
+.page-body {
+  flex: 1 0 auto;
+}
+
 .site-main {
   padding-bottom: var(--space-5);
+}
+
+/* 960px at the default font size: the frame widens and the page gets a second
+   column, the What's on panel on the right, as in the mockup. The main column
+   keeps its reading width (40rem); pages without the panel leave the right
+   column empty. Flex with margins, never gap. */
+@media (min-width: 60rem) {
+  .site-header-inner,
+  .breadcrumbs,
+  .page-body,
+  .site-footer-inner {
+    max-width: 66rem;
+  }
+
+  .page-body {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .site-main {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 40rem;
+  }
+
+  .whats-on-panel {
+    flex: none;
+    order: 2;
+    width: 22rem;
+    margin-left: var(--space-5);
+    margin-bottom: var(--space-5);
+  }
 }
 
 .day-group {
@@ -402,23 +461,40 @@ button:focus {
   list-style: none;
 }
 
-.event-list li {
+/* One day: its tile on the left, its rows beside it. The --rule line marks a
+   new day; lighter --border lines divide the rows within one. min-width: 0
+   lets a long title wrap instead of pushing the list past the tile. */
+.event-day {
+  display: flex;
+  align-items: flex-start;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--rule);
+}
+
+.event-day .event-list {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.event-list li + li {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: var(--border);
 }
 
 .event-row {
-  display: flex;
-  align-items: center;
+  display: block;
   padding-top: var(--space-3);
   padding-bottom: var(--space-3);
   text-decoration: none;
 }
 
+/* Level with the first row's title, which sits below the row's 16px padding. */
 .date-tile {
   flex: none;
   width: 3.5rem;
+  margin-top: var(--space-3);
   margin-right: var(--space-3);
   overflow: hidden;
   border-radius: var(--radius);
@@ -448,11 +524,6 @@ button:focus {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.35;
-}
-
-/* Title over town. Blocks inside the row's one link, so the whole row stays tappable. */
-.event-text {
-  display: block;
 }
 
 /* Blue without an underline, like the index headlines. */
@@ -542,6 +613,26 @@ button:focus {
   margin: 0;
   margin-bottom: var(--space-2);
   color: var(--ink);
+}
+
+/* A section heading with its "see all" link at the far side, as in the
+   mockup. Flex with no gap: space-between needs none. */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-3);
+}
+
+.section-head h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Smaller on the index than on the item page: forty bold 1.5rem headlines in
+   a column read as heavy. */
+.day-group .item-title {
+  font-size: 1.25rem;
 }
 
 /* Blue without an underline, the owner's choice: a bold headline is
@@ -654,12 +745,42 @@ button:focus {
   content: "\00a0\2192";
 }
 
+/* Full width so the band runs edge to edge; the inner box holds the measure. */
 .site-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-ink);
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: var(--rule);
-  padding-top: var(--space-4);
-  padding-bottom: var(--space-4);
+  border-top-color: var(--border);
+}
+
+.site-footer-inner {
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
+}
+
+.site-footer a {
+  color: var(--footer-ink);
+}
+
+.site-footer a:hover {
+  color: var(--footer-hover);
+}
+
+.site-footer-brand {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: var(--space-3);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.site-footer-icon {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  margin-right: var(--space-2);
 }
 
 .site-footer-links {
@@ -668,8 +789,8 @@ button:focus {
 }
 
 .disclosure {
-  background-color: var(--surface);
-  color: var(--body);
+  background-color: var(--footer-panel);
+  color: var(--footer-ink);
   border-radius: var(--radius);
   padding-top: var(--space-3);
   padding-right: var(--space-3);
@@ -680,27 +801,40 @@ button:focus {
   line-height: 1.5;
 }
 
-/* Item labels: the line above an item's headline. Weight carries the label, not
-   caps: the day heading is 0.75rem uppercase condensed, and an identical treatment
-   a few lines above an item read as the start of a new day group. Inline elements
-   with a margin, never flexbox gap, which is unsupported on Safari before 14.1 and
-   does not degrade. Margin shorthands are split because var() may not sit inside
-   one, which is pinned by a test rather than left as a preference. */
+/* Item labels: the line above an item's headline, as tinted chips from the
+   mockup. Inline-block with margins, never flexbox gap, which is unsupported on
+   Safari before 14.1 and does not degrade. Margin shorthands are split because
+   var() may not sit inside one, which is pinned by a test. */
 .item-labels {
   margin-top: 0;
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space-2);
   font-size: 0.875rem;
   line-height: 1.5;
 }
 
+/* The words carry the meaning; the tint only groups them, so colour is never
+   the sole signal. Safety is deliberately not red: most Safety items are drills
+   and seminars, and an alarm colour would overstate them. */
 .item-label {
+  display: inline-block;
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+  border-radius: 999px;
   font-weight: 700;
-  color: var(--ink);
 }
 
-/* No margins: real spaces sit either side of it, outside the aria-hidden span. */
-.item-labels-separator {
-  color: var(--muted);
+.item-label-subject {
+  background-color: var(--blue-tint);
+  color: var(--blue-tint-ink);
+}
+
+.item-label-upcoming {
+  background-color: var(--accent-tint);
+  color: var(--accent-tint-ink);
+}
+
+.item-label + .item-label {
+  margin-left: var(--space-1);
 }
 
 .item-labels time {

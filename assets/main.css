@@ -450,8 +450,14 @@ button:focus {
   line-height: 1.35;
 }
 
+/* Title over town. Blocks inside the row's one link, so the whole row stays tappable. */
+.event-text {
+  display: block;
+}
+
 /* Blue without an underline, like the index headlines. */
 .event-title {
+  display: block;
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.4;
@@ -460,6 +466,14 @@ button:focus {
 
 .event-row:hover .event-title {
   color: var(--link-hover);
+}
+
+.event-town {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
 /* Date filters as pills. Flex with margins, never gap. 8px padding, a 24px

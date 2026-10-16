@@ -8,7 +8,7 @@ source_url: https://www.townnews.co.jp/0501/2026/10/16/857386.html
 source_title: ７人の熱 響き合う世界　小網代で現代美術展
 source_name: タウンニュース（横須賀・三浦）
 event_date: '2026-11-08'
-lede: The ‘HEAT, Painting, ’ exhibition is being held through November 8 (Sun) at
+lede: The ‘HEAT: Painting, ’ exhibition is being held through November 8 (Sun) at
   the Iharium Koajiro Gallery in Misakimachikoajiro, Miura.
 guid: guid:https://www.townnews.co.jp/0501/2026/10/16/857386.html
 ---

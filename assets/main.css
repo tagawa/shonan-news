@@ -32,6 +32,9 @@
   --link-hover: #123e66;
   /* graphics only (nav bar, focus ring): 3.6:1 is too low for small text */
   --accent: #e8590c;
+  /* the date tile's band, under white text (5.2:1); the same in both schemes */
+  --accent-strong: #c2410c;
+  --panel-warm: #fff4eb;
 }
 
 /* browsers below the baseline skip this and keep the light scheme above.
@@ -49,6 +52,7 @@
     --link: #8cbcec;
     --link-hover: #c4ddf5;
     --accent: #f0782f;
+    --panel-warm: #30241a;
   }
 }
 
@@ -372,6 +376,138 @@ button:focus {
 .calendar .calendar-today {
   border-color: var(--ink);
   border-radius: var(--radius);
+}
+
+/* The index's What's on panel. Each row is one link: a date tile, then the
+   title. Flexbox with margins, never gap. */
+.whats-on-panel {
+  background-color: var(--panel-warm);
+  border-radius: var(--radius);
+  padding-top: var(--space-4);
+  padding-right: var(--space-3);
+  padding-bottom: var(--space-2);
+  padding-left: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.whats-on-panel h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: var(--space-3);
+}
+
+.event-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.event-list li {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--border);
+}
+
+.event-row {
+  display: flex;
+  align-items: center;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+  text-decoration: none;
+}
+
+.date-tile {
+  flex: none;
+  width: 3.5rem;
+  margin-right: var(--space-3);
+  overflow: hidden;
+  border-radius: var(--radius);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border);
+  background-color: var(--bg);
+  color: var(--ink);
+  text-align: center;
+}
+
+/* The weekday is written "Thu" and capitalised here, so a screen reader says
+   the word rather than spelling out THU. */
+.date-tile-day {
+  display: block;
+  background-color: var(--accent-strong);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.date-tile-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* Blue without an underline, like the index headlines. */
+.event-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--link);
+}
+
+.event-row:hover .event-title {
+  color: var(--link-hover);
+}
+
+/* Date filters as pills. Flex with margins, never gap. 8px padding, a 24px
+   line and 2px borders make each pill 44px tall. */
+.whats-on-filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: var(--space-2);
+  padding-left: 0;
+  list-style: none;
+}
+
+.whats-on-filters li {
+  margin-right: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.whats-on-filters a {
+  display: block;
+  padding-top: var(--space-2);
+  padding-right: var(--space-2);
+  padding-bottom: var(--space-2);
+  padding-left: var(--space-2);
+  line-height: 1.5;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--rule);
+  border-radius: 999px;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.whats-on-filters a:hover {
+  border-color: var(--ink);
+}
+
+/* Filled, not only recoloured: the fill is the shape change that marks it. */
+.whats-on-filters a[aria-current] {
+  background-color: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+
+.whats-on-panel-more {
+  margin-top: var(--space-2);
 }
 
 /* Clip pattern rather than clip-path, which is above the baseline. nowrap stops

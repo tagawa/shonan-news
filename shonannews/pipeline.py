@@ -167,6 +167,12 @@ def _parse_int(value):
         return None
 
 
+def feed_description(entry):
+    # The description exactly as the model sees it; offline scripts reuse this to join posts to it.
+    raw = entry.get("summary") or entry.get("description") or ""
+    return clean.truncate(clean.strip_feed_boilerplate(clean.strip_html(raw)), DESCRIPTION_MAX_CHARS)
+
+
 def _skip_tag(entry):
     for tag in entry.get("tags", []):
         # term can be None: feedparser keeps a tag that has only a scheme or label.
@@ -323,11 +329,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             state_mod.mark_processed(current_state, feed_url, key)
             continue
 
-        raw_description = entry.get("summary") or entry.get("description") or ""
-        description = clean.truncate(
-            clean.strip_feed_boilerplate(clean.strip_html(raw_description)),
-            DESCRIPTION_MAX_CHARS,
-        )
+        description = feed_description(entry)
         # Catches a retitled copy that title dedup misses. See the backend spec, "Description dedup".
         description_key = identity.description_key(description)
         if state_mod.is_source_description_posted(current_state, description_key):

@@ -13,5 +13,5 @@ lede: A high school band event will be held on 24 October (Sat) at Chigasaki Civ
 guid: guid:https://www.townnews.co.jp/0603/2026/10/06/855901.html
 ---
 
-The event, titled 'Let's Play in a Huge Hall!', will be held in the Main Hall, with doors opening at 1 a.m. and performances starting at 1:30 a.m. Admission is free.
+The event, titled 'Let's Play in a Huge Hall!', will be held in the Main Hall, with doors opening at 1 pm and performances starting at 1:30 pm Admission is free.
 

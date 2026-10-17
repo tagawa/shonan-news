@@ -347,12 +347,14 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
 
         # One retry on a bad response: the observed failure (a string closed early) is
         # intermittent per item, so a second identical call often succeeds. Japanese left
-        # in the English gets the same retry. See the backend spec, "Japanese left in".
+        # in the English and source narration get the same retry. See the backend spec,
+        # "Japanese left in" and "Narration retry".
         try:
             result = validate.validate_response(
                 llm.call_llm(create_fn, title, description, date_str, readings=readings), source)
-            if not result.ok or result.japanese:
-                logger.warning("Validation failed for %s: %s; retrying once", key, result.error or "japanese_left_in")
+            if not result.ok or result.japanese or result.narration:
+                reason = result.error or ("japanese_left_in" if result.japanese else "source_narration")
+                logger.warning("Validation failed for %s: %s; retrying once", key, reason)
                 retry = validate.validate_response(
                     llm.call_llm(create_fn, title, description, date_str, readings=readings), source)
                 # A usable first response is only given up for another usable one.
@@ -370,6 +372,11 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         # Published anyway: a stray Japanese word is a smaller defect than a lost story.
         if result.japanese:
             logger.warning("Publishing %s with Japanese left in: %s", key, " ".join(result.japanese))
+
+        # Narration the retry did not fix: keep each fact where code can, drop the rest.
+        if result.narration:
+            logger.warning("Rewriting source narration in %s: %s", key, " | ".join(result.narration))
+            result = validate.rewrite_narration(result)
 
         # Puts back a weekday the source states and the model dropped. See the backend spec,
         # "Weekday restoration".

@@ -69,6 +69,37 @@ NARRATION_JOIN = re.compile(r"(?:;|,? (?:and|but|before|with)) ")
 # "Mt. Fuji" is harmless, since the pieces are rejoined with the same space.
 SENTENCE_BREAK = re.compile(r"(?<=[.!?])\s+(?=[A-Z])")
 
+# Source narration: a sentence about the feed text instead of the news ("The title says",
+# "is named in the announcement", "ends mid-sentence", 'Poo...'). The cut-off strip above only
+# catches the "cut off" shape. Fitted on 20 live sentences and scored on 23 later ones: 19
+# caught, none of 729 other sentences flagged; over all 4,886 live sentences, every hit was
+# narration. The pipeline retries on it. See the backend spec, "Narration retry".
+_SOURCE = r"(?:title|headline|description|article|item|listing|announcement|source|text|notice|report|teaser|excerpt|feed)"
+_NARRATING_VERB = (r"(?:says|said|notes|states|mentions|names|identifies|cites|lists|describes|reports|quotes|begins|"
+                   r"ends|adds|refers|indicates|gives|does|doesn't|cuts|attributes|introduces|includes|highlights|"
+                   r"suggests|focuses|calls)")
+NARRATION = (
+    # The source as the subject: "The title also notes", "the description names".
+    re.compile(rf"\bthe {_SOURCE}(?: also| itself)? {_NARRATING_VERB}\b", re.I),
+    # The source as where something appears: "is named in the announcement", "was also mentioned".
+    re.compile(rf"\b(?:named|mentioned|listed|cited|described|given|stated|quoted|specified|cut off) in the "
+               rf"{_SOURCE}\b|\b(?:is|are|was|were) (?:also )?mentioned\b", re.I),
+    # The cut-off itself described.
+    re.compile(r"\bmid-sentence\b|\btruncated\b|\bbegins to (?:describe|mention|identify|list|name|explain)\b", re.I),
+    # A word the source cut off, kept with its ellipsis: 'Poo...', 'WORLD ONE Te...'.
+    re.compile("\\w(?:\\.\\.\\.|…)"),
+)
+# Verbs whose object is a whole clause, so dropping "The title says (that)" leaves the fact as
+# a sentence. "notes" and "reports" also take a noun ("The article reports her participation"),
+# which would leave a fragment, so they count only with "that". Nouns after "cites" or
+# "mentions" have no verb to stand on, so those sentences are dropped.
+NARRATED_CLAUSE = re.compile(
+    rf"^(?P<head>(?:.*?(?:;|,? and|,? but) )?)the {_SOURCE}(?: also)? "
+    r"(?:(?:says|said)(?: that)?|(?:notes|reports|states|adds|indicates) that) (?P<clause>.+)$", re.I)
+# A cut-off name after titled/named/called: "a lecture titled '91...'" keeps "a lecture".
+_CUT_NAME = "\\s(?:titled|named|called)\\s['‘\"][^'’\"]*?(?:\\.\\.\\.|…)['’\"]"
+CUT_OFF_NAME = re.compile(f",{_CUT_NAME},|{_CUT_NAME}")
+
 # Kana and kanji the model left in its English. Shared with scripts/audit_names.py,
 # so the offline audit and the pipeline agree on what counts.
 JAPANESE_RUN = re.compile(r"[぀-ヿ一-鿿]+")
@@ -105,6 +136,14 @@ def _clean(text, source):
     return enforce_canonical(_fold_long_vowels(_normalize_dashes(text)), source).strip()
 
 
+def _news_before(sentence, joins):
+    # What precedes the last of the joins, as a sentence, or "".
+    head = sentence[: joins[-1].start()].rstrip() if joins else ""
+    if not head:
+        return ""
+    return head if head.endswith((".", "!", "?")) else head + "."
+
+
 def drop_cut_off_narration(summary):
     kept = []
     for sentence in SENTENCE_BREAK.split(summary):
@@ -115,16 +154,53 @@ def drop_cut_off_narration(summary):
             continue
         # Cut at the join before the source noun, not the one before "cut off": in
         # "104-1; the description lists ... but is cut off" the narration starts at ";".
-        joins = list(NARRATION_JOIN.finditer(sentence, 0, nouns[-1].start()))
-        head = sentence[: joins[-1].start()].rstrip() if joins else ""
+        head = _news_before(sentence, list(NARRATION_JOIN.finditer(sentence, 0, nouns[-1].start())))
         if head:
-            kept.append(head if head.endswith((".", "!", "?")) else head + ".")
+            kept.append(head)
     return " ".join(kept)
+
+
+def _narration_start(sentence):
+    starts = [match.start() for match in (pattern.search(sentence) for pattern in NARRATION) if match]
+    return min(starts) if starts else None
+
+
+def narration_sentences(text):
+    return [sentence for sentence in SENTENCE_BREAK.split(text) if _narration_start(sentence) is not None]
+
+
+def without_narration(text):
+    kept = []
+    for sentence in SENTENCE_BREAK.split(text):
+        if _narration_start(sentence) is not None:
+            clause = NARRATED_CLAUSE.match(sentence)
+            if clause:
+                fact = clause["clause"].replace(" and that ", " and ")
+                sentence = clause["head"] + (fact if clause["head"] else fact[:1].upper() + fact[1:])
+            sentence = CUT_OFF_NAME.sub("", sentence)
+            start = _narration_start(sentence)
+            if start is not None:
+                # A semicolon ends a clause anywhere; "and" or "but" only right before the narration,
+                # since in "its chair, vice chair, and secretariat were mentioned" it joins a list.
+                joins = [join for join in NARRATION_JOIN.finditer(sentence, 0, start)
+                         if join.group().startswith(";") or join.end() == start]
+                sentence = _news_before(sentence, joins)
+        if sentence:
+            kept.append(sentence)
+    return " ".join(kept)
+
+
+def rewrite_narration(result):
+    # For narration the retry did not fix. The title is left alone: none has narrated so far.
+    # A summary that was all narration is kept, as a smaller defect than a post without one.
+    result.summary = without_narration(result.summary) or result.summary
+    result.lede = without_narration(result.lede) or _derive_lede(result.summary)
+    return result
 
 
 class ValidationResult:
     def __init__(self, ok, title=None, summary=None, lede=None, error=None, event_month_day=None, label=None,
-                 japanese=()):
+                 japanese=(), narration=()):
         self.ok = ok
         self.title = title
         self.summary = summary
@@ -135,6 +211,8 @@ class ValidationResult:
         # Japanese left in the English. Not a failure: the response is usable, and the
         # pipeline decides what to do. See the backend spec, "Japanese left in".
         self.japanese = list(japanese)
+        # Sentences about the source text, per field. Also not a failure; the pipeline retries.
+        self.narration = list(narration)
 
 
 def _ends_complete_sentence(text):
@@ -235,4 +313,6 @@ def validate_response(raw_text, source=""):
         event_month_day=_extract_event_month_day(data.get("event_date")),
         label=_extract_label(data.get("label")),
         japanese=japanese_runs(" ".join((title, lede, summary))),
+        # Per field, so a title with no full stop does not run into the lede.
+        narration=[sentence for field in (title, lede, summary) for sentence in narration_sentences(field)],
     )

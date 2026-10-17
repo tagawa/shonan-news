@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  {% comment %}Search snippets and link previews. Hand-written rather than jekyll-seo-tag, which adds JSON-LD to every page.{% endcomment %}
+  {% comment %}Search snippets and link previews. Hand-written rather than jekyll-seo-tag, which adds JSON-LD to pages that don't show what it states.{% endcomment %}
   {% assign description = page.lede | default: site.description %}
   {% assign canonical_url = page.url | absolute_url %}
   <meta name="description" content="{{ description | escape }}">
@@ -26,6 +26,7 @@
   <meta property="og:image" content="{{ '/assets/link-preview.png' | absolute_url }}">
   <meta name="twitter:card" content="summary">
   {% endif %}
+  {% include structured-data.html %}
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
   <link rel="icon" href="{{ '/assets/site-icon.svg' | relative_url }}" type="image/svg+xml">

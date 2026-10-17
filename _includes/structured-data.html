@@ -1,0 +1,25 @@
+{% comment %}
+For search engines, so it may only state what the page visibly shows. The breadcrumb's block lives with the trail
+in breadcrumbs.html. Every value goes through jsonify, never escape. See the frontend spec, "Structured data".
+{% endcomment %}
+{% capture site_organization %}{"@type": "Organization", "name": {{ site.title | jsonify }}, "url": {{ '/' | absolute_url | jsonify }}}{% endcapture %}
+{% if page.url == "/" %}
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "WebSite", "name": {{ site.title | jsonify }}, "url": {{ '/' | absolute_url | jsonify }}}
+  </script>
+{% elsif page.collection == "posts" %}
+  {% assign based_on_name = page.source_name | default: site.source_name %}
+  {% comment %}datePublished is this page's run date, not source_date; no image, so the publisher's photo goes no further than og:image.{% endcomment %}
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "NewsArticle",
+    "headline": {{ page.title | jsonify }},
+    "url": {{ canonical_url | jsonify }},
+    "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+    "inLanguage": "en",
+    "author": {{ site_organization }},
+    "publisher": {{ site_organization }},
+    "isBasedOn": {"@type": "NewsArticle", "url": {{ page.source_url | jsonify }},{% if page.source_title and page.source_title != "" %} "name": {{ page.source_title | jsonify }},{% endif %} "inLanguage": "ja",
+      "publisher": {"@type": "Organization", "name": {{ based_on_name | jsonify }}}}
+  }
+  </script>
+{% endif %}

@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Australian artist's solo exhibition in Katase, Fujisawa, to be venue for first
-  overseas showing
+title: Australian artist's first overseas exhibition opens in Katase, Fujisawa
 date: 2026-10-19 03:58:19 +0900
 source_date: '2026-10-18 13:42:43 +0900'
 source_url: https://shonan.keizai.biz/headline/3603/

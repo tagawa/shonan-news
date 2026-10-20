@@ -1,4 +1,4 @@
-USER_AGENT = "ShonanNewsBot/1.0 (+https://github.com/kyokodaniel/shonannews)"
+USER_AGENT = "ShonanNewsBot/1.0 (+https://github.com/tagawa/shonan-news)"
 
 
 class FetchError(Exception):

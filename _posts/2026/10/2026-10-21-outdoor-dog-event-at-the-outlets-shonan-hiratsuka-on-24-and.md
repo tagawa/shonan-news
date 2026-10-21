@@ -13,5 +13,5 @@ lede: The outdoor event 'Inu Soto Days' will be held on 24 and 25 October (Sun) 
 guid: guid:https://www.townnews.co.jp/0605/2026/10/21/858446.html
 ---
 
-The event, where visitors can enjoy time with their dogs, will be held at The Outlets Shonan Hiratsuka in Okami, Hiratsuka, on 24 and 25 October (Sun). It is organized by Rateru Event.
+The event, where visitors can enjoy time with their dogs, will be held at The Outlets Shonan Hiratsuka in Okami, Hiratsuka, on 24 and 25 October (Sun). It is organized by Ratel Event.
 

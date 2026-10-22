@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0601/2026/10/01/855039.html
 source_title: ネット中傷恐怖と責任　キクチ氏が講演
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-11'
+town: Fujisawa
 lede: The 41st Fujisawa City Human Rights Awareness Lecture will be held on 11 November
   (Wed) at F Place Hall in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/01/855039.html

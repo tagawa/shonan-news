@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0605/2026/09/25/854237.html
 source_title: オランガルーツ　大磯運動公園で自然遊び　10月24日（土）に開催
 source_name: タウンニュース（平塚・大磯・二宮・中井）
 event_date: '2026-10-24'
+town: Oiso
 lede: NPO Oranga Roots will hold 'Oranga Play Park' on October 24 (Sat) at the forest
   area of Oiso Sports Park in Oiso.
 guid: guid:https://www.townnews.co.jp/0605/2026/09/25/854237.html

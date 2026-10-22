@@ -7,6 +7,7 @@ source_url: https://shonanevent.blogspot.com/2026/10/1031-with.html
 source_title: 【10月31日（土）】モノレールサミット with レディオ湘南
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-10-31'
+town: Fujisawa
 thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRnIZFc7H3u3P1ohKob5lPhislRBsA_r3rrqbklh1-gurOE-dodOU3CRFhk2ad2SuPa256NM0A1kcSfd7HHUEIJ6XnE_vg5jh_DHkG1sFMaZiJdX2yoZdG9DfVCwcYmMyRgOd7LH13lKaRsF1w7FPkrC-cx7ttiyCb8ykR2ckbI6QkRfJ4-_EkjrZhWA0/s72-c/web_info202610_03.png
 lede: The Shonan Monorail Summit with Radio Shonan will take place on 31 October (Sat)
   at Shonan-Enoshima Station in Fujisawa.

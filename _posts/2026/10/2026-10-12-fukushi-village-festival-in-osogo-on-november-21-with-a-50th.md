@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0601/2026/10/12/856950.html
 source_title: 獺郷でふくし村まつり　11月21日、50周年プレ企画も
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-21'
+town: Fujisawa
 lede: The 33rd Koyukai Fukushi Village Festival will be held on November 21 (Sat)
   at Shonan Fukushi Village in Osogo.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/12/856950.html

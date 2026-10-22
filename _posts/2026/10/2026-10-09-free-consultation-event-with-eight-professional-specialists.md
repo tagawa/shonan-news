@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0601/2026/10/09/856574.html
 source_title: ８士業による無料相談会　11月７日、藤沢商議所
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-07'
+town: Fujisawa
 lede: The 29th Life and Business Consultation event will be held on 7 November (Sat)
   at Minapark in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/09/856574.html

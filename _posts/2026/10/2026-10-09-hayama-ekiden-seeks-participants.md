@@ -8,6 +8,7 @@ source_title: 葉山駅伝参加者を募集
 source_name: タウンニュース（逗子・葉山）
 event_date: '2026-12-13'
 label: sport
+town: Hayama
 lede: The Hayama Ekiden 2026 will be held on 13 December (Sun) in Hayama.
 guid: guid:https://www.townnews.co.jp/0503/2026/10/09/856351.html
 ---

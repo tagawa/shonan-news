@@ -9,6 +9,7 @@ source_title: 茅ヶ崎市長選挙　新人･富田氏が出馬へ　市文化
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-11-01'
 label: politics
+town: Chigasaki
 lede: Katsuya Tomita has announced he will run in the Chigasaki mayoral election,
   with voting scheduled for 1 November in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/09/856296.html

@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0605/2026/10/16/857466.html
 source_title: 大磯港でフリマ
 source_name: タウンニュース（平塚・大磯・二宮・中井）
 event_date: '2026-10-24'
+town: Oiso
 lede: 'The ''Oiso Port Lawn Plaza Flea Market: Connecting, Using, Toward the Future''
   will be held on 24 and 25 October (Sun) at Oiso Port.'
 guid: guid:https://www.townnews.co.jp/0605/2026/10/16/857466.html

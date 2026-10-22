@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/09/25/854103.html
 source_title: 松下政経塾見学とその周辺を歩く
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-29'
+town: Chigasaki
 lede: On 29 October (Thu) in Chigasaki, the Chigasaki Mangoro Furusato Discovery Museum
   group will hold a guided walk titled 'Visiting Matsushita Institute of Government
   and Politics and Walking Its Surroundings.'

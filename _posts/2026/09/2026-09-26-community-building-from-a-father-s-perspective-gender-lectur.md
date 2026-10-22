@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0601/2026/09/26/854666.html
 source_title: パパ目線の地域づくり　ジェンダー講座
 source_name: タウンニュース（藤沢）
 event_date: '2026-10-27'
+town: Fujisawa
 lede: Fujisawa City's gender equality and gender-equal participation lecture will
   be held on 27 October in Fujisawa City.
 guid: guid:https://www.townnews.co.jp/0601/2026/09/26/854666.html

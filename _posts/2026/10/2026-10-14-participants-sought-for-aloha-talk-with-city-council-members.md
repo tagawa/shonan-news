@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/14/857368.html
 source_title: 参加者募集中　議員と語る「アロハトーク」　11月14日茅ヶ崎市役所で開催
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-11-14'
+town: Chigasaki
 lede: '''Aloha Talk,'' an exchange of views between Chigasaki city council members
   and residents, will be held on 14 November (Sat) at Chigasaki City Hall.'
 guid: guid:https://www.townnews.co.jp/0603/2026/10/14/857368.html

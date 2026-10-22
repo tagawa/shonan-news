@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/09/856691.html
 source_title: 鶴嶺高吹奏楽部　日曜午後の演奏会　10月25日　鶴嶺東コミセンで
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-25'
+town: Chigasaki
 lede: Tsurumine High School’s wind ensemble will hold a concert on 25 October (Sun)
   at Tsurumine Higashi Community Center in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/09/856691.html

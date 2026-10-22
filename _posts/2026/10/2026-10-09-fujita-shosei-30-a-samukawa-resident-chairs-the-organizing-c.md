@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/09/856287.html
 source_title: 10月24日に開催されるさむかわスポーツマルシェの実行委員長を務める　藤田 祥生さん　寒川町在住　30歳
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-24'
+town: Samukawa
 lede: The Samukawa Sports Marche will be held on October 24 in Samukawa.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/09/856287.html
 ---

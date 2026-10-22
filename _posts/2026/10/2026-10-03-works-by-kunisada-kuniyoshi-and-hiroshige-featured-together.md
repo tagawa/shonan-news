@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0601/2026/10/02/855449.html
 source_title: 国貞・国芳・広重の共作一堂に　浮世絵館で企画展　来月３日まで
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-03'
+town: Fujisawa
 lede: An exhibition featuring works by Kunisada, Kuniyoshi and Hiroshige is on view
   through 3 November (Tue) at the Fujisawa Ukiyo-e Museum in Tsujidokandai.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/02/855449.html

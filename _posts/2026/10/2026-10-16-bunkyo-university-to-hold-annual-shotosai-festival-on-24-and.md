@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/16/857422.html
 source_title: 文教大学　恒例の｢聳塔祭｣今年も　10月24日・25日　一般公開あり
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-24'
+town: Chigasaki
 lede: Bunkyo University will hold its 42nd Shotosai festival on 24 October (Sat) and
   25 October (Sun) at its Shonan Campus in Namegaya, Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/16/857422.html

@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0605/2026/10/16/857465.html
 source_title: 利用者の力作ずらり　栗原ホームで11月30日まで
 source_name: タウンニュース（平塚・大磯・二宮・中井）
 event_date: '2026-11-30'
+town: Hiratsuka
 lede: The ‘Marron Gallery’ is being held through 30 November (Mon) at Hiratsuka Kurihara
   Home in Tatsunocho, Hiratsuka.
 guid: guid:https://www.townnews.co.jp/0605/2026/10/16/857465.html

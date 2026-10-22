@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0605/2026/10/01/855374.html
 source_title: チェロとピアノ二重奏　10月25日 チェチリア工房
 source_name: タウンニュース（平塚・大磯・二宮・中井）
 event_date: '2026-10-25'
+town: Oiso
 lede: A cello and piano duo recital will be held at Cecilia Kobo in Oiso Town on 25
   October (Sun).
 guid: guid:https://www.townnews.co.jp/0605/2026/10/01/855374.html

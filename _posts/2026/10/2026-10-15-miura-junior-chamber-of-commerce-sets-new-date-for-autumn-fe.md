@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0501/2026/10/15/857571.html
 source_title: 三浦青年会議所　オータムフェス延期日決定　台風被災者支援企画も
 source_name: タウンニュース（横須賀・三浦）
 event_date: '2026-10-24'
+town: Miura
 lede: The rescheduled 'Autumn Fest in Miura Beach' will be held on 24 October (Sat)
   on the beach in front of the Seven-Eleven Miura Kaigan store.
 guid: guid:https://www.townnews.co.jp/0501/2026/10/15/857571.html

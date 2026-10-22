@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0602/2026/10/16/857610.html
 source_title: 大船秋の風物詩　大船夜市が開催　11月３日　芸術館通り
 source_name: タウンニュース（鎌倉）
 event_date: '2026-11-03'
+town: Kamakura
 lede: Ofuna Night Market 2026 will be held on 3 November (Tue, holiday) on Geijutsukan-dori
   near the east exit of Ofuna Station.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/16/857610.html

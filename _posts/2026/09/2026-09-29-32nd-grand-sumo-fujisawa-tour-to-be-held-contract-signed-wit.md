@@ -9,6 +9,7 @@ source_title: 大相撲藤沢場所　32回目の開催決定　錣山親方と�
 source_name: タウンニュース（藤沢）
 event_date: '2027-04-17'
 label: sport
+town: Fujisawa
 lede: The 32nd Grand Sumo Fujisawa Tour will be held on 17 April (Sat) in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/09/29/855052.html
 ---

@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0602/2026/10/15/857491.html
 source_title: 女性産婦人科医師が担当「からだとこころの健康相談」11月12日、鎌倉保健福祉事務所で開催（予約制）
 source_name: タウンニュース（鎌倉）
 event_date: '2026-11-12'
+town: Kamakura
 lede: A female OB-GYN will lead a 'Mind and Body Health Consultation' on 12 November
   at the Kamakura Health and Welfare Office in Yuigahama, Kamakura.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/15/857491.html

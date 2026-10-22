@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/10/856815.html
 source_title: 茅ヶ崎市教育委員会｢あなたの好きな茅ヶ崎｣を募集中　11月30日まで
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-11-30'
+town: Chigasaki
 lede: The Chigasaki City Board of Education is conducting a survey in Chigasaki through
   30 November (Mon) asking what people like about the city.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/10/856815.html

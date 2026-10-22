@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/16/857087.html
 source_title: ｢強い自分｣のつくり方指導　10月24日　勤労市民会館で講座
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-24'
+town: Chigasaki
 lede: A mental training lecture for children through seniors will be held on 24 October
   (Sat) at Chigasaki City Working Citizens Hall in Shineicho.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/16/857087.html

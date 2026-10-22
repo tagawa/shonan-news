@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/09/856282.html
 source_title: 茅高文楽部が伝統芸能を公演　10月31日、うみかぜテラスで
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-31'
+town: Chigasaki
 lede: The Chigasaki High School Bunraku Club will perform at Umikaze Terrace in Chigasaki
   on October 31 (Sat).
 guid: guid:https://www.townnews.co.jp/0603/2026/10/09/856282.html

@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0601/2026/10/09/856561.html
 source_title: 老舗木材店がまち周遊イベント　藤沢本町で10月末まで
 source_name: タウンニュース（藤沢）
 event_date: '2026-10-31'
+town: Fujisawa
 lede: A stamp rally around shops near Fujisawa Honcho Station is being held through
   31 October (Sat), led by Yamadai Mokuzai Co., Ltd. of Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/09/856561.html

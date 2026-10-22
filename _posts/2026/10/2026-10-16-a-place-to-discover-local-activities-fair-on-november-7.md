@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0601/2026/10/16/857581.html
 source_title: 地域活動との出合いの場　11月７日に見本市
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-07'
+town: Fujisawa
 lede: A fair introducing civic groups active in Fujisawa will be held on 7 November
   (Sat) at Fujisawa City Hall and other venues.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/16/857581.html

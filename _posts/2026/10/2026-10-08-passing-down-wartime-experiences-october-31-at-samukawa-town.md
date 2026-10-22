@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/08/856620.html
 source_title: 語り継ぐ戦争体験　10月31日　寒川町民センター
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-31'
+town: Samukawa
 lede: A lecture on passing down wartime experiences will be held on 31 October (Sat)
   at Samukawa Town Community Center.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/08/856620.html

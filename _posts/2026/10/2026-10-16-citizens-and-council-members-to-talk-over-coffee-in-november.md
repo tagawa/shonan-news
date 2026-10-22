@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0601/2026/10/16/857582.html
 source_title: 市民と議員がカフェトーク　11月、参加募集
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-15'
+town: Fujisawa
 lede: Fujisawa City Council will hold its regular Cafe Talk Fujisawa on 15 November
   (Sun) in the First Council Committee Room on the ninth floor of Fujisawa City Hall’s
   main building.

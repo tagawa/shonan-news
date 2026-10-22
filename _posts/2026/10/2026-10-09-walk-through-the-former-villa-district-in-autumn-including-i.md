@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/09/856275.html
 source_title: 【11月7日（土）うみかぜテラス】秋の旧別荘地を歩こう！イサム・ノグチ旧宅ほか
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-11-07'
+town: Chigasaki
 lede: A walk through the former villa district will take place on 7 November (Sat)
   at Umikaze Terrace.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/09/856275.html

@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/06/855901.html
 source_title: 高校生バンドの熱演を聞け！　10月24日、茅ヶ崎市民文化会館で
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-24'
+town: Chigasaki
 lede: A high school band event will be held on 24 October (Sat) at Chigasaki Civic
   Cultural Hall in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/06/855901.html

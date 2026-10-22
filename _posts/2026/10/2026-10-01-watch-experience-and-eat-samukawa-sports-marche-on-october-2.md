@@ -8,6 +8,7 @@ source_title: 観て、体験して、食べて！　10月24日　寒川スポ�
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-24'
 label: sport
+town: Samukawa
 lede: The Samukawa Sports Marche will be held at Samukawa Ekimae Park on October 24
   (Sat).
 guid: guid:https://www.townnews.co.jp/0603/2026/10/01/855383.html

@@ -9,6 +9,7 @@ source_title: 【参加無料】ウスイホームが茅ヶ崎でビーチサッ
 source_name: タウンニュース（鎌倉）
 event_date: '2026-11-08'
 label: sport
+town: Chigasaki
 lede: Usui Home will hold a beach soccer clinic on 8 November (Sun) at Chigasaki Fishing
   Port in Kanagawa Prefecture.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/07/856454.html

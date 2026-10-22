@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0602/2026/10/07/856324.html
 source_title: 秋の公開講座　永井路子の人と作品　11月７日、早見芸術学園で
 source_name: タウンニュース（鎌倉）
 event_date: '2026-11-07'
+town: Kamakura
 lede: An autumn public lecture on Nagai Michiko will be held on 7 November (Sat) at
   Hayami Art Academy’s Kamakura main campus.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/07/856324.html

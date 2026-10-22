@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0605/2026/10/15/857624.html
 source_title: 大磯町　初の黒岩文化祭　11月14・15日に講演など
 source_name: タウンニュース（平塚・大磯・二宮・中井）
 event_date: '2026-11-14'
+town: Oiso
 lede: The 'Kuroiwa Cultural Festival' will be held on November 14 (Sat) and 15 (Sun)
   at Kuroiwa Kaikan in Oiso Town.
 guid: guid:https://www.townnews.co.jp/0605/2026/10/15/857624.html

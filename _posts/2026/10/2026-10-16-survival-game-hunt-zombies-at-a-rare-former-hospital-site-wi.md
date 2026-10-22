@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0501/2026/10/16/857830.html
 source_title: サバイバルゲーム　レアな病院跡地でゾンビ退治　安全なレーザーガン、小学生も楽しく
 source_name: タウンニュース（横須賀・三浦）
 event_date: '2026-10-24'
+town: Yokosuka
 lede: ‘Halloween Thriller Laser Tag’ will be held on 24 October (Sat) at Uwamachi
   Hiroba, the former Uwamachi Hospital site in Yokosuka.
 guid: guid:https://www.townnews.co.jp/0501/2026/10/16/857830.html

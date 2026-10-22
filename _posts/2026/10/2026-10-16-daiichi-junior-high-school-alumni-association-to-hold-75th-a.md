@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/16/857416.html
 source_title: 一中同窓会が75周年総会　10月25日に同校体育館で
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-25'
+town: Chigasaki
 lede: The Chigasaki Municipal Daiichi Junior High School Alumni Association will hold
   its 75th anniversary meeting on 25 October (Sun) at the school gymnasium.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/16/857416.html

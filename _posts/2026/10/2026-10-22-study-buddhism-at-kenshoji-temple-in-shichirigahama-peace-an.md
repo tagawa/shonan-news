@@ -14,5 +14,5 @@ lede: A lecture on peace and Buddhism will begin at 10 a.m. on 3 November (Tue, 
 guid: guid:https://www.townnews.co.jp/0602/2026/10/22/858617.html
 ---
 
-The 9th Buryu University Lecture, titled 'Peace and Buddhism in the Era of the Mongol Invasions, Possibilities of Underwater Archaeology,' will be held at Kenshoji Temple of the Honmon Butsuryu Sect. It begins at 10 a.m. on 3 November (Tue, public holiday).
+The 9th Butsuryu University Lecture, titled 'Peace and Buddhism in the Era of the Mongol Invasions, Possibilities of Underwater Archaeology,' will be held at Kenshoji Temple of the Honmon Butsuryu Sect. It begins at 10 a.m. on 3 November (Tue, public holiday).
 

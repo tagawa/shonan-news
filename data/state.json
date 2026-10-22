@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1cce-65e4af6ef9a26\"",
-    "modified": "Tue, 20 Oct 2026 19:52:03 GMT",
+    "etag": "\"1cce-65e655e11efcc\"",
+    "modified": "Thu, 22 Oct 2026 03:22:03 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -17,8 +17,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1bd8-65e4b01ac9030\"",
-    "modified": "Tue, 20 Oct 2026 19:55:03 GMT",
+    "etag": "\"1bd5-65e6568d6f083\"",
+    "modified": "Thu, 22 Oct 2026 03:25:03 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -78,7 +78,9 @@
       "link:https://shonan.keizai.biz/headline/3600/",
       "link:https://shonan.keizai.biz/headline/3601/",
       "link:https://shonan.keizai.biz/headline/3602/",
-      "link:https://shonan.keizai.biz/headline/3603/"
+      "link:https://shonan.keizai.biz/headline/3603/",
+      "link:https://shonan.keizai.biz/headline/3605/",
+      "link:https://shonan.keizai.biz/headline/3604/"
     ]
   },
   "https://shonanevent.blogspot.com/feeds/posts/summary": {
@@ -1857,8 +1859,8 @@
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"1ba6-65e4b01a70013\"",
-    "modified": "Tue, 20 Oct 2026 19:55:03 GMT",
+    "etag": "\"1ba6-65e6568d28d46\"",
+    "modified": "Thu, 22 Oct 2026 03:25:03 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",
@@ -1885,8 +1887,8 @@
     ]
   },
   "https://zushi-hayama.keizai.biz/rss.xml": {
-    "etag": "\"1b0a-65e4b019e1265\"",
-    "modified": "Tue, 20 Oct 2026 19:55:02 GMT",
+    "etag": "\"1b0a-65e6568d21936\"",
+    "modified": "Thu, 22 Oct 2026 03:25:03 GMT",
     "processed": [
       "link:http://zushi-hayama.keizai.biz/headline/1093/",
       "link:http://zushi-hayama.keizai.biz/headline/1094/",
@@ -2244,6 +2246,25 @@
       "guid": "guid:https://www.townnews.co.jp/0603/2026/10/22/858418.html",
       "post": "2026-10-22-nissan-koki-nissan-fair-test-drive-the-latest-cars-and-sign.md",
       "score": 0.596
+    },
+    {
+      "candidate": "2026-10-01-october-24-sat-and-25-sun-aotosora-aoto-sora.md",
+      "corrections": [],
+      "event_date": null,
+      "guard": null,
+      "guid": "link:https://shonan.keizai.biz/headline/3604/",
+      "judge": true,
+      "lede": "AOTOSORA, a beach culture event, will take place on October 24 and 25 at Tsujido Seaside Park in Tsujidonishikaigan, Fujisawa City.",
+      "missing": [
+        "name Kanagawa",
+        "name Prefectural"
+      ],
+      "outcome": "link_only",
+      "post": "2026-10-22-beach-culture-event-at-tsujido-seaside-park-to-feature-live.md",
+      "reason": "additive_check",
+      "score": 0.422,
+      "summary": "The event, themed around surfing and camping, will be held on 24 October (Sat) and 25 October (Sun) at Tsujido Seaside Park, at 3 Tsujidonishikaigan, Fujisawa City. It will feature live performances, a market, food, workshops and outdoor experiences. It will run from 9 a.m. to 4 p.m., closing at 3 p.m. on the 25th; admission is free, and it will be canceled in case of rain.",
+      "title": "October 24 (Sat) and 25 (Sun): AOTOSORA / Aoto Sora"
     }
   ],
   "posted_source_descriptions": [
@@ -2371,11 +2392,11 @@
     "d610f027bf0def75",
     "cb41aefd7327e7c0",
     "6686964c581a984c",
-    "3510dfa0a6c09a1b"
+    "3510dfa0a6c09a1b",
+    "ccb096d379663b80",
+    "dc8b2db59b027d69"
   ],
   "posted_source_titles": [
-    "\u30d7\u30ec\u30df\u30a2\u30e0\u5546\u54c1\u5238\u201d\u79cb\u306e\u9663\u201d \u6a2a\u9808\u8cc0\u30fb\u4e09\u6d66\u306e\u5546\u5e97\u8857\u300c30\uff05\u5272\u5897\u300d",
-    "\u591a\u7a2e\u76ee\u306e\u30d7\u30ed\u9078\u624b\u3068\u30b9\u30dd\u30fc\u30c4\u5b9f\u8df5 10\u670823\u65e5 \u6a2a\u9808\u8cc0\u30b9\u30bf\u30b8\u30a2\u30e0",
     "\u65e5\u7c73\u4ea4\u6d41\u306e\u97f3\u8272\u97ff\u304b\u305b\u308b \u6a2a\u9808\u8cc0\u82b8\u8853\u5287\u5834\u306e\u516c\u6f14",
     "\u9577\u4e95\u306e\u9b45\u529b\u5168\u958b\u300c\uff2e\u30d5\u30a7\u30b9\u300d \u30c8\u30e9\u30c3\u30af\u30b9\u30c6\u30fc\u30b8\u306b\u71b1\u8996\u7dda",
     "\u6a2a\u9808\u8cc0\u30d3\u30fc\u30eb \u300c\u4e16\u754c\u306e\u8a89\u308c\u300d\u3092\u624b\u4e2d\u306b \u56fd\u969b\u5927\u4f1a\u3067\u90e8\u9580\u6700\u9ad8\u8cde",
@@ -3123,6 +3144,8 @@
     "\u65e5\u7523\u5de5\u6a5f \u6700\u65b0\u8eca\u306e\u8a66\u4e57\u304b\u3089\u6210\u7d04\u307e\u3067 \u65e5\u7523\u30d5\u30a7\u30a2 11\u6708\uff18\u65e5",
     "\u30d1\u30e9\u5353\u7403\u5168\u56fd\u5927\u4f1a\u3067\uff13\u4f4d \u8305\u30f6\u5d0e\u5e02\u5728\u4f4f\u30fb\u90a3\u9808\u5149\u3055\u3093",
     "\u82f1\u8a9e\u7d75\u672c\u306e\u304a\u306f\u306a\u3057\u4f1a 11\u670811\u65e5\u958b\u50ac",
-    "\u4e8c\u5bae\u753a\u5728\u4f4f\u5c71\u672c\u307e\u308a\u3053\u3055\u3093 \u4f5c\u54c1\u5c55\u300c\u3068\u3051\u308b\u300d\u3092\u9280\u5ea7\u3067\u958b\u50ac \u718a\u91ce\u53e4\u9053\u3092\u3068\u3089\u3048\u305f\u4f5c\u54c1\u306a\u306930\u70b9\u304c\u4e26\u3076 10\u670823\u65e5\uff08\u91d1\uff09\u301c11\u6708\uff15\u65e5\uff08\u6728\uff09"
+    "\u4e8c\u5bae\u753a\u5728\u4f4f\u5c71\u672c\u307e\u308a\u3053\u3055\u3093 \u4f5c\u54c1\u5c55\u300c\u3068\u3051\u308b\u300d\u3092\u9280\u5ea7\u3067\u958b\u50ac \u718a\u91ce\u53e4\u9053\u3092\u3068\u3089\u3048\u305f\u4f5c\u54c1\u306a\u306930\u70b9\u304c\u4e26\u3076 10\u670823\u65e5\uff08\u91d1\uff09\u301c11\u6708\uff15\u65e5\uff08\u6728\uff09",
+    "\u8fbb\u5802\u306e\u795e\u53f0\u516c\u5712\u3067\u91ce\u5916\u30a4\u30d9\u30f3\u30c8 \u6620\u753b\u4e0a\u6620\u3068\u300c\u30c7\u30ed\u30ea\u30a2\u30f3\u300d\u5b9f\u8eca\u5c55\u793a\u3082",
+    "\u8fbb\u5802\u6d77\u6d5c\u516c\u5712\u3067\u30d3\u30fc\u30c1\u30ab\u30eb\u30c1\u30e3\u30fc\u30a4\u30d9\u30f3\u30c8 \u30e9\u30a4\u30d6\u3084\u30a2\u30a6\u30c8\u30c9\u30a2\u4f53\u9a13\u3082"
   ]
 }

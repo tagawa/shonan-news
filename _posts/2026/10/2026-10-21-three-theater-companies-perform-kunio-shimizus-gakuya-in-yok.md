@@ -10,10 +10,10 @@ source_name: 横須賀経済新聞
 event_date: '2026-10-24'
 town: Yokosuka
 image_url: https://images.keizai.biz/yokosuka_keizai/headline/1792492589.jpg
-lede: '‘Gakuya: Nagareyuku Mono wa Natsukashiki’ will be staged on 24 and 25 October
+lede: '‘Gakuya: Nagaresaru Mono wa Natsukashiki’ will be staged on 24 and 25 October
   at the Yokosuka City Youth Center in Fukadadai, Yokosuka.'
 guid: link:https://yokosuka.keizai.biz/headline/1673/
 ---
 
-The Miura Peninsula Theater Festival begins with three theater companies performing ‘Gakuya,’ a work by Kunio Shimizu. Theater Company Eigyo Ni-ka will stage ‘Gakuya: Nagareyuku Mono wa Natsukashiki’ at the Yokosuka City Youth Center on 24 and 25 October.
+The Miura Peninsula Theater Festival begins with three theater companies performing ‘Gakuya,’ a work by Kunio Shimizu. Theater Company Eigyo Ni-ka will stage ‘Gakuya: Nagaresaru Mono wa Natsukashiki’ at the Yokosuka City Youth Center on 24 and 25 October.
 

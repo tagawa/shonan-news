@@ -293,18 +293,17 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
     if parsed.get("bozo"):
         logger.warning("Feed parsed with warnings: %s", parsed.get("bozo_exception"))
 
-    feed_state["etag"] = parsed.get("etag") or feed_state.get("etag")
-    feed_state["modified"] = parsed.get("modified") or feed_state.get("modified")
-
     gazetteer = places.load_places()
     # A feed's own towns scope its place readings; an empty list (no fixed area) keeps them all.
     edition = {places.MUNICIPALITIES[town] for town in towns}
 
     new_count = 0
+    capped = False
     posts = None
     # Feeds list newest-first; process oldest-first so the newest item gets the latest timestamp.
     for entry in reversed(parsed.get("entries", [])):
         if new_count >= MAX_ITEMS_PER_RUN:
+            capped = True
             break
 
         key = identity.identity_key(entry)
@@ -423,6 +422,12 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         _shadow(current_state, posts, path, key, title, description, source_name, source_date, date_str, readings,
                 result, event_date, create_fn)
         new_count += 1
+
+    # A capped run keeps the old validators: new ones would get a 304 next run, stranding
+    # the items left over until the feed changes. See the backend spec, "Pipeline stages", step 3.
+    if not capped:
+        feed_state["etag"] = parsed.get("etag") or feed_state.get("etag")
+        feed_state["modified"] = parsed.get("modified") or feed_state.get("modified")
 
     state_mod.save_state(state_path, current_state)
     logger.info("Run complete: %d new posts.", new_count)

@@ -9,8 +9,7 @@ source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-31'
 label: sport
 town: Samukawa
-lede: Samukawa Town is seeking a catchphrase for its 77th Cherry-Blossom Ekiden on
-  31 October (Sat).
+lede: Samukawa Town is seeking a catchphrase for its 77th Cherry-Blossom Ekiden, with entries accepted through 31 October (Sat).
 guid: guid:https://www.townnews.co.jp/0603/2026/10/23/858515.html
 ---
 

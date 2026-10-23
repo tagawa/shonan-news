@@ -11,5 +11,5 @@ lede: The 74th Autumn Ikebana Exhibition will be held on October 31 (Sat) and No
 guid: guid:https://www.townnews.co.jp/0605/2026/10/23/858540.html
 ---
 
-The Hiratsuka Kado Association, chaired by Ohno Shosen, will hold the 74th Autumn Ikebana Exhibition in the multipurpose hall at Hirashin Hiratsuka Cultural Arts Hall on October 31 (Sat) and November 1 (Sun).
+The Hiratsuka Kado Association, chaired by Shosen Ono, will hold the 74th Autumn Ikebana Exhibition in the multipurpose hall at Hirashin Hiratsuka Cultural Arts Hall on October 31 (Sat) and November 1 (Sun).
 

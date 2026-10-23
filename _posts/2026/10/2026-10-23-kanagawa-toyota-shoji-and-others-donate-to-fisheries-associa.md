@@ -9,7 +9,7 @@ source_title: 神奈川トヨタ商事ほか　水産資源を守る活動を支
 source_name: タウンニュース（横須賀・三浦）
 event_date: '2026-10-21'
 lede: On 21 October, Kanagawa Toyota Shoji and Kanagawa Hama Tire donated to a fisheries
-  association to support fishery resource protection efforts in Yokohama.
+  association to support fishery resource protection efforts.
 guid: guid:https://www.townnews.co.jp/0501/2026/10/23/858961.html
 ---
 

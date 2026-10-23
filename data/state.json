@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1cce-65e73329f43d8\"",
-    "modified": "Thu, 22 Oct 2026 19:52:03 GMT",
+    "etag": "\"1cce-65e87506ae2e1\"",
+    "modified": "Fri, 23 Oct 2026 19:52:03 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -17,8 +17,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1bc0-65e733d51400c\"",
-    "modified": "Thu, 22 Oct 2026 19:55:03 GMT",
+    "etag": "\"1c09-65e875b2ef68a\"",
+    "modified": "Fri, 23 Oct 2026 19:55:03 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -81,7 +81,8 @@
       "link:https://shonan.keizai.biz/headline/3603/",
       "link:https://shonan.keizai.biz/headline/3605/",
       "link:https://shonan.keizai.biz/headline/3604/",
-      "link:https://shonan.keizai.biz/headline/3606/"
+      "link:https://shonan.keizai.biz/headline/3606/",
+      "link:https://shonan.keizai.biz/headline/3607/"
     ]
   },
   "https://shonanevent.blogspot.com/feeds/posts/summary": {
@@ -191,7 +192,7 @@
   },
   "https://www.townnews.co.jp/0501/index.xml": {
     "etag": null,
-    "modified": "Thu, 22 Oct 2026 15:52:32 GMT",
+    "modified": "Fri, 23 Oct 2026 15:47:27 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0501/2026/08/04/847507.html",
       "guid:https://www.townnews.co.jp/0501/2026/08/04/847508.html",
@@ -478,7 +479,11 @@
       "guid:https://www.townnews.co.jp/0501/2026/10/23/858631.html",
       "guid:https://www.townnews.co.jp/0501/2026/10/23/858934.html",
       "guid:https://www.townnews.co.jp/0501/2026/10/23/858960.html",
-      "guid:https://www.townnews.co.jp/0501/2026/10/23/858961.html"
+      "guid:https://www.townnews.co.jp/0501/2026/10/23/858961.html",
+      "guid:https://www.townnews.co.jp/0501/2026/10/24/859028.html",
+      "guid:https://www.townnews.co.jp/0501/2026/10/24/859053.html",
+      "guid:https://www.townnews.co.jp/0501/2026/10/24/859064.html",
+      "guid:https://www.townnews.co.jp/0501/2026/10/24/859120.html"
     ]
   },
   "https://www.townnews.co.jp/0503/index.xml": {
@@ -638,7 +643,7 @@
   },
   "https://www.townnews.co.jp/0601/index.xml": {
     "etag": null,
-    "modified": "Thu, 22 Oct 2026 15:55:57 GMT",
+    "modified": "Fri, 23 Oct 2026 15:48:15 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0601/2026/08/06/847658.html",
       "guid:https://www.townnews.co.jp/0601/2026/08/07/846440.html",
@@ -1049,7 +1054,14 @@
       "guid:https://www.townnews.co.jp/0601/2026/10/23/858779.html",
       "guid:https://www.townnews.co.jp/0601/2026/10/23/858780.html",
       "guid:https://www.townnews.co.jp/0601/2026/10/23/858781.html",
-      "guid:https://www.townnews.co.jp/0601/2026/10/23/858782.html"
+      "guid:https://www.townnews.co.jp/0601/2026/10/23/858782.html",
+      "guid:https://www.townnews.co.jp/0601/2026/10/23/858783.html",
+      "guid:https://www.townnews.co.jp/0601/2026/10/23/858784.html",
+      "guid:https://www.townnews.co.jp/0601/2026/10/23/858785.html",
+      "guid:https://www.townnews.co.jp/0601/2026/10/23/858786.html",
+      "guid:https://www.townnews.co.jp/0601/2026/10/23/858947.html",
+      "guid:https://www.townnews.co.jp/0601/2026/10/24/859094.html",
+      "guid:https://www.townnews.co.jp/0601/2026/10/24/859108.html"
     ]
   },
   "https://www.townnews.co.jp/0602/index.xml": {
@@ -1271,7 +1283,7 @@
   },
   "https://www.townnews.co.jp/0603/index.xml": {
     "etag": null,
-    "modified": "Thu, 22 Oct 2026 15:59:09 GMT",
+    "modified": "Fri, 23 Oct 2026 15:48:54 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0603/2026/08/06/848054.html",
       "guid:https://www.townnews.co.jp/0603/2026/08/07/844023.html",
@@ -1612,12 +1624,14 @@
       "guid:https://www.townnews.co.jp/0603/2026/10/23/858522.html",
       "guid:https://www.townnews.co.jp/0603/2026/10/23/858523.html",
       "guid:https://www.townnews.co.jp/0603/2026/10/23/858524.html",
-      "guid:https://www.townnews.co.jp/0603/2026/10/23/858526.html"
+      "guid:https://www.townnews.co.jp/0603/2026/10/23/858526.html",
+      "guid:https://www.townnews.co.jp/0603/2026/10/24/858949.html",
+      "guid:https://www.townnews.co.jp/0603/2026/10/24/859023.html"
     ]
   },
   "https://www.townnews.co.jp/0605/index.xml": {
     "etag": null,
-    "modified": "Thu, 22 Oct 2026 16:01:03 GMT",
+    "modified": "Fri, 23 Oct 2026 15:49:30 GMT",
     "processed": [
       "guid:https://www.townnews.co.jp/0605/2026/08/06/847987.html",
       "guid:https://www.townnews.co.jp/0605/2026/08/07/844024.html",
@@ -1975,12 +1989,14 @@
       "guid:https://www.townnews.co.jp/0605/2026/10/23/858547.html",
       "guid:https://www.townnews.co.jp/0605/2026/10/23/858548.html",
       "guid:https://www.townnews.co.jp/0605/2026/10/23/858549.html",
-      "guid:https://www.townnews.co.jp/0605/2026/10/23/858550.html"
+      "guid:https://www.townnews.co.jp/0605/2026/10/23/858550.html",
+      "guid:https://www.townnews.co.jp/0605/2026/10/23/858711.html",
+      "guid:https://www.townnews.co.jp/0605/2026/10/24/858462.html"
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"1ba6-65e733d5850ab\"",
-    "modified": "Thu, 22 Oct 2026 19:55:03 GMT",
+    "etag": "\"1ba6-65e875b23aa0c\"",
+    "modified": "Fri, 23 Oct 2026 19:55:02 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",
@@ -2007,8 +2023,8 @@
     ]
   },
   "https://zushi-hayama.keizai.biz/rss.xml": {
-    "etag": "\"1a97-65e733d4eac39\"",
-    "modified": "Thu, 22 Oct 2026 19:55:03 GMT",
+    "etag": "\"1a97-65e875b307726\"",
+    "modified": "Fri, 23 Oct 2026 19:55:03 GMT",
     "processed": [
       "link:http://zushi-hayama.keizai.biz/headline/1093/",
       "link:http://zushi-hayama.keizai.biz/headline/1094/",
@@ -2658,6 +2674,53 @@
       "guid": "guid:https://www.townnews.co.jp/0605/2026/10/23/858550.html",
       "post": "2026-10-23-two-incumbent-and-newcomer-camps-attend-oiso-mayoral-electio.md",
       "score": 0.313
+    },
+    {
+      "candidate": "2026-10-21-workshop-on-funding-for-organizations-to-be-held-on-14-novem.md",
+      "corrections": [],
+      "event_date": "2026-11-14",
+      "guard": null,
+      "guid": "link:https://shonan.keizai.biz/headline/3607/",
+      "judge": true,
+      "lede": "A funding lecture, workshop and networking event for civic activity groups will be held on 14 November (Sat) at the Chigasaki Civic Activity Support Center in Chigasaki.",
+      "missing": [],
+      "outcome": "merged",
+      "post": "2026-10-24-funding-workshop-for-civic-groups-in-chigasaki-to-explore-di.md",
+      "reason": null,
+      "score": 0.514,
+      "summary": "The lecture and workshop, titled 'Let's Think About Fundraising to Support Our Activities,' are aimed at people concerned about funding for running their organizations and will cover securing diverse funding sources. The accompanying networking event is 'Machi-katsu meetup Vol.1.' The events will be held at the Chigasaki Civic Activity Support Center, Chigasaki 3, Chigasaki; the telephone number is 0467-88-7546.",
+      "title": "Chigasaki Workshop to Teach Civic Groups How to Secure Diverse Funding"
+    },
+    {
+      "candidate": "2026-10-09-unified-local-elections-komuro-to-run-for-city-council-endor.md",
+      "guard": null,
+      "guid": "guid:https://www.townnews.co.jp/0601/2026/10/23/858947.html",
+      "judge": false,
+      "post": "2026-10-24-cdp-fields-ayu-yanagida-for-next-springs-prefectural-electio.md",
+      "score": 0.333
+    },
+    {
+      "candidate": "2026-10-23-chigasaki-mayoral-election-public-debate-to-be-held-on-23-oc.md",
+      "guard": null,
+      "guid": "guid:https://www.townnews.co.jp/0603/2026/10/24/859023.html",
+      "judge": false,
+      "post": "2026-10-24-chigasaki-mayoral-election-debate-canceled.md",
+      "score": 0.686
+    },
+    {
+      "candidate": "2026-10-23-four-incumbent-and-newcomer-candidates-debate-ninomiyas-futu.md",
+      "guard": null,
+      "guid": "guid:https://www.townnews.co.jp/0603/2026/10/24/859023.html",
+      "judge": false,
+      "post": "2026-10-24-chigasaki-mayoral-election-debate-canceled.md",
+      "score": 0.456
+    },
+    {
+      "candidate": "2026-10-16-nakai-mayoral-election-200-attend-public-debate-discuss-the.md",
+      "guard": "event_date",
+      "guid": "guid:https://www.townnews.co.jp/0603/2026/10/24/859023.html",
+      "post": "2026-10-24-chigasaki-mayoral-election-debate-canceled.md",
+      "score": 0.445
     }
   ],
   "posted_source_descriptions": [
@@ -2852,24 +2915,24 @@
     "6c31874cd14e9766",
     "694004351e262d5d",
     "fe7075272c140a39",
-    "f2c4f5c22f70d53e"
+    "f2c4f5c22f70d53e",
+    "f5a0e4218fa7eca8",
+    "5ba09761dab3520e",
+    "2ce7e92624db31e9",
+    "5ecdc26fd11bf36d",
+    "a9b3b5b3b04fc490",
+    "46620cc7251ae37b",
+    "00fc81be96dce54d",
+    "ca4d20a6fd3b67e4",
+    "1f785d123ecd1faf",
+    "ace5b8c4e60b9bb8",
+    "5c298dca6b359efe",
+    "1eb6c0c697ed190e",
+    "31bb3e8d427786db",
+    "dacb34ed06987ce8",
+    "72d0d311104a5c87"
   ],
   "posted_source_titles": [
-    "\u4e2d\u4e95\u753a \u6620\u753b\u3067\u77e5\u308b\u8a8d\u77e5\u75c7 10\u6708\uff13\u65e5\u306b\u7121\u6599\u4e0a\u6620\u4f1a",
-    "\u4e16\u754c\u81ea\u6bba\u4e88\u9632\u30c7\u30fc \u547d\u306b\u5bc4\u308a\u6dfb\u3046\u76f8\u8ac7\u4f1a\u3082 \u5e73\u585a\u5e02\u5185\u3067\u3082\u5553\u767a",
-    "\u5e73\u585a\u5e02\u5ca1\u5d0e\u5730\u533a \u4e57\u5408\u30bf\u30af\u30b7\u30fc\u5b9f\u8a3c\u958b\u59cb \u7b2c\u4e8c\u671f\u304c\uff19\u670817\u65e5\u304b\u3089",
-    "\u82b1\u83dc\u30ac\u30fc\u30c7\u30f3 \u5f69\u308a\u8c4a\u304b\u306b\u79cb\u306e\u88c5\u3044 \u5927\u82b1\u58c7\u3084\u30ea\u30b3\u30ea\u30b9\u304c\u898b\u3054\u308d",
-    "\uff34\uff2b\uff2f\u3067\u65e5\u672c\u738b\u8005\u306b \u5e73\u585a\u5e02\u5728\u4f4f\u5927\u6a4b\u6ce2\u6708\u3055\u3093",
-    "\u5e73\u585a\u3067\u5e02\u6c11\u6f14\u5287\u30d5\u30a7\u30b9 \uff19\u670819\u65e5\uff08\u571f\uff09\u30fb20\u65e5\uff08\u65e5\uff09\u958b\u50ac",
-    "\u5e73\u585a\u5e02\u7f8e\u8853\u9928 \u5de5\u85e4\u7532\u4eba\u306e\uff11\uff11\uff10\u5e74\u3092\u56de\u9867 \uff19\u670819\u65e5\u301c\u4f01\u753b\u5c55",
-    "\u30df\u30b9\u30bf\u30fc\u30de\u30c3\u30af\u30b9\u6e58\u5357\u85e4\u6ca2\u306b\u300c\u6e58\u5357\u30c6\u30a3\u30fc\u30e9\u30d6\u300d \u8336\u8449\u4f1a\u793e\u304c\u521d\u51fa\u5e97",
-    "\u304b\u308b\u305f\u904a\u3073\u3067\u5c0f\u6817\u3092\u77e5\u308b \u6b63\u5fb3\u5bfa\u4f1a\u5834\u306b\u4ea4\u6d41\u30a4\u30d9\u30f3\u30c8",
-    "\u6a2a\u9808\u8cc0\u5e02\u914d\u5099\u306e\u9632\u707d\u8eca\u4e21 \u30ad\u30c3\u30c1\u30f3\u30ab\u30fc\u30fb\u30c8\u30a4\u30ec\u30ab\u30fc\u62ab\u9732",
-    "\u3088\u3053\u3059\u304b\u958b\u56fd\u82b1\u706b\u5927\u4f1a \u7121\u4eba\u5cf6\u304b\u3089\u773a\u3081\u308b\uff11\u4e07\u767a \u300c\u6a2a\u9808\u8cc0\u5e02\u6c11\u5272\u300d\u3067\u7279\u5225\u6599\u91d1",
-    "\u6b74\u53f2\u8b1b\u5ea7 \u5bd2\u6751\u304b\u3089\u8fd1\u4ee3\u90fd\u5e02\u3078\u5927\u8ee2\u63db \u53e4\u5730\u56f3\u304b\u3089\u6a2a\u9808\u8cc0\u8a95\u751f\u7269\u8a9e",
-    "\u6a2a\u9808\u8cc0\u5e02\u7acb\u4e2d\u5b66\u6821 \u82f1\u8a9e\u6559\u80b2\u306bAI\u6280\u8853\u5c0e\u5165 \u770c\u5185\u521d\u306e\u5c0e\u5165\u3067\u300c\u8a71\u3059\u30fb\u66f8\u304f\u300d\u306e\u82e6\u624b\u514b\u670d\u3078",
-    "\u533b\u7642\u8b1b\u8a71 \u4f4f\u8077\u304c\u8a9e\u308b\u300c\u6b7b\u751f\u89b3\u300d",
-    "\u30ec\u30b9\u30ea\u30f3\u30b0 \u6dfa\u91ce\u304d\u3087\u3046\u3060\u3044\u3001\u5feb\u9032\u6483 \u9577\u7537\u30fb\u6b21\u7537\u30fb\u6b21\u5973\u304c\u597d\u6210\u7e3e",
     "\u9017\u8449\u5730\u57df\u533b\u7642\u30bb\u30f3\u30bf\u30fc \u8d64\u5b57\u7d4c\u55b6\u3067\u4e00\u90e8\u4e8b\u696d\u5ec3\u6b62 \u4e21\u5e02\u753a\u3001\u7d04\uff11\u5104\uff17\u5343\u4e07\u5186\u88dc\u586b\u3078",
     "\u8449\u5c71\u753a\u300c\u306f\u3084\u307e\u308b\u30bf\u30af\u30b7\u30fc\u300d \u5229\u7528\u4f4e\u8ff7\u3067\u5b9f\u8a3c\u5909\u66f4 12\u6708\u304b\u3089\uff62\u5b9a\u6642\u5b9a\u8def\u7dda\uff63\u306b",
     "\u9017\u5b50\uff32\uff23\u676f \u30d3\u30fc\u30c1\u30d0\u30ec\u30fc\u51fa\u5834\u8005\u52df\u96c6 \uff19\u670815\u65e5\u7de0\u5207",
@@ -3604,6 +3667,21 @@
     "\u571f\u5c4b\u5c0f\u5b66\u6821 \u5e02\u5185\u5168\u57df\u304b\u3089\u901a\u3048\u308b 11\u6708\uff15\u65e5\u30fb\uff16\u65e5\u306b\u8aac\u660e\u4f1a",
     "\u3072\u3089\u3064\u304b\u30b7\u30fc\u30c6\u30e9\u30b9 10\u670831\u65e5\u3067\uff11\u5468\u5e74 \u30a4\u30d9\u30f3\u30c8\u306b\u82b1\u6c34\u5c0f\u5150\u7ae5",
     "\u5927\u78ef\u7523\u7c73\u306e\u713c\u914e\u518d\u3073 \u306f\u308b\u307f100\uff05\u3067\u65e8\u5473\u6fc3\u539a",
-    "\u5927\u78ef\u753a\u9577\u9078 \u73fe\u65b0\uff12\u9663\u55b6\u304c\u53c2\u52a0 \u544a\u793a\u30fb\u6295\u958b\u7968\u306b\u5411\u3051\u8aac\u660e\u4f1a"
+    "\u5927\u78ef\u753a\u9577\u9078 \u73fe\u65b0\uff12\u9663\u55b6\u304c\u53c2\u52a0 \u544a\u793a\u30fb\u6295\u958b\u7968\u306b\u5411\u3051\u8aac\u660e\u4f1a",
+    "\u8305\u30f6\u5d0e\u3067\u5e02\u6c11\u6d3b\u52d5\u56e3\u4f53\u5411\u3051\u8cc7\u91d1\u3065\u304f\u308a\u8b1b\u5ea7 \u591a\u69d8\u306a\u8ca1\u6e90\u306e\u78ba\u4fdd\u3092\u5b66\u3076",
+    "\u89b3\u97f3\u5d0e\u7832\u53f0\u30df\u30cb\u30c4\u30a2\u30fc",
+    "\u304f\u308a\u306f\u307e\u82b1\u306e\u56fd \u53f0\u98a8\u88ab\u5bb3\u4e57\u308a\u8d8a\u3048 \u90e8\u5206\u958b\u5712",
+    "\u7406\u60f3\u306e\u5730\u57df\u533b\u7642 \u8a9e\u308a\u5408\u3046 \u6a2a\u9808\u8cc0\u5e02 \u4e0a\u753a\u3067\u4e0a\u6620\u4f1a",
+    "\u8133\u3068\u4f53\u3092\u540c\u6642\u306b\u523a\u6fc0 \uff62\u30b3\u30b0\u30cb\u30b5\u30a4\u30ba\uff63\u4f53\u9a13\u4f1a",
+    "\u5b89\u5168\u306a\u307e\u3061\u3065\u304f\u308a\u306b\u8ca2\u732e \u85e4\u6ca2\u7f72\u304c\uff17\u8005\u306b\u611f\u8b1d\u72b6",
+    "\u5b50\u80b2\u3066\u306b\u4e00\u606f\u3064\u3051\u308b\u30b5\u30ed\u30f3 \u6d77\u5916\u30eb\u30fc\u30c4\u306e\u4eba\u3082\u6b53\u8fce",
+    "\u5149\u66f8\u623f \u53e4\u672c\u5c4a\u3051\u305f44\u5e74\u306b\u5e55 \u5e97\u4e3b\u306e\u6238\u7530\u3055\u3093\u3001\u5730\u57df\u3078\u611f\u8b1d",
+    "\u65e5\u5927\u85e4\u6ca2\u5b66\u751f\u3089 \u5730\u5143\u5de1\u308b\uff62\u30b9\u30b4\u30ed\u30af\uff63\u5b8c\u6210 \u3042\u3059\u3001\u9060\u85e4\u5e02\u6c11\u30bb\u30f3\u3067\u304a\u62ab\u9732\u76ee",
+    "\u6765\u6625\u306e\u770c\u8b70\u9078 \u7acb\u61b2\u304c\u67f3\u7530\u6c0f\u3092\u64c1\u7acb",
+    "\u9b42\u63fa\u3055\u3076\u308b\u5168\u529b\u30b9\u30c6\u30fc\u30b8 \u6e58\u5357\u30c0\u30f3\u30b9\u30b5\u30df\u30c3\u30c8\u767d\u71b1",
+    "\u5bfe\u7b49\u306a\u95a2\u4fc2\u5c0e\u304f\u8b1b\u6f14\u4f1a",
+    "\u8001\u4eba\u30af\u30e9\u30d6\u5927\u4f1a \u4eca\u5e74\u3082 \u529f\u52b4\u8005\u8868\u5f70\u3084\u6f14\u82b8\u62ab\u9732",
+    "\u8305\u30f6\u5d0e\u5e02\u9577\u9078\u6319\u516c\u958b\u8a0e\u8ad6\u4f1a \u4e2d\u6b62\u306b",
+    "\u5742\u672c\u9f8d\u99ac\u306e\u300c\u81ea\u5fd8\u4ed6\u5229\u300d\u306e\u5fc3\u3092\u6e58\u5357\u3067 \u6e58\u5357\u9f8d\u99ac\u4f1a\u304c\u5b50\u3069\u3082\u305f\u3061\u62db\u304d\u5927\u78ef\u3067\u5730\u5f15\u7db2"
   ]
 }

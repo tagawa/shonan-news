@@ -8,8 +8,8 @@ source_title: 茅ヶ崎市長選挙公開討論会 中止に
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-23'
 town: Chigasaki
-lede: The Chigasaki Mayoral Election Public Debate was canceled on 23 October at the
-  Chigasaki City Community Hall.
+lede: The Chigasaki Mayoral Election Public Debate, scheduled 
+       for 23 October at the Chigasaki City Community Hall, has been canceled.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/24/859023.html
 ---
 

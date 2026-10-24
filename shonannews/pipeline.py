@@ -6,7 +6,8 @@ from datetime import date, datetime, timezone
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
-from . import clean, event_town, fetch, identity, llm, merge, places, shortlist, state as state_mod, validate, weekdays, writer
+from . import (clean, event_town, fetch, identity, llm, merge, places, relative_days, shortlist, state as state_mod,
+               validate, weekdays, writer)
 
 logger = logging.getLogger("shonannews")
 
@@ -339,9 +340,13 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         run_time = now_fn()
         date_str = run_time.strftime("%Y-%m-%d")
         source_date = _derive_source_date(entry, run_time)
+        # What the model and every check against the source read; source_title and the dedup
+        # keys stay raw. See the backend spec, "Relative days".
+        model_title = relative_days.resolve(title, source_date)
+        model_description = relative_days.resolve(description, source_date)
 
         # The model's whole input, so a canonical name is only enforced where the source has it.
-        source = f"{title} {description}"
+        source = f"{model_title} {model_description}"
 
         # Official readings of the districts the source names. See the backend spec, "Place readings".
         readings = places.scoped_hints(source, gazetteer, edition)
@@ -352,12 +357,12 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         # "Japanese left in" and "Narration retry".
         try:
             result = validate.validate_response(
-                llm.call_llm(create_fn, title, description, date_str, readings=readings), source)
+                llm.call_llm(create_fn, model_title, model_description, date_str, readings=readings), source)
             if not result.ok or result.japanese or result.narration:
                 reason = result.error or ("japanese_left_in" if result.japanese else "source_narration")
                 logger.warning("Validation failed for %s: %s; retrying once", key, reason)
                 retry = validate.validate_response(
-                    llm.call_llm(create_fn, title, description, date_str, readings=readings), source)
+                    llm.call_llm(create_fn, model_title, model_description, date_str, readings=readings), source)
                 # A usable first response is only given up for another usable one.
                 if retry.ok or not result.ok:
                     result = retry
@@ -384,7 +389,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         result.lede = weekdays.restore_weekdays(result.lede, source, source_date)
         result.summary = weekdays.restore_weekdays(result.summary, source, source_date)
 
-        event_date = _event_date(result, title, description, source_date)
+        event_date = _event_date(result, model_title, model_description, source_date)
         # Only What's on shows a town, and it lists only posts with an event date.
         town = event_town.find(result.title, result.lede, result.summary, title, towns) if event_date else None
 
@@ -419,8 +424,8 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             posts = shortlist.load_posts(posts_dir)
         else:
             posts += [post for post in [shortlist.load_post(path)] if post]
-        _shadow(current_state, posts, path, key, title, description, source_name, source_date, date_str, readings,
-                result, event_date, create_fn)
+        _shadow(current_state, posts, path, key, model_title, model_description, source_name, source_date, date_str,
+                readings, result, event_date, create_fn)
         new_count += 1
 
     # A capped run keeps the old validators: new ones would get a 304 next run, stranding

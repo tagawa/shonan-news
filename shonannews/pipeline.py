@@ -61,7 +61,15 @@ def _single_source_month_day(title, description):
     # one is the event is a judgement for the model. See the backend spec, "Event date fallback".
     source = unicodedata.normalize("NFKC", f"{title}\n{description}")
     found = {(int(m), int(d)) for m, d in FULL_DATE.findall(source)}
-    return found.pop() if len(found) == 1 else None
+    if len(found) != 1:
+        return None
+    month_day = found.pop()
+    # A different day-only date before it is the event, and this one a rain date or a
+    # range's end (31日（土）… 荒天の場合は11月１日（日）に延期).
+    first = FULL_DATE.search(source).start()
+    if any(int(d) != month_day[1] for d, _ in DAY_WITH_WEEKDAY.findall(source[:first])):
+        return None
+    return month_day
 
 
 def _weekday_month_day(title, description, source_date):

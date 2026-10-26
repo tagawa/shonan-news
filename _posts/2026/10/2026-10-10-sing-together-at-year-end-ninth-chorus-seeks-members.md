@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0601/2026/10/09/856585.html
 source_title: ともに歌おう年末の第九　唄う会がメンバー募集中
 source_name: タウンニュース（藤沢）
 event_date: '2026-12-20'
+town: Fujisawa
 lede: The Shimin Theater Ninth Singing Group is recruiting choir members for a Ninth
   concert on 20 December (Sun) at Shonandai Art Square.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/09/856585.html

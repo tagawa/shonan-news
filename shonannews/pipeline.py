@@ -399,7 +399,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
 
         event_date = _event_date(result, model_title, model_description, source_date)
         # Only What's on shows a town, and it lists only posts with an event date.
-        town = event_town.find(result.title, result.lede, result.summary, title, towns) if event_date else None
+        town = event_town.find(result.title, result.lede, result.summary, title, towns, description) if event_date else None
 
         source_url = _prefer_https(entry.get("link", ""))
         image_url = _extract_image(entry)

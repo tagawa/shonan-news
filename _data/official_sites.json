@@ -1,4 +1,16 @@
 [
   {"ja": ["ソレイユの丘"], "en": ["Soleil Hill", "Soleil no Oka"], "url": "https://soleil-park.jp/en/"},
-  {"ja": ["フードバンク湘南"], "en": ["Food Bank Shonan"], "url": "https://foodbank-shonan.com/"}
+  {"ja": ["フードバンク湘南"], "en": ["Food Bank Shonan"], "url": "https://foodbank-shonan.com/"},
+  {"ja": ["茅ヶ崎市民文化会館", "茅ケ崎市民文化会館"], "en": ["Chigasaki Civic Hall", "Chigasaki Civic Cultural Hall", "Chigasaki City Cultural Hall", "Chigasaki Civic Cultural Center", "Chigasaki Civic Cultural Centre"], "url": "https://www.chigasaki-hall.jp/"},
+  {"ja": ["鶴岡八幡宮"], "en": ["Tsurugaoka Hachimangu"], "url": "https://www.hachimangu.or.jp/en/"},
+  {"ja": ["新江ノ島水族館", "新江の島水族館", "えのすい"], "en": ["Enoshima Aquarium", "Shin-Enoshima Aquarium", "New Enoshima Aquarium", "Enosui"], "url": "https://www.enosui.com/en/"},
+  {"ja": ["横須賀美術館"], "en": ["Yokosuka Museum of Art"], "url": "https://www.yokosuka-moa.jp/en/"},
+  {"ja": ["横須賀芸術劇場", "よこすか芸術劇場"], "en": ["Yokosuka Arts Theatre", "Yokosuka Arts Theater"], "url": "https://www.yokosuka-arts.or.jp/"},
+  {"ja": ["寒川神社"], "en": ["Samukawa-jinja Shrine", "Samukawa Shrine", "Samukawa Jinja"], "url": "https://samukawajinjya.jp/en/"},
+  {"ja": ["寒川アリーナ", "寒川総合体育館"], "en": ["Shinko Sports Samukawa Arena", "Samukawa General Gymnasium"], "url": "https://samukawa-sougoutaiikukan.com/"},
+  {"ja": ["逗子文化プラザ"], "en": ["Zushi Bunka Plaza Hall", "Zushi Bunka Plaza Sazanami Hall", "Zushi Bunka Plaza Nagisa Hall", "Zushi Bunka Plaza", "Zushi Cultural Plaza Hall", "Zushi Cultural Plaza", "Zushi Culture Plaza"], "url": "https://www.bunka-plazahall.com/"},
+  {"ja": ["コッキング苑"], "en": ["Enoshima Samuel Cocking Garden", "Samuel Cocking Garden"], "url": "https://enoshima-seacandle.com/"},
+  {"ja": ["平塚文化芸術ホール", "平塚市文化芸術ホール"], "en": ["Hirashin Hiratsuka Hall of Culture and Arts", "Hirashin Hiratsuka Cultural Arts Hall", "Hirashin Hiratsuka Cultural and Arts Hall", "Hirashin Hiratsuka Culture and Arts Hall", "Hirashin Hall"], "url": "https://hiratsuka.hall-info.jp/"},
+  {"ja": ["ベルマーレ"], "en": ["Shonan Bellmare"], "url": "https://bellmare.co.jp/"},
+  {"ja": ["テラスモール"], "en": ["Terrace Mall Shonan", "Terrace Mall"], "url": "https://shonan.terracemall.com/"}
 ]

@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0601/2026/10/26/859099.html
 source_title: 自然と遊ぶ秋の感謝祭
 source_name: タウンニュース（藤沢）
 event_date: '2026-10-31'
+town: Fujisawa
 lede: The 'Let's All Enjoy It! Autumn Festival' will be held on 31 October (Sat) at Nagakubo Park.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/26/859099.html
 ---

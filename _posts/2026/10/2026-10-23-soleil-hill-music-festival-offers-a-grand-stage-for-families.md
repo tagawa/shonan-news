@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0501/2026/10/23/858622.html
 source_title: ソレイユの丘 音楽フェス　親子で楽しむ豪華ステージ　Ｍａｙ Ｊ． 川崎鷹也など
 source_name: タウンニュース（横須賀・三浦）
 event_date: '2026-11-07'
+town: Yokosuka
 lede: '''nobinobi 2026,'' a large parent-child music festival, will be held on 7 November
   (Sat) and 8 November (Sun) at Nagai Uminote Park Soleil Hill.'
 guid: guid:https://www.townnews.co.jp/0501/2026/10/23/858622.html

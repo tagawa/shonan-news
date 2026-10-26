@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0603/2026/10/09/856284.html
 source_title: カラオケ大会観覧者募集中
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-11-21'
+town: Chigasaki
 lede: A joint charity karaoke contest by Hishinuma Keiai Club and Akamatsucho Yume
   Club will be held on 21 November (Sat) at Kowada Community Center.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/09/856284.html

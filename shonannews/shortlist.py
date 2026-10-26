@@ -9,6 +9,8 @@ from pathlib import Path
 
 import yaml
 
+from .official_sites import unlink
+
 # Set in the offline threshold round; see the backend spec, "Story merge shadow".
 SHORTLIST_THRESHOLD = 0.31
 # Same tokens and stop words as the duplicate measurement, so its threshold carries over.
@@ -39,7 +41,8 @@ def load_post(path):
         source_day = date.fromisoformat(str(front["source_date"])[:10])
     except (yaml.YAMLError, KeyError, TypeError, ValueError):
         return None
-    return Post(Path(path), front, parts[2].strip(), source_day, str(front.get("date", "")))
+    # Without official-site links: the shortlist and judge compare what the model wrote.
+    return Post(Path(path), front, unlink(parts[2].strip()), source_day, str(front.get("date", "")))
 
 
 def load_posts(posts_dir):

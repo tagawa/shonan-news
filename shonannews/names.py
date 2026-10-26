@@ -15,7 +15,8 @@ CANONICAL = {
     # gpt-6-luna wrote "Kamakura Intel" in 3 of 4 responses in the 2026-09-25 model round.
     # Keyed on the club's full name, since インテル alone is also Intel Corporation.
     "鎌倉インテル": "Inter",
-    "ラーテルイベント": "Ratel Event"
+    "ラーテルイベント": "Ratel Event",
+    "ソレイユの丘": "Soleil Hill"
 }
 
 # Hyphenated parts are included so a split name ("Hira-tsuka") is seen whole; a

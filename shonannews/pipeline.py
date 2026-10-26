@@ -6,8 +6,8 @@ from datetime import date, datetime, timezone
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
-from . import (clean, event_town, fetch, identity, llm, merge, places, relative_days, shortlist, state as state_mod,
-               validate, weekdays, writer)
+from . import (clean, event_town, fetch, identity, llm, merge, official_sites, places, relative_days, shortlist,
+               state as state_mod, validate, weekdays, writer)
 
 logger = logging.getLogger("shonannews")
 
@@ -303,6 +303,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         logger.warning("Feed parsed with warnings: %s", parsed.get("bozo_exception"))
 
     gazetteer = places.load_places()
+    sites = official_sites.load_sites()
     # A feed's own towns scope its place readings; an empty list (no fixed area) keeps them all.
     edition = {places.MUNICIPALITIES[town] for town in towns}
 
@@ -421,7 +422,9 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             label=result.label,
             town=town,
         )
-        body = writer.build_body(result.summary)
+        # Linked only in the file: result.summary stays plain for _shadow. See the backend spec,
+        # "Official site links".
+        body = writer.build_body(official_sites.link_first_mention(result.summary, source, sites))
         writer.write_post(path, front_matter, body)
 
         state_mod.mark_source_title_posted(current_state, normalized_title)

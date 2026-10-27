@@ -7,6 +7,7 @@ source_date: '2026-08-22 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0605/2026/08/22/849885.html
 source_title: 透明水彩画80点を展示　９月８日から平塚市美術館で
 source_name: タウンニュース（平塚・大磯・二宮・中井）
+place_photo: hiratsuka-museum-of-art.jpg
 lede: The 25th Tosai-kai Exhibition runs from September 8 to 13 at Hiratsuka City
   Museum of Art's Citizen Art Gallery in Hiratsuka.
 guid: guid:https://www.townnews.co.jp/0605/2026/08/22/849885.html

@@ -18,7 +18,7 @@ def load_sites(path=SITES_PATH):
 
 
 def _english(site):
-    # Longest first, so "Soleil no Oka" is not cut short by a shorter spelling sharing its start.
+    # Longest first, so "Zushi Bunka Plaza Hall" is not cut short by a shorter spelling sharing its start.
     names = sorted(site["en"], key=len, reverse=True)
     return re.compile(r"(?<![\w-])(?:" + "|".join(map(re.escape, names)) + r")(?![\w-])", re.IGNORECASE)
 

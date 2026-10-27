@@ -1,5 +1,6 @@
 import difflib
 import re
+import unicodedata
 
 # One spelling per name, applied in code because a prompt rule cannot guarantee it.
 # Add an entry when scripts/audit_names.py or a reader finds a name the model spells
@@ -17,7 +18,26 @@ CANONICAL = {
     "鎌倉インテル": "Inter",
     "ラーテルイベント": "Ratel Event",
     "ソレイユの丘": "Soleil Hill",
-    "城島": "Kijima"
+    # Hiratsuka's 城島 district, read きじま (the source's own きじまルシェ). Not a postal
+    # district, so the place readings cannot hint it.
+    "城島": "Kijima",
+}
+
+# Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
+# one word, rewritten as whole phrases when the source names the key. Only readings the model
+# has actually produced.
+MISREADINGS = {
+    # Published as "Jojima" and "Kishima Marche" on 2026-10-27, fixed by hand by the owner.
+    "城島": ("Jojima", "Kishima"),
+    # Published once, 2026-09-02, against "Soleil Hill" in 9 live posts (2026-10-27).
+    "ソレイユの丘": ("Soleil no Oka",),
+}
+
+# Places better known locally by their Japanese name: the first body mention of the English
+# name gets the local one in brackets, so a reader can ask the way or search for it. Keyed on
+# the Japanese, like CANONICAL. Owner's list, added to by hand. See the backend spec, "Local names".
+LOCAL_NAMES = {
+    "ソレイユの丘": ("Soleil Hill", "Soleil no Oka"),
 }
 
 # Hyphenated parts are included so a split name ("Hira-tsuka") is seen whole; a
@@ -47,10 +67,12 @@ def is_near_miss(a, b, min_prefix, min_ratio):
     return _shared_prefix(a, b) >= min_prefix and difflib.SequenceMatcher(None, na, nb).ratio() >= min_ratio
 
 
-def enforce_canonical(text, source, table=CANONICAL):
+def enforce_canonical(text, source, table=CANONICAL, misreadings=MISREADINGS):
     for japanese, expected in table.items():
         if japanese not in source:
             continue
+        for reading in misreadings.get(japanese, ()):
+            text = re.sub(rf"\b{re.escape(reading)}\b", expected, text, flags=re.IGNORECASE)
 
         def fix(match):
             token = match.group(0).replace("-", "")
@@ -61,3 +83,15 @@ def enforce_canonical(text, source, table=CANONICAL):
 
         text = NAME_TOKEN.sub(fix, text)
     return text
+
+
+def add_local_name(body, source, table=LOCAL_NAMES):
+    source = unicodedata.normalize("NFKC", source)
+    for japanese, (english, local) in table.items():
+        if unicodedata.normalize("NFKC", japanese) not in source or local.lower() in body.lower():
+            continue
+        # A possessive is skipped: "Soleil Hill (Soleil no Oka)'s field" splits it from its name.
+        mention = re.search(rf"(?<![\w-]){re.escape(english)}(?![\w-]|['’]s\b)", body)
+        if mention:
+            body = f"{body[:mention.end()]} ({local}){body[mention.end():]}"
+    return body

@@ -6,8 +6,8 @@ from datetime import date, datetime, timezone
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
-from . import (clean, event_town, fetch, identity, llm, merge, official_sites, places, relative_days, shortlist,
-               state as state_mod, validate, weekdays, writer)
+from . import (clean, event_town, fetch, identity, llm, merge, names, official_sites, places, relative_days,
+               shortlist, state as state_mod, validate, weekdays, writer)
 
 logger = logging.getLogger("shonannews")
 
@@ -424,7 +424,8 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         )
         # Linked only in the file: result.summary stays plain for _shadow. See the backend spec,
         # "Official site links".
-        body = writer.build_body(official_sites.link_first_mention(result.summary, source, sites))
+        body = writer.build_body(official_sites.link_first_mention(names.add_local_name(result.summary, source),
+                                                                   source, sites))
         writer.write_post(path, front_matter, body)
 
         state_mod.mark_source_title_posted(current_state, normalized_title)

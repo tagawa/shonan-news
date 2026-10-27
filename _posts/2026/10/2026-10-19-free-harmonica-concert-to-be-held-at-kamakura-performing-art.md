@@ -9,6 +9,7 @@ source_title: ハーモニカ響く無料演奏会　11月19日、鎌倉芸術�
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-19'
 town: Kamakura
+place_photo: kamakura-performing-arts-center.jpg
 lede: The Shonan Harmonica Circle’s 29th regular concert will be held on 19 November
   (Thu) at Kamakura Performing Arts Center’s Small Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/19/858033.html

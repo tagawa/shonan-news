@@ -7,6 +7,7 @@ source_date: '2026-09-18 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0605/2026/09/18/853367.html
 source_title: 平塚市美術館　日本初公開作品も　カウナス姉妹都市記念展
 source_name: タウンニュース（平塚・大磯・二宮・中井）
+place_photo: hiratsuka-museum-of-art.jpg
 lede: An exhibition marking the third anniversary of the Hiratsuka–Kaunas sister-city
   relationship opens at Hiratsuka City Museum of Art on 26 September in Hiratsuka.
 guid: guid:https://www.townnews.co.jp/0605/2026/09/18/853367.html

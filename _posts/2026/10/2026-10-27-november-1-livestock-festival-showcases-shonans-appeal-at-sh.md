@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'November 1: Livestock Festival Showcases Shonan’s Appeal at Shonandai Park'
+title: 'November 1: Kanagawa Livestock Festival at Shonandai Park'
 date: 2026-10-27 06:13:39 +0900
 source_date: '2026-10-27 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0601/2026/10/27/859213.html

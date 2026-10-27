@@ -9,6 +9,7 @@ source_title: 紙の花が咲き誇る　鎌倉芸術館でブラッサムアー
 source_name: タウンニュース（鎌倉）
 event_date: '2026-10-29'
 town: Kamakura
+place_photo: kamakura-performing-arts-center.jpg
 lede: The 24th Blossom Art Exhibition will be held from 29 October (Thu) at Kamakura
   Arts Center in Ofuna.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/14/857450.html

@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0605/2026/09/25/854236.html
 source_title: アートスクール　生徒作品を展示　平塚市美術館で
 source_name: タウンニュース（平塚・大磯・二宮・中井）
 event_date: '2026-10-02'
+place_photo: hiratsuka-museum-of-art.jpg
 lede: An art exhibition by 'Aoi Tori Art School' and 'ART VIVANT Shonan' will open
   from October 2 to October 4 at Hiratsuka City Museum's Citizen Art Gallery.
 guid: guid:https://www.townnews.co.jp/0605/2026/09/25/854236.html

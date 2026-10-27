@@ -38,6 +38,7 @@ MISREADINGS = {
 # the Japanese, like CANONICAL. Owner's list, added to by hand. See the backend spec, "Local names".
 LOCAL_NAMES = {
     "ソレイユの丘": ("Soleil Hill", "Soleil no Oka"),
+    "新江ノ島水族館": ("Enoshima Aquarium", "Enosui"),
 }
 
 # Hyphenated parts are included so a split name ("Hira-tsuka") is seen whole; a
@@ -91,7 +92,8 @@ def add_local_name(body, source, table=LOCAL_NAMES):
         if unicodedata.normalize("NFKC", japanese) not in source or local.lower() in body.lower():
             continue
         # A possessive is skipped: "Soleil Hill (Soleil no Oka)'s field" splits it from its name.
-        mention = re.search(rf"(?<![\w-]){re.escape(english)}(?![\w-]|['’]s\b)", body)
+        # No hyphen in the lookbehind: "Shin-Enoshima Aquarium" is the same place with a prefix.
+        mention = re.search(rf"(?<!\w){re.escape(english)}(?![\w-]|['’]s\b)", body)
         if mention:
             body = f"{body[:mention.end()]} ({local}){body[mention.end():]}"
     return body

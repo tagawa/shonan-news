@@ -16,7 +16,8 @@ CANONICAL = {
     # Keyed on the club's full name, since インテル alone is also Intel Corporation.
     "鎌倉インテル": "Inter",
     "ラーテルイベント": "Ratel Event",
-    "ソレイユの丘": "Soleil Hill"
+    "ソレイユの丘": "Soleil Hill",
+    "城島": "Kijima"
 }
 
 # Hyphenated parts are included so a split name ("Hira-tsuka") is seen whole; a

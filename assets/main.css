@@ -674,6 +674,25 @@ button:focus {
   margin-bottom: var(--space-3);
 }
 
+/* A stock photo of the place the post is about. The margin replaces the
+   browser's 1em 40px on <figure>, which would indent it off the 8px scale. */
+.place-photo {
+  margin: 0;
+  margin-bottom: var(--space-3);
+}
+
+.place-photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.place-photo figcaption {
+  color: var(--muted);
+  margin-top: var(--space-2);
+}
+
 /* var() cannot appear inside an @media feature condition, so this repeats
    --measure's value (40rem) literally; keep the two in sync by hand if
    --measure ever changes. Root font-size is unscaled (100%, tracks the
@@ -681,7 +700,8 @@ button:focus {
    default, so 40rem here means the same thing as --measure does in the
    document. */
 @media (min-width: 40rem) {
-  .item-image {
+  .item-image,
+  .place-photo {
     float: right;
     max-width: 50%;
     margin-left: var(--space-2);

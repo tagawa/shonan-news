@@ -28,7 +28,9 @@ def _named_in(source, site):
     return any(unicodedata.normalize("NFKC", name) in source for name in site["ja"])
 
 
-def link_first_mention(body, source, sites):
+def _first_mentions(body, source, sites):
+    # Each listed entry's earliest mention in the body, {index: (start, end)}, shared by the links
+    # and the place photo so the two cannot disagree.
     links = [match.span() for match in LINK.finditer(body)]
     found = [(match.start(), match.end(), index)
              for index, site in enumerate(sites)
@@ -44,10 +46,23 @@ def link_first_mention(body, source, sites):
     first = {}
     for start, end, index in sorted(kept):
         first.setdefault(index, (start, end))
+    return first
+
+
+def link_first_mention(body, source, sites):
+    first = _first_mentions(body, source, sites)
     # From the end backwards, so earlier offsets stay valid.
     for index, (start, end) in sorted(first.items(), key=lambda item: item[1], reverse=True):
         body = f"{body[:start]}[{body[start:end]}]({sites[index]['url']}){NEW_TAB}{body[end:]}"
     return body
+
+
+def place_photo(body, source, sites):
+    # The photo of the first place mentioned that has one. See the backend spec, "Place photos".
+    for index, _ in sorted(_first_mentions(body, source, sites).items(), key=lambda item: item[1]):
+        if "photo" in sites[index]:
+            return sites[index]["photo"]["file"]
+    return None
 
 
 def unlink(body):

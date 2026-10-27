@@ -9,6 +9,15 @@ layout: default
   {% include meta-line.html date=item_date %}
   {% if page.image_url %}
     <img class="item-image" src="{{ page.image_url | escape }}" alt="">
+  {% elsif page.place_photo %}
+    {% comment %} A stock photo of the place, credited in its caption. See the frontend spec, "Place photo". {% endcomment %}
+    {% assign place = site.data.official_sites | where_exp: "entry", "entry.photo.file == page.place_photo" | first %}
+    {% if place %}
+    <figure class="place-photo">
+      <img src="{{ '/assets/images/' | append: place.photo.file | relative_url | escape }}" width="{{ place.photo.width }}" height="{{ place.photo.height }}" alt="">
+      <figcaption>{{ place.en[0] | escape }}. Photo: {% if place.photo.source_url %}<a href="{{ place.photo.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ place.photo.author | escape }}</a>{% else %}{{ place.photo.author | escape }}{% endif %}{% if place.photo.licence %}, <a href="{{ place.photo.licence_url | escape }}" target="_blank" rel="noopener noreferrer">{{ place.photo.licence | escape }}</a>{% endif %}.</figcaption>
+    </figure>
+    {% endif %}
   {% endif %}
   <div class="item-body">
     {{ content }}

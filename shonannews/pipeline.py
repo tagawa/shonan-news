@@ -412,6 +412,9 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         source_url = _prefer_https(entry.get("link", ""))
         image_url = _extract_image(entry)
         thumb_url = None if image_url else _extract_thumb(entry)
+        body_text = names.add_local_name(result.summary, source)
+        # The publisher's image shows the event itself, so a stock photo of the place only fills a gap.
+        place_photo = None if image_url or thumb_url else official_sites.place_photo(body_text, source, sites)
         slug = writer.slugify(result.title, key)
         path = writer.build_filename(date_str, slug, posts_dir, key)
         front_matter = writer.build_front_matter(
@@ -425,14 +428,14 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             guid=key,
             image_url=image_url,
             thumb_url=thumb_url,
+            place_photo=place_photo,
             event_date=event_date,
             label=result.label,
             town=town,
         )
         # Linked only in the file: result.summary stays plain for _shadow. See the backend spec,
         # "Official site links".
-        body = writer.build_body(official_sites.link_first_mention(names.add_local_name(result.summary, source),
-                                                                   source, sites))
+        body = writer.build_body(official_sites.link_first_mention(body_text, source, sites))
         writer.write_post(path, front_matter, body)
 
         state_mod.mark_source_title_posted(current_state, normalized_title)

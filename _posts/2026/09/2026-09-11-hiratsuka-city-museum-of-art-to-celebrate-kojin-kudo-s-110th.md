@@ -7,6 +7,7 @@ source_date: '2026-09-11 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0605/2026/09/11/852277.html
 source_title: 平塚市美術館　工藤甲人の１１０年を回顧　９月19日〜企画展
 source_name: タウンニュース（平塚・大磯・二宮・中井）
+place_photo: hiratsuka-museum-of-art.jpg
 lede: The Hiratsuka City Museum of Art will hold a retrospective of Japanese painter
   Kojin Kudo from September 19 in Hiratsuka, marking his 110th birth anniversary.
 guid: guid:https://www.townnews.co.jp/0605/2026/09/11/852277.html

@@ -27,6 +27,10 @@ SKIP_TAGS = {
     "あっとほーむデスク": "a column",
     "人物風土記": "a profile",
 }
+# Election coverage is for voters, which most readers are not (owner, 2026-10-27). Town News
+# also put this tag on a library poster exhibition, so the title must contain 選 as well.
+# See the backend spec, "Tag skip".
+ELECTION_TAG = "選挙"
 # A volume number in a Town News title marks a serial, whatever its tags; the event blog
 # numbers real concerts the same way, so only Town News is matched. Matched after NFKC.
 # See the backend spec, "Serial skip".
@@ -185,9 +189,12 @@ def feed_description(entry):
 def _skip_tag(entry):
     for tag in entry.get("tags", []):
         # term can be None: feedparser keeps a tag that has only a scheme or label.
-        reason = SKIP_TAGS.get((tag.get("term") or "").strip())
+        term = (tag.get("term") or "").strip()
+        reason = SKIP_TAGS.get(term)
         if reason:
             return reason
+        if term == ELECTION_TAG and "選" in entry.get("title", ""):
+            return "an election item"
     return None
 
 

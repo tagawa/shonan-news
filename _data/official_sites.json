@@ -14,9 +14,34 @@
   {"ja": ["ベルマーレ"], "en": ["Shonan Bellmare"], "url": "https://bellmare.co.jp/"},
   {"ja": ["テラスモール"], "en": ["Terrace Mall Shonan", "Terrace Mall"], "url": "https://shonan.terracemall.com/"},
   {"ja": ["観音崎公園"], "en": ["Kannonzaki Park", "Cape Kannonzaki"], "url": "https://www.kanagawa-park.or.jp/kannonzaki/"},
-  {"ja": ["平塚市美術館"], "en": ["Hiratsuka City Museum of Art", "Hiratsuka Museum of Art", "Hiratsuka Art Museum", "Hiratsuka City Art Museum"], "url": "https://www.city.hiratsuka.kanagawa.jp/art-muse/index.html",
-   "photo": {"file": "hiratsuka-museum-of-art.jpg", "width": 1280, "height": 960, "author": "Dddeco", "source_url": "https://commons.wikimedia.org/wiki/File:Hiratsuka_MOA.JPG", "licence": "CC BY 2.5", "licence_url": "https://creativecommons.org/licenses/by/2.5/"}},
-  {"ja": ["鎌倉芸術館"], "en": ["Kamakura Performing Arts Center", "Kamakura Performing Arts Centre", "Kamakura Arts Center", "Kamakura Arts Centre"], "url": "https://kamakura-kpac.jp/"},
+  {
+    "ja": ["平塚市美術館"], 
+    "en": ["Hiratsuka City Museum of Art", "Hiratsuka Museum of Art", "Hiratsuka Art Museum", "Hiratsuka City Art Museum"], 
+    "url": "https://www.city.hiratsuka.kanagawa.jp/art-muse/index.html",
+    "photo": {
+      "file": "hiratsuka-museum-of-art.jpg", 
+      "width": 1280, 
+      "height": 960, 
+      "author": "Dddeco", 
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hiratsuka_MOA.JPG", 
+      "licence": "CC BY 2.5", 
+      "licence_url": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "ja": ["鎌倉芸術館"], 
+    "en": ["Kamakura Performing Arts Center", "Kamakura Performing Arts Centre", "Kamakura Arts Center", "Kamakura Arts Centre"], 
+    "url": "https://kamakura-kpac.jp/",
+    "photo": {
+      "file": "kamakura-performing-arts-center.jpg", 
+      "width": 1280, 
+      "height": 851,
+      "author": "トトト", 
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hoofdingang_van_het_Kamakura_Performing_Arts_Center,_-18_januari_2026_16%EF%BC%9A59.jpg", 
+      "licence": "CC BY-SA 2.1 JP", 
+      "licence_url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en"
+    }
+  },
   {"ja": ["大船フラワーセンター", "フラワーセンター大船植物園"], "en": ["Ofuna Flower Center", "Ofuna Flower Centre"], "url": "https://www.fcofuna-kanagawa.jp/"},
   {"ja": ["ヴェルニー公園"], "en": ["Verny Park"], "url": "https://www.kanagawaparks.com/verny/"},
   {"ja": ["建長寺"], "en": ["Kenchoji Temple", "Kencho-ji Temple", "Kenchoji", "Kencho-ji", "Kencho Temple"], "url": "https://www.kenchoji.com/"},

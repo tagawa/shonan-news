@@ -9,6 +9,7 @@ source_title: 松山バレエ団　鎌倉芸術館で「くるみ割り人形」
 source_name: タウンニュース（鎌倉）
 event_date: '2026-12-12'
 town: Kamakura
+place_photo: kamakura-performing-arts-center.jpg
 lede: The Matsuyama Ballet Company will perform 'The Nutcracker' on 12 December (Sat)
   at Kamakura Arts Center's Main Hall.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/22/858551.html

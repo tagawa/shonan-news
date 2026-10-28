@@ -709,11 +709,11 @@ button:focus {
 }
 
 /* Index thumbnail: uncropped at a fixed width, since a crop would cut flyer
-   text and object-fit is above the baseline. The cap stops 6rem taking the
+   text and object-fit is above the baseline. The cap stops 7rem taking the
    text column when the reader enlarges text on a narrow screen. */
 .item-thumb {
   float: right;
-  width: 6rem;
+  width: 7rem;
   max-width: 33%;
   height: auto;
   border-radius: var(--radius);
@@ -722,9 +722,9 @@ button:focus {
 }
 
 /* A feed's own small thumbnail (72px on blogspot) shows at its natural size:
-   stretched to 6rem it would blur. */
+   stretched to 7rem it would blur. */
 .item-thumb-small {
-  width: auto;
+  --width: auto;
 }
 
 /* Keeps a tall thumbnail inside its own item. Block, not table: an empty

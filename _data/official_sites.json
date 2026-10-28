@@ -1,18 +1,51 @@
 [
   {"ja": ["ソレイユの丘"], "en": ["Soleil Hill"], "url": "https://soleil-park.jp/en/"},
   {"ja": ["フードバンク湘南"], "en": ["Food Bank Shonan"], "url": "https://foodbank-shonan.com/"},
-  {"ja": ["茅ヶ崎市民文化会館", "茅ケ崎市民文化会館"], "en": ["Chigasaki Civic Hall", "Chigasaki Civic Cultural Hall", "Chigasaki City Cultural Hall", "Chigasaki Civic Cultural Center", "Chigasaki Civic Cultural Centre"], "url": "https://www.chigasaki-hall.jp/"},
+  {
+    "ja": ["茅ヶ崎市民文化会館", "茅ケ崎市民文化会館"], 
+    "en": ["Chigasaki Civic Hall", "Chigasaki Civic Cultural Hall", "Chigasaki City Cultural Hall", "Chigasaki Civic Cultural Center", "Chigasaki Civic Cultural Centre"], 
+    "url": "https://www.chigasaki-hall.jp/"
+  },
   {"ja": ["鶴岡八幡宮"], "en": ["Tsurugaoka Hachimangu"], "url": "https://www.hachimangu.or.jp/en/"},
-  {"ja": ["新江ノ島水族館", "新江の島水族館", "えのすい"], "en": ["Enoshima Aquarium", "Shin-Enoshima Aquarium", "New Enoshima Aquarium", "Enosui"], "url": "https://www.enosui.com/en/"},
+  {
+    "ja": ["新江ノ島水族館", "新江の島水族館", "えのすい"], 
+    "en": ["Enoshima Aquarium", "Shin-Enoshima Aquarium", "New Enoshima Aquarium", "Enosui"], 
+    "url": "https://www.enosui.com/en/",
+    "photo": {
+      "file": "enoshima-aquarium.jpg", 
+      "width": 1280, 
+      "height": 960, 
+      "author": "TAKA@P.P.R.S", 
+      "source_url": "https://www.flickr.com/photos/takapprs_flickr/14758786847/", 
+      "licence": "CC BY-SA 2.0", 
+      "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/deed.en"
+    }
+  },
   {"ja": ["横須賀美術館"], "en": ["Yokosuka Museum of Art"], "url": "https://www.yokosuka-moa.jp/en/"},
   {"ja": ["横須賀芸術劇場", "よこすか芸術劇場"], "en": ["Yokosuka Arts Theatre", "Yokosuka Arts Theater"], "url": "https://www.yokosuka-arts.or.jp/"},
-  {"ja": ["寒川神社"], "en": ["Samukawa-jinja Shrine", "Samukawa Shrine", "Samukawa Jinja"], "url": "https://samukawajinjya.jp/en/"},
+  {
+    "ja": ["寒川神社"], 
+    "en": ["Samukawa-jinja Shrine", "Samukawa Shrine", "Samukawa Jinja"], 
+    "url": "https://samukawajinjya.jp/en/"
+  },
   {"ja": ["寒川アリーナ", "寒川総合体育館"], "en": ["Shinko Sports Samukawa Arena", "Samukawa General Gymnasium"], "url": "https://samukawa-sougoutaiikukan.com/"},
-  {"ja": ["逗子文化プラザ"], "en": ["Zushi Bunka Plaza Hall", "Zushi Bunka Plaza Sazanami Hall", "Zushi Bunka Plaza Nagisa Hall", "Zushi Bunka Plaza", "Zushi Cultural Plaza Hall", "Zushi Cultural Plaza", "Zushi Culture Plaza"], "url": "https://www.bunka-plazahall.com/"},
+  {
+    "ja": ["逗子文化プラザ"], 
+    "en": ["Zushi Bunka Plaza Hall", "Zushi Bunka Plaza Sazanami Hall", "Zushi Bunka Plaza Nagisa Hall", "Zushi Bunka Plaza", "Zushi Cultural Plaza Hall", "Zushi Cultural Plaza", "Zushi Culture Plaza"], 
+    "url": "https://www.bunka-plazahall.com/"
+  },
   {"ja": ["コッキング苑"], "en": ["Enoshima Samuel Cocking Garden", "Samuel Cocking Garden"], "url": "https://enoshima-seacandle.com/"},
   {"ja": ["平塚文化芸術ホール", "平塚市文化芸術ホール"], "en": ["Hirashin Hiratsuka Hall of Culture and Arts", "Hirashin Hiratsuka Cultural Arts Hall", "Hirashin Hiratsuka Cultural and Arts Hall", "Hirashin Hiratsuka Culture and Arts Hall", "Hirashin Hall"], "url": "https://hiratsuka.hall-info.jp/"},
-  {"ja": ["ベルマーレ"], "en": ["Shonan Bellmare"], "url": "https://bellmare.co.jp/"},
-  {"ja": ["テラスモール"], "en": ["Terrace Mall Shonan", "Terrace Mall"], "url": "https://shonan.terracemall.com/"},
+  {
+    "ja": ["ベルマーレ"], 
+    "en": ["Shonan Bellmare"], 
+    "url": "https://bellmare.co.jp/"
+  },
+  {
+    "ja": ["テラスモール"], 
+    "en": ["Terrace Mall Shonan", "Terrace Mall"], 
+    "url": "https://shonan.terracemall.com/"
+  },
   {"ja": ["観音崎公園"], "en": ["Kannonzaki Park", "Cape Kannonzaki"], "url": "https://www.kanagawa-park.or.jp/kannonzaki/"},
   {
     "ja": ["平塚市美術館"], 
@@ -46,5 +79,33 @@
   {"ja": ["ヴェルニー公園"], "en": ["Verny Park"], "url": "https://www.kanagawaparks.com/verny/"},
   {"ja": ["建長寺"], "en": ["Kenchoji Temple", "Kencho-ji Temple", "Kenchoji", "Kencho-ji", "Kencho Temple"], "url": "https://www.kenchoji.com/"},
   {"ja": ["しおさい博物館"], "en": ["Hayama Shiosai Museum"], "url": "https://www.town.hayama.lg.jp/soshiki/shougaigakushuu/2/1701.html"},
-  {"ja": ["茅ヶ崎市博物館", "茅ケ崎市博物館"], "en": ["Chigasaki City Museum", "Chigasaki Museum"], "url": "https://chigamu.jp/en/"}
+  {"ja": ["茅ヶ崎市博物館", "茅ケ崎市博物館"], "en": ["Chigasaki City Museum", "Chigasaki Museum"], "url": "https://chigamu.jp/en/"},
+  {
+    "ja": ["満昌寺"], 
+    "en": ["Manshōji Temple", "Manshoji Temple"], 
+    "url": "https://manshoji.com",
+    "photo": {
+      "file": "manshoji-temple.jpg", 
+      "width": 1280, 
+      "height": 960,
+      "author": "C2revenge", 
+      "source_url": "https://commons.wikimedia.org/wiki/File:%E6%BA%80%E6%98%8C%E5%AF%BA.jpg", 
+      "licence": "CC BY-SA 4.0", 
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+    }
+  },
+  {
+    "ja": ["湘南T-SITE"], 
+    "en": ["Shōnan T-SITE", "Shonan T-SITE"], 
+    "url": "https://store.tsite.jp/shonan/",
+    "photo": {
+      "file": "shonan-t-site.jpg", 
+      "width": 1280, 
+      "height": 853,
+      "author": "yoppy", 
+      "source_url": "https://www.flickr.com/photos/spilt-milk/19640865023/in/photolist-vVAyTR-wRJAB9-wSt5Lp-JJDJmX", 
+      "licence": "CC BY 2.0", 
+      "licence_url": "https://creativecommons.org/licenses/by/2.0/deed.en"
+    }
+  }
 ]

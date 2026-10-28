@@ -128,5 +128,18 @@
       "source_url": "https://commons.wikimedia.org/wiki/File:Chigasaki_City_Library_ac_(2).jpg", 
       "licence": "CC BY-SA 4.0"
     }
+  },
+  {
+    "ja": ["茅ヶ崎館"], 
+    "en": ["Chigasaki-kan", "Chigasakikan"], 
+    "url": "https://www.city.chigasaki.kanagawa.jp/bunka_rekishi/shiteibunkazai/1006259.html",
+    "photo": {
+      "file": "chigasaki-kan.jpg", 
+      "width": 1280, 
+      "height": 853,
+      "author": "茅ヶ崎の宙", 
+      "source_url": "https://commons.wikimedia.org/wiki/File:%E8%8C%85%E3%83%B6%E5%B4%8E%E9%A4%A8.jpg", 
+      "licence": "CC BY-SA 4.0"
+    }
   }
 ]

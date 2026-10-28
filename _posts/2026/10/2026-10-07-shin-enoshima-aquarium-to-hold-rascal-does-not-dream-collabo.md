@@ -8,6 +8,7 @@ source_url: https://shonan.keizai.biz/headline/3597/
 source_title: 新江ノ島水族館が「青春ブタ野郎」コラボイベント　等身大パネルも
 source_name: 湘南経済新聞
 event_date: '2026-10-16'
+place_photo: enoshima-aquarium.jpg
 image_url: https://images.keizai.biz/shonan_keizai/headline/1791257152.jpg
 lede: Shin-Enoshima Aquarium in Katasekaigan, Fujisawa, will hold an Enoshima and
   Shonan-area collaboration event starting 16 October.

@@ -8,6 +8,7 @@ source_title: 11月１日　畜産の魅力ぎっしり　湘南台公園でフ�
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-01'
 town: Fujisawa
+place_photo: shonandai-park.jpg
 lede: The Kanagawa Livestock Day Food Festival will be held on 1 November (Sun) at
   Shonandai Park.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/27/859213.html

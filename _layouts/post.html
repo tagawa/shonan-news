@@ -7,6 +7,10 @@ layout: default
   {% include item-labels.html event_date=page.event_date label=page.label %}
   {% assign item_date = page.source_date | default: page.date %}
   {% include meta-line.html date=item_date %}
+  {% comment %} No excerpt fallback, unlike the index: the excerpt is the body's first paragraph, so it would repeat. {% endcomment %}
+  {% if page.lede %}
+    <p class="item-standfirst">{{ page.lede | escape }}</p>
+  {% endif %}
   {% if page.image_url %}
     <img class="item-image" src="{{ page.image_url | escape }}" alt="">
   {% elsif page.place_photo %}

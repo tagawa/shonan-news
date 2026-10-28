@@ -666,6 +666,18 @@ button:focus {
   margin-bottom: var(--space-3);
 }
 
+/* Larger than the body so it reads as a standfirst, not the body's first
+   sentence. --ink is brighter than --body only in dark mode; in light mode
+   the two tokens are the same colour. */
+.item-standfirst {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0;
+  margin-bottom: var(--space-3);
+}
+
 .item-image {
   display: block;
   max-width: 100%;

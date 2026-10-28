@@ -8,6 +8,7 @@ source_title: 読書の楽しさ表現　茅ヶ崎市図書館で児童・生徒
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-11-18'
 town: Chigasaki
+place_photo: chigasaki-city-library.jpg
 lede: A children’s and students’ poster exhibition is on display through 18 November
   (Wed) at Chigasaki City Library in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/27/859468.html

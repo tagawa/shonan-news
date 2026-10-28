@@ -13,5 +13,4 @@ lede: A lecture and film screening related to the Oto-Sada Oppeke Festival will 
 guid: guid:https://www.townnews.co.jp/0603/2026/10/29/859715.html
 ---
 
-The festival celebrates the achievements of actor Otojiro Kawakami and his wife, Sada Yacco, who had a home at Takasago Ryokuchi in Chigasaki. The related event is titled ‘Cultural Figure Rediscovery Lecture and Revival Play ‘Monna Wanna’…’.
-
+The festival celebrates the achievements of actor Otojiro Kawakami and his wife, Sada Yacco, who had a home at Takasago Ryokuchi in Chigasaki. The related event includes a lecture and a screening of a revived play called "Monna Vanna".

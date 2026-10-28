@@ -14,5 +14,5 @@ lede: On 20 October, WorldSkills gold medalist Kota Tokieda visited Hiratsuka Te
 guid: guid:https://www.townnews.co.jp/0605/2026/10/28/859702.html
 ---
 
-Kota Tokieda, 23, who is from Hiratsuka City and belongs to Kindan Co., Ltd., won a gold medal at the WorldSkills International Competition held in September. He visited Hiratsuka Technical High School on 20 October and encouraged its students to value the spirit of taking on challenges.
+Kota Tokieda, 23, who is from Hiratsuka City and belongs to Kinden Co., Ltd., won a gold medal at the WorldSkills International Competition held in September. He visited Hiratsuka Technical High School on 20 October and encouraged its students to value the spirit of taking on challenges.
 

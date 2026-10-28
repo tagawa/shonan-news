@@ -82,7 +82,7 @@
   {"ja": ["茅ヶ崎市博物館", "茅ケ崎市博物館"], "en": ["Chigasaki City Museum", "Chigasaki Museum"], "url": "https://chigamu.jp/en/"},
   {
     "ja": ["満昌寺"], 
-    "en": ["Manshōji Temple", "Manshoji Temple"], 
+    "en": ["Manshoji Temple", "Manshōji Temple"], 
     "url": "https://manshoji.com",
     "photo": {
       "file": "manshoji-temple.jpg", 
@@ -96,7 +96,7 @@
   },
   {
     "ja": ["湘南T-SITE"], 
-    "en": ["Shōnan T-SITE", "Shonan T-SITE"], 
+    "en": ["Shonan T-SITE", "Shōnan T-SITE"], 
     "url": "https://store.tsite.jp/shonan/",
     "photo": {
       "file": "shonan-t-site.jpg", 
@@ -106,6 +106,20 @@
       "source_url": "https://www.flickr.com/photos/spilt-milk/19640865023/in/photolist-vVAyTR-wRJAB9-wSt5Lp-JJDJmX", 
       "licence": "CC BY 2.0", 
       "licence_url": "https://creativecommons.org/licenses/by/2.0/deed.en"
+    }
+  },
+  {
+    "ja": ["湘南台公園"], 
+    "en": ["Shonandai Park", "Shōnandai Park"], 
+    "url": "https://www.city.fujisawa.kanagawa.jp/kouen/kyoiku/leisure/koen/fujisawashi/shonandai/",
+    "photo": {
+      "file": "shonandai-park.jpg", 
+      "width": 1280, 
+      "height": 960,
+      "author": "五虎将軍", 
+      "source_url": "https://commons.wikimedia.org/wiki/File:Shonandai_Park_01.jpg", 
+      "licence": "CC BY-SA 4.0", 
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
     }
   }
 ]

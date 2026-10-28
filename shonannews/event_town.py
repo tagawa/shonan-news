@@ -11,11 +11,12 @@ TOWNS = list(places.MUNICIPALITIES)
 NAMED = re.compile(r"\b(" + "|".join(TOWNS) + r")\b")
 _TOWN = "(?:" + "|".join(TOWNS) + ")"
 # A town named as where a person or organisation is from, not where the event is. The Miura
-# Peninsula is not Miura, nor is Miura Anjin (William Adams), whose land was in Yokosuka.
+# Peninsula is not Miura, nor is Miura Anjin (William Adams), whose land was in Yokosuka, nor
+# the Miura clan and its founder Miura Daisuke, whose temples and castles are mostly in Yokosuka.
 NOT_THE_VENUE = re.compile(
     rf"\b{_TOWN}-born\b|\bborn in {_TOWN}\b|\b{_TOWN} [Rr]esidents?\b|\b[Rr]esidents? of {_TOWN}\b"
     rf"|\blives? in {_TOWN}\b|\bliving in {_TOWN}\b|\bbased in {_TOWN}(?: and {_TOWN})?\b"
-    rf"|\bnative of {_TOWN}\b|\b{_TOWN} Peninsula\b|\bMiura Anjin\b")
+    rf"|\bnative of {_TOWN}\b|\b{_TOWN} Peninsula\b|\bMiura Anjin\b|\bMiura [Cc]lan\b|\bMiura Daisuke\b")
 JAPANESE_NAMES = {places.short_name(ja): en for en, ja in places.MUNICIPALITIES.items()}
 # The description's own version of NOT_THE_VENUE: a clause saying where someone lives,
 # comes from or is based.

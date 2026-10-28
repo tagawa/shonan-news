@@ -13,5 +13,5 @@ lede: The 'Shonan Cha-karu Sea and Agriculture Marche' will be held on 31 Octobe
 guid: guid:https://www.townnews.co.jp/0601/2026/10/28/859680.html
 ---
 
-The Halloween event, which aims to create a new form of regional circulation, will feature the 'Shonan Cha-karu Sea and Agriculture Marche' at Jellyfish Plaza next to [New Enoshima Aquarium](https://www.enosui.com/en/){:target="_blank" rel="noopener noreferrer"} (Enosui).
+The marche, which aims to create a new form of regional circulation, will be held at Jellyfish Plaza next to [New Enoshima Aquarium](https://www.enosui.com/en/){:target="_blank" rel="noopener noreferrer"} (Enosui).
 

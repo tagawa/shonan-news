@@ -121,5 +121,19 @@
       "licence": "CC BY-SA 4.0", 
       "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
     }
+  },
+  {
+    "ja": ["茅ヶ崎市図書館", "茅ヶ崎図書館"], 
+    "en": ["Chigasaki City Library", "Chigasaki Library"], 
+    "url": "https://chigamu.jp/en/point/detail/173/",
+    "photo": {
+      "file": "chigasaki-city-library.jpg", 
+      "width": 1280, 
+      "height": 851,
+      "author": "Asturio Cantabrio", 
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chigasaki_City_Library_ac_(2).jpg", 
+      "licence": "CC BY-SA 4.0", 
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+    }
   }
 ]

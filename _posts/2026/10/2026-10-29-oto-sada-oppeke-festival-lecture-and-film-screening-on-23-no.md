@@ -8,6 +8,7 @@ source_title: 音貞オッペケ祭　講演会と映像上映会　11月23日�
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-11-23'
 town: Chigasaki
+place_photo: chigasaki-kan.jpg
 lede: A lecture and film screening related to the Oto-Sada Oppeke Festival will take
   place on 23 November at Chigasakikan in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/29/859715.html

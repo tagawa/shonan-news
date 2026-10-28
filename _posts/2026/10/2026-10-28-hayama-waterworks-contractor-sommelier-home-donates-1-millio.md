@@ -12,5 +12,4 @@ lede: '''Sommelier Home'' donated 1 million yen to Zushi City on 26 October.'
 guid: guid:https://www.townnews.co.jp/0503/2026/10/28/859703.html
 ---
 
-The public waterworks contractor, based in Nagae, Hayama Town, works mainly in Zushi City and Hayama Town. It made the donation through the corporate hometown tax program; on 26 October, executive managing director Kazuto Muto was involved in the matter.
-
+The public waterworks contractor, based in Nagae, Hayama Town, works mainly in Zushi City and Hayama Town. It made the donation through the corporate hometown tax program.

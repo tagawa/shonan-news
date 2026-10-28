@@ -8,6 +8,7 @@ source_title: 湘南の未来描くマルシェ　食や体験、多彩に２本
 source_name: タウンニュース（藤沢）
 event_date: '2026-10-31'
 town: Fujisawa
+place_photo: enoshima-aquarium.jpg
 lede: The 'Shonan Cha-karu Sea and Agriculture Marche' will be held on 31 October
   (Sat) at Jellyfish Plaza next to New Enoshima Aquarium.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/28/859680.html

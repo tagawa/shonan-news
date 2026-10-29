@@ -24,8 +24,16 @@
   {"ja": ["横須賀芸術劇場", "よこすか芸術劇場"], "en": ["Yokosuka Arts Theatre", "Yokosuka Arts Theater"], "url": "https://www.yokosuka-arts.or.jp/"},
   {
     "ja": ["寒川神社"], 
-    "en": ["Samukawa-jinja Shrine", "Samukawa Shrine", "Samukawa Jinja"], 
-    "url": "https://samukawajinjya.jp/en/"
+    "en": ["Samukawa-jinja Shrine", "Samukawa Shrine", "Samukawa Jinja", "Samukawa-jinja", "Samukawajinja"], 
+    "url": "https://samukawajinjya.jp/en/",
+    "photo": {
+      "file": "samukawa-jinja.jpg", 
+      "width": 1280, 
+      "height": 960, 
+      "author": "五虎将軍", 
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Samukawa_Shrine_02.jpg", 
+      "licence": "CC BY-SA 4.0"
+    }
   },
   {"ja": ["寒川アリーナ", "寒川総合体育館"], "en": ["Shinko Sports Samukawa Arena", "Samukawa General Gymnasium"], "url": "https://samukawa-sougoutaiikukan.com/"},
   {

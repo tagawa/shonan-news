@@ -6,6 +6,7 @@ source_date: '2026-09-18 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0603/2026/09/18/853262.html
 source_title: ガイド体験ツアー初開催　寒川神社周辺を巡る
 source_name: タウンニュース（茅ヶ崎・寒川）
+place_photo: samukawa-jinja.jpg
 lede: A guided-tour experience was held around Samukawa Shrine on 1 September in Samukawa
   Town.
 guid: guid:https://www.townnews.co.jp/0603/2026/09/18/853262.html

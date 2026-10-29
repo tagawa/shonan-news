@@ -7,6 +7,7 @@ source_date: '2026-09-10 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0603/2026/09/10/852494.html
 source_title: 寒川神社　感謝と繁栄祈念し例祭　19日・20日　流鏑馬や奉納行事
 source_name: タウンニュース（茅ヶ崎・寒川）
+place_photo: samukawa-jinja.jpg
 lede: Samukawa Shrine held its Reitaisai festival on September 19 and 20 at Samukawa.
 guid: guid:https://www.townnews.co.jp/0603/2026/09/10/852494.html
 ---

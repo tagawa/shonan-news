@@ -6,6 +6,7 @@ source_date: '2026-08-14 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0603/2026/08/14/848800.html
 source_title: レイラインツアー参加募集　９月23日　寒川神社で
 source_name: タウンニュース（茅ヶ崎・寒川）
+place_photo: samukawa-jinja.jpg
 lede: Samukawa Town is recruiting participants for a Ley Line experience tour at Samukawa
   Shrine on September 23.
 guid: guid:https://www.townnews.co.jp/0603/2026/08/14/848800.html

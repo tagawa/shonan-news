@@ -11,5 +11,5 @@ lede: An online feature introduces initiatives by organizations supporting resid
 guid: guid:https://www.townnews.co.jp/0602/2026/10/30/859277.html
 ---
 
-The feature introduces initiatives by various organizations supporting car life in Kanagawa Prefecture. Interviews with representatives of the organizations are available online through the link below.
+The feature introduces initiatives by various organizations supporting car life in Kanagawa Prefecture. Interviews with representatives of the organizations are [available online](https://rarea.events/event/309143){:target="_blank" rel="noopener noreferrer"} (Japanese).
 

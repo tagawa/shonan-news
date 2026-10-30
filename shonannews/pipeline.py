@@ -414,7 +414,9 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         thumb_url = None if image_url else _extract_thumb(entry)
         body_text = names.add_local_name(result.summary, source)
         # The publisher's image shows the event itself, so a stock photo of the place only fills a gap.
-        place_photo = None if image_url or thumb_url else official_sites.place_photo(body_text, source, sites)
+        # Title and lede count too: unlike a link, a photo needs no body mention to sit on.
+        place_text = "\n".join([result.title, result.lede, body_text])
+        place_photo = None if image_url or thumb_url else official_sites.place_photo(place_text, source, sites)
         slug = writer.slugify(result.title, key)
         path = writer.build_filename(date_str, slug, posts_dir, key)
         front_matter = writer.build_front_matter(

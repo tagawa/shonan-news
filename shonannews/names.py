@@ -21,6 +21,7 @@ CANONICAL = {
     # Hiratsuka's 城島 district, read きじま (the source's own きじまルシェ). Not a postal
     # district, so the place readings cannot hint it.
     "城島": "Kijima",
+    "宮原青子": "Seiko Miyahara"
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than

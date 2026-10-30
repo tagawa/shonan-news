@@ -14,5 +14,5 @@ lede: Gallery Tsubana will open in Chigasaki's Tomoe district, with a watercolor
 guid: guid:https://www.townnews.co.jp/0603/2026/10/31/860058.html
 ---
 
-Kimiko Ito, who had operated the Chikabado Pharmacy for many years in the Southern Street Shopping District near the south exit of Chigasaki Station, closed the pharmacy and opened Gallery Tsubana at 1-11-7 Tomoe, Chigasaki. The gallery will hold a watercolor exhibition from 16 to 25 November.
+Kimiko Ito, who had operated the Tsubanado Pharmacy for many years in the Southern Street Shopping District near the south exit of Chigasaki Station, closed the pharmacy and opened Gallery Tsubana at 1-11-7 Tomoe, Chigasaki. The gallery will hold a watercolor exhibition from 16 to 25 November.
 

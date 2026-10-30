@@ -9,6 +9,7 @@ source_title: 鎌倉交響楽団　鎌倉芸術館で11月３日に定期演奏�
 source_name: タウンニュース（鎌倉）
 event_date: '2026-11-03'
 town: Kamakura
+place_photo: kamakura-performing-arts-center.jpg
 lede: The Kamakura Symphony Orchestra will hold its 128th regular concert on 3 November
   (Tue, public holiday) at Kamakura Arts Center’s Grand Hall.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/31/860099.html

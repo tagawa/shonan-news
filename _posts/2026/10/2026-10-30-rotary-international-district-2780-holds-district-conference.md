@@ -9,6 +9,7 @@ source_title: 国際ロータリー第２７８０地区　鎌倉で地区大会
 source_name: タウンニュース（鎌倉）
 event_date: '2026-10-10'
 town: Kamakura
+place_photo: kamakura-performing-arts-center.jpg
 lede: Rotary International District 2780 held its district conference on 10 and 11
   October at Kamakura Park Hotel and Kamakura Performing Arts Center in Kamakura.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/30/859812.html

@@ -7,6 +7,7 @@ source_url: https://shonanevent.blogspot.com/2026/11/118_01512347403.html
 source_title: 【11月8日（日）】城ヶ島公園マルシェ
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-11-08'
+town: Miura
 thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9ubzospXXMtbovo-pYGaGLMr0YlT1FlVosTRB43q5ErunoQGKzXP0HX6DSBkm-ZVK6HgenLg5_K7FhdTATFBuBKAQ9gII5WiQxBoBKFaDrlomWQcqscHvYGEbqPfoVHoMwuV3KqOwHGYCnWlS4jw2P39pfhTvW25ZDBbS-glplkZRcqQgyowYx8WUHv4/s72-c/web_info202611_11.png
 lede: The Jogashima Park Marche will be held on 8 November (Sun) at the Jogashima
   Park parking area and entrance gate.

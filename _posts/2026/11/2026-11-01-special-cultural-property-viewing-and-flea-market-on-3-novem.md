@@ -14,5 +14,5 @@ lede: Manshoji will open normally closed cultural properties to the public and h
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-5956231890641301764
 ---
 
-Visitors will be able to view the Important Cultural Property statue of Miura Yoshiaki, along with the 'Cloud Dragon' painting and 'Horai Garden.' The event will run from 9:00 a.m. to 3:00 p.m. inside Manshoji’s main hall and treasure hall; admission is 700 yen, free for elementary school children and younger, while the flea market and food truck area is free.
+Visitors will be able to view the Important Cultural Property statue of Miura Yoshiaki, along with the 'Cloud Dragon' painting and 'Horai Garden.' The event will run from 9:00 a.m. to 3:00 p.m. inside [Manshoji](https://manshoji.com){:target="_blank" rel="noopener noreferrer"}’s main hall and treasure hall; admission is 700 yen, free for elementary school children and younger, while the flea market and food truck area is free.
 

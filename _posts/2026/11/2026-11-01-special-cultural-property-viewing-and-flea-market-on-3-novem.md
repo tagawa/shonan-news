@@ -8,6 +8,7 @@ source_url: https://shonanevent.blogspot.com/2026/11/113_0521760328.html
 source_title: 【11月3日（火・祝）】文化財特別公開＆フリーマーケット
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-11-03'
+town: Yokosuka
 thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFPNJKo5eKuSfGK7KLLqkg7TOIJeHnWAooSQyMj9s37uKi-RVSBfo9ddZkcxkWftqVzEdI8mLZF-ShrJcaN0yWLUBA_OrCKu2pyWy_aKC9Go8FMHoyS8iVw_n3q0Y92D3ZaiqT5Gvzchhhs4CBLcMGFP-Yb85ozEJ1qNcH_4vkoFGXx6zvOlbq2CN0eJ4/s72-c/web_info202611_15.png
 lede: Manshoji will open normally closed cultural properties to the public and hold
   a flea market on 3 November (Tue, public holiday) at the temple in Yokosuka.

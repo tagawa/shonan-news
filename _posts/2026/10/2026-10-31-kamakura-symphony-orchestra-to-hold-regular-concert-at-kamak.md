@@ -15,5 +15,5 @@ lede: The Kamakura Symphony Orchestra will hold its 128th regular concert on 3 N
 guid: guid:https://www.townnews.co.jp/0602/2026/10/31/860099.html
 ---
 
-The concert will begin at 2 p.m., with doors opening at 1 p.m. Conductor Go Tabei will give a pre-concert talk from 1:30 p.m., and tickets will be available at the door.
+The concert at [Kamakura Performing Arts Center](https://kamakura-kpac.jp/){:target="_blank" rel="noopener noreferrer"} will begin at 2 p.m., with doors opening at 1 p.m. Conductor Go Tabei will give a pre-concert talk from 1:30 p.m., and tickets will be available at the door.
 

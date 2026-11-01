@@ -14,5 +14,5 @@ lede: Men Kagura will be performed at Kainan Shrine in Misaki on 6 November (Fri
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-219423761958049425
 ---
 
-Men Kagura, a Miura City-designated intangible folk cultural asset passed down by local people, will be performed from around 17:00 to 20:00. The program begins with 'Kunizume' and includes 'Ebisu no Mai', among other performances characteristic of the fishing town of Misaki; admission is free.
+Men Kagura, a Miura City-designated intangible folk cultural asset passed down by local people, will be performed from around 17:00 to 20:00. The program begins with 'Kunigatame' and includes 'Ebisu no Mai', among other performances characteristic of the fishing town of Misaki; admission is free.
 

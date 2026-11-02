@@ -14,5 +14,6 @@ lede: Mixed choir La Mare will hold a concert on 21 November (Sat) at the small 
 guid: guid:https://www.townnews.co.jp/0603/2026/10/29/859537.html
 ---
 
-La Mare, a mixed choir that meets twice a month at Nango Community Center in Chigasaki, will hold the concert to mark its 30th anniversary, which it will reach next year. The concert will begin in the afternoon.
+La Mare, a mixed choir that meets twice a month at Nango Community Center in Chigasaki, will hold the concert at
+    [Chigasaki Civic Cultural Hall](https://www.chigasaki-hall.jp/){:target="_blank" rel="noopener noreferrer"} to mark its 30th anniversary, which it will reach next year. The concert will begin in the afternoon.
 

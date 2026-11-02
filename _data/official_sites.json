@@ -43,7 +43,19 @@
     "url": "https://www.bunka-plazahall.com/"
   },
   {"ja": ["コッキング苑"], "en": ["Enoshima Samuel Cocking Garden", "Samuel Cocking Garden"], "url": "https://enoshima-seacandle.com/"},
-  {"ja": ["平塚文化芸術ホール", "平塚市文化芸術ホール"], "en": ["Hirashin Hiratsuka Hall of Culture and Arts", "Hirashin Hiratsuka Cultural Arts Hall", "Hirashin Hiratsuka Cultural and Arts Hall", "Hirashin Hiratsuka Culture and Arts Hall", "Hirashin Hall"], "url": "https://hiratsuka.hall-info.jp/"},
+  {
+    "ja": ["平塚文化芸術ホール", "平塚市文化芸術ホール"], 
+    "en": ["Hirashin Hiratsuka Hall of Culture and Arts", "Hirashin Hiratsuka Cultural Arts Hall", "Hirashin Hiratsuka Cultural and Arts Hall", "Hirashin Hiratsuka Culture and Arts Hall", "Hirashin Hall"], 
+    "url": "https://hiratsuka.hall-info.jp/",
+    "photo": {
+      "file": "hirashin-hiratsuka-hall.jpg", 
+      "width": 1280, 
+      "height": 960, 
+      "author": "Nesnad", 
+      "source_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Hirashin_Hiratsuka_Cultural_Arts_Hall_2024_Dec_04_06-09PM.jpeg", 
+      "licence": "CC BY-SA 4.0"
+    }
+  },
   {
     "ja": ["ベルマーレ"], 
     "en": ["Shonan Bellmare"], 

@@ -14,5 +14,5 @@ lede: A class titled 'Simple Chair Exercises and Rhythm Dance' will be held on 1
 guid: guid:https://www.townnews.co.jp/0603/2026/11/02/860238.html
 ---
 
-The class will take place at Chigasaki City Workers' Civic Hall, at 13-32 Shineicho. The stated time is 1 p.m. to 2 p.m. on both days.
+The class will take place at [Chigasaki City Workers' Civic Hall](https://www.chigasaki-kinro.jp/){:target="_blank" rel="noopener noreferrer"}, at 13-32 Shineicho. It runs from 1 p.m. to 2 p.m.
 

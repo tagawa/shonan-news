@@ -15,5 +15,5 @@ lede: The ‘PARKOUR TOP OF JAPAN YOKOSUKA 2026’ championship will be held on 
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-3293823940056434509
 ---
 
-The [parkour championship](https://tokyoparkourcommission.jp/contents/menu/164830){:target="_blank" rel="noopener noreferrer"} will run from 11 a.m. to 5 p.m. at Ikoi Square in [Verny Park](https://www.kanagawaparks.com/verny/){:target="_blank" rel="noopener noreferrer"}, with free admission; it will be canceled in case of rain. For inquiries, contact Yokosuka City’s Culture, Sports and Tourism Department Planning Division at info@tokyoparkourcommission.jp or 046 (822) 9820.
+The [parkour championship](https://tokyoparkourcommission.jp/contents/menu/164830){:target="_blank" rel="noopener noreferrer"} will run from 11 a.m. to 5 p.m. at Ikoi Square in [Verny Park](https://www.kanagawaparks.com/verny/){:target="_blank" rel="noopener noreferrer"}, with free admission; it will be canceled in case of rain. For inquiries, contact the Tokyo Parkour Commission at info@tokyoparkourcommission.jp or Yokosuka City’s Culture, Sports and Tourism Department Planning Division at 046 (822) 9820.
 

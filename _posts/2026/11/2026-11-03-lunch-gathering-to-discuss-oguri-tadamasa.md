@@ -13,5 +13,5 @@ lede: A lunch gathering about Oguri Tadamasa will be held on 11 November (Wed) a
 guid: guid:https://www.townnews.co.jp/0501/2026/11/03/860493.html
 ---
 
-History enthusiasts will gather at the izakaya Yakitori Ryoma no Omakase in Hinodecho, Yokosuka, to discuss the NHK Taiga drama 'Gyakuzoku no Bakushin,' scheduled to air in January 2027.
+The izakaya Yakitori Ryoma no Omakase in Hinodecho, Yokosuka, a gathering place for history enthusiasts, will host the lunch to discuss the NHK Taiga drama 'Gyakuzoku no Bakushin,' scheduled to air in January 2027.
 

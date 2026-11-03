@@ -14,5 +14,5 @@ lede: The Kanagawa Livestock Day Food Festival will be held on 1 November (Sun) 
 guid: guid:https://www.townnews.co.jp/0601/2026/10/27/859213.html
 ---
 
-The festival, featuring the appeal of livestock farming in Kanagawa Prefecture, will run from 10 a.m. to 3 p.m. The Kanagawa Tonton Festival will also be held at the same time.
+The festival, featuring the appeal of livestock farming in Kanagawa Prefecture, will run from 10 a.m. to 3 p.m. The Kanagawa Tonton Festival will also be held at the same time. It will be held at [Shonandai Park](https://www.city.fujisawa.kanagawa.jp/kouen/kyoiku/leisure/koen/fujisawashi/shonandai/){:target="_blank" rel="noopener noreferrer"}.
 

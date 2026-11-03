@@ -736,7 +736,7 @@ button:focus {
 /* A feed's own small thumbnail (72px on blogspot) shows at its natural size:
    stretched to 7rem it would blur. */
 .item-thumb-small {
-  --width: auto;
+  width: auto;
 }
 
 /* Keeps a tall thumbnail inside its own item. Block, not table: an empty

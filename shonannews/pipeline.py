@@ -6,8 +6,8 @@ from datetime import date, datetime, timezone
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
-from . import (clean, event_town, fetch, identity, llm, merge, names, official_sites, places, relative_days,
-               shortlist, state as state_mod, validate, weekdays, writer)
+from . import (clean, event_town, fetch, identity, llm, names, official_sites, places, relative_days,
+               state as state_mod, validate, weekdays, writer)
 
 logger = logging.getLogger("shonannews")
 
@@ -232,61 +232,6 @@ def _extract_thumb(entry):
     return None
 
 
-def _shadow(current_state, posts, new_path, key, title, description, source_name, source_date, date_str, readings,
-            result, event_date, create_fn):
-    # Release 1 of the story merge: decide and record, never write. See the backend spec, "Story merge shadow".
-    base = {"guid": key, "post": new_path.name}
-    try:
-        text = shortlist.post_text(result.title, result.lede, result.summary)
-        # The post just written is excluded before scoring: in the corpus it would skew the IDF.
-        candidates = shortlist.shortlist(text, source_date.date(), [p for p in posts if p.path != new_path])
-        new_event_day = date.fromisoformat(event_date) if event_date else None
-        for score, post in candidates:
-            entry = {**base, "candidate": post.path.name, "score": round(score, 3)}
-            old_event = post.front.get("event_date")
-            old_event_day = date.fromisoformat(str(old_event)[:10]) if old_event else None
-            if merge.blocked_by_event_date(post.source_day, old_event_day, source_date.date(), new_event_day):
-                entry["guard"] = "event_date"
-            elif merge.blocked_by_stated_dates(shortlist.post_text(post.front.get("title", ""), post.front.get("lede"),
-                                                                   post.body), post.source_day, text, source_date.date()):
-                entry["guard"] = "stated_date"
-            elif merge.blocked_by_profile(post.front.get("source_title"), title):
-                entry["guard"] = "profile"
-            else:
-                entry["guard"] = None
-            if entry["guard"]:
-                state_mod.record_merge_shadow(current_state, entry)
-                continue
-            try:
-                judge = lambda: llm.call_judge(create_fn, post.front, post.body, title, description,
-                                               source_date.date(), event_date)
-                verdict = llm.parse_judge(judge())
-                if verdict is None:
-                    verdict = llm.parse_judge(judge())
-            except llm.LLMCallError:
-                state_mod.record_merge_shadow(current_state, {**entry, "judge": "error"})
-                return
-            entry["judge"] = verdict
-            if not verdict:
-                state_mod.record_merge_shadow(current_state, entry)
-                continue
-            try:
-                outcome = merge.merge_into(post, title, description, source_name, source_date, date_str, readings,
-                                           create_fn, _event_date)
-            except llm.LLMCallError:
-                state_mod.record_merge_shadow(current_state, {**entry, "outcome": "merge_error"})
-                return
-            state_mod.record_merge_shadow(current_state, {**entry, "outcome": outcome.kind, "reason": outcome.reason,
-                                                          "missing": outcome.missing, "title": outcome.title,
-                                                          "lede": outcome.lede, "summary": outcome.summary,
-                                                          "event_date": outcome.event_date,
-                                                          "corrections": outcome.corrections})
-            return
-    except Exception as exc:  # the shadow must never cost a post
-        logger.warning("Merge shadow failed for %s: %s", key, exc)
-        state_mod.record_merge_shadow(current_state, {**base, "outcome": "error", "error": repr(exc)})
-
-
 def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_fn=_default_now, towns=()):
     try:
         current_state = state_mod.load_state(state_path)
@@ -316,7 +261,6 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
 
     new_count = 0
     capped = False
-    posts = None
     # Feeds list newest-first; process oldest-first so the newest item gets the latest timestamp.
     for entry in reversed(parsed.get("entries", [])):
         if new_count >= MAX_ITEMS_PER_RUN:
@@ -435,21 +379,13 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             label=result.label,
             town=town,
         )
-        # Linked only in the file: result.summary stays plain for _shadow. See the backend spec,
-        # "Official site links".
+        # See the backend spec, "Official site links".
         body = writer.build_body(official_sites.link_first_mention(body_text, source, sites))
         writer.write_post(path, front_matter, body)
 
         state_mod.mark_source_title_posted(current_state, normalized_title)
         state_mod.mark_source_description_posted(current_state, description_key)
         state_mod.mark_processed(current_state, feed_url, key)
-        # Loaded once per feed (the first load includes this post); later items add only their own file.
-        if posts is None:
-            posts = shortlist.load_posts(posts_dir)
-        else:
-            posts += [post for post in [shortlist.load_post(path)] if post]
-        _shadow(current_state, posts, path, key, model_title, model_description, source_name, source_date, date_str,
-                readings, result, event_date, create_fn)
         new_count += 1
 
     # A capped run keeps the old validators: new ones would get a 304 next run, stranding

@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0601/2026/11/05/860449.html
 source_title: 江の島ボウル拠点の高田選手、杉山選手　ボウリング 国スポ好成績　仲間とともにつかんだ勝利
 source_name: タウンニュース（藤沢）
 event_date: '2026-10-12'
+label: sport
 town: Fujisawa
 lede: The 80th National Sports Games bowling competition was held from 12 to 16 October
   in Aomori Prefecture.

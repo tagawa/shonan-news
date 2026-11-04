@@ -9,7 +9,7 @@ source_title: 人気店集合で‟肉だらけ”　11月６日から８日、�
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-06'
 town: Fujisawa
-lede: '''Niku Niku Park'' will be held from November 6 (Fri) to 8 at Kandai Park in
+lede: '''Niku Niku Park'' will be held from November 6 (Fri) to 8 (Sun) at Kandai Park in
   Tsujido.'
 guid: guid:https://www.townnews.co.jp/0601/2026/11/04/860473.html
 ---

@@ -14,5 +14,5 @@ lede: Kitakamakura Girls' School will hold its regular concert on 14 November (S
 guid: guid:https://www.townnews.co.jp/0602/2026/11/05/860917.html
 ---
 
-The 61st regular concert by the school's junior high music course and high school music department will take place at the hall, about a 10-minute walk from JR Ofuna Station.
+The 61st regular concert by the school's junior high music course and high school music department will take place at the [Kamakura Performing Arts Center Main Hall](https://kamakura-kpac.jp/){:target="_blank" rel="noopener noreferrer"}, about a 10-minute walk from JR Ofuna Station.
 

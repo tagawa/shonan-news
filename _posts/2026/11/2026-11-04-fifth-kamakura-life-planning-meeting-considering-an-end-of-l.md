@@ -7,6 +7,8 @@ source_date: '2026-11-04 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0602/2026/11/04/860757.html
 source_title: 第５回人生会議ｉｎ鎌倉　「自分らしい最期を考える」　11月22日、12月20日　建長寺などで開催
 source_name: タウンニュース（鎌倉）
+event_date: '2026-11-22'
+town: Kamakura
 lede: The fifth Kamakura Life Planning Meeting will be held on 22 November (Sun) and
   20 December at Kenchoji and other venues.
 guid: guid:https://www.townnews.co.jp/0602/2026/11/04/860757.html

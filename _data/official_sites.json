@@ -163,5 +163,17 @@
       "source_url": "https://commons.wikimedia.org/wiki/File:%E8%8C%85%E3%83%B6%E5%B4%8E%E9%A4%A8.jpg", 
       "licence": "CC BY-SA 4.0"
     }
+  },
+  {
+    "ja": ["鎌倉中央公園"], 
+    "en": ["Kamakura Central Park"], 
+    "url": "https://kamakura-park.com/go/central_park/",
+    "photo": {
+      "file": "kamakura-central-park.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Shonan News",
+      "licence": "CC BY 4.0"
+    }
   }
 ]

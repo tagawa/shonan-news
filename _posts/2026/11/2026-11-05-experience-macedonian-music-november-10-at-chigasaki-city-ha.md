@@ -8,7 +8,6 @@ source_title: マケドニア音楽 感じて　11月10日　茅ヶ崎市役所�
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-11-10'
 town: Chigasaki
-place_photo: chigasaki-city-hall.jpg
 lede: A guitar concert by North Macedonian guitarist Darko Bageski will be held on
   10 November (Tue) at Chigasaki City Hall.
 guid: guid:https://www.townnews.co.jp/0603/2026/11/05/860850.html

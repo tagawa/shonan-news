@@ -57,6 +57,17 @@ def link_first_mention(body, source, sites):
     return body
 
 
+def add_site_line(body, head, source, sites):
+    # A place spelled only in the title or lede (head) has no body mention to link, and those two
+    # are never linked, so it gets a line of its own. See the backend spec, "Official site links".
+    first = sorted(_first_mentions(head, source, sites).items(), key=lambda item: item[1])
+    links = [f"[{head[start:end]}]({sites[index]['url']}){NEW_TAB}"
+             for index, (start, end) in first if not _english(sites[index]).search(body)]
+    if not links:
+        return body
+    return f"{body}\n\nOfficial site{'s' if len(links) > 1 else ''}: {', '.join(links)}"
+
+
 def place_photo(body, source, sites):
     # The photo of the first place mentioned that has one. See the backend spec, "Place photos".
     for index, _ in sorted(_first_mentions(body, source, sites).items(), key=lambda item: item[1]):

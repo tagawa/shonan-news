@@ -8,6 +8,7 @@ source_title: 赤ちゃんあそびたい　11月４日　鎌倉中央公園
 source_name: タウンニュース（鎌倉）
 event_date: '2026-11-04'
 town: Kamakura
+place_photo: kamakura-central-park.jpg
 lede: '''Akachan Asobitai'' will be held on 4 November (Wed) at the Yamasaki-guchi
   Plaza in Kamakura Central Park.'
 guid: guid:https://www.townnews.co.jp/0602/2026/09/25/854115.html

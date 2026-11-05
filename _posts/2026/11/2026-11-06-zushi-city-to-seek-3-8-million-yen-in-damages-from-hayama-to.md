@@ -10,7 +10,7 @@ source_name: タウンニュース（逗子・葉山）
 event_date: '2026-11-02'
 town: Zushi
 lede: Zushi City announced on 2 November that it plans to seek 3.8 million yen in
-  damages from Hayama Town in Zushi City.
+  damages from Hayama Town.
 guid: guid:https://www.townnews.co.jp/0503/2026/11/06/860587.html
 ---
 

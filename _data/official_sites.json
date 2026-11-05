@@ -181,5 +181,17 @@
     "ja": ["茅ヶ崎市役所"], 
     "en": ["Chigasaki City Hall"], 
     "url": "https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html"
+  },
+  {
+    "ja": ["くりはま花の国"], 
+    "en": ["Kurihama Flower Park", "Kurihama Flower Country"], 
+    "url": "https://www.kanagawaparks.com/kurihama/",
+    "photo": {
+      "file": "kurihama-flower-park.jpg",
+      "width": 1280,
+      "height": 853,
+      "author": "Shonan News",
+      "licence": "CC BY 4.0"
+    }
   }
 ]

@@ -12,5 +12,5 @@ lede: In Yokosuka, representative Nagasaka discusses the direction of 'Yokosuka 
 guid: guid:https://www.townnews.co.jp/0501/2026/11/06/860594.html
 ---
 
-Yokosuka, starting with the U.S. Navy enlisted men's club known as the EM Club, helped drive Japan's postwar jazz culture. The description recalls a time when the music that once echoed through the city had fallen silent, leaving only a monument in front of Yokosuka-Chuo Station.
+Yokosuka, starting with the U.S. Navy enlisted men's club known as the EM Club, helped drive Japan's postwar jazz culture. The music that once echoed through the city later fell silent, leaving only a monument in front of Yokosuka-Chuo Station.
 

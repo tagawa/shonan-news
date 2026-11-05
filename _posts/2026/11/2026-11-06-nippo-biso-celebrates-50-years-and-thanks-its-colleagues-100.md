@@ -13,5 +13,5 @@ lede: Nippo Biso held a celebration on 23 October at Hotel Sunlife Garden in Hir
 guid: guid:https://www.townnews.co.jp/0605/2026/11/06/860551.html
 ---
 
-The painting company, based in Hiratsuka City and led by Ken Hozoji, held the celebration in the Koyo-no-ma room. Takuji Tokiwa of the Hiratsuka Chamber of Commerce and Industry was among those mentioned.
+The painting company, based in Hiratsuka City and led by Ken Hozoji, held the celebration in the Koyo-no-ma room.
 

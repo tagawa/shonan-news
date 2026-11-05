@@ -22,7 +22,11 @@ CANONICAL = {
     # district, so the place readings cannot hint it.
     "城島": "Kijima",
     "宮原青子": "Seiko Miyahara",
-    "深沢": "Fukasawa"
+    # Kamakura's 深沢, published as "Fukazawa" on 2026-11-06; reading from the owner.
+    "深沢": "Fukasawa",
+    # Filmmaker, reading from the owner, 2026-11-06. More than one word, so it acts
+    # only through MISREADINGS.
+    "藤本東子": "Haruko Fujimoto",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
@@ -33,6 +37,8 @@ MISREADINGS = {
     "城島": ("Jojima", "Kishima"),
     # Published once, 2026-09-02, against "Soleil Hill" in 9 live posts (2026-10-27).
     "ソレイユの丘": ("Soleil no Oka",),
+    # Published 2026-11-06; the 2026-10-23 post on the same film had "Haruko".
+    "藤本東子": ("Toko Fujimoto",),
 }
 
 # Places better known locally by their Japanese name: the first body mention of the English

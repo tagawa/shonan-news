@@ -9,7 +9,7 @@ source_title: こども食堂おいしいね　音楽劇団とコラボ企画　
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-10-08'
 town: Chigasaki
-lede: A musical was held on 8 October at the ‘Oishii ne’ children’s cafeteria in Higashigaankita,
+lede: A musical was held on 8 October at the ‘Oishii ne’ children’s cafeteria in Higashikaigankita,
   Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/11/06/860619.html
 ---

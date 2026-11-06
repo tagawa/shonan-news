@@ -77,13 +77,15 @@ SENTENCE_BREAK = re.compile(r"(?<=[.!?])\s+(?=[A-Z])")
 _SOURCE = r"(?:title|headline|description|article|item|listing|announcement|source|text|notice|report|teaser|excerpt|feed)"
 _NARRATING_VERB = (r"(?:says|said|notes|states|mentions|names|identifies|cites|lists|describes|reports|quotes|begins|"
                    r"ends|adds|refers|indicates|gives|does|doesn't|cuts|attributes|introduces|includes|highlights|"
-                   r"suggests|focuses|calls)")
+                   r"suggests|focuses|calls|recalls)")
 NARRATION = (
     # The source as the subject: "The title also notes", "the description names".
     re.compile(rf"\bthe {_SOURCE}(?: also| itself)? {_NARRATING_VERB}\b", re.I),
     # The source as where something appears: "is named in the announcement", "was also mentioned".
     re.compile(rf"\b(?:named|mentioned|listed|cited|described|given|stated|quoted|specified|cut off) in the "
                rf"{_SOURCE}\b|\b(?:is|are|was|were) (?:also )?mentioned\b", re.I),
+    # "... was among those mentioned." Only at a clause's end: "Among those named to the board" is news.
+    re.compile(r"\bamong (?:those|others|the people) (?:mentioned|named|listed)(?=[.,;]|$)", re.I),
     # The cut-off itself described.
     re.compile(r"\bmid-sentence\b|\btruncated\b|\bbegins to (?:describe|mention|identify|list|name|explain)\b", re.I),
     # A word the source cut off, kept with its ellipsis: 'Poo...', 'WORLD ONE Te...'.

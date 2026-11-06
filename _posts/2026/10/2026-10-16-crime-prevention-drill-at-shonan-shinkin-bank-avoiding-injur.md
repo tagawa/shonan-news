@@ -8,7 +8,7 @@ source_title: 湘南信用金庫で防犯訓練　「けがをしない」を第
 source_name: タウンニュース（鎌倉）
 event_date: '2026-10-06'
 label: safety
-lede: A crime-prevention drill was held on October 6 at Shonan Shinkin Bank's Fukazawa
+lede: A crime-prevention drill was held on October 6 at Shonan Shinkin Bank's Fukasawa
   Branch in Kamakura.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/16/857612.html
 ---

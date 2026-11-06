@@ -14,5 +14,5 @@ lede: A musical was held on 8 October at the ‘Oishii ne’ children’s cafete
 guid: guid:https://www.townnews.co.jp/0603/2026/11/06/860619.html
 ---
 
-The ‘Oishii ne’ children’s cafeteria, represented by China Kanemaru, held a musical on 8 October at the cafeteria in CIELO House, 2-1-47 Higashigaankita, Chigasaki.
+The ‘Oishii ne’ children’s cafeteria, represented by China Kanemaru, held a musical on 8 October at the cafeteria in CIELO House, 2-1-47 Higashikaigankita, Chigasaki.
 

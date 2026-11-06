@@ -12,5 +12,5 @@ lede: Yasutaka Takekawa, 26, of Kamakura Fire Department was selected as Kanagaw
 guid: guid:https://www.townnews.co.jp/0602/2026/08/21/849625.html
 ---
 
-Yasutaka Takekawa, 26, assigned to Kamakura Fire Department’s Fukazawa substation, will compete at the 54th National Fire and Rescue Skills Competition in Niigata on August 22. Takekawa qualified as Kanagawa Prefecture’s representative in rope techniques and said his national goal is, “Of course, first place.” The article introduced him in a human-interest profile highlighting his background and achievement.
+Yasutaka Takekawa, 26, assigned to Kamakura Fire Department’s Fukasawa substation, will compete at the 54th National Fire and Rescue Skills Competition in Niigata on August 22. Takekawa qualified as Kanagawa Prefecture’s representative in rope techniques and said his national goal is, “Of course, first place.” The article introduced him in a human-interest profile highlighting his background and achievement.
 

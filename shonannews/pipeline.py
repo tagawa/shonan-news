@@ -344,6 +344,10 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             logger.warning("Rewriting source narration in %s: %s", key, " | ".join(result.narration))
             result = validate.rewrite_narration(result)
 
+        # A hinted reading the model still misspelt. See the backend spec, "Place reading fix".
+        result.title, result.lede, result.summary = places.fix_readings(
+            [result.title, result.lede, result.summary], readings, gazetteer)
+
         # Puts back a weekday the source states and the model dropped. See the backend spec,
         # "Weekday restoration".
         result.lede = weekdays.restore_weekdays(result.lede, source, source_date)

@@ -115,11 +115,14 @@ def display_reading(kana):
     return re.sub(r"u+", "u", reading).capitalize()
 
 
-def hints(source, places):
+def named_as_place(key, source):
     text = unicodedata.normalize("NFKC", source).translate(SPELLING)
+    return not all(text[m.end():].startswith(NOT_A_PLACE_AFTER) for m in re.finditer(re.escape(key), text))
+
+
+def hints(source, places):
     found, _ = find_keys(source, places)
-    return [(key, display_reading(kana)) for key, kana in found
-            if not all(text[m.end():].startswith(NOT_A_PLACE_AFTER) for m in re.finditer(re.escape(key), text))]
+    return [(key, display_reading(kana)) for key, kana in found if named_as_place(key, source)]
 
 
 def scoped_hints(source, places, edition):

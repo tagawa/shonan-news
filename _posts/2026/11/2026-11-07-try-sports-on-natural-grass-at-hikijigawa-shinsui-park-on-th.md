@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0601/2026/11/07/861178.html
 source_title: 天然芝で運動体験　14日 引地川親水公園
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-14'
+label: sport
 town: Fujisawa
 lede: '''Multi-Sports Day 2026'' will be held at Hikijigawa Shinsui Park’s sports
   field in Oba.'

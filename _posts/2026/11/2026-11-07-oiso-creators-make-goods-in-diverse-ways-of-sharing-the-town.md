@@ -10,5 +10,5 @@ lede: Creators living in Oiso Town have made goods to share the town in diverse 
 guid: guid:https://www.townnews.co.jp/0605/2026/11/07/860147.html
 ---
 
-It also mentions Aobato.
+One of them is Misa Miki, 40, an illustrator and manga artist who draws the illustrations for the Oiso Town Tourism Association’s broadsheet.
 

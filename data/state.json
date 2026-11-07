@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1cce-65fa2341eb4ba\"",
-    "modified": "Fri, 06 Nov 2026 21:22:04 GMT",
+    "etag": "\"1cce-65fb57b529043\"",
+    "modified": "Sat, 07 Nov 2026 20:22:02 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -17,8 +17,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1bd2-65fa23ecbf971\"",
-    "modified": "Fri, 06 Nov 2026 21:25:03 GMT",
+    "etag": "\"1be4-65fb5861352f1\"",
+    "modified": "Sat, 07 Nov 2026 20:25:03 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -92,7 +92,8 @@
       "link:https://shonan.keizai.biz/headline/3614/",
       "link:https://shonan.keizai.biz/headline/3615/",
       "link:https://shonan.keizai.biz/headline/3616/",
-      "link:https://shonan.keizai.biz/headline/3617/"
+      "link:https://shonan.keizai.biz/headline/3617/",
+      "link:https://shonan.keizai.biz/headline/3618/"
     ]
   },
   "https://shonanevent.blogspot.com/feeds/posts/summary": {
@@ -2369,8 +2370,8 @@
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"1b03-65fa23ed7a72a\"",
-    "modified": "Fri, 06 Nov 2026 21:25:03 GMT",
+    "etag": "\"1b03-65fb5861a6f08\"",
+    "modified": "Sat, 07 Nov 2026 20:25:03 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",
@@ -2399,8 +2400,8 @@
     ]
   },
   "https://zushi-hayama.keizai.biz/rss.xml": {
-    "etag": "\"1afc-65fa23ece25ff\"",
-    "modified": "Fri, 06 Nov 2026 21:25:03 GMT",
+    "etag": "\"1afc-65fb58618279f\"",
+    "modified": "Sat, 07 Nov 2026 20:25:03 GMT",
     "processed": [
       "link:http://zushi-hayama.keizai.biz/headline/1093/",
       "link:http://zushi-hayama.keizai.biz/headline/1094/",
@@ -3860,10 +3861,10 @@
     "0fc50fb3ee3ed745",
     "ffffd2af5a54cdfa",
     "7115e261732992d5",
-    "486b59b662ae6c2e"
+    "486b59b662ae6c2e",
+    "ce1d0366860e2086"
   ],
   "posted_source_titles": [
-    "\u30b3\u30ed\u30ef\u30a4\u30c9\u30b0\u30eb\u30fc\u30d7\u5275\u696d\u306e\u5730\u30fb\u9017\u5b50\u306b\u300c\u7518\u592a\u90ce\u98df\u5802\u300d \u753a\u4e2d\u83ef\u306b\u671f\u5f85",
     "\u9017\u5b50\u3067ALS\u60a3\u8005\u652f\u63f4\u306e\u30c1\u30e3\u30ea\u30c6\u30a3\u30fc\u30b3\u30f3\u30b5\u30fc\u30c8 \u79fb\u52d5\u8eca\u300c\u3086\u3081\u3070\u3059\u300d\u5c55\u793a\u3082",
     "\u8449\u5c71\u753a\u5f79\u5834\u306e\u98df\u5802\u304c\u5237\u65b0\u3078 \u5730\u57df\u306e\u8cc7\u6e90\u5faa\u74b0\u76ee\u6307\u3059 \u5371\u967a\u6728\u306f\u30c6\u30fc\u30d6\u30eb\u306b",
     "\u5b64\u7acb\u3059\u308b\u82e5\u8005\u652f\u63f4\u306e\u300c\u30a2\u30de\u30e4\u30c9\u30ea\u300d\u3001\u30ad\u30c3\u30c1\u30f3\u30ab\u30fc\u3067\u306e\u30a2\u30a6\u30c8\u30ea\u30fc\u30c1\u306b\u6311\u6226\u3078",
@@ -4612,6 +4613,7 @@
     "\u6e58\u5357\u30d3\u30e5\u30fc\u30c6\u30a3\u30fc\u30ab\u30ec\u30c3\u30b8 \u901a\u4fe1\u8ab2\u7a0b26\u671f\u751f\u304c\u5165\u5b66\u5f0f 28\u4eba\u304c\u7406\u5bb9\u30fb\u7f8e\u5bb9\u306e\u9053\u3078",
     "\u5e02\u6c11\u6d3b\u52d5\u56e3\u4f53\u304c\u4e00\u5802\u306b \u3072\u3089\u3064\u304b\u5e02\u6c11\u6d3b\u52d5\u30bb\u30f3\u30bf\u30fc\u307e\u3064\u308a\u958b\u50ac 11\u670829\u65e5\uff08\u65e5\uff09 \u30b9\u30c6\u30fc\u30b8\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u3084\u30d0\u30b6\u30fc\u306a\u3069",
     "\u5065\u5eb7\u30d5\u30a9\u30fc\u30e9\u30e0\uff12\uff10\uff12\uff16 \u301c\u30ea\u30a6\u30de\u30c1\u30fb\u81a0\u539f\u75c5\u306b\u3064\u3044\u3066\u77e5\u308d\u3046\u301c",
-    "\u5927\u78ef\u304b\u3089\u6f6e\u98a8\u306b\u306e\u305b\u3066 11\u6708\uff18\u65e5\u306b\u30d5\u30a1\u30df\u30ea\u30fc\u30ed\u30c3\u30af\u30d5\u30a7\u30b9"
+    "\u5927\u78ef\u304b\u3089\u6f6e\u98a8\u306b\u306e\u305b\u3066 11\u6708\uff18\u65e5\u306b\u30d5\u30a1\u30df\u30ea\u30fc\u30ed\u30c3\u30af\u30d5\u30a7\u30b9",
+    "\u3048\u306e\u3059\u3044\u306e\u8d64\u3061\u3083\u3093\u30a4\u30eb\u30ab\u3001\u611b\u79f0\u306f\u300c\u30a2\u30af\u30a2\u300d\u306b 827\u4ef6\u306e\u5fdc\u52df\u304b\u3089\u9078\u5b9a"
   ]
 }

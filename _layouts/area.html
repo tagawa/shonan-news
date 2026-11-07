@@ -7,13 +7,14 @@ week counts from the newest post, as the home page does, so a failed run never e
 loop stops at the week's edge before looking up any post's area. See the frontend spec, "Areas".
 {% endcomment %}{% assign area = site.data.areas | where: "slug", page.area | first %}
 <h1>{{ area.name | escape }}</h1>
-{% if area.towns.size > 1 or area.towns.first != area.name %}<p class="area-towns">{{ area.towns | join: ", " | escape }}</p>{% endif %}
+{% comment %}One town named as its area (Fujisawa, Kamakura): naming it again, under the heading or on each event row, says nothing.{% endcomment %}{% assign single_town = false %}{% if area.towns.size == 1 and area.towns.first == area.name %}{% assign single_town = true %}{% endif %}
+{% unless single_town %}<p class="area-towns">{{ area.towns | join: ", " | escape }}</p>{% endunless %}
 <p><a href="#area-events">What's on</a> &middot; <a href="#area-news">Latest news</a></p>
 {% include whats-on-events.html %}{% assign area_events = "" | split: "" %}{% for post in whats_on_events %}{% if post.town and area.towns contains post.town %}{% assign area_events = area_events | push: post %}{% endif %}{% endfor %}
 {% assign area_days = area_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}
 <h2 id="area-events">What's on in {{ area.name | escape }}</h2>
 {% if area_days.size > 0 %}
-{% include event-days.html days=area_days level="h3" %}
+{% include event-days.html days=area_days level="h3" hide_town=single_town %}
 {% else %}
 <p>No upcoming events listed.</p>
 {% endif %}

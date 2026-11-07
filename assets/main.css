@@ -472,6 +472,13 @@ button:focus {
   border-top-color: var(--rule);
 }
 
+/* A month label in an event list: the day heading's type, with the next day's top rule as its
+   underline, and space above so it reads as the start of a new stretch. */
+.event-month {
+  margin-top: var(--space-4);
+  border-bottom-width: 0;
+}
+
 .event-day .event-list {
   flex: 1 1 auto;
   min-width: 0;

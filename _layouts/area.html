@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% comment %}
+One area's page: its towns, every upcoming event held in it, then its posts from the past week. The
+week counts from the newest post, as the home page does, so a failed run never empties it, and the
+loop stops at the week's edge before looking up any post's area. See the frontend spec, "Areas".
+{% endcomment %}{% assign area = site.data.areas | where: "slug", page.area | first %}
+<h1>{{ area.name | escape }}</h1>
+{% if area.towns.size > 1 or area.towns.first != area.name %}<p class="area-towns">{{ area.towns | join: ", " | escape }}</p>{% endif %}
+<p><a href="#area-events">What's on</a> &middot; <a href="#area-news">Latest news</a></p>
+{% include whats-on-events.html %}{% assign area_events = "" | split: "" %}{% for post in whats_on_events %}{% if post.town and area.towns contains post.town %}{% assign area_events = area_events | push: post %}{% endif %}{% endfor %}
+{% assign area_days = area_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}
+<h2 id="area-events">What's on in {{ area.name | escape }}</h2>
+{% if area_days.size > 0 %}
+{% include event-days.html days=area_days level="h3" %}
+{% else %}
+<p>No upcoming events listed.</p>
+{% endif %}
+{% assign newest = site.posts.first.date | date: "%s" | plus: 0 %}{% assign cutoff = newest | minus: 604800 %}{% assign area_posts = "" | split: "" %}{% for post in site.posts %}{% assign fetched = post.date | date: "%s" | plus: 0 %}{% if fetched < cutoff %}{% break %}{% endif %}{% include post-area.html post=post %}{% if post_area and post_area.slug == area.slug %}{% assign area_posts = area_posts | push: post %}{% endif %}{% endfor %}
+<h2 id="area-news">Latest from {{ area.name | escape }}</h2>
+{% if area_posts.size > 0 %}
+{% include news-days.html posts=area_posts datelines=false %}
+{% else %}
+<p>Nothing new in the past week.</p>
+{% endif %}

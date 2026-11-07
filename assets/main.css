@@ -563,7 +563,8 @@ button:focus {
   margin-bottom: var(--space-2);
 }
 
-.whats-on-filters a {
+.whats-on-filters a,
+.area-links a {
   display: block;
   padding-top: var(--space-2);
   padding-right: var(--space-2);
@@ -580,7 +581,8 @@ button:focus {
   text-decoration: none;
 }
 
-.whats-on-filters a:hover {
+.whats-on-filters a:hover,
+.area-links a:hover {
   border-color: var(--ink);
 }
 
@@ -589,6 +591,23 @@ button:focus {
   background-color: var(--ink);
   border-color: var(--ink);
   color: var(--bg);
+}
+
+/* The six area links on the home page, pills like the filters above. Left margins and a matching
+   negative one on the list, never gap: an area alone on a wrapped row keeps its full width. */
+.area-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+  margin-left: calc(-1 * var(--space-2));
+  padding-left: 0;
+  list-style: none;
+}
+
+.area-links li {
+  margin-left: var(--space-2);
+  margin-bottom: var(--space-2);
 }
 
 .whats-on-panel-more {
@@ -872,4 +891,9 @@ button:focus {
 .item-labels time {
   margin-left: var(--space-1);
   color: var(--muted);
+}
+
+/* The area dateline: a plain link, so it reads as somewhere to go, not as another label. */
+.item-area {
+  font-weight: 600;
 }

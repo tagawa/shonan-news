@@ -4,7 +4,8 @@ layout: default
 <article class="item">
   <h1 class="item-title">{{ page.title }}</h1>
   {% include japanese-title.html text=page.source_title %}
-  {% include item-labels.html event_date=page.event_date label=page.label %}
+  {% include post-area.html post=page %}
+  {% include item-labels.html event_date=page.event_date label=page.label area=post_area %}
   {% assign item_date = page.source_date | default: page.date %}
   {% include meta-line.html date=item_date %}
   {% comment %} No excerpt fallback, unlike the index: the excerpt is the body's first paragraph, so it would repeat. {% endcomment %}

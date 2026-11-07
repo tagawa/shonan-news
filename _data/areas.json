@@ -1,0 +1,8 @@
+[
+  {"slug": "hiratsuka-oiso", "name": "Hiratsuka & Oiso", "towns": ["Hiratsuka", "Oiso", "Ninomiya", "Nakai"]},
+  {"slug": "chigasaki-samukawa", "name": "Chigasaki & Samukawa", "towns": ["Chigasaki", "Samukawa"]},
+  {"slug": "fujisawa", "name": "Fujisawa", "towns": ["Fujisawa"]},
+  {"slug": "kamakura", "name": "Kamakura", "towns": ["Kamakura"]},
+  {"slug": "zushi-hayama", "name": "Zushi & Hayama", "towns": ["Zushi", "Hayama"]},
+  {"slug": "yokosuka-miura", "name": "Yokosuka & Miura", "towns": ["Yokosuka", "Miura"]}
+]

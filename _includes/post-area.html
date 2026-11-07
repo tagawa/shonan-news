@@ -1,0 +1,6 @@
+{% comment %}
+Sets post_area to the include.post's area (an entry of site.data.areas) or nil: the area of its event
+town when it has one, else the area of its feed's towns, matched on source_name, else none. Every
+variable is reset first, because Jekyll includes share the page's scope and the previous post's area
+would otherwise reach the next. See the frontend spec, "Areas".
+{% endcomment %}{% assign post_area = nil %}{% assign area_feed = nil %}{% assign area_town = include.post.town %}{% unless area_town %}{% if include.post.source_name %}{% assign area_feed = site.data.feeds | where: "name", include.post.source_name | first %}{% endif %}{% if area_feed and area_feed.towns.size > 0 %}{% assign area_town = area_feed.towns.first %}{% endif %}{% endunless %}{% if area_town %}{% for candidate in site.data.areas %}{% if candidate.towns contains area_town %}{% assign post_area = candidate %}{% break %}{% endif %}{% endfor %}{% endif %}

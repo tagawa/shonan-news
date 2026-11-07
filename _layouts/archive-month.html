@@ -15,7 +15,8 @@ layout: default
     <h2 class="day-heading"><time datetime="{{ day.name }}">{{ sorted_items.first.source_date | default: sorted_items.first.date | date: '%-d %B %Y' }}</time></h2>
     <ul class="archive-list">
       {% for post in sorted_items %}
-      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% include post-area.html post=post %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post_area %} {% include area-link.html area=post_area %}{% endif %}</li>
       {% endfor %}
     </ul>
   </section>

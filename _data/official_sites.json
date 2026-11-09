@@ -1,15 +1,60 @@
 [
-  {"ja": ["ソレイユの丘"], "en": ["Soleil Hill"], "url": "https://soleil-park.jp/en/"},
-  {"ja": ["神台公園"], "en": ["Kandai Park"], "url": "https://fujisawa-park.com/kandai/?lcp_page0=1"},
+  {
+    "ja": ["ソレイユの丘"], 
+    "en": ["Soleil Hill"], 
+    "url": "https://soleil-park.jp/en/",
+    "photo": {
+      "file": "soleil-hill.jpg",
+      "width": 1280,
+      "height": 853,
+      "author": "Pcs34560",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Merry-go-round_in_Nagai_Uminote_Park_20190511_1549_photo_by_Pcs34560.jpg"
+    }
+  },
+  {
+    "ja": ["神台公園"], 
+    "en": ["Kandai Park"], 
+    "url": "https://fujisawa-park.com/kandai/?lcp_page0=1",
+    "photo": {
+      "file": "kandai-park.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "ToshiJapon",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kandai_Park.JPG",
+      "licence": "CC BY-SA 4.0"
+    }
+  },
   {"ja": ["茅ヶ崎市勤労市民会"], "en": ["Chigasaki City Workers' Civic Hall", "Chigasaki Workers' Civic Hall", "Chigasaki Workers’ Civic Hall"], "url": "https://www.chigasaki-kinro.jp/"},
-  {"ja": ["横須賀市自然・人文博物館", "横須賀市自然人文博物館", "横須賀市博物館", "横須賀博物館"], "en": ["Yokosuka City Museum of Nature and Culture", "Yokosuka City Museum"], "url": "https://www.museum.yokosuka.kanagawa.jp/"},
+  {
+    "ja": ["横須賀市自然・人文博物館", "横須賀市自然人文博物館", "横須賀市博物館", "横須賀博物館"], 
+    "en": ["Yokosuka City Museum of Nature and Culture", "Yokosuka City Museum"], 
+    "url": "https://www.museum.yokosuka.kanagawa.jp/",
+    "photo": {
+      "file": "yokosuka-city-museum.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Abasaa",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Yokosuka_City_Museum.JPG"
+    }
+  },
   {"ja": ["フードバンク湘南"], "en": ["Food Bank Shonan"], "url": "https://foodbank-shonan.com/"},
   {
     "ja": ["茅ヶ崎市民文化会館", "茅ケ崎市民文化会館"], 
     "en": ["Chigasaki Civic Hall", "Chigasaki Civic Cultural Hall", "Chigasaki City Cultural Hall", "Chigasaki Civic Cultural Center", "Chigasaki Civic Cultural Centre"], 
     "url": "https://www.chigasaki-hall.jp/"
   },
-  {"ja": ["鶴岡八幡宮"], "en": ["Tsurugaoka Hachimangu"], "url": "https://www.hachimangu.or.jp/en/"},
+  {
+    "ja": ["鶴岡八幡宮"], 
+    "en": ["Tsurugaoka Hachimangu"], 
+    "url": "https://www.hachimangu.or.jp/en/",
+    "photo": {
+      "file": "tsurugaoka-hachimangu.jpg",
+      "width": 1280,
+      "height": 849,
+      "author": "Ocdp",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tsurugaoka_Hachimangu_001.jpg"
+    }
+  },
   {
     "ja": ["新江ノ島水族館", "新江の島水族館", "えのすい"], 
     "en": ["Enoshima Aquarium", "Shin-Enoshima Aquarium", "New Enoshima Aquarium", "Enosui"], 
@@ -23,8 +68,32 @@
       "licence": "CC BY-SA 2.0"
     }
   },
-  {"ja": ["横須賀美術館"], "en": ["Yokosuka Museum of Art"], "url": "https://www.yokosuka-moa.jp/en/"},
-  {"ja": ["横須賀芸術劇場", "よこすか芸術劇場"], "en": ["Yokosuka Arts Theatre", "Yokosuka Arts Theater"], "url": "https://www.yokosuka-arts.or.jp/"},
+  {
+    "ja": ["横須賀美術館"], 
+    "en": ["Yokosuka Museum of Art"], 
+    "url": "https://www.yokosuka-moa.jp/en/",
+    "photo": {
+      "file": "yokosuka-museum-of-art.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "陳 ポーハン",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Yokosuka_Museum_of_Art_20081017-01.jpg",
+      "licence": "CC BY 2.0"
+    }
+  },
+  {
+    "ja": ["横須賀芸術劇場", "よこすか芸術劇場"], 
+    "en": ["Yokosuka Arts Theatre", "Yokosuka Arts Theater"], 
+    "url": "https://www.yokosuka-arts.or.jp/",
+    "photo": {
+      "file": "yokosuka-arts-theatre.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Suikotei",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Yokosuka_Arts_Theatre.jpg",
+      "licence": "CC BY-SA 4.0"
+    }
+  },
   {
     "ja": ["寒川神社"], 
     "en": ["Samukawa-jinja Shrine", "Samukawa Shrine", "Samukawa Jinja", "Samukawa-jinja", "Samukawajinja"], 
@@ -38,13 +107,43 @@
       "licence": "CC BY-SA 4.0"
     }
   },
-  {"ja": ["寒川アリーナ", "寒川総合体育館"], "en": ["Shinko Sports Samukawa Arena", "Samukawa General Gymnasium"], "url": "https://samukawa-sougoutaiikukan.com/"},
+  {
+    "ja": ["寒川アリーナ", "寒川総合体育館"], 
+    "en": ["Shinko Sports Samukawa Arena", "Samukawa General Gymnasium"], 
+    "url": "https://samukawa-sougoutaiikukan.com/",
+    "photo": {
+      "file": "samukawa-arena.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "五虎将軍",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Samukawa_City_Gymnasium_01.jpg",
+      "licence": "CC BY-SA 4.0"
+    }
+  },
   {
     "ja": ["逗子文化プラザ"], 
     "en": ["Zushi Bunka Plaza Hall", "Zushi Bunka Plaza Sazanami Hall", "Zushi Bunka Plaza Nagisa Hall", "Zushi Bunka Plaza", "Zushi Cultural Plaza Hall", "Zushi Cultural Plaza", "Zushi Culture Plaza"], 
-    "url": "https://www.bunka-plazahall.com/"
+    "url": "https://www.bunka-plazahall.com/",
+    "photo": {
+      "file": "zushi-bunka-plaza.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Quercus acuta",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zushi_Bunka_Plaza.jpg"
+    }
   },
-  {"ja": ["コッキング苑"], "en": ["Enoshima Samuel Cocking Garden", "Samuel Cocking Garden"], "url": "https://enoshima-seacandle.com/"},
+  {
+    "ja": ["コッキング苑"], 
+    "en": ["Enoshima Samuel Cocking Garden", "Samuel Cocking Garden"], 
+    "url": "https://enoshima-seacandle.com/",
+    "photo": {
+      "file": "samuel-cocking-garden.jpg",
+      "width": 1280,
+      "height": 853,
+      "author": "Daderot",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Entry_gate_-_Samuel_Cocking_Garden_-_Enoshima,_Japan_-_DSC07710.jpg"
+    }
+  },
   {
     "ja": ["平塚文化芸術ホール", "平塚市文化芸術ホール"], 
     "en": ["Hirashin Hiratsuka Hall of Culture and Arts", "Hirashin Hiratsuka Cultural Arts Hall", "Hirashin Hiratsuka Cultural and Arts Hall", "Hirashin Hiratsuka Culture and Arts Hall", "Hirashin Hall"], 
@@ -61,14 +160,42 @@
   {
     "ja": ["ベルマーレ"], 
     "en": ["Shonan Bellmare"], 
-    "url": "https://bellmare.co.jp/"
+    "url": "https://bellmare.co.jp/",
+    "photo": {
+      "file": "lemon-gas-stadium-hiratsuka.jpg",
+      "width": 1280,
+      "height": 702,
+      "author": "Nesnad",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lemon_Gas_Hiratsuka_Stadium_2025_Feb_15_02-24-09_PM.jpeg",
+      "licence": "CC BY 4.0"
+    }
   },
   {
     "ja": ["テラスモール"], 
     "en": ["Terrace Mall Shonan", "Terrace Mall"], 
-    "url": "https://shonan.terracemall.com/"
+    "url": "https://shonan.terracemall.com/",
+    "photo": {
+      "file": "terrace-mall-shonan.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "inunami",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tsujido_20190330162524_(48347935997).jpg",
+      "licence": "CC BY 2.0"
+    }
   },
-  {"ja": ["観音崎公園"], "en": ["Kannonzaki Park", "Cape Kannonzaki"], "url": "https://www.kanagawa-park.or.jp/kannonzaki/"},
+  {
+    "ja": ["観音崎公園"], 
+    "en": ["Kannonzaki Park", "Cape Kannonzaki"], 
+    "url": "https://www.kanagawa-park.or.jp/kannonzaki/",
+    "photo": {
+      "file": "kannonzaki-park.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Quercus acuta",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kannonzaki_park_01.jpg",
+      "licence": "CC BY-SA 4.0"
+    }
+  },
   {
     "ja": ["平塚市美術館"], 
     "en": ["Hiratsuka City Museum of Art", "Hiratsuka Museum of Art", "Hiratsuka Art Museum", "Hiratsuka City Art Museum"], 
@@ -95,11 +222,69 @@
       "licence": "CC BY-SA 2.1 JP"
     }
   },
-  {"ja": ["大船フラワーセンター", "フラワーセンター大船植物園"], "en": ["Ofuna Flower Center", "Ofuna Flower Centre"], "url": "https://www.fcofuna-kanagawa.jp/"},
-  {"ja": ["ヴェルニー公園"], "en": ["Verny Park"], "url": "https://www.kanagawaparks.com/verny/"},
-  {"ja": ["建長寺"], "en": ["Kenchoji Temple", "Kencho-ji Temple", "Kenchoji", "Kencho-ji", "Kencho Temple"], "url": "https://www.kenchoji.com/"},
-  {"ja": ["しおさい博物館"], "en": ["Hayama Shiosai Museum"], "url": "https://www.town.hayama.lg.jp/soshiki/shougaigakushuu/2/1701.html"},
-  {"ja": ["茅ヶ崎市博物館", "茅ケ崎市博物館"], "en": ["Chigasaki City Museum", "Chigasaki Museum"], "url": "https://chigamu.jp/en/"},
+  {
+    "ja": ["大船フラワーセンター", "フラワーセンター大船植物園"], 
+    "en": ["Ofuna Flower Center", "Ofuna Flower Centre"], 
+    "url": "https://www.fcofuna-kanagawa.jp/",
+    "photo": {
+      "file": "ofuna-flower-center.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Abasaa",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kanagawa_Prefectural_Flower_Center_Ofuna_Botanical_Garden.JPG"
+    }
+  },
+  {
+    "ja": ["ヴェルニー公園"], 
+    "en": ["Verny Park"], 
+    "url": "https://www.kanagawaparks.com/verny/",
+    "photo": {
+      "file": "verny-park.jpg",
+      "width": 1280,
+      "height": 851,
+      "author": "Hideto Kobayashi",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Verny_Park,_Yokosuka_-_Oct_31,_2015.jpg",
+      "licence": "CC BY 2.0"
+    }
+  },
+  {
+    "ja": ["建長寺"], 
+    "en": ["Kenchoji Temple", "Kencho-ji Temple", "Kenchoji", "Kencho-ji", "Kencho Temple"], 
+    "url": "https://www.kenchoji.com/",
+    "photo": {
+      "file": "kenchoji-temple.jpg",
+      "width": 1280,
+      "height": 857,
+      "author": "Tarourashima",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kenchoji_Main_Complex.jpg"
+    }
+  },
+  {
+    "ja": ["しおさい博物館"], 
+    "en": ["Hayama Shiosai Museum"], 
+    "url": "https://www.town.hayama.lg.jp/soshiki/shougaigakushuu/2/1701.html",
+    "photo": {
+      "file": "hayama-shiosai-museum.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Suikotei",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hayama_Shiosai_Museum.jpg",
+      "licence": "CC BY-SA 4.0"
+    }
+  },
+  {
+    "ja": ["茅ヶ崎市博物館", "茅ケ崎市博物館"], 
+    "en": ["Chigasaki City Museum", "Chigasaki Museum"], 
+    "url": "https://chigamu.jp/en/",
+    "photo": {
+      "file": "chigasaki-city-museum.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Nesnad",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chigasaki_City_Museum_-_2024_May_3_various_22_10_41_339000.jpg",
+      "licence": "CC BY 4.0"
+    }
+  },
   {
     "ja": ["満昌寺"], 
     "en": ["Manshoji Temple", "Manshōji Temple", "Manshoji"], 
@@ -180,7 +365,14 @@
   {
     "ja": ["茅ヶ崎市役所"], 
     "en": ["Chigasaki City Hall"], 
-    "url": "https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html"
+    "url": "https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html",
+    "photo": {
+      "file": "chigasaki-city-hall.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Waka77",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chigasaki_City_Hall_20170721.JPG"
+    }
   },
   {
     "ja": ["くりはま花の国"], 

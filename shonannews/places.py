@@ -109,10 +109,26 @@ def _resolve(by_municipality, source):
 NOT_A_PLACE_AFTER = ("宮", "神社", "寺", "川")
 
 
+# Doubled vowels that are a word break, not a long vowel (光の丘 is Hikari no oka), which kana
+# alone cannot show. Keyed on the reading's start, so 安浦町 is covered by 安浦. See the backend
+# spec, "Place readings".
+WORD_BREAKS = {
+    "ヒカリノオカ": "Hikarinooka", "サジマノオカ": "Sajimanooka", "ヤマノウチ": "Yamanouchi",
+    "ヨコウチ": "Yokouchi", "ヤスウラ": "Yasuura",
+}
+
+
+def _plain(kana):
+    reading = re.sub(r"o[ou]+", "o", romanise(kana))
+    return re.sub(r"u+", "u", reading)
+
+
 def display_reading(kana):
     # Plain Hepburn as most live posts write it: Shorin, not Shourin or Shōrin.
-    reading = re.sub(r"o[ou]+", "o", romanise(kana))
-    return re.sub(r"u+", "u", reading).capitalize()
+    for stem, spelt in WORD_BREAKS.items():
+        if kana.startswith(stem):
+            return spelt + _plain(kana[len(stem):])
+    return _plain(kana).capitalize()
 
 
 def named_as_place(key, source):

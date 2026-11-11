@@ -9,7 +9,7 @@ source_title: ＹＲＰでイノベーションデー　デジタルの最先端
 source_name: タウンニュース（横須賀・三浦）
 event_date: '2026-12-11'
 town: Yokosuka
-lede: Yokosuka Research Park in Hikarinoka, Yokosuka, will hold Innovation Day on
+lede: Yokosuka Research Park in Hikarinooka, Yokosuka, will hold Innovation Day on
   11 and 12 December (Sat).
 guid: guid:https://www.townnews.co.jp/0501/2026/11/11/861748.html
 ---

@@ -375,6 +375,31 @@
     }
   },
   {
+    "ja": ["藤沢市役所"],
+    "en": ["Fujisawa City Hall"],
+    "url": "https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html",
+    "photo": {
+      "file": "fujisawa-city-hall.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "J.K",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fujisawa_City_Hall,_Fujisawa,_Kanagawa,_2019-01-29.jpg",
+      "licence": "CC BY-SA 4.0"
+    }
+  },
+  {
+    "ja": ["藤沢駅"],
+    "en": ["Fujisawa Station"],
+    "photo": {
+      "file": "fujisawa-station.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Nesnad",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fujisawa_Station_-_North_exit_-_2022_Sept_19_various.jpeg",
+      "licence": "CC BY 4.0"
+    }
+  },
+  {
     "ja": ["くりはま花の国"], 
     "en": ["Kurihama Flower Park", "Kurihama Flower Country"], 
     "url": "https://www.kanagawaparks.com/kurihama/",

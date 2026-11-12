@@ -7,6 +7,8 @@ import re
 import unicodedata
 from pathlib import Path
 
+import yaml
+
 SITES_PATH = Path(__file__).resolve().parent.parent / "_data" / "official_sites.json"
 # The same attributes as the source link, so every external link opens in a new tab.
 NEW_TAB = '{:target="_blank" rel="noopener noreferrer"}'
@@ -34,7 +36,8 @@ def _first_mentions(body, source, sites):
     links = [match.span() for match in LINK.finditer(body)]
     found = [(match.start(), match.end(), index)
              for index, site in enumerate(sites)
-             if _named_in(source, site) and site["url"] not in body
+             # An entry without a url (a photo only) still counts, so it wins its overlaps.
+             if _named_in(source, site) and not ("url" in site and site["url"] in body)
              for match in _english(site).finditer(body)
              if not any(start < match.end() and match.start() < end for start, end in links)]
     # One pass over every entry, so file order cannot decide: the longer of two overlapping
@@ -53,6 +56,8 @@ def link_first_mention(body, source, sites):
     first = _first_mentions(body, source, sites)
     # From the end backwards, so earlier offsets stay valid.
     for index, (start, end) in sorted(first.items(), key=lambda item: item[1], reverse=True):
+        if "url" not in sites[index]:
+            continue
         body = f"{body[:start]}[{body[start:end]}]({sites[index]['url']}){NEW_TAB}{body[end:]}"
     return body
 
@@ -62,7 +67,7 @@ def add_site_line(body, head, source, sites):
     # are never linked, so it gets a line of its own. See the backend spec, "Official site links".
     first = sorted(_first_mentions(head, source, sites).items(), key=lambda item: item[1])
     links = [f"[{head[start:end]}]({sites[index]['url']}){NEW_TAB}"
-             for index, (start, end) in first if not _english(sites[index]).search(body)]
+             for index, (start, end) in first if "url" in sites[index] and not _english(sites[index]).search(body)]
     if not links:
         return body
     return f"{body}\n\nOfficial site{'s' if len(links) > 1 else ''}: {', '.join(links)}"
@@ -74,6 +79,23 @@ def place_photo(body, source, sites):
         if "photo" in sites[index]:
             return sites[index]["photo"]["file"]
     return None
+
+
+def backfill_photos(posts_dir, sites):
+    # A photo added after a post was written, given to that post. Keyed on the link, since old posts
+    # no longer have their source. See the backend spec, "Place photos", "Later photos".
+    photographed = [(f"]({site['url']})", site["photo"]["file"]) for site in sites if "photo" in site and "url" in site]
+    changed = []
+    for path in sorted(Path(posts_dir).rglob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        _, front_matter, body = text.split("---\n", 2)
+        if any(yaml.safe_load(front_matter).get(key) for key in ("image_url", "thumb_url", "place_photo")):
+            continue
+        found = sorted((body.find(link), file) for link, file in photographed if link in body)
+        if found:
+            path.write_text(f"---\n{front_matter}place_photo: {found[0][1]}\n---\n{body}", encoding="utf-8")
+            changed.append(path)
+    return changed
 
 
 def unlink(body):

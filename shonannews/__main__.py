@@ -7,7 +7,7 @@ from pathlib import Path
 import feedparser
 import openai
 
-from . import pipeline, writer
+from . import official_sites, pipeline, writer
 
 logger = logging.getLogger("shonannews")
 
@@ -50,6 +50,8 @@ def main():
 
     # Runs even when a feed failed: the other feeds may still have written posts in a new month.
     writer.ensure_archive_stubs(POSTS_DIR, ARCHIVE_DIR)
+    for path in official_sites.backfill_photos(POSTS_DIR, official_sites.load_sites()):
+        logger.info("Added a later place photo to %s", path)
 
     sys.exit(1 if any(exit_codes) or conflicts else 0)
 

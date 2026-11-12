@@ -12,5 +12,5 @@ lede: The annual Chogo Regional Cultural Festival was held on the 8th at Chogo S
 guid: guid:https://www.townnews.co.jp/0601/2026/11/12/861791.html
 ---
 
-The festival drew more than 2,000 visitors. Original menu items devised by nearby students and children were also sold in limited quantities, including one.
+The festival drew more than 2,000 visitors. Original menu items devised by nearby students and children were also sold in limited quantities.
 

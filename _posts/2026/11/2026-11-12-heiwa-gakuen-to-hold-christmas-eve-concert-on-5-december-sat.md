@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Heiwa Gakuen to hold Christmas Eve concert on 5 December (Sat), with free admission
+title: Heiwa Gakuen to hold Christmas concert on 5 December (Sat), with free admission
 date: 2026-11-12 08:07:15 +0900
 source_date: '2026-11-12 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0603/2026/11/12/861901.html

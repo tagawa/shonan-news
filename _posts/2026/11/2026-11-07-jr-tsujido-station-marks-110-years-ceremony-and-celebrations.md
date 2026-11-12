@@ -12,6 +12,7 @@ town: Fujisawa
 lede: A ceremony and celebratory events marking JR Tsujido Station’s 110th anniversary
   will be held on 29 November (Sun) at Terrace Mall Shonan in Tsujidokandai.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/06/860890.html
+place_photo: terrace-mall-shonan.jpg
 ---
 
 JR Tsujido Station marks 110 years since opening this year. A commemorative ceremony and celebratory events will be held on 29 November (Sun) at the Sorakaze Stage at [Terrace Mall Shonan](https://shonan.terracemall.com/){:target="_blank" rel="noopener noreferrer"} in Tsujidokandai.

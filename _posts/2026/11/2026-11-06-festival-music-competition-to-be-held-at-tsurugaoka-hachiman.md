@@ -12,6 +12,7 @@ town: Kamakura
 lede: A festival music competition will be held on 15 November (Sun) beside Genji
   Pond in the grounds of Tsurugaoka Hachimangu Shrine in Kamakura.
 guid: guid:https://www.townnews.co.jp/0602/2026/11/06/860840.html
+place_photo: tsurugaoka-hachimangu.jpg
 ---
 
 The Festival Music Competition, organized by the Kamakura City Folk Performing Arts Preservation Association and the city’s Board of Education, will run from 11 a.m. to 2 p.m. Admission is free.

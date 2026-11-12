@@ -10,6 +10,7 @@ source_name: タウンニュース（鎌倉）
 lede: Three cedar-panel paintings were dedicated in the upper shrine’s east corridor
   at Tsurugaoka Hachimangu in Kamakura.
 guid: guid:https://www.townnews.co.jp/0602/2026/11/06/860841.html
+place_photo: tsurugaoka-hachimangu.jpg
 ---
 
 Three cedar-panel paintings by Chinami Nakajima, an 81-year-old Japanese-style painter with close ties to Kamakura and professor emeritus at Tokyo University of the Arts, were dedicated at [Tsurugaoka Hachimangu](https://www.hachimangu.or.jp/en/){:target="_blank" rel="noopener noreferrer"}. The paintings depict cherry blossoms, lotus flowers and peonies.

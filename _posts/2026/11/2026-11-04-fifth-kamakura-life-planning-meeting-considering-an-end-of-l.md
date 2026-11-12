@@ -12,6 +12,7 @@ town: Kamakura
 lede: The fifth Kamakura Life Planning Meeting will be held on 22 November (Sun) and
   20 December at Kenchoji and other venues.
 guid: guid:https://www.townnews.co.jp/0602/2026/11/04/860757.html
+place_photo: kenchoji-temple.jpg
 ---
 
 The event is organized by the Kamakura Regional Care Support Organization. The first session will take place at [Kenchoji](https://www.kenchoji.com/){:target="_blank" rel="noopener noreferrer"}’s Ryuoden Hall on 22 November (Sun), from 1 p.m. to 3 p.m., with doors opening at 12:30 p.m.

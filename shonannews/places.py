@@ -104,9 +104,9 @@ def _resolve(by_municipality, source):
     return by_municipality[named[0]][0] if len(named) == 1 else None
 
 
-# A district name followed by one of these is a shrine, temple, surname or river (鶴岡八幡宮,
-# 長谷川), so its reading would be a wrong hint. Withholding one costs only today's behaviour.
-NOT_A_PLACE_AFTER = ("宮", "神社", "寺", "川")
+# A district name followed by one of these is a shrine, temple, surname, river or hill (鶴岡八幡宮,
+# 長谷川, 八幡山公園), so its reading would be a wrong hint. Withholding one costs only today's behaviour.
+NOT_A_PLACE_AFTER = ("宮", "神社", "寺", "川", "山")
 
 
 # Doubled vowels that are a word break, not a long vowel (光の丘 is Hikari no oka), which kana

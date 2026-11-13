@@ -27,6 +27,10 @@ CANONICAL = {
     # Filmmaker, reading from the owner, 2026-11-06. More than one word, so it acts
     # only through MISREADINGS.
     "藤本東子": "Haruko Fujimoto",
+    # Hiratsuka's prefectural flower garden, read かなガーデン (kana-garden.com). All three live
+    # posts naming it misread it, 2026-08-19 to 2026-11-13. More than one word, so it acts only
+    # through MISREADINGS.
+    "花菜ガーデン": "Kana Garden",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
@@ -39,6 +43,8 @@ MISREADINGS = {
     "ソレイユの丘": ("Soleil no Oka",),
     # Published 2026-11-06; the 2026-10-23 post on the same film had "Haruko".
     "藤本東子": ("Toko Fujimoto",),
+    # Published 2026-08-19 and 2026-09-11 / 2026-11-13 respectively.
+    "花菜ガーデン": ("Hana-na Garden", "Hana Garden"),
 }
 
 # Places better known locally by their Japanese name: the first body mention of the English

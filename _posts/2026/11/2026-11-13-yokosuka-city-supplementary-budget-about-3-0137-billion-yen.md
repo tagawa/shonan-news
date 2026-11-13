@@ -15,5 +15,5 @@ lede: Yokosuka City’s November 9 extraordinary assembly approved a supplementa
 guid: guid:https://www.townnews.co.jp/0501/2026/11/13/861687.html
 ---
 
-On November 9, Yokosuka City’s assembly approved as proposed a supplementary budget totaling about 3.0137 billion yen, including support for people affected by Typhoon No. 25, which struck in September, and recovery measures. The title specifies costs for farmland restoration and sediment removal.
+On November 9, Yokosuka City’s assembly approved as proposed a supplementary budget totaling about 3.0137 billion yen, including support for people affected by Typhoon No. 25, which struck in September, and recovery measures. It includes costs for farmland restoration and sediment removal.
 

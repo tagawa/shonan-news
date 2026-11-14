@@ -21,15 +21,7 @@ the homepage, then shown under source-date headings as before. Everything else i
 {% endfor %}
 <section class="latest-news" aria-labelledby="latest-news-heading">
 <h2 id="latest-news-heading" class="section-head">Latest news</h2>
-{% comment %}
-Each pill is a link to its area page and a hidden toggle; where storage works the head include's rules
-swap in the toggles and All areas. See the frontend spec, "Areas", "Saved area", "Area pills".
-{% endcomment %}<nav class="area-links" aria-label="News by area">
-  <ul>
-    {% for area in site.data.areas %}<li><a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}" data-area="{{ area.slug }}">{{ area.name | escape }}</a><button type="button" class="area-pick" data-area="{{ area.slug }}" aria-pressed="false" hidden>{{ area.name | escape }}</button></li>{% endfor %}
-    <li class="area-all" hidden><button type="button" class="area-pick" data-area="" aria-pressed="true">All areas</button></li>
-  </ul>
-</nav>
+{% include area-pills.html label="News by area" %}
 {% comment %}
 The saved area first: a block of that area's posts for each area with any, or a quiet-day line for each
 without, all hidden, then today's list. The head include's rules show the saved area's and hide its

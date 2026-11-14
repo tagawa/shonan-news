@@ -704,6 +704,14 @@ button:focus {
   display: none;
 }
 
+/* The What's on pages' per-area calendar links, plain dates and empty lines, revealed by the head
+   include's rules for the saved area. See the frontend spec, "Areas", "What's on pages". */
+.calendar td a[data-area],
+.calendar-plain,
+.whats-on-area-none {
+  display: none;
+}
+
 /* Filled, not only recoloured: the fill is the shape change that marks it. */
 .whats-on-filters a[aria-current] {
   background-color: var(--ink);

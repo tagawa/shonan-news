@@ -1,9 +1,10 @@
-{% comment %}One month: a Monday-first grid, then its event days from today, grouped by event-days.html. include.month_start is the epoch of the 1st at 00:00 JST; include.events is that month's admitted posts, or nil.{% endcomment %}
+{% comment %}One month: a Monday-first grid, then its event days from today, grouped by event-days.html. include.month_start is the epoch of the 1st at 00:00 JST; include.events is that month's admitted posts, or nil. Each month but the build's, and each day with events, carries data-areas for the saved-area filter; such a day also holds a hidden link per area, counting only that area's events, and a hidden plain date for an area with none. See the frontend spec, "Areas", "What's on pages".{% endcomment %}
 {% assign month = include.month_start | date: "%Y-%m" %}
 {% assign no_events = "" | split: "" %}
 {% assign month_events = include.events | default: no_events %}
 {% assign days = month_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}
-<section class="calendar-month" id="{{ month }}">
+{% assign month_areas = "" %}{% assign build_month = whats_on_today | slice: 0, 7 %}{% if month != build_month %}{% for candidate in site.data.areas %}{% for month_post in month_events %}{% if month_post.town and candidate.towns contains month_post.town %}{% assign month_areas = month_areas | append: " " | append: candidate.slug %}{% break %}{% endif %}{% endfor %}{% endfor %}{% endif %}
+<section class="calendar-month"{% if month != build_month %} data-areas="{{ month_areas | strip }}"{% endif %} id="{{ month }}">
   <h2>{{ include.month_start | date: "%B %Y" }}</h2>
   {% comment %}Monday first: %u is 1 for Monday. The count is spoken, not shown: a visible count under the date read as a fraction, and the list below gives it. A link reads "18 October, 11 events" and still starts with its visible text (WCAG 2.5.3).{% endcomment %}
   {% assign lead = include.month_start | date: "%u" | minus: 1 %}
@@ -20,12 +21,17 @@
         {%- if column == 7 %}</tr>
       <tr>{% assign column = 0 %}{% endif -%}
         {%- assign day_group = days | where: "name", day | first -%}
-        {%- capture cell -%}<span class="calendar-date">{{ day_epoch | date: "%-d" }}</span><span class="visually-hidden"> {{ day_epoch | date: "%B" }}{% if day == whats_on_today %}, today{% endif %}{% if day_group %}, {{ day_group.items.size }} {% if day_group.items.size == 1 %}event{% else %}events{% endif %}{% endif %}</span>{%- endcapture -%}
-        <td{% if day == whats_on_today %} class="calendar-today" aria-current="date"{% elsif day < whats_on_today %} class="calendar-past"{% endif %}>{% if day_group %}<a href="#{{ day }}">{{ cell }}</a>{% else %}{{ cell }}{% endif %}</td>
+        {%- capture cell_date -%}<span class="calendar-date">{{ day_epoch | date: "%-d" }}</span><span class="visually-hidden"> {{ day_epoch | date: "%B" }}{% if day == whats_on_today %}, today{% endif %}{%- endcapture -%}
+        {%- capture cell -%}{{ cell_date }}{% if day_group %}, {{ day_group.items.size }} {% if day_group.items.size == 1 %}event{% else %}events{% endif %}{% endif %}</span>{%- endcapture -%}
+        {%- assign cell_areas = "" -%}{%- assign area_links = "" -%}
+        {%- if day_group -%}{%- for candidate in site.data.areas -%}{%- assign area_count = 0 -%}{%- for day_post in day_group.items -%}{%- if day_post.town and candidate.towns contains day_post.town -%}{%- assign area_count = area_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+          {%- if area_count > 0 -%}{%- assign cell_areas = cell_areas | append: " " | append: candidate.slug -%}{%- capture area_link -%}<a href="#{{ day }}" data-area="{{ candidate.slug }}" hidden>{{ cell_date }}, {{ area_count }} {% if area_count == 1 %}event{% else %}events{% endif %}</span></a>{%- endcapture -%}{%- assign area_links = area_links | append: area_link -%}{%- endif -%}
+        {%- endfor -%}{%- endif -%}
+        <td{% if day == whats_on_today %} class="calendar-today" aria-current="date"{% elsif day < whats_on_today %} class="calendar-past"{% endif %}{% if day_group %} data-areas="{{ cell_areas | strip }}"{% endif %}>{% if day_group %}<a href="#{{ day }}">{{ cell }}</a>{{ area_links }}<span class="calendar-plain" hidden>{{ cell_date }}</span></span>{% else %}{{ cell }}{% endif %}</td>
         {%- assign column = column | plus: 1 -%}
       {%- endfor -%}
       {%- for blank in (column..6) %}<td></td>{% endfor %}</tr>
     </tbody>
   </table>
-  {% include event-days.html days=days level="h3" months=false %}
+  {% include event-days.html days=days level="h3" months=false areas=true %}
 </section>

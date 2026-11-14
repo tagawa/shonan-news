@@ -68,7 +68,7 @@ my area" disappears, so focus moves to the menu link that appears with the save.
   });
 })(document);
 </script>
-<style id="saved-area-style">
+{% assign filter_events = false %}{% if page.url contains "/whats-on/" %}{% assign filter_events = true %}{% endif %}<style id="saved-area-style">
 html[data-area-storage] .area-save { display: inline-block; }
 html[data-area-storage] .area-links a { display: none; }
 html[data-area-storage] .area-links .area-pick { display: block; }
@@ -84,4 +84,13 @@ html[data-saved-area="{{ area.slug }}"] .area-links .area-pick[data-area="{{ are
 html[data-saved-area="{{ area.slug }}"] .panel-area[data-area="{{ area.slug }}"] { display: block; }
 html[data-saved-area="{{ area.slug }}"] .panel-area-none[data-area="{{ area.slug }}"] { display: block; }
 html[data-saved-area="{{ area.slug }}"] .panel-area[data-area="{{ area.slug }}"] ~ .panel-default { display: none; }
-{% endfor %}</style>
+{% if filter_events %}html[data-saved-area="{{ area.slug }}"] .event-list > li[data-area]:not([data-area="{{ area.slug }}"]) { display: none; }
+html[data-saved-area="{{ area.slug }}"] .event-day[data-areas]:not([data-areas~="{{ area.slug }}"]) { display: none; }
+html[data-saved-area="{{ area.slug }}"] .event-month[data-areas]:not([data-areas~="{{ area.slug }}"]) { display: none; }
+html[data-saved-area="{{ area.slug }}"] .calendar-month[data-areas]:not([data-areas~="{{ area.slug }}"]) { display: none; }
+html[data-saved-area="{{ area.slug }}"] .calendar td[data-areas] > a:not([data-area="{{ area.slug }}"]) { display: none; }
+html[data-saved-area="{{ area.slug }}"] .calendar td[data-areas] > a[data-area="{{ area.slug }}"] { display: block; }
+html[data-saved-area="{{ area.slug }}"] .calendar td[data-areas]:not([data-areas~="{{ area.slug }}"]) > .calendar-plain { display: inline; }
+html[data-saved-area="{{ area.slug }}"] .whats-on-area-none[data-area="{{ area.slug }}"] { display: block; }
+{% comment %}Named after its one town, as the area page's hide_town: the town would repeat the filter on every row.{% endcomment %}{% if area.towns.size == 1 and area.towns.first == area.name %}html[data-saved-area="{{ area.slug }}"] .event-list > li[data-area] .event-town { display: none; }
+{% endif %}{% endif %}{% endfor %}</style>

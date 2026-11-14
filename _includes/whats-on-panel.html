@@ -1,16 +1,27 @@
 {% comment %}
 The What's on panel, beside every page's main content except the What's on pages: the four soonest upcoming events, admitted by whats-on-events.html's rule
 like the calendar. Grouped on the normalised day and sorted by group name, because sorting on
-event_date raises when YAML gave posts mixed types. Each row is one link. See the frontend spec,
-"What's on panel".
+event_date raises when YAML gave posts mixed types. Each row is one link. Before the usual list, one
+hidden variant per area: that area's four soonest (an event's area is its town's, as on the area
+pages), or a line saying it has none. The head include's rules show the saved area's and, through
+the sibling combinator, hide the usual list only when the area has a block. See the frontend spec,
+"What's on panel" and "Areas", "Saved area".
 {% endcomment %}{% include whats-on-events.html %}{% assign panel_days = whats_on_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}
 <aside class="whats-on-panel" aria-labelledby="whats-on-panel-heading">
   <h2 id="whats-on-panel-heading">What's on</h2>
   {% include whats-on-filters.html %}
+  {% for area in site.data.areas %}{% assign area_events = "" | split: "" %}{% for post in whats_on_events %}{% if post.town and area.towns contains post.town %}{% assign area_events = area_events | push: post %}{% endif %}{% endfor %}{% if area_events.size > 0 %}{% assign area_days = area_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}{% assign single_town = false %}{% if area.towns.size == 1 and area.towns.first == area.name %}{% assign single_town = true %}{% endif %}
+  <div class="panel-area" data-area="{{ area.slug }}" hidden>
+  {% include event-days.html days=area_days level="h3" limit=4 ids=false hide_town=single_town %}
+  <p class="whats-on-panel-more"><a href="{{ '/areas/' | append: area.slug | append: '/#area-events' | relative_url }}">All {{ area.name | escape }} events</a></p>
+  </div>{% else %}
+  <p class="panel-area-none" data-area="{{ area.slug }}" hidden>Nothing listed in {{ area.name | escape }} yet.</p>{% endif %}{% endfor %}
+  <div class="panel-default">
   {% if panel_days.size > 0 %}
   {% include event-days.html days=panel_days level="h3" limit=4 %}
   {% else %}
   <p>Nothing listed yet.</p>
   {% endif %}
+  </div>
   <p class="whats-on-panel-more"><a href="{{ '/whats-on/' | relative_url }}">All events</a></p>
 </aside>

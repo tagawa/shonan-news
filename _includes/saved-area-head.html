@@ -73,4 +73,7 @@ html[data-saved-area="{{ area.slug }}"] .latest-news > .day-group[data-only-area
 html[data-saved-area="{{ area.slug }}"] .latest-news > .day-group > .item[data-area="{{ area.slug }}"] { display: none; }
 html[data-saved-area="{{ area.slug }}"] .area-links a[data-area="{{ area.slug }}"] { background-color: var(--ink); border-color: var(--ink); color: var(--bg); }
 html[data-forgot-area="{{ area.slug }}"] .area-undo[data-area="{{ area.slug }}"] { display: block; }
+html[data-saved-area="{{ area.slug }}"] .panel-area[data-area="{{ area.slug }}"] { display: block; }
+html[data-saved-area="{{ area.slug }}"] .panel-area-none[data-area="{{ area.slug }}"] { display: block; }
+html[data-saved-area="{{ area.slug }}"] .panel-area[data-area="{{ area.slug }}"] ~ .panel-default { display: none; }
 {% endfor %}</style>

@@ -719,6 +719,12 @@ button:focus {
   display: none;
 }
 
+/* The What's on panel's per-area variants, revealed by the head include's rules. */
+.panel-area,
+.panel-area-none {
+  display: none;
+}
+
 /* Filled, not only recoloured: the fill is the shape change that marks it. */
 .whats-on-filters a[aria-current] {
   background-color: var(--ink);

@@ -329,7 +329,7 @@ button:focus {
   padding-bottom: var(--space-5);
 }
 
-/* Below 53rem the home page's What's on panel keeps its heading, filters and All events but not its
+/* Below 53rem the home page's What's on panel keeps its heading, filters and All Shonan events but not its
    event rows, so the first headline reaches the first screen. It keys on position because the panel is
    include_cached and identical everywhere: only the home page puts it before <main>. See the frontend
    spec, "What's on panel". */
@@ -698,10 +698,6 @@ button:focus {
   margin-bottom: var(--space-3);
 }
 
-.area-saved {
-  display: none;
-}
-
 /* The What's on panel's per-area variants, revealed by the head include's rules. */
 .panel-area,
 .panel-area-none {
@@ -732,7 +728,7 @@ button:focus {
   margin-bottom: var(--space-2);
 }
 
-/* The toggles that replace the links where storage works, and Show all areas: hidden here, revealed by
+/* The toggles that replace the links where storage works, and All areas: hidden here, revealed by
    the head include's rules. A button takes the browser's font unless told otherwise. */
 .area-links .area-pick {
   display: none;

@@ -4,7 +4,7 @@ when a known slug is saved. It runs before the body is parsed, so the rules belo
 paint and nothing moves. Every variant is already in the markup, hidden; the rules reveal the one
 that applies. ES5, and the click handler tests event.target itself (no closest(), which Firefox 31
 lacks). The home page's area pills (area-pick) choose or clear the area and stay on screen; "Make this
-my area" disappears, so focus moves to the text replacing it. See the frontend spec, "Areas", "Saved area".
+my area" disappears, so focus moves to the menu link that appears with the save. See the frontend spec, "Areas", "Saved area".
 {% endcomment %}<script id="saved-area">
 (function (doc) {
   var areas = { {% for area in site.data.areas %}"{{ area.slug }}": 1{% unless forloop.last %}, {% endunless %}{% endfor %} };
@@ -40,7 +40,7 @@ my area" disappears, so focus moves to the text replacing it. See the frontend s
     }
     root.removeAttribute("data-saved-area");
   }
-  // CSS fills the pills from first paint; aria-pressed tells screen readers the same. Show all areas
+  // CSS fills the pills from first paint; aria-pressed tells screen readers the same. All areas
   // has data-area="" and is pressed when nothing is saved.
   function markPills() {
     var saved = root.getAttribute("data-saved-area") || "";
@@ -55,7 +55,7 @@ my area" disappears, so focus moves to the text replacing it. See the frontend s
     if (!target || !target.getAttribute) return;
     var slug = target.getAttribute("data-area");
     if (target.className === "area-pick") {
-      // The filled pill and Show all areas clear; any other area switches to it.
+      // The filled pill and All areas clear; any other area switches to it.
       if (slug === "" || slug === root.getAttribute("data-saved-area")) clear();
       else if (areas.hasOwnProperty(slug)) save(slug);
       markPills();
@@ -63,8 +63,8 @@ my area" disappears, so focus moves to the text replacing it. See the frontend s
     }
     if (target.className !== "area-save" || !areas.hasOwnProperty(slug)) return;
     if (!save(slug)) return;
-    var text = doc.querySelector(".area-saved[data-area=\"" + slug + "\"]");
-    if (text) text.focus();
+    var link = doc.querySelector(".main-nav .nav-saved-area[data-area=\"" + slug + "\"] a");
+    if (link) link.focus();
   });
 })(document);
 </script>
@@ -76,7 +76,6 @@ html[data-area-storage] .area-links .area-all { display: block; }
 html[data-area-storage]:not([data-saved-area]) .area-links .area-all .area-pick { background-color: var(--ink); border-color: var(--ink); color: var(--bg); }
 {% for area in site.data.areas %}html[data-saved-area="{{ area.slug }}"] .main-nav .nav-saved-area[data-area="{{ area.slug }}"] { display: flex; }
 html[data-saved-area="{{ area.slug }}"] .area-save[data-area="{{ area.slug }}"] { display: none; }
-html[data-saved-area="{{ area.slug }}"] .area-saved[data-area="{{ area.slug }}"] { display: block; }
 html[data-saved-area="{{ area.slug }}"] .area-bar[data-area="{{ area.slug }}"] { display: block; }
 html[data-saved-area="{{ area.slug }}"] .area-first[data-area="{{ area.slug }}"] { display: block; }
 html[data-saved-area="{{ area.slug }}"] .latest-news > .day-group[data-only-area="{{ area.slug }}"] { display: none; }

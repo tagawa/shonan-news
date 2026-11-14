@@ -23,11 +23,11 @@ the homepage, then shown under source-date headings as before. Everything else i
 <h2 id="latest-news-heading" class="section-head">Latest news</h2>
 {% comment %}
 Each pill is a link to its area page and a hidden toggle; where storage works the head include's rules
-swap in the toggles and Show all areas. See the frontend spec, "Areas", "Saved area", "Area pills".
+swap in the toggles and All areas. See the frontend spec, "Areas", "Saved area", "Area pills".
 {% endcomment %}<nav class="area-links" aria-label="News by area">
   <ul>
     {% for area in site.data.areas %}<li><a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}" data-area="{{ area.slug }}">{{ area.name | escape }}</a><button type="button" class="area-pick" data-area="{{ area.slug }}" aria-pressed="false" hidden>{{ area.name | escape }}</button></li>{% endfor %}
-    <li class="area-all" hidden><button type="button" class="area-pick" data-area="" aria-pressed="true">Show all areas</button></li>
+    <li class="area-all" hidden><button type="button" class="area-pick" data-area="" aria-pressed="true">All areas</button></li>
   </ul>
 </nav>
 {% comment %}

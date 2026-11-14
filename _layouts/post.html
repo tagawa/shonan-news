@@ -29,5 +29,13 @@ layout: default
   </div>
   {% assign source_name = page.source_name | default: site.source_name %}
   <p class="item-footer">{% include source-link.html source_url=page.source_url source_name=source_name %}</p>
+  {% comment %}Copied before the include, which overwrites post_area. See the frontend spec, "Areas", "More from this area".{% endcomment %}
+  {% if post_area %}{% assign own_area = post_area %}{% capture more_items %}{% include_cached area-more.html slug=own_area.slug %}{% endcapture %}{% assign own_url = page.url | relative_url %}{% assign own_href = 'href="' | append: own_url | append: '"' %}{% assign more_list = "" %}{% assign more_shown = 0 %}{% assign more_split = more_items | split: "<!--area-more-->" %}{% for item in more_split %}{% if more_shown == 5 %}{% break %}{% endif %}{% if item contains "<li>" %}{% unless item contains own_href %}{% assign more_list = more_list | append: item %}{% assign more_shown = more_shown | plus: 1 %}{% endunless %}{% endif %}{% endfor %}{% if more_shown > 0 %}
+  <section class="area-more" aria-labelledby="area-more-heading">
+    <h2 id="area-more-heading">More from {{ own_area.name | escape }}</h2>
+    <ul>{{ more_list | strip }}</ul>
+    <p><a href="{{ '/areas/' | append: own_area.slug | append: '/' | relative_url }}#area-news">All {{ own_area.name | escape }} news</a></p>
+  </section>
+  {% endif %}{% endif %}
 </article>
 <p><a href="{{ '/' | relative_url }}">&larr; All summaries</a></p>

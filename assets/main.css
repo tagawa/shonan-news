@@ -796,6 +796,29 @@ button:focus {
   margin: 0;
 }
 
+/* More from this area: the list type of the archive, the date as the meta line. */
+.area-more {
+  margin-top: var(--space-5);
+}
+
+.area-more ul {
+  margin: 0;
+  margin-bottom: var(--space-3);
+  padding-left: 0;
+  list-style: none;
+}
+
+.area-more li {
+  line-height: 1.6;
+  margin-bottom: var(--space-2);
+}
+
+.area-more time {
+  font-size: 0.875rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
 /* CSS-only arrow, so it is not announced by screen readers. The leading
    \00a0 is a non-breaking space so the arrow never orphans onto its own
    line when the link text wraps. */

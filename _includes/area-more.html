@@ -1,0 +1,7 @@
+{% comment %}
+The six newest posts of the area include.slug, each <li> followed by a marker the item layout splits on.
+Six, so five remain after the layout drops the post being read. Rendered once per area through
+include_cached: a walk of site.posts on every item page would grow with the square of the post count.
+Sets post_area in the caller's scope (post-area.html does), so callers keep their own copy of the area.
+See the frontend spec, "Areas".
+{% endcomment %}{% assign more_count = 0 %}{% for post in site.posts %}{% include post-area.html post=post %}{% if post_area and post_area.slug == include.slug %}{% assign more_date = post.source_date | default: post.date %}<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time datetime="{{ more_date | date: '%Y-%m-%d' }}">{{ more_date | date: '%-d %B %Y' }}</time></li><!--area-more-->{% assign more_count = more_count | plus: 1 %}{% if more_count == 6 %}{% break %}{% endif %}{% endif %}{% endfor %}

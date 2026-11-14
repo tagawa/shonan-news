@@ -1,21 +1,24 @@
 {% comment %}
 Posts grouped under source-date day headings, newest first: h3 days, h4 items, pictured items
 first within a day. include.posts is any array of posts; datelines=false leaves out each post's area
-link, for area pages. Shared by the home page and area pages. See
+link, for area pages. With datelines, each item carries data-area and a day whose items are all one
+area's carries data-only-area, so the saved area's rules can hide them on the home page. Shared by the home page and area pages. See
 the frontend spec, "Areas", "News list include".
 {% endcomment %}{% assign day_groups = include.posts | group_by_exp: "post", "post.source_date | default: post.date | date: '%Y-%m-%d'" | sort: "name" | reverse %}
 {% for day in day_groups %}
-  <section class="day-group">
     {% assign sorted_items = day.items | sort: "source_date" | reverse %}
-    <h3 class="day-heading"><time datetime="{{ day.name }}">{{ sorted_items.first.source_date | default: sorted_items.first.date | date: '%-d %B %Y' }}</time></h3>
+    {% assign day_area = "" %}
+    {% comment %}The section opens after the items, once its data-only-area is known.{% endcomment %}{% capture day_heading %}<h3 class="day-heading"><time datetime="{{ day.name }}">{{ sorted_items.first.source_date | default: sorted_items.first.date | date: '%-d %B %Y' }}</time></h3>{% endcapture %}
     {% comment %}Items showing a thumbnail first, each set still newest first. Decided by the thumbnail markup
     itself, so the order cannot disagree with what is shown. See the frontend spec, "Item anatomy".{% endcomment %}
     {% assign pictured_items = "" %}{% assign plain_items = "" %}
     {% for post in sorted_items %}
+      {% if include.datelines == false %}{% assign post_area = nil %}{% else %}{% include post-area.html post=post %}{% endif %}
+      {% comment %}"" before the first item, the shared slug while all agree, "mixed" once any differs or has no area.{% endcomment %}
+      {% assign item_slug = post_area.slug | default: "none" %}{% if forloop.first %}{% assign day_area = item_slug %}{% elsif day_area != item_slug %}{% assign day_area = "mixed" %}{% endif %}
       {% capture thumb %}{% if post.image_url %}<img class="item-thumb" src="{{ post.image_url | escape }}" alt="" loading="lazy">{% elsif post.thumb_url %}<img class="item-thumb item-thumb-small" src="{{ post.thumb_url | escape }}" alt="" loading="lazy">{% elsif post.place_photo %}{% assign place = site.data.official_sites | where_exp: "entry", "entry.photo.file == post.place_photo" | first %}{% if place %}<img class="item-thumb" src="{{ '/assets/images/thumbs/' | append: place.photo.file | relative_url | escape }}" width="{{ place.photo.width }}" height="{{ place.photo.height }}" alt="" loading="lazy">{% endif %}{% endif %}{% endcapture %}
       {% capture item_html %}
-      <article class="item">
-        {% if include.datelines == false %}{% assign post_area = nil %}{% else %}{% include post-area.html post=post %}{% endif %}
+      <article class="item"{% if post_area %} data-area="{{ post_area.slug }}"{% endif %}>
         {% include item-labels.html event_date=post.event_date label=post.label area=post_area %}
         <h4 class="item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
         {% if thumb != "" %}<a href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">{{ thumb }}</a>{% endif %}
@@ -25,6 +28,8 @@ the frontend spec, "Areas", "News list include".
       {% endcapture %}
       {% if thumb != "" %}{% assign pictured_items = pictured_items | append: item_html %}{% else %}{% assign plain_items = plain_items | append: item_html %}{% endif %}
     {% endfor %}
+  <section class="day-group"{% if day_area != "mixed" and day_area != "none" %} data-only-area="{{ day_area }}"{% endif %}>
+    {{ day_heading }}
     {{ pictured_items }}{{ plain_items }}
   </section>
 {% endfor %}

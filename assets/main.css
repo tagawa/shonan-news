@@ -621,7 +621,8 @@ button:focus {
 
 /* "Make this my area": the area pills' look. Hidden here, as [hidden] alone loses to the display the
    head include's rules give it once storage works. See the frontend spec, "Areas", "Saved area". */
-.area-save {
+.area-save,
+.area-forget {
   display: none;
   margin-bottom: var(--space-3);
   padding-top: var(--space-2);
@@ -641,8 +642,30 @@ button:focus {
   cursor: pointer;
 }
 
-.area-save:hover {
+.area-save:hover,
+.area-forget:hover {
   border-color: var(--ink);
+}
+
+/* The home page's saved-area bar and block, revealed by the head include's rules. The bar's button
+   shows whenever the bar does. */
+.area-bar {
+  display: none;
+  margin-bottom: var(--space-4);
+}
+
+.area-bar p {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+}
+
+.area-bar .area-forget {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.area-first {
+  display: none;
 }
 
 .area-saved {

@@ -29,6 +29,22 @@ the homepage, then shown under source-date headings as before. Everything else i
     {% for area in site.data.areas %}<li><a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}">{{ area.name | escape }}</a></li>{% endfor %}
   </ul>
 </nav>
+{% comment %}
+The saved area first: a bar and a block of that area's posts for each area, all hidden, then today's
+list. The head include's rules show the saved area's bar and block and hide its posts in the list
+below. See the frontend spec, "Areas", "Saved area", "Home page order".
+{% endcomment %}{% assign area_blocks = "" %}
+{% for area in site.data.areas %}{% assign area_recent = "" | split: "" %}{% for post in recent %}{% include post-area.html post=post %}{% if post_area and post_area.slug == area.slug %}{% assign area_recent = area_recent | push: post %}{% endif %}{% endfor %}
+<div class="area-bar" data-area="{{ area.slug }}" hidden>
+  {% if area_recent.size > 0 %}<p>Showing {{ area.name | escape }} first.</p>{% else %}<p>Nothing new from {{ area.name | escape }} in this update. <a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}">All {{ area.name | escape }} news</a></p>{% endif %}
+  <button type="button" class="area-forget">Show all Shonan</button>
+</div>
+{% if area_recent.size > 0 %}{% capture area_block %}<div class="area-first" data-area="{{ area.slug }}" hidden>
+{% include news-days.html posts=area_recent datelines=false %}
+<h3 class="elsewhere-label">Elsewhere in Shonan</h3>
+</div>
+{% endcapture %}{% assign area_blocks = area_blocks | append: area_block %}{% endif %}{% endfor %}
+{{ area_blocks }}
 {% include news-days.html posts=recent %}
 <p><a href="{{ '/archive/' | relative_url }}">Older summaries</a></p>
 </section>

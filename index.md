@@ -26,19 +26,20 @@ the homepage, then shown under source-date headings as before. Everything else i
 </div>
 <nav class="area-links" aria-label="News by area">
   <ul>
-    {% for area in site.data.areas %}<li><a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}">{{ area.name | escape }}</a></li>{% endfor %}
+    {% for area in site.data.areas %}<li><a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}" data-area="{{ area.slug }}">{{ area.name | escape }}</a></li>{% endfor %}
   </ul>
 </nav>
 {% comment %}
-The saved area first: a bar and a block of that area's posts for each area, all hidden, then today's
-list. The head include's rules show the saved area's bar and block and hide its posts in the list
-below. See the frontend spec, "Areas", "Saved area", "Home page order".
+The saved area first: a bar, an undo line and a block of that area's posts for each area, all hidden,
+then today's list. The head include's rules show the saved area's bar and block and hide its posts in
+the list below; after Show all Shonan they show that area's undo line in the bar's place. See the frontend spec, "Areas", "Saved area", "Home page order".
 {% endcomment %}{% assign area_blocks = "" %}
 {% for area in site.data.areas %}{% assign area_recent = "" | split: "" %}{% for post in recent %}{% include post-area.html post=post %}{% if post_area and post_area.slug == area.slug %}{% assign area_recent = area_recent | push: post %}{% endif %}{% endfor %}
 <div class="area-bar" data-area="{{ area.slug }}" hidden>
   {% if area_recent.size > 0 %}<p>Showing {{ area.name | escape }} first.</p>{% else %}<p>Nothing new from {{ area.name | escape }} in this update. <a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}">All {{ area.name | escape }} news</a></p>{% endif %}
   <button type="button" class="area-forget">Show all Shonan</button>
 </div>
+<div class="area-undo" data-area="{{ area.slug }}" hidden><p>{{ area.name | escape }} is no longer first, and is off the menu.</p><button type="button" class="area-save" data-area="{{ area.slug }}">Undo</button></div>
 {% if area_recent.size > 0 %}{% capture area_block %}<div class="area-first" data-area="{{ area.slug }}" hidden>
 {% include news-days.html posts=area_recent datelines=false %}
 <h3 class="elsewhere-label">Elsewhere in Shonan</h3>

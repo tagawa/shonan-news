@@ -254,8 +254,8 @@ button:focus {
 }
 
 /* The saved area's link: hidden here, since [hidden] loses to .main-nav li's display, and revealed
-   by the head include's rules. Its own row at every width, icon beside the label: as a fifth item in
-   the row it broke at 320px and ran off the edge at 800px. See the frontend spec, "Areas", "Saved area". */
+   by the head include's rules. Its own row below 53rem, icon beside the label: as a fifth item in
+   the row it broke at 320px and ran off the edge at 800px. From 53rem it ends the first row. See the frontend spec, "Areas", "Saved area". */
 .main-nav .nav-saved-area {
   display: none;
   flex: 1 1 100%;
@@ -273,8 +273,9 @@ button:focus {
   margin-bottom: 0;
 }
 
-/* 600px at the default font size: room for four icon-and-label rows. */
-@media (min-width: 37.5rem) {
+/* 33rem (528px): the smallest whole rem at which all four items sit on one row in this layout
+   (every li has the same top). Measured, not convention; see the frontend spec, "Header and navigation". */
+@media (min-width: 33rem) {
   .main-nav .nav-saved-area a {
     flex: none;
     justify-content: flex-start;
@@ -328,11 +329,21 @@ button:focus {
   padding-bottom: var(--space-5);
 }
 
-/* 960px at the default font size: the frame widens and the page gets a second
-   column, the What's on panel on the right, as in the mockup. The main column
-   keeps its reading width (40rem); pages without the panel leave the right
-   column empty. Flex with margins, never gap. */
-@media (min-width: 60rem) {
+/* Below 53rem the home page's What's on panel keeps its heading, filters and All events but not its
+   event rows, so the first headline reaches the first screen. It keys on position because the panel is
+   include_cached and identical everywhere: only the home page puts it before <main>. See the frontend
+   spec, "What's on panel". */
+.page-body > .whats-on-panel:first-child .event-day,
+.page-body > .whats-on-panel:first-child .event-month {
+  display: none;
+}
+
+/* 53rem (848px): the smallest whole rem at which the news column beside the panel holds 45+ characters
+   a line of lede, and 35+ beside a thumbnail. Measured, not convention; see the frontend spec, "Page
+   columns". The frame widens and the page gets a second column, the What's on panel on the right. The
+   main column keeps its reading width (40rem); pages without the panel leave the right column empty.
+   Flex with margins, never gap. */
+@media (min-width: 53rem) {
   .site-header-inner,
   .breadcrumbs,
   .page-body,
@@ -357,6 +368,22 @@ button:focus {
     width: 22rem;
     margin-left: var(--space-5);
     margin-bottom: var(--space-5);
+  }
+
+  /* The display values .event-day and .event-month have everywhere else. */
+  .page-body > .whats-on-panel:first-child .event-day {
+    display: flex;
+  }
+
+  .page-body > .whats-on-panel:first-child .event-month {
+    display: block;
+  }
+
+  /* The saved area joins the first menu row, at its right end: five items need 731px with the longest
+     name, and the frame gives 816px here. */
+  .main-nav .nav-saved-area {
+    flex: none;
+    margin-left: auto;
   }
 }
 
@@ -654,7 +681,8 @@ button:focus {
   margin-bottom: var(--space-4);
 }
 
-.area-bar p {
+.area-bar p,
+.area-undo p {
   margin-top: 0;
   margin-bottom: var(--space-2);
 }
@@ -664,8 +692,27 @@ button:focus {
   margin-bottom: 0;
 }
 
+/* Takes the bar's place after Show all Shonan; its Undo is an .area-save, shown where storage works. */
+.area-undo {
+  display: none;
+  margin-bottom: var(--space-4);
+}
+
+.area-undo .area-save {
+  margin-bottom: 0;
+}
+
 .area-first {
   display: none;
+}
+
+/* "Elsewhere in Shonan" closes the saved area's block, so it takes the section heading's type. */
+.elsewhere-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 0;
+  margin-bottom: var(--space-3);
 }
 
 .area-saved {

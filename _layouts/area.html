@@ -11,7 +11,7 @@ loop stops at the week's edge before looking up any post's area. See the fronten
 {% comment %}The towns line only when the name leaves a town out (Hiratsuka & Oiso also covers Ninomiya and Nakai); otherwise it repeats the heading.{% endcomment %}{% assign unnamed_town = false %}{% for town in area.towns %}{% unless area.name contains town %}{% assign unnamed_town = true %}{% endunless %}{% endfor %}
 {% if unnamed_town %}<p class="area-towns">{{ area.towns | join: ", " | escape }}</p>{% endif %}
 {% comment %}Both hidden: the head include shows the button only where storage works, and the text once this area is saved.{% endcomment %}<button type="button" class="area-save" data-area="{{ area.slug }}" hidden>Make this my area</button>
-<p class="area-saved" data-area="{{ area.slug }}" hidden>This is your area.</p>
+<p class="area-saved" data-area="{{ area.slug }}" tabindex="-1" hidden>This is your area.</p>
 {% comment %}The events start directly below, so only the news needs a jump link.{% endcomment %}<p><a href="#area-news">Skip to latest news</a></p>
 {% include whats-on-events.html %}{% assign area_events = "" | split: "" %}{% for post in whats_on_events %}{% if post.town and area.towns contains post.town %}{% assign area_events = area_events | push: post %}{% endif %}{% endfor %}
 {% assign area_days = area_events | group_by_exp: "post", "post.event_date | date: '%Y-%m-%d'" | sort: "name" %}

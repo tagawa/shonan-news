@@ -207,6 +207,7 @@ button:focus {
 
 .main-nav ul {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding-left: 0;
   list-style: none;
@@ -252,8 +253,33 @@ button:focus {
   margin-bottom: var(--space-1);
 }
 
+/* The saved area's link: hidden here, since [hidden] loses to .main-nav li's display, and revealed
+   by the head include's rules. Its own row at every width, icon beside the label: as a fifth item in
+   the row it broke at 320px and ran off the edge at 800px. See the frontend spec, "Areas", "Saved area". */
+.main-nav .nav-saved-area {
+  display: none;
+  flex: 1 1 100%;
+}
+
+.main-nav .nav-saved-area a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav .nav-saved-area svg {
+  margin-left: 0;
+  margin-right: var(--space-2);
+  margin-bottom: 0;
+}
+
 /* 600px at the default font size: room for four icon-and-label rows. */
 @media (min-width: 37.5rem) {
+  .main-nav .nav-saved-area a {
+    flex: none;
+    justify-content: flex-start;
+  }
+
   .main-nav li {
     flex: none;
   }
@@ -591,6 +617,36 @@ button:focus {
 .whats-on-filters a:hover,
 .area-links a:hover {
   border-color: var(--ink);
+}
+
+/* "Make this my area": the area pills' look. Hidden here, as [hidden] alone loses to the display the
+   head include's rules give it once storage works. See the frontend spec, "Areas", "Saved area". */
+.area-save {
+  display: none;
+  margin-bottom: var(--space-3);
+  padding-top: var(--space-2);
+  padding-right: var(--space-3);
+  padding-bottom: var(--space-2);
+  padding-left: var(--space-3);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--rule);
+  border-radius: 999px;
+  background-color: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.area-save:hover {
+  border-color: var(--ink);
+}
+
+.area-saved {
+  display: none;
 }
 
 /* Filled, not only recoloured: the fill is the shape change that marks it. */

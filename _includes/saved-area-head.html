@@ -1,0 +1,44 @@
+{% comment %}
+The saved area. The script only marks <html>: data-area-storage when storage works, data-saved-area
+when a known slug is saved. It runs before the body is parsed, so the rules below apply from first
+paint and nothing moves. Every variant is already in the markup, hidden; the rules reveal the one
+that applies. ES5, and the click handler tests event.target itself (no closest(), which Firefox 31
+lacks). See the frontend spec, "Areas", "Saved area".
+{% endcomment %}<script id="saved-area">
+(function (doc) {
+  var areas = { {% for area in site.data.areas %}"{{ area.slug }}": 1{% unless forloop.last %}, {% endunless %}{% endfor %} };
+  var key = "shonannews-area";
+  var root = doc.documentElement;
+  var store = null;
+  try {
+    store = window.localStorage;
+    var saved = store.getItem(key);
+    // A write too: Safari's old private mode reads but throws on every write.
+    store.setItem(key + "-check", "1");
+    store.removeItem(key + "-check");
+    root.setAttribute("data-area-storage", "");
+    if (saved && areas.hasOwnProperty(saved)) root.setAttribute("data-saved-area", saved);
+  } catch (error) {
+    return;
+  }
+  doc.addEventListener("click", function (event) {
+    var target = event.target;
+    if (!target || !target.getAttribute || target.className !== "area-save") return;
+    var slug = target.getAttribute("data-area");
+    if (!areas.hasOwnProperty(slug)) return;
+    try {
+      store.setItem(key, slug);
+    } catch (error) {
+      return;
+    }
+    root.setAttribute("data-saved-area", slug);
+    if (window.fathom) window.fathom.trackEvent("Area remembered");
+  });
+})(document);
+</script>
+<style id="saved-area-style">
+html[data-area-storage] .area-save { display: inline-block; }
+{% for area in site.data.areas %}html[data-saved-area="{{ area.slug }}"] .main-nav .nav-saved-area[data-area="{{ area.slug }}"] { display: flex; }
+html[data-saved-area="{{ area.slug }}"] .area-save[data-area="{{ area.slug }}"] { display: none; }
+html[data-saved-area="{{ area.slug }}"] .area-saved[data-area="{{ area.slug }}"] { display: block; }
+{% endfor %}</style>

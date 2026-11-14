@@ -7,7 +7,7 @@ whats_on_panel: false
 ---
 {% include whats-on-events.html %}
 <h1>What's on</h1>
-<p>Events from the summaries, by the day they happen. Check the original article before you go.</p>
+<p>Upcoming events. Details can change so please check the original article before you go.</p>
 {% assign this_month = whats_on_today | slice: 0, 7 %}
 {% assign event_months = whats_on_events | group_by_exp: "post", "post.event_date | date: '%Y-%m'" | sort: "name" %}
 {% assign last_month = this_month %}

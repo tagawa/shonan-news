@@ -20,26 +20,25 @@ the homepage, then shown under source-date headings as before. Everything else i
   {% assign recent = recent | push: post %}
 {% endfor %}
 <section class="latest-news" aria-labelledby="latest-news-heading">
-<div class="section-head">
-  <h2 id="latest-news-heading">Latest news</h2>
-  <a href="{{ '/archive/' | relative_url }}">Archive</a>
-</div>
-<nav class="area-links" aria-label="News by area">
+<h2 id="latest-news-heading" class="section-head">Latest news</h2>
+{% comment %}
+Each pill is a link to its area page and a hidden toggle; where storage works the head include's rules
+swap in the toggles and Show all areas. See the frontend spec, "Areas", "Saved area", "Area pills".
+{% endcomment %}<nav class="area-links" aria-label="News by area">
   <ul>
-    {% for area in site.data.areas %}<li><a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}" data-area="{{ area.slug }}">{{ area.name | escape }}</a></li>{% endfor %}
+    {% for area in site.data.areas %}<li><a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}" data-area="{{ area.slug }}">{{ area.name | escape }}</a><button type="button" class="area-pick" data-area="{{ area.slug }}" aria-pressed="false" hidden>{{ area.name | escape }}</button></li>{% endfor %}
+    <li class="area-all" hidden><button type="button" class="area-pick" data-area="" aria-pressed="true">Show all areas</button></li>
   </ul>
 </nav>
 {% comment %}
-The saved area first: a bar, an undo line and a block of that area's posts for each area, all hidden,
-then today's list. The head include's rules show the saved area's bar and block and hide its posts in
-the list below; after Show all Shonan they show that area's undo line in the bar's place. See the frontend spec, "Areas", "Saved area", "Home page order".
+The saved area first: a block of that area's posts for each area with any, or a quiet-day line for each
+without, all hidden, then today's list. The head include's rules show the saved area's and hide its
+posts in the list below. See the frontend spec, "Areas", "Saved area", "Home page order".
 {% endcomment %}{% assign area_blocks = "" %}
-{% for area in site.data.areas %}{% assign area_recent = "" | split: "" %}{% for post in recent %}{% include post-area.html post=post %}{% if post_area and post_area.slug == area.slug %}{% assign area_recent = area_recent | push: post %}{% endif %}{% endfor %}
+{% for area in site.data.areas %}{% assign area_recent = "" | split: "" %}{% for post in recent %}{% include post-area.html post=post %}{% if post_area and post_area.slug == area.slug %}{% assign area_recent = area_recent | push: post %}{% endif %}{% endfor %}{% if area_recent.size == 0 %}
 <div class="area-bar" data-area="{{ area.slug }}" hidden>
-  {% if area_recent.size > 0 %}<p>Showing {{ area.name | escape }} first.</p>{% else %}<p>Nothing new from {{ area.name | escape }} in this update. <a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}">All {{ area.name | escape }} news</a></p>{% endif %}
-  <button type="button" class="area-forget">Show all Shonan</button>
-</div>
-<div class="area-undo" data-area="{{ area.slug }}" hidden><p>{{ area.name | escape }} is no longer first, and is off the menu.</p><button type="button" class="area-save" data-area="{{ area.slug }}">Undo</button></div>
+  <p>Nothing new from {{ area.name | escape }} in this update. <a href="{{ '/areas/' | append: area.slug | append: '/' | relative_url }}">All {{ area.name | escape }} news</a></p>
+</div>{% endif %}
 {% if area_recent.size > 0 %}{% capture area_block %}<div class="area-first" data-area="{{ area.slug }}" hidden>
 {% include news-days.html posts=area_recent datelines=false %}
 <h3 class="elsewhere-label">Elsewhere in Shonan</h3>

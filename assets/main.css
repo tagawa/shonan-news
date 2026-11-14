@@ -624,7 +624,8 @@ button:focus {
 }
 
 .whats-on-filters a,
-.area-links a {
+.area-links a,
+.area-links .area-pick {
   display: block;
   padding-top: var(--space-2);
   padding-right: var(--space-2);
@@ -642,14 +643,14 @@ button:focus {
 }
 
 .whats-on-filters a:hover,
-.area-links a:hover {
+.area-links a:hover,
+.area-links .area-pick:hover {
   border-color: var(--ink);
 }
 
 /* "Make this my area": the area pills' look. Hidden here, as [hidden] alone loses to the display the
    head include's rules give it once storage works. See the frontend spec, "Areas", "Saved area". */
-.area-save,
-.area-forget {
+.area-save {
   display: none;
   margin-bottom: var(--space-3);
   padding-top: var(--space-2);
@@ -669,36 +670,18 @@ button:focus {
   cursor: pointer;
 }
 
-.area-save:hover,
-.area-forget:hover {
+.area-save:hover {
   border-color: var(--ink);
 }
 
-/* The home page's saved-area bar and block, revealed by the head include's rules. The bar's button
-   shows whenever the bar does. */
+/* The home page's quiet-day line and saved-area block, revealed by the head include's rules. */
 .area-bar {
   display: none;
   margin-bottom: var(--space-4);
 }
 
-.area-bar p,
-.area-undo p {
+.area-bar p {
   margin-top: 0;
-  margin-bottom: var(--space-2);
-}
-
-.area-bar .area-forget {
-  display: inline-block;
-  margin-bottom: 0;
-}
-
-/* Takes the bar's place after Show all Shonan; its Undo is an .area-save, shown where storage works. */
-.area-undo {
-  display: none;
-  margin-bottom: var(--space-4);
-}
-
-.area-undo .area-save {
   margin-bottom: 0;
 }
 
@@ -749,6 +732,20 @@ button:focus {
   margin-bottom: var(--space-2);
 }
 
+/* The toggles that replace the links where storage works, and Show all areas: hidden here, revealed by
+   the head include's rules. A button takes the browser's font unless told otherwise. */
+.area-links .area-pick {
+  display: none;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.area-links .area-all {
+  display: none;
+}
+
 .whats-on-panel-more {
   margin-top: var(--space-2);
 }
@@ -773,18 +770,11 @@ button:focus {
   color: var(--ink);
 }
 
-/* A section heading with its "see all" link at the far side, as in the
-   mockup. Flex with no gap: space-between needs none. */
+/* "Latest news" on the home page, the size of the What's on panel's heading. */
 .section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: var(--space-3);
-}
-
-.section-head h2 {
   font-size: 1.5rem;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: var(--space-3);
 }
 
 /* Smaller on the index than on the item page: forty bold 1.5rem headlines in

@@ -31,6 +31,8 @@ CANONICAL = {
     # posts naming it misread it, 2026-08-19 to 2026-11-13. More than one word, so it acts only
     # through MISREADINGS.
     "花菜ガーデン": "Kana Garden",
+    # Chigasaki ballet company, read のわ (nowa-ballet.com). Published as "Noba", 2026-11-16.
+    "乃羽": "Nowa",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
@@ -45,6 +47,8 @@ MISREADINGS = {
     "藤本東子": ("Toko Fujimoto",),
     # Published 2026-08-19 and 2026-09-11 / 2026-11-13 respectively.
     "花菜ガーデン": ("Hana-na Garden", "Hana Garden"),
+    # Published 2026-11-16; too far from "Nowa" to be a near miss (ratio 0.75).
+    "乃羽": ("Noba",),
 }
 
 # Places better known locally by their Japanese name: the first body mention of the English

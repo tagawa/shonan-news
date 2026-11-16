@@ -100,6 +100,49 @@ def _weekday_month_day(title, description, source_date):
     return fits[0] if len(fits) == 1 else None
 
 
+APPLICATION_WORDS = ("募集", "申込", "申し込", "受付", "締切", "締め切", "〆切")
+DEADLINE_TAIL = re.compile(r"\s*(?:\([^)]*\))?\s*(?:まで|締|〆|告示)")
+MAX_DAYS_AHEAD = 200
+
+
+def _earliest_month_day(title, description, source_date):
+    # The last fallback, for a source stating several dates (a day-only range, a rain date):
+    # the earliest still ahead. Sources about applications are left alone, since their dates
+    # are entry windows, not the event. See the backend spec, "Event date fallback", "Several dates".
+    source = unicodedata.normalize("NFKC", f"{title}\n{description}")
+    if any(word in source for word in APPLICATION_WORDS):
+        return None
+    full = list(FULL_DATE.finditer(source))
+    stated = [((int(m.group(1)), int(m.group(2))), m.end()) for m in full]  # (month_day, end)
+    for match in DAY_WITH_WEEKDAY.finditer(source):
+        if any(m.start() <= match.start() < m.end() for m in full):
+            continue  # the day of a full date, already counted
+        day, weekday = int(match.group(1)), weekdays.WEEKDAYS.index(match.group(2))
+        fits = []
+        for offset in (0, 1):
+            year, month = divmod(source_date.year * 12 + source_date.month - 1 + offset, 12)
+            try:
+                candidate = date(year, month + 1, day)
+            except ValueError:
+                continue
+            if candidate.weekday() == weekday:
+                fits.append((candidate.month, candidate.day))
+        if len(fits) == 1:
+            stated.append((fits[0], match.end()))
+    if len({month_day for month_day, _ in stated}) < 2:
+        return None
+    source_day = source_date.date()
+    left = []
+    for month_day, end in stated:
+        if DEADLINE_TAIL.match(source, end):
+            continue
+        year = _stated_year(title, description, month_day, source_date)
+        derived = _derive_event_date(month_day, source_date, year=year)
+        if derived and 0 <= (derived - source_day).days <= MAX_DAYS_AHEAD:
+            left.append((derived, month_day))
+    return min(left)[1] if left else None
+
+
 def _stated_year(title, description, month_day, source_date):
     # The year the source writes directly before this date, or None. Nearest-year cannot
     # see 来年: a date more than about six months ahead is nearer last year's copy
@@ -150,7 +193,8 @@ def _event_date(result, title, description, source_date):
     # Only keep a date the source itself states: the model's input is exactly this
     # title and description, so an uncorroborated day was invented, not read.
     month_day = (result.event_month_day or _single_source_month_day(title, description)
-                 or _weekday_month_day(title, description, source_date))
+                 or _weekday_month_day(title, description, source_date)
+                 or _earliest_month_day(title, description, source_date))
     if not (month_day and _corroborated_day(title, description, month_day[1])):
         return None
     derived = _derive_event_date(month_day, source_date, year=_stated_year(title, description, month_day, source_date))

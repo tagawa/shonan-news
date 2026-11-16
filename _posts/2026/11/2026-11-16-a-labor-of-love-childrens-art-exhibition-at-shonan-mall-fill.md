@@ -6,6 +6,8 @@ source_date: '2026-11-16 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0601/2026/11/16/862100.html
 source_title: 好き突き詰めた力作　21日から、フィルでアート展
 source_name: タウンニュース（藤沢）
+event_date: '2026-11-21'
+town: Fujisawa
 lede: A children’s art exhibition will open on the 21st at Shonan Mall Fill in Tsujidoshinmachi.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/16/862100.html
 ---

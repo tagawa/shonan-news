@@ -33,6 +33,11 @@ CANONICAL = {
     "花菜ガーデン": "Kana Garden",
     # Chigasaki ballet company, read のわ (nowa-ballet.com). Published as "Noba", 2026-11-16.
     "乃羽": "Nowa",
+    # Nickname of Kandai Park, Tsujido: "Seacross", "C-X" and "Sea Cross" in its three live posts,
+    # 2026-10-22 to 2026-11-17. Owner chose the Tsujido development's own spelling (湘南C-X).
+    "シークロス公園": "C-X Park",
+    # 辻堂今昔物語, published as "Ima Mukashi" on 2026-11-17, fixed by hand.
+    "今昔": "Konjaku",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
@@ -49,6 +54,8 @@ MISREADINGS = {
     "花菜ガーデン": ("Hana-na Garden", "Hana Garden"),
     # Published 2026-11-16; too far from "Nowa" to be a near miss (ratio 0.75).
     "乃羽": ("Noba",),
+    "シークロス公園": ("Seacross Park", "Sea Cross Park"),
+    "今昔": ("Ima Mukashi",),
 }
 
 # Places better known locally by their Japanese name: the first body mention of the English

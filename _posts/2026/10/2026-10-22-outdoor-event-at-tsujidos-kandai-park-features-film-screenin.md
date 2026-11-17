@@ -11,9 +11,9 @@ event_date: '2026-10-24'
 town: Fujisawa
 image_url: https://images.keizai.biz/shonan_keizai/headline/1792567314.jpg
 lede: The ‘TSUJI FES 2026 Autumn’ outdoor community event will be held on 24 and 25
-  October at Seacross Park (Kandai Park) in Tsujido, Fujisawa.
+  October at C-X Park (Kandai Park) in Tsujido, Fujisawa.
 guid: link:https://shonan.keizai.biz/headline/3605/
 ---
 
-The ‘TSUJI FES 2026 Autumn’ event will take place on 24 and 25 October, 2026, at Seacross Park (Kandai Park), near Tsujido Station, in Tsujidokandai 1, Fujisawa.
+The ‘TSUJI FES 2026 Autumn’ event will take place on 24 and 25 October, 2026, at C-X Park (Kandai Park), near Tsujido Station, in Tsujidokandai 1, Fujisawa.
 

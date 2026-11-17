@@ -14,5 +14,5 @@ lede: The Fujisawa City Tourism Association and Enoshima-Fujisawa Guide Club wil
 guid: guid:https://www.townnews.co.jp/0601/2026/11/17/862339.html
 ---
 
-The Fujisawa City Tourism Association is collaborating with the Enoshima-Fujisawa Guide Club to hold two walking events exploring local history and attractions. One is titled 'Tsujido Ima Mukashi Monogatari: Visiting Tsujido's Little-Known Power Spots and Deities.'
+The Fujisawa City Tourism Association is collaborating with the Enoshima-Fujisawa Guide Club to hold two walking events exploring local history and attractions. One is titled 'Tsujido Konjaku Monogatari: Visiting Tsujido's Little-Known Power Spots and Deities.'
 

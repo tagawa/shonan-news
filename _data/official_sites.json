@@ -423,5 +423,18 @@
       "source_url": "https://commons.wikimedia.org/wiki/File:%E6%A8%AA%E9%A0%88%E8%B3%80%E5%B8%82%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8_Nov_18,_2012.jpg",
       "licence": "CC BY 2.0"
     }
+  },
+  {
+    "ja": ["江島神社"], 
+    "en": ["Enoshima Shrine", "Enoshima-jinja"], 
+    "url": "http://enoshimajinja.or.jp/",
+    "photo": {
+      "file": "enoshima-shrine.jpg",
+      "width": 1280,
+      "height": 852,
+      "author": "Shoma Suzuki",
+      "source_url": "https://www.flickr.com/photos/shomas/7946475666/in/photolist-974geS-d7cLEE-d7cLn9-d7cLdf-6E5yhQ-bq18xy",
+      "licence": "CC BY 2.0"
+    }
   }
 ]

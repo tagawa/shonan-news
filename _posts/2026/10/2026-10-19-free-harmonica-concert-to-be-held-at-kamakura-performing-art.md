@@ -17,3 +17,5 @@ guid: guid:https://www.townnews.co.jp/0601/2026/10/19/858033.html
 
 The concert will begin at 1 p.m., with doors opening at 12:30 p.m. Admission is free.
 
+Official site: [Kamakura Performing Arts Center](https://kamakura-kpac.jp/){:target="_blank" rel="noopener noreferrer"}
+

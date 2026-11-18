@@ -15,5 +15,5 @@ lede: An exchange event between Enoshima Shrine and Togakushi Shrine was held on
 guid: link:https://shonan.keizai.biz/headline/3623/
 ---
 
-Togakushi soba from Nagano was dedicated to Enoshima Shrine during the event. The exchange took place between Enoshima Shrine, known as a 'shrine of the sea,' and Togakushi Shrine in Nagano City, known as a 'shrine of the mountains.'
+Togakushi soba from Nagano was dedicated to [Enoshima Shrine](http://enoshimajinja.or.jp/){:target="_blank" rel="noopener noreferrer"} during the event. The exchange took place between Enoshima Shrine, known as a 'shrine of the sea,' and Togakushi Shrine in Nagano City, known as a 'shrine of the mountains.'
 

@@ -15,5 +15,5 @@ lede: The 24th Blossom Art Exhibition will be held from 29 October (Thu) at Kama
 guid: guid:https://www.townnews.co.jp/0602/2026/10/14/857450.html
 ---
 
-Organized by the BlossomArt Association, the exhibition will run for three days, from 29 October (Thu) to 31 October (Sat), at Gallery 2 of Kamakura Arts Center.
+Organized by the BlossomArt Association, the exhibition will run for three days, from 29 October (Thu) to 31 October (Sat), at Gallery 2 of [Kamakura Arts Center](https://kamakura-kpac.jp/){:target="_blank" rel="noopener noreferrer"}.
 

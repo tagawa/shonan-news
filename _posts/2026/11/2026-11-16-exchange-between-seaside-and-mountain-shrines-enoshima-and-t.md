@@ -9,7 +9,8 @@ source_name: タウンニュース（藤沢）
 lede: A joint soba dedication festival and performance of Togakushi Shrine's Daidaikagura
   were held on the 12th at Enoshima Shrine.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/16/862098.html
+place_photo: enoshima-shrine.jpg
 ---
 
-Enoshima Shrine, which enshrines one of Japan's three great Benzaiten, held the event jointly with Togakushi Shrine in Nagano City, Nagano Prefecture. The program included a soba dedication festival and a performance offering of Togakushi Shrine's Daidaikagura.
+[Enoshima Shrine](http://enoshimajinja.or.jp/){:target="_blank" rel="noopener noreferrer"}, which enshrines one of Japan's three great Benzaiten, held the event jointly with Togakushi Shrine in Nagano City, Nagano Prefecture. The program included a soba dedication festival and a performance offering of Togakushi Shrine's Daidaikagura.
 

@@ -17,3 +17,5 @@ guid: guid:https://www.townnews.co.jp/0602/2026/10/22/858551.html
 
 The performance will open its doors at 1:45 p.m. and begin at 2:30 p.m. Tickets start at 3,000 yen.
 
+Official site: [Kamakura Arts Center](https://kamakura-kpac.jp/){:target="_blank" rel="noopener noreferrer"}
+

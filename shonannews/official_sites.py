@@ -19,7 +19,7 @@ def load_sites(path=SITES_PATH):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
-def _english(site):
+def spelling_pattern(site):
     # Longest first, so "Zushi Bunka Plaza Hall" is not cut short by a shorter spelling sharing its start.
     names = sorted(site["en"], key=len, reverse=True)
     return re.compile(r"(?<![\w-])(?:" + "|".join(map(re.escape, names)) + r")(?![\w-])", re.IGNORECASE)
@@ -30,7 +30,7 @@ def _named_in(source, site):
     return any(unicodedata.normalize("NFKC", name) in source for name in site["ja"])
 
 
-def _first_mentions(body, source, sites):
+def first_mentions(body, source, sites):
     # Each listed entry's earliest mention in the body, {index: (start, end)}, shared by the links
     # and the place photo so the two cannot disagree.
     links = [match.span() for match in LINK.finditer(body)]
@@ -38,7 +38,7 @@ def _first_mentions(body, source, sites):
              for index, site in enumerate(sites)
              # An entry without a url (a photo only) still counts, so it wins its overlaps.
              if _named_in(source, site) and not ("url" in site and site["url"] in body)
-             for match in _english(site).finditer(body)
+             for match in spelling_pattern(site).finditer(body)
              if not any(start < match.end() and match.start() < end for start, end in links)]
     # One pass over every entry, so file order cannot decide: the longer of two overlapping
     # matches wins ("Enoshima Aquarium" over its "Enoshima"), the earlier one on a tie.
@@ -52,22 +52,26 @@ def _first_mentions(body, source, sites):
     return first
 
 
+def new_tab_link(text, url):
+    return f"[{text}]({url}){NEW_TAB}"
+
+
 def link_first_mention(body, source, sites):
-    first = _first_mentions(body, source, sites)
+    first = first_mentions(body, source, sites)
     # From the end backwards, so earlier offsets stay valid.
     for index, (start, end) in sorted(first.items(), key=lambda item: item[1], reverse=True):
         if "url" not in sites[index]:
             continue
-        body = f"{body[:start]}[{body[start:end]}]({sites[index]['url']}){NEW_TAB}{body[end:]}"
+        body = f"{body[:start]}{new_tab_link(body[start:end], sites[index]['url'])}{body[end:]}"
     return body
 
 
 def add_site_line(body, head, source, sites):
     # A place spelled only in the title or lede (head) has no body mention to link, and those two
     # are never linked, so it gets a line of its own. See the backend spec, "Official site links".
-    first = sorted(_first_mentions(head, source, sites).items(), key=lambda item: item[1])
-    links = [f"[{head[start:end]}]({sites[index]['url']}){NEW_TAB}"
-             for index, (start, end) in first if "url" in sites[index] and not _english(sites[index]).search(body)]
+    first = sorted(first_mentions(head, source, sites).items(), key=lambda item: item[1])
+    links = [new_tab_link(head[start:end], sites[index]['url'])
+             for index, (start, end) in first if "url" in sites[index] and not spelling_pattern(sites[index]).search(body)]
     if not links:
         return body
     return f"{body}\n\nOfficial site{'s' if len(links) > 1 else ''}: {', '.join(links)}"
@@ -75,7 +79,7 @@ def add_site_line(body, head, source, sites):
 
 def place_photo(body, source, sites):
     # The photo of the first place mentioned that has one. See the backend spec, "Place photos".
-    for index, _ in sorted(_first_mentions(body, source, sites).items(), key=lambda item: item[1]):
+    for index, _ in sorted(first_mentions(body, source, sites).items(), key=lambda item: item[1]):
         if "photo" in sites[index]:
             return sites[index]["photo"]["file"]
     return None
@@ -103,4 +107,4 @@ def unlink(body):
 
 
 def misses(english, source, sites):
-    return [site["ja"][0] for site in sites if _named_in(source, site) and not _english(site).search(english)]
+    return [site["ja"][0] for site in sites if _named_in(source, site) and not spelling_pattern(site).search(english)]

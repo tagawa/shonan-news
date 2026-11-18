@@ -10,7 +10,9 @@ event_date: '2026-12-20'
 town: Kamakura
 lede: The annual 'Ninth' concert will be held on 20 December (Sun) at Kamakura Geijutsu-kan.
 guid: guid:https://www.townnews.co.jp/0602/2026/11/18/862778.html
+place_photo: kamakura-performing-arts-center.jpg
 ---
 
-The year-end 'Ninth Concert: Gathering of Joy in Singing the Ninth' will take place at Kamakura Geijutsu-kan. Its approximately 230 members are local residents ranging in age from their teens to older adults.
+
+The year-end 'Ninth Concert: Gathering of Joy in Singing the Ninth' will take place at [Kamakura Geijutsu-kan](https://kamakura-kpac.jp/){:target="_blank" rel="noopener noreferrer"}. Its approximately 230 members are local residents ranging in age from their teens to older adults.
 

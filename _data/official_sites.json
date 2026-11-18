@@ -410,5 +410,18 @@
       "author": "Shonan News",
       "licence": "CC BY 4.0"
     }
+  },
+  {
+    "ja": ["横須賀市文化会館"], 
+    "en": ["Yokosuka City Cultural Hall", "Yokosuka Cultural Hall"], 
+    "url": "https://yokosuka-bunka.info/",
+    "photo": {
+      "file": "yokosuka-cultural-hall.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Ryo FUKAsawa",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%E6%A8%AA%E9%A0%88%E8%B3%80%E5%B8%82%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8_Nov_18,_2012.jpg",
+      "licence": "CC BY 2.0"
+    }
   }
 ]

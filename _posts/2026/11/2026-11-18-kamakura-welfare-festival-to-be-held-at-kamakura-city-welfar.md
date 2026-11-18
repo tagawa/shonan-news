@@ -14,5 +14,5 @@ lede: The 46th Kamakura Welfare Festival will be held on 29 November (Sun) at Ka
 guid: guid:https://www.townnews.co.jp/0602/2026/11/18/862652.html
 ---
 
-Organized by the Kamakura City Council of Social Welfare, the festival will run from 10 a.m. to 2 p.m. and will include a bazaar. The venue is Kamakura City Welfare Center, Onarimachi 20-21.
+Organized by the Kamakura City Council of Social Welfare, the festival will run from 10 a.m. to 2 p.m. and will include a bazaar. The venue is [Kamakura City Welfare Center](https://www.city.kamakura.kanagawa.jp/fukushi/soumu/center.html){:target="_blank" rel="noopener noreferrer"}, Onarimachi 20-21.
 

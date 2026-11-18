@@ -13,5 +13,5 @@ lede: The Fueda Recycling Market will be held on 29 November (Sun) at Fueda Recy
 guid: guid:https://www.townnews.co.jp/0602/2026/11/17/862369.html
 ---
 
-The market will run from 10:30 am to 3 pm and will take place even if it rains. The venue is Fueda Recycling Center, 1-11-34 Fueda.
+The market will run from 10:30 am to 3 pm and will take place even if it rains. The venue is [Fueda Recycling Center](https://rarara-kamakura.sakura.ne.jp/){:target="_blank" rel="noopener noreferrer"}, 1-11-34 Fueda.
 

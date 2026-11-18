@@ -16,3 +16,5 @@ guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-420899587535021540
 
 The festival will feature hula, hip-hop, cheerleading and festival drumming performances, along with food from kitchen trucks. The Shonan Motor Show will display 11 popular cars, and admission is free.
 
+Official site: [Shonan Mall Fill](https://www.shonan-fill.com/){:target="_blank" rel="noopener noreferrer"}
+

@@ -9,7 +9,8 @@ source_name: タウンニュース（藤沢）
 lede: About 50 members of five Fujisawa Lions Clubs raised 460,000 yen for Kumamoto
   relief at Shonan Mall Fill on the 11th.
 guid: guid:https://www.townnews.co.jp/0601/2026/08/21/849636.html
+place_photo: shonan-mall-fill.jpg
 ---
 
-Approximately 50 members from Fujisawa LC, Fujisawa Shonan LC, Fujisawa Chuo LC, Fujisawa Life LC, and Fujisawa Active LC conducted a fundraising activity at Shonan Mall Fill on the 11th. They collected a total of 460,000 yen and handed the money to the Fujisawa branch of the Lions Club, which will send the funds to Kumamoto. The five clubs are continuing support efforts for the affected communities.
+Approximately 50 members from Fujisawa LC, Fujisawa Shonan LC, Fujisawa Chuo LC, Fujisawa Life LC, and Fujisawa Active LC conducted a fundraising activity at [Shonan Mall Fill](https://www.shonan-fill.com/){:target="_blank" rel="noopener noreferrer"} on the 11th. They collected a total of 460,000 yen and handed the money to the Fujisawa branch of the Lions Club, which will send the funds to Kumamoto. The five clubs are continuing support efforts for the affected communities.
 

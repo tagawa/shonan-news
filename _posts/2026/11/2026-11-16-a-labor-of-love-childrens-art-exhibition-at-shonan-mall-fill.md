@@ -10,7 +10,8 @@ event_date: '2026-11-21'
 town: Fujisawa
 lede: A children’s art exhibition will open on the 21st at Shonan Mall Fill in Tsujidoshinmachi.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/16/862100.html
+place_photo: shonan-mall-fill.jpg
 ---
 
-‘Asa Cafe Kodomo Art’ will display works by children who practice diverse forms of learning at Shonan Mall Fill, a large shopping mall. The exhibition runs from Saturday the 21st through Sunday the 29th.
+‘Asa Cafe Kodomo Art’ will display works by children who practice diverse forms of learning at [Shonan Mall Fill](https://www.shonan-fill.com/){:target="_blank" rel="noopener noreferrer"}, a large shopping mall. The exhibition runs from Saturday the 21st through Sunday the 29th.
 

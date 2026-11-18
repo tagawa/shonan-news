@@ -425,7 +425,7 @@
     }
   },
   {
-    "ja": ["江島神社"], 
+    "ja": ["江島神社", "江ノ島神社"], 
     "en": ["Enoshima Shrine", "Enoshima-jinja"], 
     "url": "http://enoshimajinja.or.jp/",
     "photo": {
@@ -435,6 +435,28 @@
       "author": "Shoma Suzuki",
       "source_url": "https://www.flickr.com/photos/shomas/7946475666/in/photolist-974geS-d7cLEE-d7cLn9-d7cLdf-6E5yhQ-bq18xy",
       "licence": "CC BY 2.0"
+    }
+  },
+  {
+    "ja": ["鎌倉市福祉センター"], 
+    "en": ["Kamakura City Welfare Center", "Kamakura Welfare Center", "Kamakura City Welfare Centre", "Kamakura Welfare Centre"], 
+    "url": "https://www.city.kamakura.kanagawa.jp/fukushi/soumu/center.html"
+  },
+  {
+    "ja": ["笛田リサイクルセンター"], 
+    "en": ["Fueda Recycling Center", "Fueda Recycle Center", "Fueda Recycling Centre", "Fueda Recycle Centre"], 
+    "url": "https://rarara-kamakura.sakura.ne.jp/"
+  },
+  {
+    "ja": ["湘南モールフィル"], 
+    "en": ["Shonan Mall Fill", "Shonan Fill Mall"], 
+    "url": "https://www.shonan-fill.com/",
+    "photo": {
+      "file": "shonan-mall-fill.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Mr.n.k",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Shonanmallfill.jpg"
     }
   }
 ]

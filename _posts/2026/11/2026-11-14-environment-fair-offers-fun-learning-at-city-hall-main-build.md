@@ -11,7 +11,8 @@ town: Fujisawa
 lede: The 29th Fujisawa Environment Fair will be held on 21 November (Sat) at Fujisawa
   City Hall’s main building.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/14/862155.html
+place_photo: fujisawa-city-hall.jpg
 ---
 
-The 29th Fujisawa Environment Fair, 'Eco Eco Festival 2026,' will offer fun ways to learn about environmental conservation and preventing global warming. Fujisawa City Hall’s main building will host the event on 21 November (Sat).
+The 29th Fujisawa Environment Fair, 'Eco Eco Festival 2026,' will offer fun ways to learn about environmental conservation and preventing global warming. [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}’s main building will host the event on 21 November (Sat).
 

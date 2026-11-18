@@ -10,7 +10,10 @@ label: safety
 lede: A disaster preparedness fair was held at the main building of Fujisawa City
   Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/23/858779.html
+place_photo: fujisawa-city-hall.jpg
 ---
 
 The Disaster Preparedness Fair was held on the 18th to give people a hands-on experience of disaster preparedness. Forty-six organizations and companies involved in disaster preparedness initiatives from inside and outside the city set up booths.
+
+Official site: [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}
 

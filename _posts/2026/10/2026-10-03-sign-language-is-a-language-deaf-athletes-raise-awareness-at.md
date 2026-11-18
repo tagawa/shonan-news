@@ -11,7 +11,8 @@ event_date: '2026-09-23'
 lede: The 'International Day of Sign Languages in Fujisawa' was held at Fujisawa City
   Hall on September 23.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/02/855447.html
+place_photo: fujisawa-city-hall.jpg
 ---
 
-The event aimed to deepen understanding of sign language and promote its use. It was held at Fujisawa City Hall because of rainy weather, and included sign-language classes, wine and coffee.
+The event aimed to deepen understanding of sign language and promote its use. It was held at [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"} because of rainy weather, and included sign-language classes, wine and coffee.
 

@@ -13,7 +13,10 @@ lede: Fujisawa City Council will hold its regular Cafe Talk Fujisawa on 15 Novem
   (Sun) in the First Council Committee Room on the ninth floor of Fujisawa City Hall’s
   main building.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/16/857582.html
+place_photo: fujisawa-city-hall.jpg
 ---
 
 Fujisawa City Council will hold the event, where citizens and council members talk, as part of its aim to be an assembly open to citizens. Participants are being sought.
+
+Official site: [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}
 

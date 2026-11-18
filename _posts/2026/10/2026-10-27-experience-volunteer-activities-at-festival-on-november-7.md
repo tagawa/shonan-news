@@ -11,7 +11,10 @@ town: Fujisawa
 lede: The 'Volunteer Activity Festa' will be held on November 7 (Sat) on the first
   and second floors of Fujisawa City Hall Annex.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/27/859248.html
+place_photo: fujisawa-city-hall.jpg
 ---
 
 The event will let visitors see, learn about and experience volunteer activities. Its theme is 'Connecting with people, connecting with the community, toward a new step.'
+
+Official site: [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}
 

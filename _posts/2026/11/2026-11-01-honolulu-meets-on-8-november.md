@@ -16,3 +16,5 @@ guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-358727357294518513
 
 The event will feature Hawaiian food and goods vendors, hula and music on a special stage, and sports exchanges with Hawaiian guests through jogging and basketball. Admission is free, and the event will go ahead in the rain, though some activities may be canceled.
 
+Official site: [Chigasaki City Hall](https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html){:target="_blank" rel="noopener noreferrer"}
+

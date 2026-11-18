@@ -11,7 +11,10 @@ town: Fujisawa
 lede: A fair introducing civic groups active in Fujisawa will be held on 7 November
   (Sat) at Fujisawa City Hall and other venues.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/16/857581.html
+place_photo: fujisawa-city-hall.jpg
 ---
 
 The Community Activities Fair will introduce civic groups active in Fujisawa. Fujisawa City and the certified nonprofit Shonan Fujisawa Senior Net are organizing the event, which will be held for the 23rd time.
+
+Official site: [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}
 

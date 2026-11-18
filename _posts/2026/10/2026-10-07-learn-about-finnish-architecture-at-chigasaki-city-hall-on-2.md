@@ -11,7 +11,8 @@ town: Chigasaki
 lede: A lifelong learning course on Finnish architecture and daily life will be held
   on 23 October (Fri) at Chigasaki City Hall.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/07/856244.html
+place_photo: chigasaki-city-hall.jpg
 ---
 
-The course, titled 'Designing Happiness: Finnish Architecture and Daily Life,' will run from 2 p.m. to 3:30 p.m. in conference rooms 4 and 5 on the fourth floor of Chigasaki City Hall's main building.
+The course, titled 'Designing Happiness: Finnish Architecture and Daily Life,' will run from 2 p.m. to 3:30 p.m. in conference rooms 4 and 5 on the fourth floor of [Chigasaki City Hall](https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html){:target="_blank" rel="noopener noreferrer"}'s main building.
 

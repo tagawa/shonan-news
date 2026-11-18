@@ -10,7 +10,8 @@ event_date: '2026-10-14'
 lede: A one-day joint administrative consultation will be held on 14 October (Wed)
   at Chigasaki City Hall.
 guid: guid:https://www.townnews.co.jp/0603/2026/09/30/855318.html
+place_photo: chigasaki-city-hall.jpg
 ---
 
-The 'Chigasaki One-Day Joint Administrative Consultation' will take place at the Citizens' Interaction Plaza on the first floor of Chigasaki City Hall, 1-1-1 Chigasaki, from 1 p.m. to 4 p.m. Reception will run until 3:30 p.m.
+The 'Chigasaki One-Day Joint Administrative Consultation' will take place at the Citizens' Interaction Plaza on the first floor of [Chigasaki City Hall](https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html){:target="_blank" rel="noopener noreferrer"}, 1-1-1 Chigasaki, from 1 p.m. to 4 p.m. Reception will run until 3:30 p.m.
 

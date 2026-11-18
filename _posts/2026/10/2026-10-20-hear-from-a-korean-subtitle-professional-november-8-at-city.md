@@ -11,7 +11,8 @@ town: Fujisawa
 lede: A lecture titled 'From Housewife to Korean Film Subtitle Supervisor' will be
   held on November 8 (Sun) at Fujisawa City Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/20/858465.html
+place_photo: fujisawa-city-hall.jpg
 ---
 
-The lecture will take place from 2 p.m. in Room 5-1 on the fifth floor of the Fujisawa City Hall main building. It is organized by the Shonan Japan-Korea Friendship Association, based within the Mindan Shonan Chubu Branch.
+The lecture will take place from 2 p.m. in Room 5-1 on the fifth floor of the [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"} main building. It is organized by the Shonan Japan-Korea Friendship Association, based within the Mindan Shonan Chubu Branch.
 

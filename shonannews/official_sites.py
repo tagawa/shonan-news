@@ -9,6 +9,8 @@ from pathlib import Path
 
 import yaml
 
+from shonannews.places import SPELLING
+
 SITES_PATH = Path(__file__).resolve().parent.parent / "_data" / "official_sites.json"
 # The same attributes as the source link, so every external link opens in a new tab.
 NEW_TAB = '{:target="_blank" rel="noopener noreferrer"}'
@@ -28,6 +30,21 @@ def spelling_pattern(site):
 def _named_in(source, site):
     source = unicodedata.normalize("NFKC", source)
     return any(unicodedata.normalize("NFKC", name) in source for name in site["ja"])
+
+
+def with_short_names(source: str, edition: set[str], sites: list) -> str:
+    # Town News drops the city in its own edition (市美術館 for 平塚市美術館), so in an edition with one
+    # city a listed name's short form counts as the full name, appended here. Two cities would make
+    # 市役所 ambiguous. Only links and photos see this; misses() keeps the plain source. See the
+    # backend spec, "Official site links", "Short names".
+    cities = [city.translate(SPELLING) for city in edition if city.endswith("市")]
+    if len(cities) != 1:
+        return source
+    folded = unicodedata.normalize("NFKC", source).translate(SPELLING)
+    full = [name for site in sites for name in site["ja"]
+            if (key := unicodedata.normalize("NFKC", name).translate(SPELLING)).startswith(cities[0])
+            and key[len(cities[0]) - 1:] in folded]
+    return "\n".join([source, *full]) if full else source
 
 
 def first_mentions(body, source, sites):

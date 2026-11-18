@@ -9,7 +9,10 @@ source_name: タウンニュース（藤沢）
 lede: The Fujisawa Pharmacists Association held its 'Self-Care Starting Today' event
   at Fujisawa City Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/23/858764.html
+place_photo: fujisawa-city-hall.jpg
 ---
 
 The venue was bustling with more than 250 people, including students, seniors and families with children. The event featured lectures and other activities.
+
+Official site: [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}
 

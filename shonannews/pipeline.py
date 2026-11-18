@@ -408,7 +408,8 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         # The publisher's image shows the event itself, so a stock photo of the place only fills a gap.
         # Title and lede count too: unlike a link, a photo needs no body mention to sit on.
         place_text = "\n".join([result.title, result.lede, body_text])
-        place_photo = None if image_url or thumb_url else official_sites.place_photo(place_text, source, sites)
+        place_source = official_sites.with_short_names(source, edition, sites)
+        place_photo = None if image_url or thumb_url else official_sites.place_photo(place_text, place_source, sites)
         slug = writer.slugify(result.title, key)
         path = writer.build_filename(date_str, slug, posts_dir, key)
         front_matter = writer.build_front_matter(
@@ -428,8 +429,8 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             town=town,
         )
         # See the backend spec, "Official site links".
-        linked = official_sites.link_first_mention(body_text, source, sites)
-        body = writer.build_body(official_sites.add_site_line(linked, f"{result.title}\n{result.lede}", source, sites))
+        linked = official_sites.link_first_mention(body_text, place_source, sites)
+        body = writer.build_body(official_sites.add_site_line(linked, f"{result.title}\n{result.lede}", place_source, sites))
         writer.write_post(path, front_matter, body)
 
         state_mod.mark_source_title_posted(current_state, normalized_title)

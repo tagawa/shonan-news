@@ -12,7 +12,10 @@ town: Chigasaki
 lede: The 12th-anniversary Honolulu Meets event was held on 8 November at the plaza
   in front of Chigasaki City Hall and other venues in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/11/13/861657.html
+place_photo: chigasaki-city-hall.jpg
 ---
 
 Honolulu Meets, marking 12 years of sister-city ties between Chigasaki City and the City and County of Honolulu, was held on 8 November. A total of 5,600 people attended, according to the organizers.
+
+Official site: [Chigasaki City Hall](https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html){:target="_blank" rel="noopener noreferrer"}
 

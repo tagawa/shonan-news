@@ -9,7 +9,8 @@ source_name: タウンニュース（茅ヶ崎・寒川）
 lede: Reijukai will hold a dementia care practice report meeting on September 13 at
   Chigasaki City Hall main building.
 guid: guid:https://www.townnews.co.jp/0603/2026/09/11/852356.html
+place_photo: chigasaki-city-hall.jpg
 ---
 
-The social welfare corporation Reijukai (社会福祉法人麗寿会) is hosting a "Dementia Care Practice Report Meeting" on Sunday, September 13, at the Chigasaki City Hall main building. The event runs from 1:00 p.m. to 4:30 p.m. Further participation details and application information were announced by the organizer.
+The social welfare corporation Reijukai (社会福祉法人麗寿会) is hosting a "Dementia Care Practice Report Meeting" on Sunday, September 13, at the [Chigasaki City Hall](https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html){:target="_blank" rel="noopener noreferrer"} main building. The event runs from 1:00 p.m. to 4:30 p.m. Further participation details and application information were announced by the organizer.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NPO Zenshin Supports Independence Through Exercise, as Former Participants
+title: NPO Zenshin Supports Independence Through Exercise, as People Who Have Been There
   Share Their Experiences
 date: 2026-11-18 08:41:12 +0900
 source_date: '2026-11-18 00:00:00 +0900'
@@ -12,5 +12,5 @@ lede: NPO Zenshin held an independence-support event for children facing school 
 guid: guid:https://www.townnews.co.jp/0605/2026/11/18/862779.html
 ---
 
-The event, titled 'Support for Improving School Refusal and Social Withdrawal: Career Counseling and Enjoying New Sports,' was aimed at children struggling with school refusal, social withdrawal, or game and internet addiction, and their guardians. Former participants shared their experiences.
+The event, titled 'Support for Improving School Refusal and Social Withdrawal: Career Counseling and Enjoying New Sports,' was aimed at children struggling with school refusal, social withdrawal, or game and internet addiction, and their guardians. People who once faced these problems themselves shared their experiences.
 

@@ -13,5 +13,5 @@ lede: The 25th Tosai-kai Exhibition runs from September 8 to 13 at Hiratsuka Cit
 guid: guid:https://www.townnews.co.jp/0605/2026/08/22/849885.html
 ---
 
-The 25th Tosai-kai Exhibition will be held September 8 (Tuesday) through September 13 (Sunday) at Hiratsuka City Museum of Art's Citizen Art Gallery (Nishiyahata 1-3-3). The gallery hours are 10:00 to 16:00, with the opening day starting at 13:00; the exhibition displays 80 transparent watercolor works. Admission information was not specified in the notice.
+The 25th Tosai-kai Exhibition will be held September 8 (Tuesday) through September 13 (Sunday) at [Hiratsuka City Museum of Art](https://www.city.hiratsuka.kanagawa.jp/art-muse/index.html){:target="_blank" rel="noopener noreferrer"}'s Citizen Art Gallery (Nishiyahata 1-3-3). The gallery hours are 10:00 to 16:00, with the opening day starting at 13:00; the exhibition displays 80 transparent watercolor works. Admission information was not specified in the notice.
 

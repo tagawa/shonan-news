@@ -13,5 +13,5 @@ lede: An exhibition marking the third anniversary of the Hiratsuka–Kaunas sist
 guid: guid:https://www.townnews.co.jp/0605/2026/09/18/853367.html
 ---
 
-The Hiratsuka City Museum of Art in Nishi-Yawata will hold the exhibition 'Švėgždūna and the Painters of Shonan' from 26 September to 23 November. The show commemorates the third anniversary of the Hiratsuka–Kaunas sister-city partnership and features works by the Kaunas artist 'Švėgždūna' alongside Shonan painters, including pieces being shown in Japan for the first time. Admission details and opening hours were provided by the museum in its exhibition announcement.
+The [Hiratsuka City Museum of Art](https://www.city.hiratsuka.kanagawa.jp/art-muse/index.html){:target="_blank" rel="noopener noreferrer"} in Nishi-Yawata will hold the exhibition 'Švėgždūna and the Painters of Shonan' from 26 September to 23 November. The show commemorates the third anniversary of the Hiratsuka–Kaunas sister-city partnership and features works by the Kaunas artist 'Švėgždūna' alongside Shonan painters, including pieces being shown in Japan for the first time. Admission details and opening hours were provided by the museum in its exhibition announcement.
 

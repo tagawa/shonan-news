@@ -13,5 +13,5 @@ lede: The Hiratsuka City Museum of Art will hold a retrospective of Japanese pai
 guid: guid:https://www.townnews.co.jp/0605/2026/09/11/852277.html
 ---
 
-The Hiratsuka City Museum of Art is staging a special exhibition to commemorate the 110th anniversary of Japanese-style painter Kojin Kudo (工藤甲人, 1915–2011), who established an atelier in Hiratsuka in 1962 and worked there for half a century. The show opens September 19 and surveys Kudo's long career and his ties to the city. The museum will present selected works and materials that reflect his contribution to regional and Japanese painting.
+The [Hiratsuka City Museum of Art](https://www.city.hiratsuka.kanagawa.jp/art-muse/index.html){:target="_blank" rel="noopener noreferrer"} is staging a special exhibition to commemorate the 110th anniversary of Japanese-style painter Kojin Kudo (工藤甲人, 1915–2011), who established an atelier in Hiratsuka in 1962 and worked there for half a century. The show opens September 19 and surveys Kudo's long career and his ties to the city. The museum will present selected works and materials that reflect his contribution to regional and Japanese painting.
 

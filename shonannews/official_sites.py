@@ -117,19 +117,26 @@ def place_photo(body, source, sites):
 def backfill_photos(posts_dir, sites):
     # A photo added after a post was written, given to that post. Keyed on the link, since old posts
     # no longer have their source. See the backend spec, "Place photos", "Later photos".
-    photographed = [(f"]({site['url']})", site["photo"]["file"], site) for site in sites if "photo" in site and "url" in site]
     changed = []
     for path in sorted(Path(posts_dir).rglob("*.md")):
         text = path.read_text(encoding="utf-8")
-        _, front_matter, body = text.split("---\n", 2)
-        if any(yaml.safe_load(front_matter).get(key) for key in ("image_url", "thumb_url", "place_photo")):
-            continue
-        found = sorted((body.find(link), file) for link, file, site in photographed
-                       if link in body and not given_as_directions(body, site))
-        if found:
-            path.write_text(f"---\n{front_matter}place_photo: {found[0][1]}\n---\n{body}", encoding="utf-8")
+        photo = later_photo(text, sites)
+        if photo:
+            _, front_matter, body = text.split("---\n", 2)
+            path.write_text(f"---\n{front_matter}place_photo: {photo}\n---\n{body}", encoding="utf-8")
             changed.append(path)
     return changed
+
+
+def later_photo(text: str, sites: list) -> str | None:
+    # The photo backfill_photos gives one post file, or None.
+    _, front_matter, body = text.split("---\n", 2)
+    if any(yaml.safe_load(front_matter).get(key) for key in ("image_url", "thumb_url", "place_photo")):
+        return None
+    found = sorted((body.find(f"]({site['url']})"), site["photo"]["file"]) for site in sites
+                   if "photo" in site and "url" in site and f"]({site['url']})" in body
+                   and not given_as_directions(body, site))
+    return found[0][1] if found else None
 
 
 def unlink(body):

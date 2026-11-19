@@ -463,5 +463,10 @@
     "ja": ["ロボリンク"], 
     "en": ["Robolink", "RoboLink"], 
     "url": "https://www.pref.kanagawa.jp/osirase/0604/robolink/"
+  },
+  {
+    "ja": ["藤澤浮世絵館", "藤沢浮世絵館"], 
+    "en": ["Fujisawa Ukiyo-e Museum", "Fujisawa Ukiyoe Museum"], 
+    "url": "https://fujisawa-ukiyoekan.net/f/home-en/"
   }
 ]

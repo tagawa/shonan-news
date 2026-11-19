@@ -14,5 +14,5 @@ lede: A special exhibition marking the Fujisawa Ukiyo-e Museum’s 10th annivers
 guid: guid:https://www.townnews.co.jp/0601/2026/11/19/862936.html
 ---
 
-The exhibition, ‘Scenes of Kanagawa Depicted by Hiroshige,’ is currently being held at the Fujisawa Ukiyo-e Museum near the north exit of Tsujido Station. It features local scenes from the perspective of ukiyo-e artist Utagawa Hiroshige.
+The exhibition, ‘Scenes of Kanagawa Depicted by Hiroshige,’ is currently being held at the [Fujisawa Ukiyo-e Museum](https://fujisawa-ukiyoekan.net/f/home-en/){:target="_blank" rel="noopener noreferrer"} near the north exit of Tsujido Station. It features local scenes from the perspective of ukiyo-e artist Utagawa Hiroshige.
 

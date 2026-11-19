@@ -45,7 +45,7 @@
         <img class="site-icon" src="{{ '/assets/site-icon.svg' | relative_url }}" alt="" width="48" height="48">
         <div>
           {% if page.url == "/" %}<h1 class="site-title">{{ site.title }}</h1>{% else %}<p class="site-title">{{ site.title }}</p>{% endif %}
-          <p class="site-tagline">{{ site.tagline }}</p>
+          <p class="site-tagline">{{ site.tagline | escape }}</p>
         </div>
       </a>
       {% include main-nav.html %}

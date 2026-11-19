@@ -13,5 +13,5 @@ lede: An exhibition marking 60 years since 'Thunderbirds' began airing in Japan 
 guid: guid:https://www.townnews.co.jp/0601/2026/11/19/862882.html
 ---
 
-The exhibition features the British special-effects television series 'Thunderbirds' and is being held at RoboLink, a hub for robot-industry networking. RoboLink is at Fujisawa 559, a 2-minute walk from the north exit of Fujisawa Station.
+The exhibition features the British special-effects television series 'Thunderbirds' and is being held at [RoboLink](https://www.pref.kanagawa.jp/osirase/0604/robolink/){:target="_blank" rel="noopener noreferrer"}, a hub for robot-industry networking. RoboLink is at Fujisawa 559, a 2-minute walk from the north exit of Fujisawa Station.
 

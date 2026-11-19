@@ -7,6 +7,7 @@ whats_on_panel: false
 ---
 {% include whats-on-events.html %}{% include on-now-posts.html day=whats_on_today %}{% assign whats_on_listed = whats_on_events | concat: on_now_posts %}
 <h1>What's on</h1>
+{% include on-now.html level="h2" areas=true side=true %}
 <p>Upcoming events and what's on now. Details can change so please check the original article before you go.</p>
 {% include area-pills.html label="Events by area" %}
 {% include on-now.html level="h2" areas=true %}

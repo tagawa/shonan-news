@@ -341,7 +341,8 @@ button:focus {
 /* 53rem (848px): the smallest whole rem at which the news column beside the panel holds 45+ characters
    a line of lede, and 35+ beside a thumbnail. Measured, not convention; see the frontend spec, "Page
    columns". The frame widens and the page gets a second column, the What's on panel on the right. The
-   main column keeps its reading width (40rem); pages without the panel leave the right column empty.
+   main column keeps its reading width (40rem); on the event pages, which have no panel, the On now box
+   takes the right column (below).
    Flex with margins, never gap. */
 @media (min-width: 53rem) {
   .site-header-inner,
@@ -360,6 +361,33 @@ button:focus {
     flex: 1 1 auto;
     min-width: 0;
     max-width: 40rem;
+  }
+
+  /* The event pages have no panel, so their On now box takes the right column instead. It is part of
+     the page's content, so it floats inside <main>, which widens to the frame; each child keeps the
+     reading width, and everything after the box keeps clear of its column. <main> is a flex item, so it
+     contains the float. See the frontend spec, "What's on", "On now beside the events". */
+  .site-main-wide {
+    max-width: none;
+  }
+
+  .site-main-wide > * {
+    max-width: 40rem;
+  }
+
+  .site-main-wide .on-now {
+    display: none;
+  }
+
+  .site-main-wide .on-now-side {
+    display: block;
+    float: right;
+    width: 22rem;
+    margin-left: var(--space-5);
+  }
+
+  .on-now-side ~ * {
+    margin-right: calc(22rem + var(--space-5));
   }
 
   .whats-on-panel {
@@ -491,8 +519,9 @@ button:focus {
 }
 
 /* The index's What's on panel. Each row is one link: a date tile, then the
-   title. Flexbox with margins, never gap. */
-.whats-on-panel {
+   title. Flexbox with margins, never gap. The event pages' On now box looks the same. */
+.whats-on-panel,
+.on-now-side {
   background-color: var(--panel-warm);
   border-radius: var(--radius);
   padding-top: var(--space-4);
@@ -502,10 +531,16 @@ button:focus {
   margin-bottom: var(--space-5);
 }
 
-.whats-on-panel h2 {
+.whats-on-panel h2,
+.on-now-side h2 {
   font-size: 1.5rem;
   margin: 0;
   margin-bottom: var(--space-3);
+}
+
+/* The On now box is the right-column copy; phones keep the copy in the page's flow. */
+.on-now-side {
+  display: none;
 }
 
 .event-list {

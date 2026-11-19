@@ -56,7 +56,7 @@
   {% assign show_panel = true %}{% if page.whats_on_panel == false %}{% assign show_panel = false %}{% endif %}
   <div class="page-body">
     {% if show_panel and page.url == "/" %}{% include_cached whats-on-panel.html %}{% endif %}
-    <main id="main" class="site-main">
+    {% comment %}The event pages widen <main> so their On now box can sit in the right column; see the frontend spec, "Page columns".{% endcomment %}<main id="main" class="site-main{% unless show_panel %} site-main-wide{% endunless %}">
       {{ content }}
     </main>
     {% if show_panel and page.url != "/" %}{% include_cached whats-on-panel.html %}{% endif %}

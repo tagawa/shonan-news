@@ -40,7 +40,7 @@ def build_filename(date_str, slug, posts_dir, identity_key):
 
 def build_front_matter(title, date, source_date, source_url, source_title, source_name, lede, guid,
                         image_url=None, event_date=None, label=None, thumb_url=None, town=None,
-                        place_photo=None):
+                        place_photo=None, on_until=None):
     head = {"layout": "post", "title": title, "date": date}
     tail = {
         "source_url": source_url,
@@ -52,6 +52,9 @@ def build_front_matter(title, date, source_date, source_url, source_title, sourc
     # Omitted when absent, so nothing downstream has to tell "none" from "not stated".
     if event_date:
         tail["event_date"] = event_date
+    # Same form as event_date, and never beside it. See the backend spec, "Closing date".
+    if on_until:
+        tail["on_until"] = on_until
     # Omitted when absent, like event_date: an unlabelled post asserts nothing.
     if label:
         tail["label"] = label

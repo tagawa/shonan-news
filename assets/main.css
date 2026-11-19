@@ -599,7 +599,8 @@ button:focus {
   color: var(--link-hover);
 }
 
-.event-town {
+.event-town,
+.event-until {
   display: block;
   margin-top: var(--space-1);
   font-size: 1rem;
@@ -1035,7 +1036,8 @@ button:focus {
   color: var(--blue-tint-ink);
 }
 
-.item-label-upcoming {
+.item-label-upcoming,
+.item-label-on-now {
   background-color: var(--accent-tint);
   color: var(--accent-tint-ink);
 }

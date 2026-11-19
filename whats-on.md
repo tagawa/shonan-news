@@ -5,10 +5,11 @@ permalink: /whats-on/
 # The page is events already; a panel of them beside it would repeat itself.
 whats_on_panel: false
 ---
-{% include whats-on-events.html %}
+{% include whats-on-events.html %}{% include on-now-posts.html day=whats_on_today %}{% assign whats_on_listed = whats_on_events | concat: on_now_posts %}
 <h1>What's on</h1>
-<p>Upcoming events. Details can change so please check the original article before you go.</p>
+<p>Upcoming events and what's on now. Details can change so please check the original article before you go.</p>
 {% include area-pills.html label="Events by area" %}
+{% include on-now.html level="h2" areas=true %}
 {% assign this_month = whats_on_today | slice: 0, 7 %}
 {% assign event_months = whats_on_events | group_by_exp: "post", "post.event_date | date: '%Y-%m'" | sort: "name" %}
 {% assign last_month = this_month %}
@@ -22,6 +23,6 @@ whats_on_panel: false
   {% if month == this_month or month_group %}{% include calendar-month.html month_start=month_start events=month_group.items %}{% endif %}
   {% assign month_start = month_start | plus: 2764800 | date: "%Y-%m" | append: "-01" | date: "%s" | plus: 0 %}
 {% endfor %}
-{% if whats_on_events.size == 0 %}<p>No upcoming events.</p>{% endif %}
-{% comment %}With an area saved, only its events show (see the frontend spec, "Areas", "What's on pages").{% endcomment %}{% if whats_on_events.size > 0 %}{% for area in site.data.areas %}{% assign area_has_events = false %}{% for area_post in whats_on_events %}{% if area_post.town and area.towns contains area_post.town %}{% assign area_has_events = true %}{% break %}{% endif %}{% endfor %}{% unless area_has_events %}
+{% if whats_on_listed.size == 0 %}<p>No upcoming events.</p>{% endif %}
+{% comment %}With an area saved, only its events show (see the frontend spec, "Areas", "What's on pages").{% endcomment %}{% if whats_on_listed.size > 0 %}{% for area in site.data.areas %}{% assign area_has_events = false %}{% for area_post in whats_on_listed %}{% if area_post.town and area.towns contains area_post.town %}{% assign area_has_events = true %}{% break %}{% endif %}{% endfor %}{% unless area_has_events %}
 <p class="whats-on-area-none" data-area="{{ area.slug }}" hidden>No upcoming events in {{ area.name | escape }}.</p>{% endunless %}{% endfor %}{% endif %}

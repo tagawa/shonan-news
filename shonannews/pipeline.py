@@ -103,6 +103,8 @@ def _weekday_month_day(title, description, source_date):
 APPLICATION_WORDS = ("募集", "申込", "申し込", "受付", "締切", "締め切", "〆切")
 DEADLINE_TAIL = re.compile(r"\s*(?:\([^)]*\))?\s*(?:まで|締|〆|告示)")
 MAX_DAYS_AHEAD = 200
+# まで after a date, with a weekday in brackets and a time allowed between ("11月30日（月）17時まで").
+CLOSING_TAIL = re.compile(r"\s*(?:\([^)]*\))?\s*(?:(?:午前|午後)?\d{1,2}(?:時(?:\d{1,2}分)?|:\d{2}))?\s*まで")
 
 
 def _earliest_month_day(title, description, source_date):
@@ -189,16 +191,31 @@ def _derive_event_date(month_day, source_date, year=None):
     return min(candidates, key=lambda c: (abs((c - source_day).days), -c.toordinal()))
 
 
-def _event_date(result, title, description, source_date):
-    # Only keep a date the source itself states: the model's input is exactly this
-    # title and description, so an uncorroborated day was invented, not read.
+def _is_closing_date(title: str, description: str, day: int) -> bool:
+    # Every mention of the day is followed by まで, so the source gives it only as an end.
+    # One mention without (a talk on the last day) keeps it an event date.
+    source = unicodedata.normalize("NFKC", f"{title}\n{description}")
+    mentions = list(re.finditer(rf"(?<!\d){day}\s*\u65e5(?!\u9593)", source))
+    return bool(mentions) and all(CLOSING_TAIL.match(source, m.end()) for m in mentions)
+
+
+def _event_date(result, title, description, source_date) -> tuple[str | None, str | None]:
+    # Returns (event_date, on_until), never both. Only keep a date the source itself
+    # states: the model's input is exactly this title and description, so an
+    # uncorroborated day was invented, not read. A closing date (12月16日まで) ends the
+    # chain rather than letting a later fallback take a closed day or a gallery talk as
+    # the event. See the backend spec, "Closing date".
     month_day = (result.event_month_day or _single_source_month_day(title, description)
                  or _weekday_month_day(title, description, source_date)
                  or _earliest_month_day(title, description, source_date))
     if not (month_day and _corroborated_day(title, description, month_day[1])):
-        return None
+        return None, None
     derived = _derive_event_date(month_day, source_date, year=_stated_year(title, description, month_day, source_date))
-    return derived.isoformat() if derived else None
+    if not derived:
+        return None, None
+    if _is_closing_date(title, description, month_day[1]):
+        return None, derived.isoformat()
+    return derived.isoformat(), None
 
 
 def _derive_source_date(entry, run_time):
@@ -397,9 +414,10 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         result.lede = weekdays.restore_weekdays(result.lede, source, source_date)
         result.summary = weekdays.restore_weekdays(result.summary, source, source_date)
 
-        event_date = _event_date(result, model_title, model_description, source_date)
-        # Only What's on shows a town, and it lists only posts with an event date.
-        town = event_town.find(result.title, result.lede, result.summary, title, towns, description) if event_date else None
+        event_date, on_until = _event_date(result, model_title, model_description, source_date)
+        # Only What's on shows a town, and it lists only posts with an event or closing date.
+        town = (event_town.find(result.title, result.lede, result.summary, title, towns, description)
+                if event_date or on_until else None)
 
         source_url = _prefer_https(entry.get("link", ""))
         image_url = _extract_image(entry)
@@ -425,6 +443,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             thumb_url=thumb_url,
             place_photo=place_photo,
             event_date=event_date,
+            on_until=on_until,
             label=result.label,
             town=town,
         )

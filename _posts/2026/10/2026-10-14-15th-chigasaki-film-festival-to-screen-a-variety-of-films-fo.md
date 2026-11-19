@@ -7,7 +7,7 @@ source_date: '2026-10-14 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0603/2026/10/14/857380.html
 source_title: 第15回茅ヶ崎映画祭　多世代・多彩な作品上映　市内３会場で11月23日まで
 source_name: タウンニュース（茅ヶ崎・寒川）
-event_date: '2026-11-23'
+on_until: '2026-11-23'
 town: Chigasaki
 lede: The 15th Chigasaki Film Festival will screen five films at three venues across
   the city through 23 November.

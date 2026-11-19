@@ -1,0 +1,11 @@
+{% comment %}
+The On now list, from on-now-posts.html, which the caller runs first: running things, listed once each
+rather than on every day of their run. include.level is the heading tag, include.areas marks the rows
+and the section for the saved-area filter, include.hide_town leaves the town off. Nothing prints when
+nothing is running. See the frontend spec, "What's on", "On now".
+{% endcomment %}{% if on_now_posts.size > 0 %}<section class="on-now"{% if include.areas %} data-areas="{{ on_now_areas | strip }}"{% endif %}>
+  <{{ include.level }}>On now</{{ include.level }}>
+  <ul class="event-list">
+    {% for on_now_row in on_now_posts %}{% if include.areas %}{% include event-area.html post=on_now_row %}{% endif %}{% include event-row.html post=on_now_row hide_town=include.hide_town areas=include.areas area=event_area until=on_now_row.on_until %}{% endfor %}
+  </ul>
+</section>{% endif %}

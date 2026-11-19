@@ -7,7 +7,7 @@ source_date: '2026-11-09 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0602/2026/11/09/861233.html
 source_title: ３００の菊が咲き誇る　県立大船フラワーセンターで11月23日まで菊花大会が開催中
 source_name: タウンニュース（鎌倉）
-event_date: '2026-11-23'
+on_until: '2026-11-23'
 town: Kamakura
 lede: The 63rd Kanagawa Prefecture Chrysanthemum Exhibition is running through 23
   November (Mon, public holiday) at the Prefectural Ofuna Flower Center in Okamoto.

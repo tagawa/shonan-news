@@ -19,7 +19,7 @@ the frontend spec, "Areas", "News list include".
       {% capture thumb %}{% if post.image_url %}<img class="item-thumb" src="{{ post.image_url | escape }}" alt="" loading="lazy">{% elsif post.thumb_url %}<img class="item-thumb item-thumb-small" src="{{ post.thumb_url | escape }}" alt="" loading="lazy">{% elsif post.place_photo %}{% assign place = site.data.official_sites | where_exp: "entry", "entry.photo.file == post.place_photo" | first %}{% if place %}<img class="item-thumb" src="{{ '/assets/images/thumbs/' | append: place.photo.file | relative_url | escape }}" width="{{ place.photo.width }}" height="{{ place.photo.height }}" alt="" loading="lazy">{% endif %}{% endif %}{% endcapture %}
       {% capture item_html %}
       <article class="item"{% if post_area %} data-area="{{ post_area.slug }}"{% endif %}>
-        {% include item-labels.html event_date=post.event_date label=post.label area=post_area %}
+        {% include item-labels.html event_date=post.event_date on_until=post.on_until label=post.label area=post_area %}
         <h4 class="item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
         {% if thumb != "" %}<a href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">{{ thumb }}</a>{% endif %}
         {% include japanese-title.html text=post.source_title url=post.source_url %}

@@ -467,6 +467,27 @@
   {
     "ja": ["藤澤浮世絵館", "藤沢浮世絵館"], 
     "en": ["Fujisawa Ukiyo-e Museum", "Fujisawa Ukiyoe Museum"], 
-    "url": "https://fujisawa-ukiyoekan.net/f/home-en/"
+    "url": "https://fujisawa-ukiyoekan.net/f/home-en/",
+    "photo": {
+      "file": "fujisawa-ukiyoe-museum.jpg",
+      "width": 1280,
+      "height": 990,
+      "author": "Utagawa Hiroshige",
+      "licence": "CC0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E6%B5%B7%E9%81%93%E4%BA%94%E5%8D%81%E4%B8%89%E6%AC%A1_%E8%97%A4%E6%B2%A2-Fujisawa_MET_DP122830.jpg"
+    }
+  },
+  {
+    "ja": ["湘南鎌倉総合病院"], 
+    "en": ["Shonan Kamakura General Hospital", "Shonan Kamakura Hospital"], 
+    "url": "https://www.skgh.jp/english/",
+    "photo": {
+      "file": "shonan-kamakura-general-hospital.jpg",
+      "width": 1280,
+      "height": 837,
+      "author": "WAKA77",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Shonan_Kamakura_General_Hospital3.jpg"
+    }
   }
 ]
+

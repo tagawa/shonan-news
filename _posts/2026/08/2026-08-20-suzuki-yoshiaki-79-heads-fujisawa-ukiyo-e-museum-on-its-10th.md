@@ -9,7 +9,8 @@ source_name: タウンニュース（藤沢）
 lede: Suzuki Yoshiaki, 79, serves as chair of the operating committee for the Fujisawa
   Ukiyo-e Museum as it marks its 10th anniversary in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/08/07/848101.html
+place_photo: fujisawa-ukiyoe-museum.jpg
 ---
 
-The Fujisawa Ukiyo-e Museum, which displays the city’s collection of ukiyo-e and local materials and draws visitors from inside and outside the city, opened in 2016 and has reached its 10th anniversary. Suzuki Yoshiaki, a 79-year-old resident of Honmachi, has served as a knowledgeable local guardian of the museum since its founding and currently chairs its operating committee. He emphasizes the museum’s role as a point of contact for protecting cultural properties and for connecting the public with Edo-period artwork and local history. The museum continues to attract audiences by exhibiting its municipal collections and promoting preservation of regional heritage.
+The [Fujisawa Ukiyo-e Museum](https://fujisawa-ukiyoekan.net/f/home-en/){:target="_blank" rel="noopener noreferrer"}, which displays the city’s collection of ukiyo-e and local materials and draws visitors from inside and outside the city, opened in 2016 and has reached its 10th anniversary. Suzuki Yoshiaki, a 79-year-old resident of Honmachi, has served as a knowledgeable local guardian of the museum since its founding and currently chairs its operating committee. He emphasizes the museum’s role as a point of contact for protecting cultural properties and for connecting the public with Edo-period artwork and local history. The museum continues to attract audiences by exhibiting its municipal collections and promoting preservation of regional heritage.
 

@@ -11,7 +11,8 @@ lede: Shonan Kamakura General Hospital is promoting cross-department collaborati
   to detect and treat systemic lupus erythematosus early in patients with vague, easily
   overlooked symptoms.
 guid: guid:https://www.townnews.co.jp/0601/2026/08/28/850509.html
+place_photo: shonan-kamakura-general-hospital.jpg
 ---
 
-Patients presenting with unexplained fatigue, low-grade fever, joint pain, facial swelling, or proteinuria may have the government-designated rare disease systemic lupus erythematosus (SLE). Because SLE symptoms are diverse and can be missed, Shonan Kamakura General Hospital has strengthened coordination among departments to improve early diagnosis and treatment. The hospital encourages clinicians to consider SLE when common complaints persist and to use multidisciplinary evaluation and appropriate testing to avoid delayed care.
+Patients presenting with unexplained fatigue, low-grade fever, joint pain, facial swelling, or proteinuria may have the government-designated rare disease systemic lupus erythematosus (SLE). Because SLE symptoms are diverse and can be missed, [Shonan Kamakura General Hospital](https://www.skgh.jp/english/){:target="_blank" rel="noopener noreferrer"} has strengthened coordination among departments to improve early diagnosis and treatment. The hospital encourages clinicians to consider SLE when common complaints persist and to use multidisciplinary evaluation and appropriate testing to avoid delayed care.
 

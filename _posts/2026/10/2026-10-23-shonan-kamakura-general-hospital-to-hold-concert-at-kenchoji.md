@@ -10,7 +10,8 @@ source_name: タウンニュース（鎌倉）
 lede: A concert aimed at improving health and extending healthy life expectancy through
   music will take place at Kenchoji Temple on 7 November.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/23/858749.html
+place_photo: shonan-kamakura-general-hospital.jpg
 ---
 
-On 16 October, Shuzo Kobayashi, director of Shonan Kamakura General Hospital, pianist Arisa Kobayashi and violinist Miki Kobayashi paid a courtesy visit to Mayor Takashi Matsuo. The hospital is holding the concert at Kenchoji Temple on 7 November.
+On 16 October, Shuzo Kobayashi, director of [Shonan Kamakura General Hospital](https://www.skgh.jp/english/){:target="_blank" rel="noopener noreferrer"}, pianist Arisa Kobayashi and violinist Miki Kobayashi paid a courtesy visit to Mayor Takashi Matsuo. The hospital is holding the concert at Kenchoji Temple on 7 November.
 

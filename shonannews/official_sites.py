@@ -15,6 +15,11 @@ SITES_PATH = Path(__file__).resolve().parent.parent / "_data" / "official_sites.
 # The same attributes as the source link, so every external link opens in a new tab.
 NEW_TAB = '{:target="_blank" rel="noopener noreferrer"}'
 LINK = re.compile(r"\[([^\]]*)\]\([^)]*\)(?:\{:[^}]*\})?")
+# Text ending just before a place named only to say where something else is ("a 2-minute walk from
+# the north exit of Fujisawa Station"). See the backend spec, "Place photos", "Directions".
+DIRECTIONS = re.compile(
+    r"\b(?:near(?:by)?|next to|close to|beside|opposite|across from|(?:north|south|east|west) of|walk from|minutes? from|on foot from)"
+    r"\s+(?:the\s+)?(?:[\w-]+\s+exit\s+of\s+(?:the\s+)?)?$", re.IGNORECASE)
 
 
 def load_sites(path=SITES_PATH):
@@ -94,10 +99,17 @@ def add_site_line(body, head, source, sites):
     return f"{body}\n\nOfficial site{'s' if len(links) > 1 else ''}: {', '.join(links)}"
 
 
+def given_as_directions(text, site):
+    # Any one such mention is enough: better no photo than a wrong one (owner decision, 2026-11-19).
+    text = unlink(text)
+    return any(DIRECTIONS.search(text[max(0, match.start() - 60):match.start()])
+               for match in spelling_pattern(site).finditer(text))
+
+
 def place_photo(body, source, sites):
     # The photo of the first place mentioned that has one. See the backend spec, "Place photos".
     for index, _ in sorted(first_mentions(body, source, sites).items(), key=lambda item: item[1]):
-        if "photo" in sites[index]:
+        if "photo" in sites[index] and not given_as_directions(body, sites[index]):
             return sites[index]["photo"]["file"]
     return None
 
@@ -105,14 +117,15 @@ def place_photo(body, source, sites):
 def backfill_photos(posts_dir, sites):
     # A photo added after a post was written, given to that post. Keyed on the link, since old posts
     # no longer have their source. See the backend spec, "Place photos", "Later photos".
-    photographed = [(f"]({site['url']})", site["photo"]["file"]) for site in sites if "photo" in site and "url" in site]
+    photographed = [(f"]({site['url']})", site["photo"]["file"], site) for site in sites if "photo" in site and "url" in site]
     changed = []
     for path in sorted(Path(posts_dir).rglob("*.md")):
         text = path.read_text(encoding="utf-8")
         _, front_matter, body = text.split("---\n", 2)
         if any(yaml.safe_load(front_matter).get(key) for key in ("image_url", "thumb_url", "place_photo")):
             continue
-        found = sorted((body.find(link), file) for link, file in photographed if link in body)
+        found = sorted((body.find(link), file) for link, file, site in photographed
+                       if link in body and not given_as_directions(body, site))
         if found:
             path.write_text(f"---\n{front_matter}place_photo: {found[0][1]}\n---\n{body}", encoding="utf-8")
             changed.append(path)

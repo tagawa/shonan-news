@@ -16,3 +16,5 @@ guid: guid:https://www.townnews.co.jp/0503/2026/11/06/860579.html
 
 The performance was part of the Hayama Town Cultural Festival. This year, the organizers used AI-created illustrations as part of an effort to make the performance easier for anyone to understand and enjoy.
 
+Official site: [Hayama Town Welfare and Cultural Hall](https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html){:target="_blank" rel="noopener noreferrer"}
+

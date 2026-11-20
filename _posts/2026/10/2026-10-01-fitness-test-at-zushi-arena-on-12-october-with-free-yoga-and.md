@@ -9,7 +9,8 @@ source_name: タウンニュース（逗子・葉山）
 event_date: '2026-10-12'
 lede: A free fitness test will be held on 12 October at Zushi Arena in Zushi.
 guid: guid:https://www.townnews.co.jp/0503/2026/10/01/855500.html
+place_photo: zushi-arena.jpg
 ---
 
-The annual fitness test will take place in the sub-arena at Zushi Arena, also known as Zushi City Gymnasium. Participation is free, reservations are not required, and anyone can try it; activities will vary according to participants’ age groups.
+The annual fitness test will take place in the sub-arena at [Zushi Arena](https://www.city.zushi.kanagawa.jp/sports/arena/3000006.html){:target="_blank" rel="noopener noreferrer"}, also known as Zushi City Gymnasium. Participation is free, reservations are not required, and anyone can try it; activities will vary according to participants’ age groups.
 

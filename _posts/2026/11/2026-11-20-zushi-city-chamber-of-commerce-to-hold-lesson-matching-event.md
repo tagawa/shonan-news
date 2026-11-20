@@ -11,7 +11,10 @@ town: Zushi
 lede: A lesson-matching event will be held on 29 November (Sun) at Zushi Arena in
   Ikego, Zushi City.
 guid: guid:https://www.townnews.co.jp/0503/2026/11/20/862677.html
+place_photo: zushi-arena.jpg
 ---
 
 The first 'Zushi Naraigoto Hakken!' will connect children with local lesson providers and sports groups. The event will bring together 40 organizations.
+
+Official site: [Zushi Arena](https://www.city.zushi.kanagawa.jp/sports/arena/3000006.html){:target="_blank" rel="noopener noreferrer"}
 

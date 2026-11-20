@@ -15,3 +15,5 @@ guid: guid:https://www.townnews.co.jp/0503/2026/11/20/862673.html
 
 'Machi fes Hayama' will run from 10 a.m. to 4 p.m. and is hosted by the NPO Hayama Machizukuri Association. Its theme is 'Connecting, expanding'.
 
+Official site: [Hayama Town Welfare and Cultural Hall](https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html){:target="_blank" rel="noopener noreferrer"}
+

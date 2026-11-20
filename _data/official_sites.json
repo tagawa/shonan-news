@@ -519,6 +519,29 @@
       "licence": "CC BY-SA 4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Mikasa_park_and_museum_ship.jpg"
     }
+  },
+  {
+    "ja": ["逗子アリーナ", "逗子市立体育館"], 
+    "en": ["Zushi Arena"], 
+    "url": "https://www.city.zushi.kanagawa.jp/sports/arena/3000006.html",
+    "photo": {
+      "file": "zushi-arena.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "Quercus acuta",
+      "licence": "CC0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zushi_Shiritsu_Taiikukan.jpg"
+    }
+  },
+  {
+    "ja": ["南郷上ノ山公園", "南郷上の山公園"], 
+    "en": ["Nango Uenoyama Park", "Nango-Uenoyama Park"], 
+    "url": "https://www.town.hayama.lg.jp/soshiki/shougaigakushuu/2/1/1540.html"
+  },
+  {
+    "ja": ["葉山町福祉文化会館"], 
+    "en": ["Hayama Town Welfare and Cultural Hall", "Hayama Town Welfare Cultural Hall", "Hayama Welfare and Cultural Hall", "Hayama Welfare Cultural Hall"], 
+    "url": "https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html"
   }
 ]
 

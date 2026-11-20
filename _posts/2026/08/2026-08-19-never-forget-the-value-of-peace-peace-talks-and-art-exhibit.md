@@ -11,5 +11,5 @@ lede: The event "葉山で平和を考える一日" will take place on August 28
 guid: guid:https://www.townnews.co.jp/0503/2026/08/14/848629.html
 ---
 
-The event "葉山で平和を考える一日" will take place on August 28 (Friday) at Hayama Town Welfare and Cultural Hall from 1:00 p.m. to 4:45 p.m. It aims to prevent the fading of war memories and to share the importance of peace across generations, featuring talks on peace and an art exhibition. The program is designed for community members of all ages to reflect on wartime experiences and the need to preserve peace.
+The event "葉山で平和を考える一日" will take place on August 28 (Friday) at [Hayama Town Welfare and Cultural Hall](https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html){:target="_blank" rel="noopener noreferrer"} from 1:00 p.m. to 4:45 p.m. It aims to prevent the fading of war memories and to share the importance of peace across generations, featuring talks on peace and an art exhibition. The program is designed for community members of all ages to reflect on wartime experiences and the need to preserve peace.
 

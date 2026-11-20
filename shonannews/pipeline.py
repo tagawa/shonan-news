@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 from . import (clean, event_town, fetch, identity, llm, names, official_sites, places, relative_days,
-               state as state_mod, validate, weekdays, writer)
+               state as state_mod, title_labels, validate, weekdays, writer)
 
 logger = logging.getLogger("shonannews")
 
@@ -444,7 +444,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             place_photo=place_photo,
             event_date=event_date,
             on_until=on_until,
-            label=result.label,
+            label=title_labels.label(result.label, title),
             town=town,
         )
         # See the backend spec, "Official site links".

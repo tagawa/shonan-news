@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The 'Three Great Ave Marias' to Ring Out on Christmas Eve; Tickets Also on
+title: The 'Three Great Ave Marias' to Ring Out on 11 December; Tickets Also on
   Offer
 date: 2026-11-20 08:17:34 +0900
 source_date: '2026-11-20 00:00:00 +0900'

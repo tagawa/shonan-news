@@ -7,7 +7,7 @@ source_date: '2026-11-20 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0501/2026/11/20/862682.html
 source_title: いい夫婦の日11月２２日　二人三脚で守る憩いの場　笑顔繋ぐ社交ダンス
 source_name: タウンニュース（横須賀・三浦）
-event_date: '2026-11-22'
+event_date: '2026-11-16'
 town: Yokosuka
 lede: A social dance party at a public facility in Yokosuka reached its 1,000th gathering
   on November 16.

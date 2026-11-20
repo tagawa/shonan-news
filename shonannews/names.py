@@ -38,6 +38,10 @@ CANONICAL = {
     "シークロス公園": "C-X Park",
     # 辻堂今昔物語, published as "Ima Mukashi" on 2026-11-17, fixed by hand.
     "今昔": "Konjaku",
+    # KOTOWA鎌倉鶴ヶ丘会館, a Kamakura venue named after Tsurugaoka Hachimangu. Published as
+    # "Tsuruoka Kaikan" on 2026-11-20, fixed by hand. 鶴ヶ丘 is a postal district only in
+    # Yokosuka, so Kamakura items get no reading hint. Two words, so it acts only through MISREADINGS.
+    "鶴ヶ丘会館": "Tsurugaoka Kaikan",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
@@ -56,6 +60,7 @@ MISREADINGS = {
     "乃羽": ("Noba",),
     "シークロス公園": ("Seacross Park", "Sea Cross Park"),
     "今昔": ("Ima Mukashi",),
+    "鶴ヶ丘会館": ("Tsuruoka Kaikan",),
 }
 
 # Places better known locally by their Japanese name: the first body mention of the English

@@ -10,7 +10,7 @@ source_name: タウンニュース（鎌倉）
 event_date: '2026-11-11'
 town: Kamakura
 lede: The Miura Peninsula district education research conference for private kindergartens
-  was held on 11 November at KOTOWA Kamakura Tsuruoka Kaikan.
+  was held on 11 November at KOTOWA Kamakura Tsurugaoka Kaikan.
 guid: guid:https://www.townnews.co.jp/0602/2026/11/20/862875.html
 ---
 

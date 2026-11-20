@@ -287,7 +287,7 @@
   },
   {
     "ja": ["満昌寺"], 
-    "en": ["Manshoji Temple", "Manshōji Temple", "Manshoji"], 
+    "en": ["Manshoji Temple", "Manshōji Temple", "Manshoji", "Mansho-ji", "Mansho-ji Temple", "Mansho Temple"], 
     "url": "https://manshoji.com",
     "photo": {
       "file": "manshoji-temple.jpg", 
@@ -463,6 +463,11 @@
     "ja": ["ロボリンク"], 
     "en": ["Robolink"], 
     "url": "https://www.pref.kanagawa.jp/osirase/0604/robolink/"
+  },
+  {
+    "ja": ["圓福寺", "円福寺"], 
+    "en": ["Enpukuji", "Enpuku-ji", "Enpukuji Temple", "Enpuku-ji Temple", "Enpuku Temple"], 
+    "url": "http://www.miura7.com/1enpukuji.htm"
   },
   {
     "ja": ["藤澤浮世絵館", "藤沢浮世絵館"], 

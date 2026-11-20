@@ -42,6 +42,10 @@ CANONICAL = {
     # "Tsuruoka Kaikan" on 2026-11-20, fixed by hand. 鶴ヶ丘 is a postal district only in
     # Yokosuka, so Kamakura items get no reading hint. Two words, so it acts only through MISREADINGS.
     "鶴ヶ丘会館": "Tsurugaoka Kaikan",
+    # Miura temple, read えんぷくじ (owner, 2026-11-20). Published as "Enfukuji" on 2026-11-20, fixed by
+    # hand. Both spellings, since the check is a plain substring and NFKC does not fold 圓 to 円.
+    "圓福寺": "Enpukuji",
+    "円福寺": "Enpukuji",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than

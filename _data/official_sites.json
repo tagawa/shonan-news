@@ -307,7 +307,7 @@
       "width": 1280, 
       "height": 853,
       "author": "yoppy", 
-      "source_url": "https://www.flickr.com/photos/spilt-milk/19640865023/in/photolist-vVAyTR-wRJAB9-wSt5Lp-JJDJmX", 
+      "source_url": "https://www.flickr.com/photos/spilt-milk/19640865023/", 
       "licence": "CC BY 2.0"
     }
   },
@@ -433,7 +433,7 @@
       "width": 1280,
       "height": 852,
       "author": "Shoma Suzuki",
-      "source_url": "https://www.flickr.com/photos/shomas/7946475666/in/photolist-974geS-d7cLEE-d7cLn9-d7cLdf-6E5yhQ-bq18xy",
+      "source_url": "https://www.flickr.com/photos/shomas/7946475666/",
       "licence": "CC BY 2.0"
     }
   },
@@ -493,6 +493,34 @@
       "author": "WAKA77",
       "source_url": "https://commons.wikimedia.org/wiki/File:Shonan_Kamakura_General_Hospital3.jpg"
     }
+  },
+  {
+    "ja": ["横須賀市産業交流プラザ"], 
+    "en": ["Yokosuka Industrial Community Plaza", "Yokosuka City Industrial Community Plaza"],
+    "url": "https://www.yokosuka-sanpla.jp/english/",
+    "photo": {
+      "file": "yokosuka-industrial-community-plaza.jpg",
+      "width": 1280,
+      "height": 958,
+      "author": "TakamiChie",
+      "licence": "CC BY 2.0",
+      "source_url": "https://www.flickr.com/photos/takamichie/11628134513/"
+    }
+  },
+  {
+    "ja": ["三笠公園"], 
+    "en": ["Mikasa Park"], 
+    "url": "https://www.kanagawaparks.com/mikasa/",
+    "photo": {
+      "file": "mikasa-park.jpg",
+      "width": 1280,
+      "height": 721,
+      "author": "Fritzmann2002",
+      "licence": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mikasa_park_and_museum_ship.jpg"
+    }
   }
 ]
+
+
 

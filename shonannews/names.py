@@ -46,6 +46,10 @@ CANONICAL = {
     # hand. Both spellings, since the check is a plain substring and NFKC does not fold 圓 to 円.
     "圓福寺": "Enpukuji",
     "円福寺": "Enpukuji",
+    # Yokosuka's venue at Honcho 3-27; official English name from its site (yokosuka-sanpla.jp/english),
+    # owner, 2026-11-20. The model translates 産業交流 literally as "Exchange". More than one word, so it
+    # acts only through MISREADINGS.
+    "横須賀市産業交流プラザ": "Yokosuka Industrial Community Plaza",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
@@ -65,6 +69,10 @@ MISREADINGS = {
     "シークロス公園": ("Seacross Park", "Sea Cross Park"),
     "今昔": ("Ima Mukashi",),
     "鶴ヶ丘会館": ("Tsuruoka Kaikan",),
+    # Published 2026-11-20 and 2026-09-04 ("Honmachi Industry Exchange Plaza") respectively; the
+    # middle one is the owner's. Longest first, since each rewrite runs on the last one's output.
+    "横須賀市産業交流プラザ": ("Yokosuka City Industrial Exchange Plaza", "Yokosuka Industrial Exchange Plaza",
+                       "Industry Exchange Plaza"),
 }
 
 # Places better known locally by their Japanese name: the first body mention of the English

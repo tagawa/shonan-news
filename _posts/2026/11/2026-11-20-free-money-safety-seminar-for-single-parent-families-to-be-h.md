@@ -10,9 +10,10 @@ source_name: タウンニュース（横須賀・三浦）
 event_date: '2026-12-05'
 town: Yokosuka
 lede: A free money-safety seminar for single-parent families will be held on 5 December
-  (Sat) at the Yokosuka City Industrial Exchange Plaza in Shioiri and online.
+  (Sat) at the Yokosuka Industrial Community Plaza in Shioiri and online.
 guid: guid:https://www.townnews.co.jp/0501/2026/11/20/863034.html
+place_photo: yokosuka-industrial-community-plaza.jpg
 ---
 
-The seminar, titled 'A Money-Safety Seminar for Single Parents,' is for parents in single-parent families. It will be held free of charge at the Yokosuka City Industrial Exchange Plaza in Honcho 3-27, a one-minute walk from Keikyu Shioiri Station, and online.
+The seminar, titled 'A Money-Safety Seminar for Single Parents,' is for parents in single-parent families. It will be held free of charge at the [Yokosuka Industrial Community Plaza](https://www.yokosuka-sanpla.jp/english/){:target="_blank" rel="noopener noreferrer"} in Honcho 3-27, a one-minute walk from Keikyu Shioiri Station, and online.
 

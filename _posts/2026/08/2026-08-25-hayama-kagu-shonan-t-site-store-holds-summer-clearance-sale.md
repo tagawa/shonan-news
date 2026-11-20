@@ -10,7 +10,8 @@ source_name: タウンニュース（藤沢）
 lede: Hayama Kagu Shonan T-SITE store is holding a summer clearance sale through the
   30th offering discounts for multiple-item purchases in Shonan.
 guid: guid:https://www.townnews.co.jp/0601/2026/08/21/849643.html
+place_photo: shonan-t-site.jpg
 ---
 
-Hayama Kagu's Shonan T-SITE store is running its “Summer Clearance Sale Part 2” through the 30th (Sunday), promoting savings when customers buy multiple items. The sale offers tiered discounts based on purchase amount, with savings up to 20% available. The store specializes in furniture made from high-quality natural materials, and the promotion aims to encourage larger purchases during the store’s fiscal-period clearance.
+Hayama Kagu's [Shonan T-SITE](https://store.tsite.jp/shonan/){:target="_blank" rel="noopener noreferrer"} store is running its “Summer Clearance Sale Part 2” through the 30th (Sunday), promoting savings when customers buy multiple items. The sale offers tiered discounts based on purchase amount, with savings up to 20% available. The store specializes in furniture made from high-quality natural materials, and the promotion aims to encourage larger purchases during the store’s fiscal-period clearance.
 

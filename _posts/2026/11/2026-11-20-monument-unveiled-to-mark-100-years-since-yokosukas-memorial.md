@@ -12,7 +12,8 @@ town: Yokosuka
 lede: A ceremony unveiling a monument was held on 12 November at Mikasa Park in Inaokacho,
   Yokosuka, marking 100 years since the memorial ship Mikasa was preserved.
 guid: guid:https://www.townnews.co.jp/0501/2026/11/20/863027.html
+place_photo: mikasa-park.jpg
 ---
 
-The ceremony took place at Mikasa Park in Inaokacho, Yokosuka, on 12 November, the 100th anniversary of the preservation of the memorial ship Mikasa, which began in 1926.
+The ceremony took place at [Mikasa Park](https://www.kanagawaparks.com/mikasa/){:target="_blank" rel="noopener noreferrer"} in Inaokacho, Yokosuka, on 12 November, the 100th anniversary of the preservation of the memorial ship Mikasa, which began in 1926.
 

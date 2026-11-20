@@ -14,3 +14,5 @@ guid: guid:https://www.townnews.co.jp/0602/2026/11/20/862880.html
 
 The project, which paints pictures on shutters of vacant shops along the train street in Koshigoe, Kamakura, marked the occasion with completion of its fourth work. It began four years ago.
 
+Official site: [Koshigoe Art Street](https://koshigoeartstreet.amebaownd.com/){:target="_blank" rel="noopener noreferrer"}
+

@@ -9,6 +9,7 @@ source_name: タウンニュース（藤沢）
 lede: On September 10 at Fujisawa Station North Exit's Sun Pearl Square, a giant black
   gorilla statue was installed on a rooftop overlooking the square.
 guid: guid:https://www.townnews.co.jp/0601/2026/09/11/852530.html
+venue_url: https://fujisawa-ekimae.com
 ---
 
 Walking through the [Sun Pearl Square](https://fujisawa-ekimae.com){:target="_blank" rel="noopener noreferrer"} at Fujisawa Station North Exit, visitors felt watched and discovered a striking giant black gorilla statue on a building rooftop. The unusual sculpture, shown on September 10 during an outdoor event, depicts the gorilla holding money boxes in both hands and draws attention from passersby.

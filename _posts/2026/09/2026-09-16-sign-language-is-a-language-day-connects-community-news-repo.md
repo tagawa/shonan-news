@@ -11,6 +11,7 @@ lede: '''Sign Language Day in Fujisawa'' was held on the 23rd at Fujisawa Statio
   North Exit Sun Pearl Square (or Fujisawa City Hall in case of rain).'
 guid: guid:https://www.townnews.co.jp/0601/2026/09/16/853192.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://fujisawa-ekimae.com
 ---
 
 The event titled '手話言語の国際デー in ふじさわ' took place on the 23rd at Fujisawa Station North Exit [Sun Pearl Square](https://fujisawa-ekimae.com){:target="_blank" rel="noopener noreferrer"}, with [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"} designated as the rain venue. The date coincides with the United Nations' International Day of Sign Languages and Japan's 'Sign Language Day.' Local activities aimed to promote recognition of sign language as a language and to connect people, and NEWS reporter Koyama participated in the event.

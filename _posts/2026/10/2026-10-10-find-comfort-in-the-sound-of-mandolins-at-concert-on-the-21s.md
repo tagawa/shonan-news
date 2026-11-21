@@ -10,6 +10,7 @@ event_date: '2026-10-21'
 lede: The Shonan Mandolin Ensemble will hold its 22nd regular concert at F Place Hall
   in Honcho on the 21st (Wed).
 guid: guid:https://www.townnews.co.jp/0601/2026/10/10/856794.html
+venue_url: https://www.fujisawa-fplace.com
 ---
 
 The concert will be held at [F Place](https://www.fujisawa-fplace.com){:target="_blank" rel="noopener noreferrer"} Hall (1-12-17 Honcho), starting at 2 p.m., with doors opening at 1 p.m.

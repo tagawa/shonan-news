@@ -9,6 +9,7 @@ source_name: タウンニュース（藤沢）
 lede: The Shonan Fujisawa Jazz Meeting, a large-scale, citizen-participation outdoor
   jazz event, was held on the 7th at three venues near Fujisawa Station’s north exit.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/10/861330.html
+venue_url: https://fujisawa-ekimae.com
 ---
 
 The event took place at [Sun Pearl Square](https://fujisawa-ekimae.com){:target="_blank" rel="noopener noreferrer"}, Sun Palette Plaza and the North Exit Underground Plaza. It was held for the seventh time.

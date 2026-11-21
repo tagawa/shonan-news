@@ -9,6 +9,7 @@ source_name: タウンニュース（藤沢）
 lede: A lecture titled “Our Energy, Our Future” will be held on the 21st at F Place
   hall in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/09/15/853193.html
+venue_url: https://www.fujisawa-fplace.com
 ---
 
 A lecture titled “わたしたちのエネルギー わたしたちの未来” will take place on the 21st (Monday) at [F Place](https://www.fujisawa-fplace.com){:target="_blank" rel="noopener noreferrer"} (Fujisawa City Labor Hall, Honmachi 1-12-17) in the hall. The event is organized by the Shonan Citizens' Symposium Executive Committee. The notice invites local residents to attend the lecture about energy and the community’s future.

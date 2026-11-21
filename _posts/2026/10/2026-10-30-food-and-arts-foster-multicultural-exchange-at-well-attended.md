@@ -10,6 +10,7 @@ source_name: タウンニュース（藤沢）
 lede: The Fujisawa International Exchange Festival was held at Sun Pearl Square by
   the north exit of Fujisawa Station.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/30/859751.html
+venue_url: https://fujisawa-ekimae.com
 ---
 
 The event, where residents and organizations with connections to other countries engaged in intercultural understanding, was held at [Sun Pearl Square](https://fujisawa-ekimae.com){:target="_blank" rel="noopener noreferrer"} by the north exit of Fujisawa Station. It introduced food and traditional cultures from around the world.

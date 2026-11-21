@@ -12,6 +12,7 @@ town: Fujisawa
 lede: The 14th Earthquake Reconstruction Support Concert in Fujisawa will be held
   on the 29th (Sun) at F Place Hall in Honcho, Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/21/863190.html
+venue_url: https://www.fujisawa-fplace.com
 ---
 
 The concert will be held under the theme 'Protect children from radiation.'

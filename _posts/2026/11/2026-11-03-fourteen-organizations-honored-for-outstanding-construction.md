@@ -11,6 +11,7 @@ town: Fujisawa
 lede: Fourteen organizations were honored for outstanding municipal construction work
   at F Place in Honcho on 30 October.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/03/860468.html
+venue_url: https://www.fujisawa-fplace.com
 ---
 
 The 2026 fiscal year’s municipal outstanding construction awards were decided, and a ceremony for those involved was held at [F Place](https://www.fujisawa-fplace.com){:target="_blank" rel="noopener noreferrer"} in Honcho on 30 October. Recipients include Nishio Kensetsu Co., Ltd. and Oharu Komuten Co., Ltd.

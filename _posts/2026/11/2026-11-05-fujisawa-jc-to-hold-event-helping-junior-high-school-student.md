@@ -12,6 +12,7 @@ town: Fujisawa
 lede: The 'Parent-Child Career Forum' will be held on 21 November (Sat) at F Place,
   Fujisawa Civic Center.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/05/860569.html
+venue_url: https://www.fujisawa-fplace.com
 ---
 
 The event will give junior high school students a chance to interact with companies and organizations and think about their futures. It will begin at 1 p.m.

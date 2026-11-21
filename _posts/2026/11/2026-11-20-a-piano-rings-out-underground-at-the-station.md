@@ -6,7 +6,9 @@ source_date: '2026-11-20 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0601/2026/11/20/862885.html
 source_title: 駅地下でポロン
 source_name: タウンニュース（藤沢）
+label: music
 place_photo: fujisawa-station.jpg
+
 lede: A street piano was installed on the 14th at the underground plaza at the north
   exit of Fujisawa Station.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/20/862885.html

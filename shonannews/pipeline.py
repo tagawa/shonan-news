@@ -444,7 +444,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             place_photo=place_photo,
             event_date=event_date,
             on_until=on_until,
-            label=title_labels.label(result.label, title),
+            label=title_labels.label(result.label, title, result.title),
             town=town,
         )
         # See the backend spec, "Official site links".

@@ -27,10 +27,11 @@ layout: default
   <div class="item-body">
     {{ content }}
   </div>
-  {% if page.venue_url %}
-    {% comment %} Apple's ll and q form: its directions links opened the wrong area in desktop browsers. See the frontend spec, "Open in Maps". {% endcomment %}
-    {% assign venue = site.data.official_sites | where: "url", page.venue_url | first %}
-    {% if venue and venue.geo %}
+  {% comment %} The venue, else the place photo's entry, which covers a place with no official site. Apple's ll and q form: its directions links opened the wrong area in desktop browsers. See the frontend spec, "Open in Maps". {% endcomment %}
+  {% assign venue = nil %}
+  {% if page.venue_url %}{% assign venue = site.data.official_sites | where: "url", page.venue_url | first %}{% endif %}
+  {% unless venue.geo %}{% if page.place_photo %}{% assign venue = site.data.official_sites | where_exp: "entry", "entry.photo.file == page.place_photo" | first %}{% endif %}{% endunless %}
+  {% if venue.geo %}
   <p class="maps-link"><a id="maps-link" href="https://maps.apple.com/?ll={{ venue.geo | escape }}&amp;q={{ venue.geo | escape }}" target="_blank" rel="noopener noreferrer" data-geo="{{ venue.geo | escape }}" data-name="{{ venue.en[0] | escape }}">Open {{ venue.en[0] | escape }} in Maps</a></p>
   <script>
   (function (link) {
@@ -42,7 +43,6 @@ layout: default
     link.removeAttribute("target");
   }(document.getElementById("maps-link")));
   </script>
-    {% endif %}
   {% endif %}
   {% assign source_name = page.source_name | default: site.source_name %}
   <p class="item-footer">{% include source-link.html source_url=page.source_url source_name=source_name %}</p>

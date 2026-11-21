@@ -151,7 +151,7 @@ def later_photo(text: str, sites: list) -> str | None:
 
 
 def backfill_venues(posts_dir, sites):
-    # The venue an event post's "Open in Maps" link points to. See the backend spec, "Place photos",
+    # The venue a post's "Open in Maps" link points to. See the backend spec, "Place photos",
     # "Venue for maps".
     return _backfill(posts_dir, "venue_url", lambda text: venue(text, sites))
 
@@ -159,8 +159,7 @@ def backfill_venues(posts_dir, sites):
 def venue(text: str, sites: list) -> str | None:
     # Only entries with geo count: the earliest link is often the organiser, and only venues get geo.
     _, front_matter, body = text.split("---\n", 2)
-    fields = yaml.safe_load(front_matter)
-    if fields.get("venue_url") or not (fields.get("event_date") or fields.get("on_until")):
+    if yaml.safe_load(front_matter).get("venue_url"):
         return None
     found = _linked(body, sites, "geo")
     return found[0]["url"] if found else None

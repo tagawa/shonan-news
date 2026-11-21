@@ -10,9 +10,9 @@ source_name: タウンニュース（藤沢）
 event_date: '2026-10-11'
 label: sport
 lede: FUJISAWA SPORTS PARK will take place on 11 October (Sun) and 12 October (Mon)
-  at Sun Pearl Plaza, north of Fujisawa Station.
+  at Sun Pearl Square, north of Fujisawa Station.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/03/855763.html
 ---
 
-The event, where visitors can experience a variety of sports, will be held on 11 October (Sun) and 12 October (Mon) at Sun Pearl Plaza, north of Fujisawa Station.
+The event, where visitors can experience a variety of sports, will be held on 11 October (Sun) and 12 October (Mon) at [Sun Pearl Square](https://fujisawa-ekimae.com){:target="_blank" rel="noopener noreferrer"}, north of Fujisawa Station.
 

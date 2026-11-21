@@ -9,9 +9,9 @@ source_name: タウンニュース（藤沢）
 event_date: '2026-11-08'
 town: Fujisawa
 lede: A market offering an experience of the connection between agriculture and welfare
-  will be held on 8 November (Sun) at Sun Pearl Plaza in Fujisawa.
+  will be held on 8 November (Sun) at Sun Pearl Square in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/06/860874.html
 ---
 
-The 'Noufuku Marche' will be held at Sun Pearl Plaza, north of Fujisawa Station, on 8 November (Sun). The event is hosted by the Fujisawa City Agriculture-Welfare Collaboration Regional Council, and the venue will feature farmers and welfare groups involved in the collaboration.
+The 'Noufuku Marche' will be held at [Sun Pearl Square](https://fujisawa-ekimae.com){:target="_blank" rel="noopener noreferrer"}, north of Fujisawa Station, on 8 November (Sun). The event is hosted by the Fujisawa City Agriculture-Welfare Collaboration Regional Council, and the venue will feature farmers and welfare groups involved in the collaboration.
 

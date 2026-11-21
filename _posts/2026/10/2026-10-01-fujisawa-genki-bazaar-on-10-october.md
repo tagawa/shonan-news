@@ -8,10 +8,12 @@ source_title: 【10月10日（土）】ふじさわ元気バザール
 source_name: 湘南・横須賀イベント＆ニュース
 event_date: '2026-10-10'
 thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9t24aMt9wgP8YnUVJ77lOxHAybrj65_6p-L1Y4qyVM7cuvffbonUEPLBbNJnq_bLaMr8WMlTJwKzpsBFc8u7MmM_c5fAZGXSG0acSt89_uCqW97-9k083SxXIiEFwElGaEkiEPgVydvhy8DgebxogqTwvcf1A3womFAiX1S2Cq3U62Yp8D9_3eOOezK4/s72-c/web_info202610_12.png
-lede: The Fujisawa Genki Bazaar will be held on 10 October at Sun Pearl Plaza, near
+lede: The Fujisawa Genki Bazaar will be held on 10 October at Sun Pearl Square, near
   the north exit of Fujisawa Station.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-6211626499084405508
 ---
 
 The bazaar will sell distinctive accessories and miscellaneous goods, fresh local vegetables, bread, sweets, and craft beer. People who register for the official LINE account can win items including Fujikyun goods.
+
+Official site: [Sun Pearl Square](https://fujisawa-ekimae.com){:target="_blank" rel="noopener noreferrer"}
 

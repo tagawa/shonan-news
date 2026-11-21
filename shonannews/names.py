@@ -63,6 +63,10 @@ CANONICAL = {
     "吉沢郵便局": "Kisawa",
     # Surname; every NDL authority record for 沖津 reads オキツ. Published as "Okinatsu" on 2026-11-20.
     "沖津": "Okitsu",
+    # The square by Fujisawa Station's north exit; official English name from the city's press page
+    # (city.fujisawa.kanagawa.jp/jinkendanjyo/press/2026festival.html), owner, 2026-11-21. More than one
+    # word, so it acts only through MISREADINGS.
+    "サンパール広場": "Sun Pearl Square",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
@@ -91,6 +95,8 @@ MISREADINGS = {
     "吉沢公民館": ("Yoshizawa",),
     "吉沢郵便局": ("Yoshizawa",),
     "沖津": ("Okinatsu",),
+    # "Sun Pearl Plaza" in nine live posts, 2026-09-11 to 2026-11-21; "Sunpearl Plaza" on 2026-09-16.
+    "サンパール広場": ("Sun Pearl Plaza", "Sunpearl Plaza"),
 }
 
 # Places better known locally by their Japanese name: the first body mention of the English

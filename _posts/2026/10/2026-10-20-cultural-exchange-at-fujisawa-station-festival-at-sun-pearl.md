@@ -12,6 +12,7 @@ town: Fujisawa
 lede: The Fujisawa International Exchange Festival will be held on the 25th (Sun)
   at Sun Pearl Square, by the north exit of Fujisawa Station.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/20/858290.html
+venue_url: https://fujisawa-ekimae.com
 ---
 
 The Fujisawa International Exchange Festival will be held at [Sun Pearl Square](https://fujisawa-ekimae.com){:target="_blank" rel="noopener noreferrer"} by the north exit of Fujisawa Station on the 25th (Sun). Its organizers include international exchange groups such as associations for sister and friendship cities and Rotary clubs.

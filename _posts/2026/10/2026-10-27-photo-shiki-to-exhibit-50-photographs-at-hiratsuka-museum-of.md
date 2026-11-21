@@ -13,6 +13,7 @@ lede: Photo Shiki's 2026 photography exhibition, featuring 50 photographs, will 
   Art Gallery.
 place_photo: hiratsuka-museum-of-art.jpg
 guid: guid:https://www.townnews.co.jp/0605/2026/10/27/859071.html
+venue_url: https://www.city.hiratsuka.kanagawa.jp/art-muse/index.html
 ---
 
 The '2026 Photo Shiki Photography Exhibition', hosted by Photo Shiki, will be held at the [Hiratsuka Museum of Art](https://www.city.hiratsuka.kanagawa.jp/art-muse/index.html){:target="_blank" rel="noopener noreferrer"} Civic Art Gallery from 17 November (Tue) to 23 November (Mon).

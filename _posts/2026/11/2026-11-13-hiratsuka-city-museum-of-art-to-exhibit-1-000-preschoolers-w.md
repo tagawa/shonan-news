@@ -12,6 +12,7 @@ place_photo: hiratsuka-museum-of-art.jpg
 lede: A preschoolers’ art exhibition will run from 26 to 29 November (Sun) at the
   Hiratsuka City Museum of Art.
 guid: guid:https://www.townnews.co.jp/0605/2026/11/13/861603.html
+venue_url: https://www.city.hiratsuka.kanagawa.jp/art-muse/index.html
 ---
 
 The exhibition will be open from 10 a.m. to 4:30 p.m., with closing at 2:30 p.m. on the final day. It has been held since 1976.

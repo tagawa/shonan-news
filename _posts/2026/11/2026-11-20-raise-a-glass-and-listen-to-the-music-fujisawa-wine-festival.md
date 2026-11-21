@@ -10,6 +10,7 @@ event_date: '2026-11-21'
 town: Fujisawa
 lede: The Fujisawa Wine Festival 2026 will be held on 21 November (Sat) at Sun Pearl Square and other venues near the north exit of Fujisawa Station.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/20/862896.html
+venue_url: https://fujisawa-ekimae.com
 ---
 
 The festival, celebrating wine and music, will be hosted by the Fujisawa Chamber of Commerce and Industry Youth Division, known as Fujisawa YEG, and the festival organizing committee.

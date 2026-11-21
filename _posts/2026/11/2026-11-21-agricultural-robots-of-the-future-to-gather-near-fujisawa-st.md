@@ -12,6 +12,7 @@ town: Fujisawa
 lede: An event showcasing the latest technology for addressing challenges in Japanese
   agriculture will be held on December 4 (Fri) near Fujisawa Station.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/21/863199.html
+venue_url: https://fujisawa-ekimae.com
 ---
 
 ‘Agricultural Robots Gather’ will take place on December 4 (Fri) at [Robolink](https://www.pref.kanagawa.jp/osirase/0604/robolink/){:target="_blank" rel="noopener noreferrer"}, a hub for exchanges among robotics companies, and [Sun Pearl Square](https://fujisawa-ekimae.com){:target="_blank" rel="noopener noreferrer"} at the north exit of Fujisawa Station.

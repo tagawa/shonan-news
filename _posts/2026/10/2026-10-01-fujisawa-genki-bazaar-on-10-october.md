@@ -11,6 +11,7 @@ thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9t24aMt9w
 lede: The Fujisawa Genki Bazaar will be held on 10 October at Sun Pearl Square, near
   the north exit of Fujisawa Station.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-6211626499084405508
+venue_url: https://fujisawa-ekimae.com
 ---
 
 The bazaar will sell distinctive accessories and miscellaneous goods, fresh local vegetables, bread, sweets, and craft beer. People who register for the official LINE account can win items including Fujikyun goods.

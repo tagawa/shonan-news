@@ -50,6 +50,19 @@ CANONICAL = {
     # owner, 2026-11-20. The model translates 産業交流 literally as "Exchange". More than one word, so it
     # acts only through MISREADINGS.
     "横須賀市産業交流プラザ": "Yokosuka Industrial Community Plaza",
+    # Hiratsuka's 崇善小学校: its own histories read スウゼン in the Kanagawa Prefectural Library and
+    # CiNii Books, against two other prefectural libraries' ソウゼン (NDL Search, scripts.ndl).
+    # Published as "Shuzan" on 2026-11-20, fixed by hand. Too far from "Suzen" to be a near miss.
+    "崇善": "Suzen",
+    # Hiratsuka's 吉沢 area: NDL authority 00632025 reads 吉沢小学校 キサワ, and the community centre's
+    # newsletter is きさわだより, although Japan Post gives the districts as カミキチサワ. Keyed on the
+    # facilities, since 吉沢 alone is also a surname read Yoshizawa. All four live mentions were
+    # "Yoshizawa", 2026-08-19 to 2026-11-20; the post office's reading is inferred from the area.
+    "吉沢小": "Kisawa",
+    "吉沢公民館": "Kisawa",
+    "吉沢郵便局": "Kisawa",
+    # Surname; every NDL authority record for 沖津 reads オキツ. Published as "Okinatsu" on 2026-11-20.
+    "沖津": "Okitsu",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
@@ -73,6 +86,11 @@ MISREADINGS = {
     # middle one is the owner's. Longest first, since each rewrite runs on the last one's output.
     "横須賀市産業交流プラザ": ("Yokosuka City Industrial Exchange Plaza", "Yokosuka Industrial Exchange Plaza",
                        "Industry Exchange Plaza"),
+    "崇善": ("Shuzan",),
+    "吉沢小": ("Yoshizawa",),
+    "吉沢公民館": ("Yoshizawa",),
+    "吉沢郵便局": ("Yoshizawa",),
+    "沖津": ("Okinatsu",),
 }
 
 # Places better known locally by their Japanese name: the first body mention of the English

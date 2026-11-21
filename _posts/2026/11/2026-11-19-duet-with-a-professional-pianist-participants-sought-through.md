@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0603/2026/11/19/862790.html
 source_title: プロのピアニストと連弾　11月30日まで参加者募集
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2027-02-06'
+label: music
 town: Samukawa
 lede: Misako Mihara’s piano recital will be held on 6 February (Sat) at Samukawa Town
   Civic Center Hall in Miyayama.

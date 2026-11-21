@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0601/2026/11/21/863190.html
 source_title: 震災復興支援コン
 source_name: タウンニュース（藤沢）
 event_date: '2026-11-29'
+label: music
 town: Fujisawa
 lede: The 14th Earthquake Reconstruction Support Concert in Fujisawa will be held
   on the 29th (Sun) at F Place Hall in Honcho, Fujisawa.

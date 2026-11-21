@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0605/2026/11/20/862732.html
 source_title: 多彩な音色でまち照らす　二宮で｢クリスマス音楽祭｣
 source_name: タウンニュース（平塚・大磯・二宮・中井）
 event_date: '2026-12-12'
+label: music
 town: Ninomiya
 lede: The 'Town Christmas Music Festival' will be held on 12 December (Sat) at Radien
   Hall in Ninomiya Town.

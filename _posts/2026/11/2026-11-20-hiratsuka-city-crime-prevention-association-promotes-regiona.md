@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hiratsuka City Crime Prevention Association Promotes Regional Safety Campaign;
-  Rally Held at Yoshizawa Elementary School
+  Rally Held at Kisawa Elementary School
 date: 2026-11-20 20:24:28 +0900
 source_date: '2026-11-20 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0605/2026/11/20/862736.html
@@ -11,7 +11,7 @@ event_date: '2026-11-13'
 label: safety
 town: Hiratsuka
 lede: Hiratsuka City's Regional Safety Campaign Promotion Rally was held on 13 November
-  at municipal Yoshizawa Elementary School.
+  at municipal Kisawa Elementary School.
 guid: guid:https://www.townnews.co.jp/0605/2026/11/20/862736.html
 ---
 

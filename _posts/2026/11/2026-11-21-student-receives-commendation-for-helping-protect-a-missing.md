@@ -12,5 +12,5 @@ lede: On the 19th, Fujisawa Kita Police Station presented a commendation to a si
 guid: guid:https://www.townnews.co.jp/0601/2026/11/21/863209.html
 ---
 
-The station presented the letter to Tano Takeaki for protecting an elderly woman who had lost her way and helping ensure her safety by calling 110. The station is headed by Hiroshi Kojima.
+The station presented the letter to Takeaki Tano for protecting an elderly woman who had lost her way and helping ensure her safety by calling 110. The station is headed by Hiroshi Kojima.
 

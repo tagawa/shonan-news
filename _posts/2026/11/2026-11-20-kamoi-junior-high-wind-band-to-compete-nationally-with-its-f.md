@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0501/2026/11/20/862690.html
 source_title: 鴨居中吹奏楽部　同校初の編成で全国挑む　３年生８人で23日の管楽合奏コンへ
 source_name: タウンニュース（横須賀・三浦）
 event_date: '2026-11-23'
+label: music
 town: Yokosuka
 lede: Eight third-year students from Yokosuka Municipal Kamoi Junior High School will
   compete in the national contest in Tokyo on 23 November (Mon).

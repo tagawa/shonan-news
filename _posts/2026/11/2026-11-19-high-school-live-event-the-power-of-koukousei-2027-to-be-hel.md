@@ -8,6 +8,7 @@ source_url: https://shonan.keizai.biz/headline/3626/
 source_title: 片瀬海岸で高校生ライブイベント　「青春」をテーマに開催へ、出演者募集
 source_name: 湘南経済新聞
 event_date: '2027-03-27'
+label: music
 town: Fujisawa
 image_url: https://images.keizai.biz/shonan_keizai/headline/1794958270.jpg
 lede: The high school live event 'THE POWER OF KOUKOUSEI 2027' will be held on 27

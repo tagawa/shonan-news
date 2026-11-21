@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0603/2026/11/20/862644.html
 source_title: 『書のある絵本』記念展　11月26日から12月６日まで
 source_name: タウンニュース（茅ヶ崎・寒川）
 event_date: '2026-11-26'
+label: exhibition
 lede: A commemorative exhibition for 'A Picture Book with Calligraphy' will run from
   26 November to 6 December.
 guid: guid:https://www.townnews.co.jp/0603/2026/11/20/862644.html

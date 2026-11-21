@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0503/2026/11/20/862667.html
 source_title: 逗子文化プラザ　実力派ギタリストの共演　11月23日にリサイタル
 source_name: タウンニュース（逗子・葉山）
 event_date: '2026-11-23'
+label: music
 town: Zushi
 place_photo: zushi-bunka-plaza.jpg
 lede: Zushi Cultural Plaza Nagisa Hall will host a guitar duo recital by classical

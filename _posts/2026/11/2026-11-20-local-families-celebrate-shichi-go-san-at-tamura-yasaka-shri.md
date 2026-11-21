@@ -13,5 +13,5 @@ lede: On 3 November, nine local children aged 3 to 7 and their families attended
 guid: guid:https://www.townnews.co.jp/0605/2026/11/20/862739.html
 ---
 
-A Shichi-Go-San ceremony was held at Tamura Yasaka Shrine in Hiratsuka on 3 November, drawing nine local children aged 3 to 7 and their families. Worshippers attended a Shinto ritual in the shrine’s worship hall and received prayers from chief priest Yoshihiro Okinatsu.
+A Shichi-Go-San ceremony was held at Tamura Yasaka Shrine in Hiratsuka on 3 November, drawing nine local children aged 3 to 7 and their families. Worshippers attended a Shinto ritual in the shrine’s worship hall and received prayers from chief priest Yoshihiro Okitsu.
 

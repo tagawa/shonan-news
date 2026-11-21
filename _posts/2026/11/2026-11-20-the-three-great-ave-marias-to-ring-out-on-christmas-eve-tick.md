@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0601/2026/11/20/862637.html
 source_title: 聖夜に響く｢３大アヴェマリア｣　チケットプレゼントも
 source_name: タウンニュース（藤沢）
 event_date: '2026-12-11'
+label: music
 town: Chigasaki
 lede: A Christmas concert featuring the 'Three Great Ave Marias' will be held on 11
   December (Fri) at Chigasaki Civic Cultural Hall's Main Hall.

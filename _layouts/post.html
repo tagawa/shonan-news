@@ -32,7 +32,7 @@ layout: default
   {% if page.venue_url %}{% assign venue = site.data.official_sites | where: "url", page.venue_url | first %}{% endif %}
   {% unless venue.geo %}{% if page.place_photo %}{% assign venue = site.data.official_sites | where_exp: "entry", "entry.photo.file == page.place_photo" | first %}{% endif %}{% endunless %}
   {% if venue.geo %}
-  <p class="maps-link"><a id="maps-link" href="https://maps.apple.com/?ll={{ venue.geo | escape }}&amp;q={{ venue.geo | escape }}" target="_blank" rel="noopener noreferrer" data-geo="{{ venue.geo | escape }}" data-name="{{ venue.en[0] | escape }}">Open {{ venue.en[0] | escape }} in Maps</a></p>
+  <p class="maps-link"><a id="maps-link" href="https://maps.apple.com/?ll={{ venue.geo | escape }}&amp;q={{ venue.geo | escape }}" target="_blank" rel="noopener noreferrer" data-geo="{{ venue.geo | escape }}" data-name="{{ venue.en[0] | escape }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>Open {{ venue.en[0] | escape }} map</a></p>
   <script>
   (function (link) {
     // Android has no Apple Maps: a geo: link opens the reader's own map app at the pin.

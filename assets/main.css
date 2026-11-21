@@ -958,6 +958,18 @@ button:focus {
   margin: 0;
 }
 
+/* Icon beside the text, centred on it; flex: none stops a long place name squeezing it.
+   See the frontend spec, "Open in Maps". */
+.maps-link a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.maps-link svg {
+  flex: none;
+  margin-right: var(--space-2);
+}
+
 /* More from this area: the list type of the archive, the date as the meta line. */
 .area-more {
   margin-top: var(--space-5);

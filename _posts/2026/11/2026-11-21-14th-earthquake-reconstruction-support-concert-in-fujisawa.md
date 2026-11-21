@@ -16,3 +16,5 @@ guid: guid:https://www.townnews.co.jp/0601/2026/11/21/863190.html
 
 The concert will be held under the theme 'Protect children from radiation.'
 
+Official site: [F Place](https://www.fujisawa-fplace.com){:target="_blank" rel="noopener noreferrer"}
+

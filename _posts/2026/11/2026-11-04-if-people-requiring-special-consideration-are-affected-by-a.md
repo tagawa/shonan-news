@@ -15,5 +15,5 @@ lede: A disaster-prevention symposium will be held on 26 November (Thu) at F Pla
 guid: guid:https://www.townnews.co.jp/0601/2026/11/04/860756.html
 ---
 
-The symposium, titled 'What if people requiring special consideration are affected by a disaster?', will be held at F Place, a complex that includes the Fujisawa Civic Center and Labor Hall, at 1-12-17 Honcho. It is being organized by the city and the city’s association for people with physical disabilities.
+The symposium, titled 'What if people requiring special consideration are affected by a disaster?', will be held at [F Place](https://www.fujisawa-fplace.com){:target="_blank" rel="noopener noreferrer"}, a complex that includes the Fujisawa Civic Center and Labor Hall, at 1-12-17 Honcho. It is being organized by the city and the city’s association for people with physical disabilities.
 

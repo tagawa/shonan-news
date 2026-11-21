@@ -16,3 +16,5 @@ guid: guid:https://www.townnews.co.jp/0601/2026/11/05/860569.html
 
 The event will give junior high school students a chance to interact with companies and organizations and think about their futures. It will begin at 1 p.m.
 
+Official site: [F Place](https://www.fujisawa-fplace.com){:target="_blank" rel="noopener noreferrer"}
+

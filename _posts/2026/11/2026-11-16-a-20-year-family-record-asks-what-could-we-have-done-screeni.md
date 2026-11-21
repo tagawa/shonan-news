@@ -13,5 +13,5 @@ lede: A screening of the film 'What Could We Have Done?' will take place on 11 D
 guid: guid:https://www.townnews.co.jp/0601/2026/11/16/862198.html
 ---
 
-The Fujisawa City Mental Health Community Living Support Liaison Council, the city’s Health and Prevention Division, and its Human Rights, Gender Equality, Peace and International Affairs Division are organizing the public lecture and film screening. It is scheduled for 11 December (Friday) at F Place.
+The Fujisawa City Mental Health Community Living Support Liaison Council, the city’s Health and Prevention Division, and its Human Rights, Gender Equality, Peace and International Affairs Division are organizing the public lecture and film screening. It is scheduled for 11 December (Friday) at [F Place](https://www.fujisawa-fplace.com){:target="_blank" rel="noopener noreferrer"}.
 

@@ -13,5 +13,5 @@ lede: The 41st Fujisawa City Human Rights Awareness Lecture will be held on 11 N
 guid: guid:https://www.townnews.co.jp/0601/2026/10/01/855039.html
 ---
 
-The 41st Fujisawa City Human Rights Awareness Lecture will address online defamation and trouble on the internet and social media, as well as ways to respond. It will be held on 11 November (Wed) at F Place Hall, 1-12-17 Honcho.
+The 41st Fujisawa City Human Rights Awareness Lecture will address online defamation and trouble on the internet and social media, as well as ways to respond. It will be held on 11 November (Wed) at [F Place](https://www.fujisawa-fplace.com){:target="_blank" rel="noopener noreferrer"} Hall, 1-12-17 Honcho.
 

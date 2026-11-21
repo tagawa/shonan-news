@@ -555,6 +555,12 @@
     "en": ["Sun Pearl Square", "Sun Pearl Hiroba"], 
     "url": "https://fujisawa-ekimae.com",
     "geo": "35.3394,139.4875"
+  },
+  {
+    "ja": ["Fプレイス"], 
+    "en": ["F Place", "F-Place"], 
+    "url": "https://www.fujisawa-fplace.com",
+    "geo": "35.3420,139.4840"
   }
 ]
 

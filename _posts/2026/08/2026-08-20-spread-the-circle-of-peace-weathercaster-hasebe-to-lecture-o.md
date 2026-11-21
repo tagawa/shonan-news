@@ -11,5 +11,5 @@ lede: A peace-focused event featuring weathercaster Hasebe will be held on the 3
 guid: guid:https://www.townnews.co.jp/0601/2026/08/11/848125.html
 ---
 
-The gathering titled "平和の輪をひろげるつどい" will take place on the 30th (Sunday) at F Place Hall, Honmachi 1-12-17. The event is organized by Fujisawa City, the Board of Education, and the executive committee for spreading circles of peace, and will include a lecture by weathercaster Hasebe. The program aims to encourage thinking about peace and community engagement through talks and related activities.
+The gathering titled "平和の輪をひろげるつどい" will take place on the 30th (Sunday) at [F Place](https://www.fujisawa-fplace.com){:target="_blank" rel="noopener noreferrer"} Hall, Honmachi 1-12-17. The event is organized by Fujisawa City, the Board of Education, and the executive committee for spreading circles of peace, and will include a lecture by weathercaster Hasebe. The program aims to encourage thinking about peace and community engagement through talks and related activities.
 

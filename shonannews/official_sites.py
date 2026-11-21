@@ -114,18 +114,31 @@ def place_photo(body, source, sites):
     return None
 
 
-def backfill_photos(posts_dir, sites):
-    # A photo added after a post was written, given to that post. Keyed on the link, since old posts
-    # no longer have their source. See the backend spec, "Place photos", "Later photos".
+def _backfill(posts_dir, key, choose):
+    # Appends `key: value` to the front matter of each post that choose(text) gives a value.
     changed = []
     for path in sorted(Path(posts_dir).rglob("*.md")):
         text = path.read_text(encoding="utf-8")
-        photo = later_photo(text, sites)
-        if photo:
+        value = choose(text)
+        if value:
             _, front_matter, body = text.split("---\n", 2)
-            path.write_text(f"---\n{front_matter}place_photo: {photo}\n---\n{body}", encoding="utf-8")
+            path.write_text(f"---\n{front_matter}{key}: {value}\n---\n{body}", encoding="utf-8")
             changed.append(path)
     return changed
+
+
+def _linked(body: str, sites: list, key: str) -> list:
+    # Entries with `key` that the body links, earliest link first, leaving out any the body gives
+    # as directions. Keyed on the link, since old posts no longer have their source.
+    return [site for _, site in sorted(
+        ((body.find(f"]({site['url']})"), index), site) for index, site in enumerate(sites)
+        if key in site and "url" in site and f"]({site['url']})" in body and not given_as_directions(body, site))]
+
+
+def backfill_photos(posts_dir, sites):
+    # A photo added after a post was written, given to that post. See the backend spec,
+    # "Place photos", "Later photos".
+    return _backfill(posts_dir, "place_photo", lambda text: later_photo(text, sites))
 
 
 def later_photo(text: str, sites: list) -> str | None:
@@ -133,10 +146,25 @@ def later_photo(text: str, sites: list) -> str | None:
     _, front_matter, body = text.split("---\n", 2)
     if any(yaml.safe_load(front_matter).get(key) for key in ("image_url", "thumb_url", "place_photo")):
         return None
-    found = sorted((body.find(f"]({site['url']})"), site["photo"]["file"]) for site in sites
-                   if "photo" in site and "url" in site and f"]({site['url']})" in body
-                   and not given_as_directions(body, site))
-    return found[0][1] if found else None
+    found = _linked(body, sites, "photo")
+    return found[0]["photo"]["file"] if found else None
+
+
+def backfill_venues(posts_dir, sites):
+    # The venue an event post's "Open in Maps" link points to. See the backend spec, "Place photos",
+    # "Venue for maps".
+    return _backfill(posts_dir, "venue_url", lambda text: venue(text, sites))
+
+
+def venue(text: str, sites: list) -> str | None:
+    # Only entries with geo count: the earliest link is often the organiser, and only venues get geo.
+    _, front_matter, body = text.split("---\n", 2)
+    fields = yaml.safe_load(front_matter)
+    if fields.get("venue_url") or not (fields.get("event_date") or fields.get("on_until")):
+        return None
+    found = _linked(body, sites, "geo")
+    return found[0]["url"] if found else None
+
 
 
 def unlink(body):

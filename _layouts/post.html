@@ -27,6 +27,23 @@ layout: default
   <div class="item-body">
     {{ content }}
   </div>
+  {% if page.venue_url %}
+    {% comment %} Apple's ll and q form: its directions links opened the wrong area in desktop browsers. See the frontend spec, "Open in Maps". {% endcomment %}
+    {% assign venue = site.data.official_sites | where: "url", page.venue_url | first %}
+    {% if venue and venue.geo %}
+  <p class="maps-link"><a id="maps-link" href="https://maps.apple.com/?ll={{ venue.geo | escape }}&amp;q={{ venue.geo | escape }}" target="_blank" rel="noopener noreferrer" data-geo="{{ venue.geo | escape }}" data-name="{{ venue.en[0] | escape }}">Open {{ venue.en[0] | escape }} in Maps</a></p>
+  <script>
+  (function (link) {
+    // Android has no Apple Maps: a geo: link opens the reader's own map app at the pin.
+    if (!link || !/Android/i.test(navigator.userAgent)) return;
+    var geo = link.getAttribute("data-geo");
+    link.href = "geo:" + geo + "?q=" + geo + "(" + encodeURIComponent(link.getAttribute("data-name")) + ")";
+    // An app opens it, not a page, so no new tab.
+    link.removeAttribute("target");
+  }(document.getElementById("maps-link")));
+  </script>
+    {% endif %}
+  {% endif %}
   {% assign source_name = page.source_name | default: site.source_name %}
   <p class="item-footer">{% include source-link.html source_url=page.source_url source_name=source_name %}</p>
   {% comment %}Copied before the include, which overwrites post_area. See the frontend spec, "Areas", "More from this area".{% endcomment %}

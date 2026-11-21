@@ -50,8 +50,11 @@ def main():
 
     # Runs even when a feed failed: the other feeds may still have written posts in a new month.
     writer.ensure_archive_stubs(POSTS_DIR, ARCHIVE_DIR)
-    for path in official_sites.backfill_photos(POSTS_DIR, official_sites.load_sites()):
+    sites = official_sites.load_sites()
+    for path in official_sites.backfill_photos(POSTS_DIR, sites):
         logger.info("Added a later place photo to %s", path)
+    for path in official_sites.backfill_venues(POSTS_DIR, sites):
+        logger.info("Added a venue to %s", path)
 
     sys.exit(1 if any(exit_codes) or conflicts else 0)
 

@@ -200,6 +200,7 @@
     "ja": ["平塚市美術館"], 
     "en": ["Hiratsuka City Museum of Art", "Hiratsuka Museum of Art", "Hiratsuka Art Museum", "Hiratsuka City Art Museum"], 
     "url": "https://www.city.hiratsuka.kanagawa.jp/art-muse/index.html",
+    "geo": "35.33830,139.34794",
     "photo": {
       "file": "hiratsuka-museum-of-art.jpg", 
       "width": 1280, 
@@ -551,7 +552,8 @@
   {
     "ja": ["サンパール広場"], 
     "en": ["Sun Pearl Square", "Sun Pearl Hiroba"], 
-    "url": "https://fujisawa-ekimae.com"
+    "url": "https://fujisawa-ekimae.com",
+    "geo": "35.3394,139.4875"
   }
 ]
 

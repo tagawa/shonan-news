@@ -391,6 +391,7 @@
   {
     "ja": ["藤沢駅"],
     "en": ["Fujisawa Station"],
+    "geo": "35.33889,139.48722",
     "photo": {
       "file": "fujisawa-station.jpg",
       "width": 1280,

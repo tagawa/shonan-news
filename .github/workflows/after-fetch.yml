@@ -1,0 +1,73 @@
+name: After-fetch check
+# Checks each fetch run and fails, which emails the owner, only on a finding or on the weekly read.
+# See the backend spec, "After-fetch check". The run name is how fetch.yml's last step finds it.
+run-name: Check of fetch run ${{ github.event.workflow_run.id || inputs.fetch_run_id }}
+
+on:
+  workflow_run:
+    workflows: ["Fetch and publish"]
+    types: [completed]
+  # For the proving runs: plant a finding, or force the weekly read or the link check.
+  workflow_dispatch:
+    inputs:
+      fetch_run_id:
+        description: "ID of the fetch run to check"
+        required: true
+      plant:
+        description: "Plant a failure to prove it emails"
+        type: choice
+        options: ["none", "findings", "weekly-read"]
+        default: "none"
+      links:
+        description: "Run the official-link check whatever the day"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  TZ: Asia/Tokyo
+  FETCH_RUN: ${{ github.event.workflow_run.id || inputs.fetch_run_id }}
+
+jobs:
+  # Two jobs, so the email says whether a failure is a finding or the planned weekly read.
+  findings:
+    runs-on: ubuntu-latest
+    # The site wait alone may take 30 minutes; a hang ends here as a failure, never as a pass.
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Check the run
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PLANT: ${{ inputs.plant }}
+          LINKS: ${{ inputs.links }}
+        run: |
+          args=""
+          if [ "$PLANT" = "findings" ]; then args="$args --plant"; fi
+          if [ "$LINKS" = "true" ]; then args="$args --links"; fi
+          python -m scripts.after_fetch findings --fetch-run "$FETCH_RUN" $args
+
+  weekly-read:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Weekly read
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PLANT: ${{ inputs.plant }}
+        run: |
+          args=""
+          if [ "$PLANT" = "weekly-read" ]; then args="--plant"; fi
+          python -m scripts.after_fetch weekly-read --fetch-run "$FETCH_RUN" $args

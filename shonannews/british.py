@@ -10,7 +10,7 @@ AMERICAN_NAMES = (
     "Kamakura Performing Arts Center", "Kamakura Arts Center",
     "World Health Organization",
     "Ministry of Defense", "Department of Defense", "National Defense Academy", "Self-Defense",
-    "Pearl Harbor",
+    "Pearl Harbor", "Ofuna Flower Center",
 )
 NAMES = re.compile("|".join(re.escape(name) for name in AMERICAN_NAMES))
 ADDRESS = re.compile(r"(?:https?://|www\.)\S+|\S+@\S+")

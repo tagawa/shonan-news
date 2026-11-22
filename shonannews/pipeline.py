@@ -76,6 +76,20 @@ def _single_source_month_day(title, description):
     return month_day
 
 
+def _weekday_fits(day, weekday, source_date, offsets):
+    # (month, day) for each month, offset from the source date's, in which this day falls on this weekday.
+    fits = []
+    for offset in offsets:
+        year, month = divmod(source_date.year * 12 + source_date.month - 1 + offset, 12)
+        try:
+            candidate = date(year, month + 1, day)
+        except ValueError:
+            continue
+        if candidate.weekday() == weekday:
+            fits.append((candidate.month, candidate.day))
+    return fits
+
+
 def _weekday_month_day(title, description, source_date):
     # The fallback after _single_source_month_day, for 12日（月） with no month: the weekday
     # fixes the month within a month either side of the source date. Any full date makes the
@@ -88,15 +102,7 @@ def _weekday_month_day(title, description, source_date):
     if len(found) != 1:
         return None
     day, weekday = found.pop()
-    fits = []
-    for offset in (-1, 0, 1):
-        year, month = divmod(source_date.year * 12 + source_date.month - 1 + offset, 12)
-        try:
-            candidate = date(year, month + 1, day)
-        except ValueError:
-            continue
-        if candidate.weekday() == weekday:
-            fits.append((candidate.month, candidate.day))
+    fits = _weekday_fits(day, weekday, source_date, (-1, 0, 1))
     return fits[0] if len(fits) == 1 else None
 
 
@@ -120,15 +126,7 @@ def _earliest_month_day(title, description, source_date):
         if any(m.start() <= match.start() < m.end() for m in full):
             continue  # the day of a full date, already counted
         day, weekday = int(match.group(1)), weekdays.WEEKDAYS.index(match.group(2))
-        fits = []
-        for offset in (0, 1):
-            year, month = divmod(source_date.year * 12 + source_date.month - 1 + offset, 12)
-            try:
-                candidate = date(year, month + 1, day)
-            except ValueError:
-                continue
-            if candidate.weekday() == weekday:
-                fits.append((candidate.month, candidate.day))
+        fits = _weekday_fits(day, weekday, source_date, (0, 1))
         if len(fits) == 1:
             stated.append((fits[0], match.end()))
     if len({month_day for month_day, _ in stated}) < 2:

@@ -164,7 +164,7 @@ def prove_sweeps():
 def _shortlist_post(post):
     front = {key: post[key] for key in ("title", "lede", "source_title", "event_date")}
     return shortlist.Post(Path(post["path"]), front, unlink(post["body"]),
-                          datetime.date.fromisoformat(post["source_date"]), "")
+                          datetime.date.fromisoformat(post["source_date"]))
 
 
 def possible_duplicates(new, posts):

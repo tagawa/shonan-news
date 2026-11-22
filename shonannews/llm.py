@@ -1,5 +1,3 @@
-import json
-
 INTRO = """You are translating and summarizing a short Japanese local news item for an English-speaking audience."""
 TENSE_RULE = """Today's date is {today}. Use whatever tense is factually correct relative to today: past tense if the event described has already happened, present or future tense if it has not. An event dated later than today has not happened yet, so describe it in the future tense."""
 FIDELITY_RULE = """Preserve names, dates, and numbers exactly as given. Do not round numbers, invent details, or drop proper nouns. Write every Japanese name in Latin letters, never in Japanese characters. Write a present-day Japanese person's name given name first (Hanako Tanabe, not Tanabe Hanako). Keep people from before the Meiji era family name first (Minamoto no Yoritomo), and keep stage, ring and pen names as written (Shofukutei Tsurube)."""
@@ -14,10 +12,8 @@ INPUT_BLOCK = """Title: {title}
 Description: {description}
 """
 
-# The measured rules every prompt that writes post text must carry verbatim.
-RULE_PARAGRAPHS = (TENSE_RULE, FIDELITY_RULE, SOURCE_RULE, ENGLISH_RULE, PROSE_RULE, LEDE_RULE)
-
-PROMPT_TEMPLATE = "\n\n".join((INTRO, *RULE_PARAGRAPHS, LABEL_RULE, JSON_FORM, INPUT_BLOCK))
+PROMPT_TEMPLATE = "\n\n".join((INTRO, TENSE_RULE, FIDELITY_RULE, SOURCE_RULE, ENGLISH_RULE, PROSE_RULE, LEDE_RULE,
+                                LABEL_RULE, JSON_FORM, INPUT_BLOCK))
 
 
 class LLMCallError(Exception):
@@ -65,87 +61,3 @@ def call_llm(create_fn, title, description, today, model="gpt-6-luna", max_compl
              readings=()):
     return complete(create_fn, build_prompt(title, description, today, readings), model, max_completion_tokens,
                     reasoning_effort)
-
-
-JUDGE_PROMPT = """You are checking whether a new Japanese local news item reports the same story as a post already on our site.
-
-They are the same story only if both report the same event or announcement at the same stage. These are different stories: an announcement of an upcoming event and a report after it took place; a profile of a person and a news item about their event or project; two different events with the same organiser, venue or date; two editions or years of a recurring event or series. Decide the stage from the Japanese headlines and the dates, not from the tense of the English post, which can be wrong: an event dated after one item was published and on or before the other was published means one is a preview and the other a report.
-
-Respond with a single JSON object and nothing else, in this exact form:
-{{"same_story": true or false}}
-
-Post already on our site
-Original Japanese headline: {a_source_title}
-Published: {a_published}
-Event date: {a_event_date}
-Title: {a_title}
-Lede: {a_lede}
-Summary: {a_body}
-
-New item
-Published: {b_published}
-Event date: {b_event_date}
-Title: {b_title}
-Description: {b_description}
-"""
-
-
-def _day(value):
-    return str(value)[:10] if value else "unknown"
-
-
-def build_judge_prompt(post_front, post_body, title, description, published, event_date):
-    # Dates, because the English tense of an older post can be wrong; see the backend spec, "Story merge shadow".
-    return JUDGE_PROMPT.format(a_source_title=post_front.get("source_title") or "", a_title=post_front.get("title", ""),
-                               a_lede=post_front.get("lede") or "", a_body=post_body,
-                               a_published=_day(post_front.get("source_date")),
-                               a_event_date=_day(post_front.get("event_date")), b_published=_day(published),
-                               b_event_date=_day(event_date), b_title=title,
-                               b_description=description or "(no description provided)")
-
-
-def call_judge(create_fn, post_front, post_body, title, description, published, event_date):
-    return complete(create_fn, build_judge_prompt(post_front, post_body, title, description, published, event_date))
-
-
-def parse_judge(raw):
-    try:
-        data = json.loads(raw)
-    except (json.JSONDecodeError, TypeError):
-        return None
-    value = data.get("same_story") if isinstance(data, dict) else None
-    return value if isinstance(value, bool) else None
-
-
-MERGE_INTRO = ("You are updating an English news post on our local news site with a new Japanese news item about the "
-               "same story.")
-MERGE_RULE = ("Rewrite the post so it includes every fact the new item adds. Keep every fact, name, date, time and "
-              "number the post already states. If the new item gives a different figure, date or time for something "
-              "the post states, keep both and name each source, for example: 'Kamakura Keizai Shimbun reported over "
-              "3,000 visitors; Town News (Kamakura), 1,600.' Only when the new item explicitly corrects the post, list "
-              "the change under corrections with the old and new values as written in the post and the new item. "
-              # SOURCE_RULE stays verbatim; without this it reads as the new item alone and drops the post's facts.
-              "In the rules above, 'the title and description' means the post already on our site and the new item "
-              "together.")
-MERGE_JSON_FORM = ('Respond with a single JSON object and nothing else, in this exact form:\n'
-                   '{{"event_date": "<the event\'s date as YYYY-MM-DD, or null if the sources give none>", '
-                   '"title": "<English title>", "lede": "<one standalone sentence, max 30 words, covering '
-                   'what/when/where>", "summary": "<1 to 4 sentence English summary>", '
-                   '"corrections": [{{"old": "<value in the post>", "new": "<value in the new item>"}}]}}')
-MERGE_INPUT = ("Post already on our site (source: {a_source})\nTitle: {a_title}\nLede: {a_lede}\nSummary: {a_body}\n\n"
-               "New item (source: {b_source})\nTitle: {title}\nDescription: {description}\n")
-
-
-def build_merge_prompt(post_front, post_body, title, description, source_name, today, readings=()):
-    # Imported here: merge imports validate, and keeping llm free of module-level cycles is simpler.
-    from .merge import english_source_name
-    template = "\n\n".join((MERGE_INTRO, *RULE_PARAGRAPHS, MERGE_RULE, MERGE_JSON_FORM, MERGE_INPUT))
-    prompt = template.format(today=today, a_source=english_source_name(post_front.get("source_name")),
-                             a_title=post_front.get("title", ""), a_lede=post_front.get("lede") or "", a_body=post_body,
-                             b_source=english_source_name(source_name), title=title,
-                             description=description or "(no description provided)")
-    return with_readings(prompt, readings)
-
-
-def call_merge(create_fn, post_front, post_body, title, description, source_name, today, readings=()):
-    return complete(create_fn, build_merge_prompt(post_front, post_body, title, description, source_name, today, readings))

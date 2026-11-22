@@ -1,4 +1,4 @@
-# Candidate posts for the story merge: recent posts whose English text is close to a new one.
+# Possible duplicates: recent posts whose English text is close to a new one.
 # See the backend spec, "Story merge shadow".
 import math
 import re
@@ -6,10 +6,6 @@ from collections import Counter
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
-
-import yaml
-
-from .official_sites import unlink
 
 # Set in the offline threshold round; see the backend spec, "Story merge shadow".
 SHORTLIST_THRESHOLD = 0.31
@@ -25,28 +21,6 @@ class Post:
     front: dict
     body: str
     source_day: date
-    written: str
-
-
-def load_post(path):
-    # None for a file that cannot be used: unreadable, no front matter, or no source_date.
-    try:
-        parts = Path(path).read_text(encoding="utf-8").split("---", 2)
-    except (OSError, UnicodeDecodeError):
-        return None
-    if len(parts) < 3:
-        return None
-    try:
-        front = yaml.safe_load(parts[1])
-        source_day = date.fromisoformat(str(front["source_date"])[:10])
-    except (yaml.YAMLError, KeyError, TypeError, ValueError):
-        return None
-    # Without official-site links: the shortlist and judge compare what the model wrote.
-    return Post(Path(path), front, unlink(parts[2].strip()), source_day, str(front.get("date", "")))
-
-
-def load_posts(posts_dir):
-    return [post for post in map(load_post, sorted(Path(posts_dir).rglob("*.md"))) if post]
 
 
 def post_text(title, lede, body):

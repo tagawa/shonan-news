@@ -11,5 +11,5 @@ lede: The inaugural Hayama Music Cultural Exchange Festival will host a Lithuani
 guid: guid:https://www.townnews.co.jp/0503/2026/08/14/848635.html
 ---
 
-A wind ensemble from Lithuania will visit Japan to perform at the first "Hayama Music Cultural Exchange Festival" on August 22 at Hayama Town Welfare and Culture Hall. Admission is free and no reservation is required. The event offers local audiences an opportunity to hear music from the northeastern European nation and participate in a cultural exchange.
+A wind ensemble from Lithuania will visit Japan to perform at the first "Hayama Music Cultural Exchange Festival" on August 22 at [Hayama Town Welfare and Culture Hall](https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html){:target="_blank" rel="noopener noreferrer"}. Admission is free and no reservation is required. The event offers local audiences an opportunity to hear music from the northeastern European nation and participate in a cultural exchange.
 

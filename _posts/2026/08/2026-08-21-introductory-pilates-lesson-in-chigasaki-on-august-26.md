@@ -11,5 +11,5 @@ lede: An introductory Pilates lesson will be held August 26 at Chigasaki City Ki
 guid: guid:https://www.townnews.co.jp/0603/2026/08/17/848728.html
 ---
 
-A beginner Pilates lesson will take place on August 26 (Wednesday) from 7:00 p.m. to 8:00 p.m. in Room A at Chigasaki City Kinro Shimin Kaikan, located at Shin-ei-cho 13-32. The class will introduce Pilates, which is based on rehabilitation techniques, and is aimed at first-time participants. Participants should check with the venue for any registration details or fees.
+A beginner Pilates lesson will take place on August 26 (Wednesday) from 7:00 p.m. to 8:00 p.m. in Room A at [Chigasaki City Kinro Shimin Kaikan](https://www.chigasaki-kinro.jp/){:target="_blank" rel="noopener noreferrer"}, located at Shin-ei-cho 13-32. The class will introduce Pilates, which is based on rehabilitation techniques, and is aimed at first-time participants. Participants should check with the venue for any registration details or fees.
 

@@ -9,7 +9,8 @@ source_name: タウンニュース（平塚・大磯・二宮・中井）
 lede: Hiratsuka City Tourism Association sold products from 12 local shops at Hiratsuka
   City Hall on August 31 and September 1.
 guid: guid:https://www.townnews.co.jp/0605/2026/08/21/849414.html
+place_photo: hiratsuka-city-hall.jpg
 ---
 
-The Hiratsuka City Tourism Association held a sales event on August 31 and September 1 at the first-floor "Arigato" area of Hiratsuka City Hall. The event featured products from 12 shops normally carried at Minakuru Hiratsuka inside Hiratsuka Citizen Plaza, along with original goods and tourism brochures. The association aimed to promote local specialties and raise awareness of the shops and attractions available in Hiratsuka.
+The Hiratsuka City Tourism Association held a sales event on August 31 and September 1 at the first-floor "Arigato" area of [Hiratsuka City Hall](https://www.city.hiratsuka.kanagawa.jp/){:target="_blank" rel="noopener noreferrer"}. The event featured products from 12 shops normally carried at Minakuru Hiratsuka inside Hiratsuka Citizen Plaza, along with original goods and tourism brochures. The association aimed to promote local specialties and raise awareness of the shops and attractions available in Hiratsuka.
 

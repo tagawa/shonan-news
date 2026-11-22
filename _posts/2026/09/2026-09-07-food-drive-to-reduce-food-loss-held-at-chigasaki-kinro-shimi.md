@@ -13,3 +13,5 @@ guid: guid:https://www.townnews.co.jp/0603/2026/09/07/851812.html
 
 The event will take place at 茅ヶ崎市勤労市民会館 (Shinei-cho 13-32) from September 15 (Tuesday) through September 25 (Friday). The food drive collects surplus food from households to support people in need and to reduce food loss. Donors should bring unopened, non-perishable or long-shelf-life items suitable for redistribution; specific acceptance details and any drop-off times are available from the venue.
 
+Official site: [Chigasaki Kinro Shimin Kaikan](https://www.chigasaki-kinro.jp/){:target="_blank" rel="noopener noreferrer"}
+

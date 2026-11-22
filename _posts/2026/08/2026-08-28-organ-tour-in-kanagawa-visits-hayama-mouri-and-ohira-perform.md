@@ -11,5 +11,5 @@ lede: An organ recital featuring Mouri and Ohira will be held December 19 at Hay
 guid: guid:https://www.townnews.co.jp/0503/2026/08/28/849910.html
 ---
 
-The Kanagawa Prefectural Civic Hall regional program presents "Organ Tour in Kanagawa in Hayama" on December 19 at Hayama Town Welfare and Culture Hall (Hayama-machi Horiuchi 2220). The concert begins at 2:00 p.m. and will feature organists 毛利 and 大平 in a program of high-quality works. Ticket and additional program details were announced as part of the prefecture’s cultural outreach series.
+The Kanagawa Prefectural Civic Hall regional program presents "Organ Tour in Kanagawa in Hayama" on December 19 at [Hayama Town Welfare and Culture Hall](https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html){:target="_blank" rel="noopener noreferrer"} (Hayama-machi Horiuchi 2220). The concert begins at 2:00 p.m. and will feature organists 毛利 and 大平 in a program of high-quality works. Ticket and additional program details were announced as part of the prefecture’s cultural outreach series.
 

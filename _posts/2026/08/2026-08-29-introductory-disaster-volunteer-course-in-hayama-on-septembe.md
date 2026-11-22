@@ -12,5 +12,5 @@ lede: Hayama Social Welfare Council and Hayama Disaster Volunteer Network will h
 guid: guid:https://www.townnews.co.jp/0503/2026/08/28/850332.html
 ---
 
-Hayama Social Welfare Council and Hayama Disaster Volunteer Network (HSVN) will hold the "Disaster Volunteer Introductory Course" on September 13 (Sunday) in the large conference room of Hayama Welfare and Culture Hall (Horiuchi 2220). The session aims to teach basic knowledge and preparations for disaster volunteering; organizers ask participants to register in advance. Contact details, participation fees, and specific schedule information are provided by the organizers for those interested.
+Hayama Social Welfare Council and Hayama Disaster Volunteer Network (HSVN) will hold the "Disaster Volunteer Introductory Course" on September 13 (Sunday) in the large conference room of [Hayama Welfare and Culture Hall](https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html){:target="_blank" rel="noopener noreferrer"} (Horiuchi 2220). The session aims to teach basic knowledge and preparations for disaster volunteering; organizers ask participants to register in advance. Contact details, participation fees, and specific schedule information are provided by the organizers for those interested.
 

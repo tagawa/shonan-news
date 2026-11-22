@@ -11,7 +11,10 @@ town: Hiratsuka
 lede: Hiratsuka held its outstanding construction work awards ceremony on 28 October
   at the main building of Hiratsuka City Hall.
 guid: guid:https://www.townnews.co.jp/0605/2026/11/02/859995.html
+place_photo: hiratsuka-city-hall.jpg
 ---
 
 Thirteen recipient companies attended the ceremony on 28 October. The awards began in fiscal 1974, and this was the 52nd ceremony.
+
+Official site: [Hiratsuka City Hall](https://www.city.hiratsuka.kanagawa.jp/){:target="_blank" rel="noopener noreferrer"}
 

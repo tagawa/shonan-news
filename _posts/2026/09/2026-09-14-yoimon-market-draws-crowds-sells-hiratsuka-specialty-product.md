@@ -9,7 +9,8 @@ source_name: タウンニュース（平塚・大磯・二宮・中井）
 lede: The “Minakuru Hiratsuka” Yoimon Market was held at Hiratsuka City Hall’s welfare
   shop “Arigatou” on August 31 and September 1 in Hiratsuka.
 guid: guid:https://www.townnews.co.jp/0605/2026/09/11/852294.html
+place_photo: hiratsuka-city-hall.jpg
 ---
 
-The Hiratsuka City Tourism Association organized the “Minakuru Hiratsuka” Yoimon Market at the welfare shop “Arigatou” on the first floor of Hiratsuka City Hall on August 31 and September 1. The event sold Hiratsuka specialty products and original goods and attracted many visitors. The market was held to promote local products and support community engagement.
+The Hiratsuka City Tourism Association organized the “Minakuru Hiratsuka” Yoimon Market at the welfare shop “Arigatou” on the first floor of [Hiratsuka City Hall](https://www.city.hiratsuka.kanagawa.jp/){:target="_blank" rel="noopener noreferrer"} on August 31 and September 1. The event sold Hiratsuka specialty products and original goods and attracted many visitors. The market was held to promote local products and support community engagement.
 

@@ -13,7 +13,10 @@ town: Hiratsuka
 lede: The Hiratsuka City Crime Prevention Association held a crime prevention campaign
   on 13 October at Hiratsuka City Hall.
 guid: guid:https://www.townnews.co.jp/0605/2026/10/23/858535.html
+place_photo: hiratsuka-city-hall.jpg
 ---
 
 The campaign was held in conjunction with the 'Safety and Peaceful Community-Building Ten-Day Period.' The association, chaired by Yoshikazu Shimura, distributed 100 sets of crime prevention awareness items.
+
+Official site: [Hiratsuka City Hall](https://www.city.hiratsuka.kanagawa.jp/){:target="_blank" rel="noopener noreferrer"}
 

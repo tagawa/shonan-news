@@ -12,5 +12,5 @@ lede: '''Kodomo Festa 2026'' will be held on October 10 (Sat) at Chigasaki City 
 guid: guid:https://www.townnews.co.jp/0603/2026/09/24/854065.html
 ---
 
-'Kodomo Festa 2026' will take place on October 10 (Sat) at Chigasaki City Kinro Shimin Kaikan, located at Chigasaki-shi Shinei-cho 13-32. The event runs from 10:00 to 15:00, is hosted by the venue, and admission is free. The description is cut off after mentioning a dagashiya corner.
+'Kodomo Festa 2026' will take place on October 10 (Sat) at [Chigasaki City Kinro Shimin Kaikan](https://www.chigasaki-kinro.jp/){:target="_blank" rel="noopener noreferrer"}, located at Chigasaki-shi Shinei-cho 13-32. The event runs from 10:00 to 15:00, is hosted by the venue, and admission is free. The description is cut off after mentioning a dagashiya corner.
 

@@ -13,5 +13,5 @@ lede: Officials paid a courtesy call on Hiratsuka’s mayor ahead of the Japan B
 guid: guid:https://www.townnews.co.jp/0605/2026/09/04/851340.html
 ---
 
-Japan Volleyball Association official Toshiaki Kawai and others visited Hiratsuka City Hall to pay respects to Mayor and promote the Japan Beach Volleyball Tour 2026 "Round 6 Hiratsuka Arai Shoji Cup," which begins September 10 at Shonan Bellmare Hiratsuka Beach Park. The visit aimed to strengthen local ties and raise awareness of the tournament, which is expected to draw players and spectators to the coastal venue.
+Japan Volleyball Association official Toshiaki Kawai and others visited [Hiratsuka City Hall](https://www.city.hiratsuka.kanagawa.jp/){:target="_blank" rel="noopener noreferrer"} to pay respects to Mayor and promote the Japan Beach Volleyball Tour 2026 "Round 6 Hiratsuka Arai Shoji Cup," which begins September 10 at Shonan Bellmare Hiratsuka Beach Park. The visit aimed to strengthen local ties and raise awareness of the tournament, which is expected to draw players and spectators to the coastal venue.
 

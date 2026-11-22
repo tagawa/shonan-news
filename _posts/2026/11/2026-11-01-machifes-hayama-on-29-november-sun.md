@@ -16,3 +16,5 @@ guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-552329053710486543
 
 The event will showcase exhibits by 35 groups active in Hayama, along with karate performances, shigin poetry recitation, dance, music, a film screening, workshops and food. It will run from 10 a.m. to 4 p.m.; contact the Hayama Town Development Association at 046 (876) 0421.
 
+Official site: [Hayama Town Welfare and Culture Hall](https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html){:target="_blank" rel="noopener noreferrer"}
+

@@ -24,7 +24,7 @@
       "licence": "CC BY-SA 4.0"
     }
   },
-  {"ja": ["茅ヶ崎市勤労市民会"], "en": ["Chigasaki City Workers' Civic Hall", "Chigasaki Workers' Civic Hall", "Chigasaki Workers’ Civic Hall"], "url": "https://www.chigasaki-kinro.jp/"},
+  {"ja": ["茅ヶ崎市勤労市民会"], "en": ["Chigasaki City Workers' Civic Hall", "Chigasaki Workers' Civic Hall", "Chigasaki Workers’ Civic Hall", "Chigasaki City Working Citizens Hall", "Chigasaki Working Citizens Hall", "Chigasaki City Kinro Shimin Kaikan", "Chigasaki Kinro Shimin Kaikan"], "url": "https://www.chigasaki-kinro.jp/"},
   {
     "ja": ["横須賀市自然・人文博物館", "横須賀市自然人文博物館", "横須賀市博物館", "横須賀博物館"], 
     "en": ["Yokosuka City Museum of Nature and Culture", "Yokosuka City Museum"], 
@@ -542,7 +542,7 @@
   },
   {
     "ja": ["葉山町福祉文化会館"], 
-    "en": ["Hayama Town Welfare and Cultural Hall", "Hayama Town Welfare Cultural Hall", "Hayama Welfare and Cultural Hall", "Hayama Welfare Cultural Hall"], 
+    "en": ["Hayama Town Welfare and Cultural Hall", "Hayama Town Welfare Cultural Hall", "Hayama Welfare and Cultural Hall", "Hayama Welfare Cultural Hall", "Hayama Town Welfare and Culture Hall", "Hayama Welfare and Culture Hall"], 
     "url": "https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html"
   },
   {
@@ -574,6 +574,20 @@
       "author": "椎林 隆夫",
       "licence": "CC BY-SA 3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Yokosuka_shobu-en.jpg"
+    }
+  },
+  {
+    "ja": ["平塚市役所"], 
+    "en": ["Hiratsuka City Hall"], 
+    "url": "https://www.city.hiratsuka.kanagawa.jp/",
+    "geo": "35.33553,139.34944",
+    "photo": {
+      "file": "hiratsuka-city-hall.jpg",
+      "width": 1280,
+      "height": 883,
+      "author": "Nesnad",
+      "licence": "CC BY 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hiratsuka_City_Hall_2023_June_13.jpg"
     }
   }
 ]

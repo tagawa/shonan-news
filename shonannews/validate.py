@@ -2,6 +2,7 @@ import json
 import logging
 import re
 
+from shonannews.british import respell
 from shonannews.names import enforce_canonical
 
 MAX_SUMMARY_LENGTH = 2000
@@ -135,7 +136,8 @@ def _fold_long_vowels(text):
 
 
 def _clean(text, source):
-    return enforce_canonical(_fold_long_vowels(_normalize_dashes(text)), source).strip()
+    # Respelt before canonical names, so a canonical spelling is final.
+    return enforce_canonical(respell(_fold_long_vowels(_normalize_dashes(text))), source).strip()
 
 
 def _news_before(sentence, joins):

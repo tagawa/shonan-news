@@ -12,6 +12,7 @@ lede: The autumn exhibition and sale will be held on October 15 (Thu) and 16 (Fr
   at Hiratsuka City Hall in Hiratsuka.
 guid: guid:https://www.townnews.co.jp/0605/2026/10/06/855762.html
 place_photo: hiratsuka-city-hall.jpg
+venue_url: https://www.city.hiratsuka.kanagawa.jp/
 ---
 
 Organized by the Hiratsuka City Regional Workshops Liaison Council, chaired by Tsutomu Akabe, the event will take place in the multipurpose space on the first floor of the main building at [Hiratsuka City Hall](https://www.city.hiratsuka.kanagawa.jp/){:target="_blank" rel="noopener noreferrer"}.

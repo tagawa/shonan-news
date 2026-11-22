@@ -11,6 +11,7 @@ lede: On August 17 in Hiratsuka, Kurata Hospital donated ¥1,260,000 to the Shon
   Hiratsuka Fireworks Festival.
 guid: guid:https://www.townnews.co.jp/0605/2026/08/28/850370.html
 place_photo: hiratsuka-city-hall.jpg
+venue_url: https://www.city.hiratsuka.kanagawa.jp/
 ---
 
 Kurata Hospital, run by the Kurata Medical Foundation and led by Director Yasuhisa Kurata, visited [Hiratsuka City Hall](https://www.city.hiratsuka.kanagawa.jp/){:target="_blank" rel="noopener noreferrer"} on August 17 to present a donation of ¥1,260,000 to Mayor Katsuhiro Ochiai for the Shonan Hiratsuka Fireworks Festival. The contribution was made as part of the foundation's 100th anniversary commemorative efforts and aims to support local community events. Hospital representatives emphasized their commitment to regional contribution and civic support.

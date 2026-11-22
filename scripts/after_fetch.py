@@ -50,9 +50,9 @@ PLANTED = {"dash": "a \u2014 b", "japanese": "at 鎌倉芸術館", "macron": "Ka
 # the 50 latest commits held only one, and filtering by the login returns nothing.
 CHECK_RUN_NAME = "Check of fetch run {}"
 PLANTED_FINDING = "PLANTED: proving run, not a real finding"
-# Off until the link check run from GitHub matches a local run: Japanese municipal sites may block
-# overseas cloud servers, which would make every Saturday a false alarm. See the after-fetch design.
-SCHEDULED_LINK_CHECK = False
+# On since 2026-11-22, when a run from GitHub gave the same verdicts as a local one: Japanese municipal
+# sites may block overseas cloud servers, which would have made every Saturday a false alarm.
+SCHEDULED_LINK_CHECK = True
 # Every heading of the findings report, in order. Only "links unsure" never counts as a finding.
 SECTIONS = ("planted", "site build", "unposted", "unavailable feeds", "sweeps", "place flags", "duplicates", "pages",
             "listings", "feed names", "links gone", "links unsure")

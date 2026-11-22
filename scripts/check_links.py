@@ -1,6 +1,6 @@
 # Checks the official site links in _data/official_sites.json, since a council page that moves
-# leaves every post naming that place with a dead link and nothing else notices. scripts.morning
-# runs it once a week (weekly); see the backend spec, "Morning check script".
+# leaves every post naming that place with a dead link and nothing else notices. The after-fetch
+# check runs it on Saturday's run (scripts/after_fetch.py); see the backend spec, "After-fetch check".
 #
 # Only a link that is certainly gone is reported as gone (404, 410, or a domain that no longer
 # resolves, each seen twice). A refusal, rate limit or timeout is "unsure", since a site that
@@ -9,24 +9,17 @@
 # Run from the project root to check now, whatever the date:
 #   .venv/bin/python3 -B -m scripts.check_links
 
-import datetime
-import json
 import socket
 import sys
 import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from pathlib import Path
 
 from shonannews.official_sites import load_sites
 
 USER_AGENT = "shonannews-linkcheck/1.0"
 GONE = {404, 410}
-# Local only (docs/ is never uploaded), so the date is this folder's, not the live repo's.
-STAMP_PATH = Path("docs/link-check.json")
-EVERY = datetime.timedelta(days=7)
-JST = datetime.timezone(datetime.timedelta(hours=9))
 
 
 def collect_urls(sites: list) -> dict[str, list[str]]:
@@ -83,25 +76,10 @@ def report(urls: dict[str, list[str]], result: dict[str, list[str]]) -> list[str
     return lines
 
 
-def weekly(sites: list, stamp_path: Path, today: datetime.date, fetch=live_fetch, pause: float = 30) -> list[str]:
-    """The check's report if a week has passed since the last one, else when it is next due."""
-    if stamp_path.exists():
-        last = datetime.date.fromisoformat(json.loads(stamp_path.read_text(encoding="utf-8"))["checked"])
-        if today < last + EVERY:
-            return [f"  not due until {last + EVERY} (last checked {last})"]
-    urls = collect_urls(sites)
-    lines = report(urls, check(urls, fetch, pause))
-    # Written after the check, so one that crashes is tried again next morning.
-    stamp_path.write_text(json.dumps({"checked": today.isoformat()}) + "\n", encoding="utf-8")
-    return lines
-
-
 def main() -> int:
     urls = collect_urls(load_sites())
     result = check(urls)
     print("\n".join(report(urls, result)))
-    STAMP_PATH.write_text(json.dumps({"checked": datetime.datetime.now(JST).date().isoformat()}) + "\n",
-                          encoding="utf-8")
     return 1 if result["dead"] else 0
 
 

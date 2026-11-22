@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  # For the last step, which reads the after-fetch check's runs.
+  actions: read
 
 concurrency:
   group: fetch-and-publish
@@ -47,3 +49,12 @@ jobs:
           else
             echo "No new items; nothing to commit."
           fi
+
+      # After the commit, so posts are already out. Fails, and so emails, if the previous fetch run
+      # was never checked. See the backend spec, "After-fetch check".
+      - name: Check that the previous fetch was checked
+        if: always()
+        timeout-minutes: 5
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -m scripts.after_fetch proof --this-run ${{ github.run_id }}

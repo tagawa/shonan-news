@@ -67,6 +67,9 @@ CANONICAL = {
     # (city.fujisawa.kanagawa.jp/jinkendanjyo/press/2026festival.html), owner, 2026-11-21. More than one
     # word, so it acts only through MISREADINGS.
     "サンパール広場": "Sun Pearl Square",
+    # Yokosuka's citizens' seminar series. Keyed on the full name, since いきいき alone is an everyday
+    # word. Published as "Iikiki" on 2026-11-22; the 2026-10-17 post translated it "Lively".
+    "いきいき市民塾": "Ikiiki",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than
@@ -97,6 +100,8 @@ MISREADINGS = {
     "沖津": ("Okinatsu",),
     # "Sun Pearl Plaza" in nine live posts, 2026-09-11 to 2026-11-21; "Sunpearl Plaza" on 2026-09-16.
     "サンパール広場": ("Sun Pearl Plaza", "Sunpearl Plaza"),
+    # Shares only its first letter with "Ikiiki", so the near-miss rule cannot reach it.
+    "いきいき市民塾": ("Iikiki",),
 }
 
 # Places better known locally by their Japanese name: the first body mention of the English

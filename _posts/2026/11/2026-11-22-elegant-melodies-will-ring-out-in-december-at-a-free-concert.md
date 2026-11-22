@@ -12,7 +12,8 @@ town: Yokosuka
 lede: Yokosuka Iris Garden will hold a free concert on 20 December (Sun) in the hall
   of its administration building in Abekura, Yokosuka.
 guid: guid:https://www.townnews.co.jp/0501/2026/11/22/863291.html
+place_photo: yokosuka-iris-garden.jpg
 ---
 
-Yokosuka Iris Garden will hold its annual 'Yokosuka Iris Garden Christmas Concert 2026' on 20 December (Sun) in the second-floor hall of the garden’s administration building in Abekura, Yokosuka.
+[Yokosuka Iris Garden](https://www.ryokukazouen.jp/iris/){:target="_blank" rel="noopener noreferrer"} will hold its annual 'Yokosuka Iris Garden Christmas Concert 2026' on 20 December (Sun) in the second-floor hall of the garden’s administration building in Abekura, Yokosuka.
 

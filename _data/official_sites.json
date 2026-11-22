@@ -561,6 +561,20 @@
     "en": ["F Place", "F-Place"], 
     "url": "https://www.fujisawa-fplace.com",
     "geo": "35.3420,139.4840"
+  },
+  {
+    "ja": ["横須賀しょうぶ園"], 
+    "en": ["Yokosuka Iris Garden"], 
+    "url": "https://www.ryokukazouen.jp/iris/",
+    "geo": "35.2567556,139.6402417",
+    "photo": {
+      "file": "yokosuka-iris-garden.jpg",
+      "width": 1280,
+      "height": 960,
+      "author": "椎林 隆夫",
+      "licence": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Yokosuka_shobu-en.jpg"
+    }
   }
 ]
 

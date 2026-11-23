@@ -45,7 +45,7 @@ ACCENTED_WORD = re.compile(r"\w*[^\W\d_A-Za-z]\w*")
 # wrong in almost every measured miss (2020 for a 2026 event), and source_date gives
 # a better one. Strict on purpose: the junk the model actually returned in place of
 # null was <unspecified>, [REDACTED], <null>, 202? and YYYY-10-10, and none of it
-# matches this. See the backend spec, "Event-date extraction".
+# matches this. See docs/measurements_backend.md, "Tense measurement", "Event-date extraction".
 EVENT_DATE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
 
 # The only subjects a post may be labelled with. Anything else the model returns

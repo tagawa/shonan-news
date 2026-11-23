@@ -172,7 +172,8 @@ def build():
 
 
 # Read by the morning check beside the text; absent ones stay None, so no key needs guarding.
-POST_FIELDS = ("source_name", "source_title", "source_url", "event_date", "on_until", "label", "town", "place_photo", "thumb_url", "image_url")
+POST_FIELDS = ("source_name", "source_title", "source_url", "event_date", "on_until", "dropped_event_date", "label", "town",
+               "place_photo", "thumb_url", "image_url")
 
 
 def posts_in_tarball(data):

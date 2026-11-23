@@ -111,6 +111,13 @@ DEADLINE_TAIL = re.compile(r"\s*(?:\([^)]*\))?\s*(?:まで|締|〆|告示)")
 MAX_DAYS_AHEAD = 200
 # まで after a date, with a weekday in brackets and a time allowed between ("11月30日（月）17時まで").
 CLOSING_TAIL = re.compile(r"\s*(?:\([^)]*\))?\s*(?:(?:午前|午後)?\d{1,2}(?:時(?:\d{1,2}分)?|:\d{2}))?\s*まで")
+# An entry deadline closes like まで ("10月31日（土）応募締め切り"); a bare 締 or 〆 is too short to trust.
+DEADLINE_CLOSE = re.compile(r"\s*(?:\([^)]*\))?\s*(?:応募|申込|申し込み)?\s*(?:締め切り|締切|〆切)")
+# An announcement of something ahead says so in its lede; a cancellation or a past meeting does not.
+# The list is the one measured in docs/event-date-criteria.md: change it only with a new measurement.
+FUTURE_VERB = re.compile(r"\b(will|is being|are being|is to|are to|to be held|is scheduled|are scheduled|opens|runs"
+                         r"|is under way|is underway|is on|seeks|is seeking|are seeking|is recruiting|invites"
+                         r"|is inviting|takes place)\b", re.I)
 
 
 def _earliest_month_day(title, description, source_date):
@@ -194,7 +201,15 @@ def _is_closing_date(title: str, description: str, day: int) -> bool:
     # One mention without (a talk on the last day) keeps it an event date.
     source = unicodedata.normalize("NFKC", f"{title}\n{description}")
     mentions = list(re.finditer(rf"(?<!\d){day}\s*\u65e5(?!\u9593)", source))
-    return bool(mentions) and all(CLOSING_TAIL.match(source, m.end()) for m in mentions)
+    return bool(mentions) and all(CLOSING_TAIL.match(source, m.end()) or DEADLINE_CLOSE.match(source, m.end())
+                                  for m in mentions)
+
+
+def _unannounced(event_date: str | None, lede: str, source_date) -> bool:
+    # A future date the lede announces nothing for: a cancelled event's day, a different event the
+    # source mentions, a term end. The fallbacks would re-add a date the model left out, so this
+    # runs after them. See the backend spec, "Dates that are not events".
+    return bool(event_date) and event_date > source_date.date().isoformat() and not FUTURE_VERB.search(lede)
 
 
 def _event_date(result, title, description, source_date) -> tuple[str | None, str | None]:
@@ -413,6 +428,10 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
         result.summary = weekdays.restore_weekdays(result.summary, source, source_date)
 
         event_date, on_until = _event_date(result, model_title, model_description, source_date)
+        dropped_event_date = None
+        if _unannounced(event_date, result.lede, source_date):
+            logger.warning("Dropping %s's event date %s: the lede announces nothing ahead", key, event_date)
+            dropped_event_date, event_date = event_date, None
         # Only What's on shows a town, and it lists only posts with an event or closing date.
         town = (event_town.find(result.title, result.lede, result.summary, title, towns, description)
                 if event_date or on_until else None)
@@ -442,6 +461,7 @@ def run(feed_url, source_name, state_path, posts_dir, parse_fn, create_fn, now_f
             place_photo=place_photo,
             event_date=event_date,
             on_until=on_until,
+            dropped_event_date=dropped_event_date,
             label=title_labels.label(result.label, title, result.title),
             town=town,
         )

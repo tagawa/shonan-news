@@ -93,5 +93,7 @@ html[data-saved-area="{{ area.slug }}"] .calendar td[data-areas] > a:not([data-a
 html[data-saved-area="{{ area.slug }}"] .calendar td[data-areas] > a[data-area="{{ area.slug }}"] { display: block; }
 html[data-saved-area="{{ area.slug }}"] .calendar td[data-areas]:not([data-areas~="{{ area.slug }}"]) > .calendar-plain { display: inline; }
 html[data-saved-area="{{ area.slug }}"] .whats-on-area-none[data-area="{{ area.slug }}"] { display: block; }
-{% comment %}Named after its one town, as the area page's hide_town: the town would repeat the filter on every row.{% endcomment %}{% if area.towns.size == 1 and area.towns.first == area.name %}html[data-saved-area="{{ area.slug }}"] .event-list > li[data-area] .event-town { display: none; }
+{% comment %}Named after its one town, as the area page's hide_town: the town would repeat the filter on every row. The hidden town still matches .event-town + .event-until, so the date loses its dot and margin too.{% endcomment %}{% if area.towns.size == 1 and area.towns.first == area.name %}html[data-saved-area="{{ area.slug }}"] .event-list > li[data-area] .event-town { display: none; }
+html[data-saved-area="{{ area.slug }}"] .event-list > li[data-area] .event-until { margin-left: 0; }
+html[data-saved-area="{{ area.slug }}"] .event-list > li[data-area] .event-until::before { content: none; }
 {% endif %}{% endif %}{% endfor %}</style>

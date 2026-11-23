@@ -634,13 +634,33 @@ button:focus {
   color: var(--link-hover);
 }
 
+/* Town and closing date share one line under the title; nowrap keeps
+   "until 16 December" whole, so when both don't fit the date wraps to its own line. Top-aligned,
+   since on the baseline the link's taller 1.6 line adds about 1px under a town-only row. */
 .event-town,
 .event-until {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
   margin-top: var(--space-1);
   font-size: 1rem;
   line-height: 1.5;
   color: var(--muted);
+}
+
+/* 4px, since the space between the two spans in the markup adds about as much again:
+   the dot then sits about 8px from each side. */
+.event-town + .event-until {
+  margin-left: var(--space-1);
+}
+
+/* A middle dot between the town and the date. The second content line gives it empty alt text
+   where supported; older browsers drop that declaration and keep the first. */
+.event-town + .event-until::before {
+  content: "\00b7";
+  content: "\00b7" / "";
+  margin-right: var(--space-2);
+  color: var(--rule);
 }
 
 /* Date filters as pills. Flex with margins, never gap. 8px padding, a 24px

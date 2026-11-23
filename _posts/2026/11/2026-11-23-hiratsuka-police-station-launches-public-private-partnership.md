@@ -7,7 +7,7 @@ source_date: '2026-11-23 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0605/2026/11/23/863185.html
 source_title: 平塚警察署　「園芸博向け官民連携を」　テロ・災害協力会発足
 source_name: タウンニュース（平塚・大磯・二宮・中井）
-event_date: '2027-03-19'
+
 label: safety
 town: Hiratsuka
 lede: Hiratsuka Police Station launched a terrorism and disaster cooperation group

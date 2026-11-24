@@ -68,5 +68,16 @@
     <p class="disclosure">English summaries are machine-generated from Japanese sources and may contain errors. Always read the original.</p>
     </div>
   </footer>
+  <script>
+  // Clicks on links to the original article. See the frontend spec, "Analytics".
+  document.addEventListener("click", function (event) {
+    var names = {story: "Original opened: story", list: "Original opened: list"};
+    var node = event.target;
+    while (node && node.nodeName !== "A") { node = node.parentNode; }
+    if (!node || !node.getAttribute || !window.fathom) return;
+    var name = names[node.getAttribute("data-original")];
+    if (name) window.fathom.trackEvent(name);
+  });
+  </script>
 </body>
 </html>

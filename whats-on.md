@@ -10,7 +10,7 @@ whats_on_panel: false
 {% include on-now.html level="h2" areas=true side=true %}
 <p>Details can change so please check the original post before you go.</p>
 {% include area-pills.html label="Events by area" %}
-{% include on-now.html level="h2" areas=true %}
+{% comment %}On now follows the months, so phones reach the dated events first; this link reaches it in one tap. No count: with an area saved, the list shows only that area's rows. See the frontend spec, "What's on", "On now jump link".{% endcomment %}{% if on_now_posts.size > 0 %}<p class="on-now-jump" data-areas="{{ on_now_areas | strip }}"><a href="#on-now">On now</a></p>{% endif %}
 {% assign this_month = whats_on_today | slice: 0, 7 %}
 {% assign event_months = whats_on_events | group_by_exp: "post", "post.event_date | date: '%Y-%m'" | sort: "name" %}
 {% assign last_month = this_month %}
@@ -24,6 +24,7 @@ whats_on_panel: false
   {% if month == this_month or month_group %}{% include calendar-month.html month_start=month_start events=month_group.items %}{% endif %}
   {% assign month_start = month_start | plus: 2764800 | date: "%Y-%m" | append: "-01" | date: "%s" | plus: 0 %}
 {% endfor %}
+{% include on-now.html level="h2" areas=true anchor=true %}
 {% if whats_on_listed.size == 0 %}<p>No upcoming events.</p>{% endif %}
 {% comment %}With an area saved, only its events show (see the frontend spec, "Areas", "What's on pages").{% endcomment %}{% if whats_on_listed.size > 0 %}{% for area in site.data.areas %}{% assign area_has_events = false %}{% for area_post in whats_on_listed %}{% if area_post.town and area.towns contains area_post.town %}{% assign area_has_events = true %}{% break %}{% endif %}{% endfor %}{% unless area_has_events %}
 <p class="whats-on-area-none" data-area="{{ area.slug }}" hidden>No upcoming events in {{ area.name | escape }}.</p>{% endunless %}{% endfor %}{% endif %}

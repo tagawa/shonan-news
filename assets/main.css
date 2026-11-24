@@ -379,6 +379,10 @@ button:focus {
     display: none;
   }
 
+  .site-main-wide .on-now-jump {
+    display: none;
+  }
+
   .site-main-wide .on-now-side {
     display: block;
     float: right;
@@ -1011,6 +1015,41 @@ button:focus {
   font-size: 0.875rem;
   color: var(--muted);
   white-space: nowrap;
+}
+
+/* What's on's link down to On now, below the months on phones. The "On now" label chip's tints;
+   8 + 24 + 8 + 2 + 2 = 44px tall. See the frontend spec, "What's on", "On now jump link". */
+.on-now-jump {
+  margin: 0;
+  margin-bottom: var(--space-4);
+}
+
+.on-now-jump a {
+  display: inline-block;
+  padding-top: var(--space-2);
+  padding-right: var(--space-3);
+  padding-bottom: var(--space-2);
+  padding-left: var(--space-3);
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-style: solid;
+  border-color: var(--accent-tint);
+  border-radius: 999px;
+  background-color: var(--accent-tint);
+  color: var(--accent-tint-ink);
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.on-now-jump a:hover {
+  text-decoration: underline;
+}
+
+.on-now-jump a::after {
+  content: "\00a0\2193";
 }
 
 /* CSS-only arrow, so it is not announced by screen readers. The leading

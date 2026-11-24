@@ -9,6 +9,7 @@ whats_on_panel: false
 <h1>What's on</h1>
 {% include on-now.html level="h2" areas=true side=true %}
 <p>Details can change so please check the original post before you go.</p>
+{% include whats-on-filters.html %}
 {% include area-pills.html label="Events by area" %}
 {% comment %}On now follows the months, so phones reach the dated events first; this link reaches it in one tap. No count: with an area saved, the list shows only that area's rows. See the frontend spec, "What's on", "On now jump link".{% endcomment %}{% if on_now_posts.size > 0 %}<p class="on-now-jump" data-areas="{{ on_now_areas | strip }}"><a href="#on-now">On now</a></p>{% endif %}
 {% assign this_month = whats_on_today | slice: 0, 7 %}

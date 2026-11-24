@@ -128,6 +128,14 @@ h3 {
   margin-bottom: var(--space-2);
 }
 
+/* Prose in main at the body size (18px), not the browser's 16px. Classed paragraphs keep their own
+   size, so metadata such as .area-towns stays small. See the frontend spec, "Design tokens". */
+.site-main p:not([class]) {
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+}
+
 a {
   color: var(--link);
   text-decoration: underline;
@@ -1029,6 +1037,7 @@ button:focus {
 }
 
 .area-more li {
+  font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: var(--space-2);
 }

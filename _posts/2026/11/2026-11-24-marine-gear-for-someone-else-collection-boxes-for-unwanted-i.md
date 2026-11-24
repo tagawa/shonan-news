@@ -11,5 +11,5 @@ lede: The Marine Sports Foundation collects unwanted marine gear for reuse throu
 guid: guid:https://www.townnews.co.jp/0501/2026/11/24/863566.html
 ---
 
-The Marine Sports Foundation collects unwanted marine items, including wetsuits, rash guards and life jackets, for reuse through 'MARINE-LOOP' (Marine Loop.
+The Marine Sports Foundation collects unwanted marine items, including wetsuits, rash guards and life jackets, for reuse through its 'MARINE-LOOP' programme.
 

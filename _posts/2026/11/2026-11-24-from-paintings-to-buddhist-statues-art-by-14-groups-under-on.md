@@ -7,6 +7,7 @@ source_url: https://www.townnews.co.jp/0601/2026/11/24/863388.html
 source_title: 絵画から仏像まで　14団体の美、一堂に
 source_name: タウンニュース（藤沢）
 event_date: '2026-12-01'
+label: exhibition
 town: Fujisawa
 lede: The Fujisawa City Circle Federation Art Exhibition will run from 1 December
   (Tue) to 6 December (Sun) at the Fujisawa Citizens Gallery in Fujisawa.

@@ -70,6 +70,9 @@ CANONICAL = {
     # Yokosuka's citizens' seminar series. Keyed on the full name, since いきいき alone is an everyday
     # word. Published as "Iikiki" on 2026-11-22; the 2026-10-17 post translated it "Lively".
     "いきいき市民塾": "Ikiiki",
+    # Hiratsuka's flower garden イシックス馬入のお花畑, spelt as its own domain and handles
+    # (isix-ohanabatake.com). Published as "Ishix" on 2026-11-24, a near miss.
+    "イシックス": "Isix",
 }
 
 # Wrong readings of a CANONICAL name that are too far from it to be near misses, or more than

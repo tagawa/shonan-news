@@ -107,6 +107,27 @@ h3 {
   color: var(--ink);
 }
 
+/* One heading scale for bare headings in main: page titles at the wordmark's 28px, then 24 and 20,
+   margins on the 8px scale. :not([class]) leaves every classed heading to its own rule. See the
+   frontend spec, "Design tokens", "One heading scale". */
+.site-main h1:not([class]) {
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+}
+
+.site-main h2:not([class]) {
+  font-size: 1.5rem;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-3);
+}
+
+.site-main h3:not([class]) {
+  font-size: 1.25rem;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
 a {
   color: var(--link);
   text-decoration: underline;
@@ -535,8 +556,9 @@ button:focus {
   margin-bottom: var(--space-5);
 }
 
+/* .site-main outranks the bare h2 rule above, whose 32px top margin would otherwise reach the side box. */
 .whats-on-panel h2,
-.on-now-side h2 {
+.site-main .on-now-side h2 {
   font-size: 1.5rem;
   margin: 0;
   margin-bottom: var(--space-3);

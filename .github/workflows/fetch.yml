@@ -1,8 +1,13 @@
 name: Fetch and publish
+# Says which schedule entry fired; scripts.morning reads it from the run title.
+run-name: Fetch and publish ${{ github.event.schedule }}
 
 on:
   schedule:
     - cron: "47 16 * * *"
+    # Backup for a night Actions starts the first very late or drops it, on trial from 2026-11-25.
+    # Whichever starts second queues behind the first and finds nothing left. Backend spec, "Fetch schedule".
+    - cron: "47 19 * * *"
   workflow_dispatch:
 
 permissions:

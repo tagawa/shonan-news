@@ -1059,6 +1059,32 @@ button:focus {
   content: "\00a0\2192";
 }
 
+/* The story page's primary action, filled so it outranks the map link above it. The border
+   is the fill's colour, so it shows in forced-colours modes, where backgrounds are dropped.
+   8 + 24 + 8 + 2 + 2 = 44px tall on one line. See the frontend spec, "Item anatomy". */
+.item-footer .source-link {
+  display: inline-block;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--ink);
+  border-radius: var(--radius);
+  background-color: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.item-footer .source-link:hover {
+  border-color: var(--link-hover);
+  background-color: var(--link-hover);
+  color: var(--bg);
+}
+
 /* Full width so the band runs edge to edge; the inner box holds the measure. */
 .site-footer {
   background-color: var(--footer-bg);

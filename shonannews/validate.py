@@ -219,8 +219,16 @@ class ValidationResult:
         self.narration = list(narration)
 
 
+# More "(" than ")" means the sentence was cut off inside a bracket and then given a full
+# stop: "through 'MARINE-LOOP' (Marine Loop." shipped 2026-11-24. Extra ")" are left alone,
+# since a work title on the live site has them ("Kasetsu))) Contact").
+def _has_unclosed_bracket(text):
+    return text.count("(") > text.count(")")
+
+
 def _ends_complete_sentence(text):
-    return bool(TERMINAL_PUNCTUATION.search(text)) and not TRAILING_ELLIPSIS.search(text)
+    return (bool(TERMINAL_PUNCTUATION.search(text)) and not TRAILING_ELLIPSIS.search(text)
+            and not _has_unclosed_bracket(text))
 
 
 def _derive_lede(summary):

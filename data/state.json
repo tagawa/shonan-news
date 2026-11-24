@@ -1,7 +1,7 @@
 {
   "https://kamakura.keizai.biz/rss.xml": {
-    "etag": "\"1ca1-660fab31e724f\"",
-    "modified": "Tue, 24 Nov 2026 00:22:03 GMT",
+    "etag": "\"1ca1-660fccb8ae232\"",
+    "modified": "Tue, 24 Nov 2026 02:52:03 GMT",
     "processed": [
       "link:http://kamakura.keizai.biz/headline/566/",
       "link:http://kamakura.keizai.biz/headline/567/",
@@ -19,8 +19,8 @@
     ]
   },
   "https://shonan.keizai.biz/rss.xml": {
-    "etag": "\"1b82-660fabdde7bdb\"",
-    "modified": "Tue, 24 Nov 2026 00:25:03 GMT",
+    "etag": "\"1c0a-660fcd6549cd9\"",
+    "modified": "Tue, 24 Nov 2026 02:55:04 GMT",
     "processed": [
       "link:http://shonan.keizai.biz/headline/3552/",
       "link:http://shonan.keizai.biz/headline/3553/",
@@ -107,7 +107,8 @@
       "link:https://shonan.keizai.biz/headline/3627/",
       "link:https://shonan.keizai.biz/headline/3628/",
       "link:https://shonan.keizai.biz/headline/3629/",
-      "link:https://shonan.keizai.biz/headline/3630/"
+      "link:https://shonan.keizai.biz/headline/3630/",
+      "link:https://shonan.keizai.biz/headline/3631/"
     ]
   },
   "https://shonanevent.blogspot.com/feeds/posts/summary": {
@@ -2625,8 +2626,8 @@
     ]
   },
   "https://yokosuka.keizai.biz/rss.xml": {
-    "etag": "\"1b03-660fabdd526a9\"",
-    "modified": "Tue, 24 Nov 2026 00:25:03 GMT",
+    "etag": "\"1b03-660fcd644bf60\"",
+    "modified": "Tue, 24 Nov 2026 02:55:03 GMT",
     "processed": [
       "link:http://yokosuka.keizai.biz/headline/1662/",
       "link:http://yokosuka.keizai.biz/headline/1663/",
@@ -2655,8 +2656,8 @@
     ]
   },
   "https://zushi-hayama.keizai.biz/rss.xml": {
-    "etag": "\"1b99-660fabdd1acd8\"",
-    "modified": "Tue, 24 Nov 2026 00:25:02 GMT",
+    "etag": "\"1b99-660fcd6465e9e\"",
+    "modified": "Tue, 24 Nov 2026 02:55:03 GMT",
     "processed": [
       "link:http://zushi-hayama.keizai.biz/headline/1093/",
       "link:http://zushi-hayama.keizai.biz/headline/1094/",
@@ -4372,10 +4373,10 @@
     "4184df274d370df5",
     "c60d2c63c8a0e539",
     "41267a6cf8b71fce",
-    "43b8592f12d1a335"
+    "43b8592f12d1a335",
+    "14cd5189ae219672"
   ],
   "posted_source_titles": [
-    "\u6a2a\u9808\u8cc0\u5e02 \u500b\u4eba\u60c5\u5831\u6f0f\u3048\u3044 \u9632\u707d\u30fb\u9632\u72af\u30e1\u30fc\u30eb\u306b\u4e0d\u6b63\u30a2\u30af\u30bb\u30b9",
     "\u97f3\u697d\u3067\u3064\u306a\u304c\u308b\u7b11\u9854\u306e\u8f2a \u65e7\u8d70\u6c34\u5c0f\u3067\u30a6\u30af\u30ec\u30ec\u30b3\u30f3\u30b5\u30fc\u30c8",
     "\u30b8\u30a7\u30e9\u30c6\u30ea\u30a2 \u30b3\u30f3\u30ca\u30ab \uff62\u3054\u5f53\u5730\u30b9\u30a4\u30fc\u30c4\uff63\u30d1\u30d5\u30a7\u3067\u518d\u73fe \u5927\u6d25\u4e2d\u751f\u5f92\u304c\u30e1\u30cb\u30e5\u30fc\u8003\u6848",
     "\u30e8\u30b3\u30b9\u30ab\u4e2d\u592e\u30d5\u30a7\u30b9 \u8857\u89d2\u30e9\u30a4\u30d6\u306b\u30de\u30eb\u30b7\u30a7 \u6708\u898b\u53f0\u30de\u30fc\u30b1\u30c3\u30c8\u51fa\u5f35\u51fa\u5e97\u3082",
@@ -5124,6 +5125,7 @@
     "\u938c\u5009\u4ea4\u97ff\u697d\u56e3\u306e\u5ba4\u5185\u697d\u6f14\u594f\u4f1a\u304c\u958b\u50ac \u30ab\u30c8\u30ea\u30c3\u30af\u96ea\u30ce\u4e0b\u6559\u4f1a\u306712\u6708\uff15\u65e5",
     "\u30ae\u30e3\u30e9\u30ea\u30fc\u6728\u306e\u5b9f\u3067\u300c\u51ac\u306e\u624b\u3057\u3054\u3068\u5c55\u300d 11\u670826\u65e5\u304b\u308912\u6708\uff17\u65e5\u307e\u3067",
     "\u770c\u4ecb\u8b77\u8cde \u7cbe\u967d\u5b66\u5712\u30fb\u661f\u91ce\u3055\u3093\u304c\u53d7\u8cde \u300c\u5148\u8f29\u3001\u540c\u50da\u3001\u5f8c\u8f29\u306b\u611f\u8b1d\u300d",
-    "\u79cb\u306e\u3072\u307e\u308f\u308a\u304c\u898b\u3054\u308d \u30a4\u30b7\u30c3\u30af\u30b9\u99ac\u5165\u306e\u304a\u82b1\u7551"
+    "\u79cb\u306e\u3072\u307e\u308f\u308a\u304c\u898b\u3054\u308d \u30a4\u30b7\u30c3\u30af\u30b9\u99ac\u5165\u306e\u304a\u82b1\u7551",
+    "\u85e4\u6ca2\u99c5\u524d\u306e\u30b9\u30bf\u30b8\u30aa\u3067\u5373\u8208\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9 \u97f3\u30fb\u8eab\u4f53\u30fb\u5149\u3092\u305d\u306e\u5834\u3067\u751f\u307f\u51fa\u3059"
   ]
 }

@@ -7,7 +7,7 @@ source_url: https://www.townnews.co.jp/0501/2026/11/25/863768.html
 source_title: 犬との触れ合い心ほぐす　セラピードッグ啓発
 source_name: タウンニュース（横須賀・三浦）
 lede: A gathering to meet therapy dogs was held at a privately owned multipurpose
-  space in Hatsusecho, Miura.
+  space in Hassemachi, Miura.
 guid: guid:https://www.townnews.co.jp/0501/2026/11/25/863768.html
 ---
 

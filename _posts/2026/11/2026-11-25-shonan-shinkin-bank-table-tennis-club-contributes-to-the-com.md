@@ -15,5 +15,5 @@ lede: Shonan Shinkin Bank held its first table tennis school on 22 November at Y
 guid: guid:https://www.townnews.co.jp/0501/2026/11/25/863839.html
 ---
 
-Shonan Shinkin Bank held the school to contribute to the community through sport. Eight elementary school students and junior high school students from Yokosuka took part.
+Shonan Shinkin Bank held the school to contribute to the community through sport. Eight elementary school students from Yokosuka took part, along with junior high school students.
 

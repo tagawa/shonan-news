@@ -7,7 +7,7 @@ source_date: '2026-08-21 00:00:00 +0900'
 source_url: https://www.townnews.co.jp/0501/2026/08/21/849385.html
 source_title: 「三浦漂流美術館aSOUBOU」のメンバーで漂着ゴミや廃材を活用したアートを手掛ける　光井 妙江さん　三浦市三崎町諸磯在住　55歳
 source_name: タウンニュース（横須賀・三浦）
-lede: Mitsui Mieko, a 55-year-old resident of Miura City, Misaki-cho Moroiso, makes
+lede: Mitsui Mieko, a 55-year-old resident of Miura City, Misakimachi Moroiso, makes
   art from drift and discarded materials with the Miura Drifting Museum aSOUBOU.
 guid: guid:https://www.townnews.co.jp/0501/2026/08/21/849385.html
 ---

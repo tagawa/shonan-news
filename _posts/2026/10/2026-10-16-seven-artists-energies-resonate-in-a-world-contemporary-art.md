@@ -13,5 +13,5 @@ lede: 'The ‘HEAT: Painting’ exhibition is being held through November 8 (Sun
 guid: guid:https://www.townnews.co.jp/0501/2026/10/16/857386.html
 ---
 
-The exhibition, centered on contemporary art displays, is being held at the Iharium Koajiro Gallery, 1240-1 Misakimachikoajiro, Misaki-cho, Miura. It runs through November 8 (Sun).
+The exhibition, centered on contemporary art displays, is being held at the Iharium Koajiro Gallery, 1240-1 Misakimachikoajiro, Miura. It runs through November 8 (Sun).
 

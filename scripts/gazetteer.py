@@ -13,6 +13,7 @@ import csv
 import datetime
 import io
 import json
+import os
 import re
 import sys
 import tarfile
@@ -77,9 +78,31 @@ def _stems(kanji, kana):
     return [(k, r) for k, r in forms if len(k) >= MIN_KEY and r]
 
 
+def _parent_towns(records):
+    # Japan Post lists some towns only by their sub-districts (Miura's 初声町 as 初声町三戸,
+    # 初声町和田 ...), so a source naming the bare town matched no key and got no hint.
+    # The town's reading is the kana its sub-districts share, cut at the 町 or 村 reading.
+    listed = {(municipality, kanji) for municipality, kanji, _ in records}
+    children = {}
+    for municipality, kanji, kana in records:
+        for suffix in TOWN_SUFFIXES:
+            cut = kanji.find(suffix) + 1
+            if 0 < cut < len(kanji):
+                children.setdefault((municipality, kanji[:cut], suffix), []).append(kana)
+    parents = []
+    for (municipality, town, suffix), kanas in children.items():
+        if len(kanas) < 2 or (municipality, town) in listed:
+            continue
+        shared = os.path.commonprefix(kanas)
+        ends = [shared.rfind(reading) + len(reading) for reading in TOWN_SUFFIXES[suffix] if reading in shared]
+        if ends:
+            parents.append((municipality, town, shared[:max(ends)]))
+    return parents
+
+
 def build_places(records):
     places = {}
-    for municipality, kanji, kana in records:
+    for municipality, kanji, kana in records + _parent_towns(records):
         for key, reading in _stems(kanji, kana):
             readings = places.setdefault(key, {}).setdefault(municipality, [])
             if reading not in readings:

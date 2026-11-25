@@ -11,6 +11,7 @@ town: Hiratsuka
 lede: Autumn sunflowers are at their peak at Isix Banyu Flower Field along the Sagami
   River.
 guid: guid:https://www.townnews.co.jp/0605/2026/11/24/863571.html
+venue_url: https://isix-ohanabatake.com/
 ---
 
 At [Isix Banyu Flower Field](https://isix-ohanabatake.com/){:target="_blank" rel="noopener noreferrer"}, where flowers bloom throughout the seasons, autumn sunflowers are currently at their peak. The accompanying photo was taken on 12 November; the three areas total about 3,800 square metres.

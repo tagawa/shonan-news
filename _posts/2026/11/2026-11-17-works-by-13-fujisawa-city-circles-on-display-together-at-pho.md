@@ -12,7 +12,8 @@ town: Fujisawa
 lede: The 28th Fujisawa City Circle Federation Photo Exhibition will run from the
   24th (Tue) through the 29th (Sun) at Fujisawa Civic Gallery in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/17/862334.html
+place_photo: odakyu-shonan-gate.jpg
 ---
 
-The exhibition will be held at Fujisawa Civic Gallery on the sixth floor of Odakyu Shonan Gate. It will be open daily from 10 a.m. to 7 p.m., with shorter hours on the final day, until 5 p.m.
+The exhibition will be held at Fujisawa Civic Gallery on the sixth floor of [Odakyu Shonan Gate](https://www.odakyu-sc.com/shonan-gate/){:target="_blank" rel="noopener noreferrer"}. It will be open daily from 10 a.m. to 7 p.m., with shorter hours on the final day, until 5 p.m.
 

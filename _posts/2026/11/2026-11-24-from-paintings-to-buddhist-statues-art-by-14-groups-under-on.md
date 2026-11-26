@@ -12,7 +12,8 @@ town: Fujisawa
 lede: The Fujisawa City Circle Federation Art Exhibition will run from 1 December
   (Tue) to 6 December (Sun) at the Fujisawa Citizens Gallery in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/24/863388.html
+place_photo: odakyu-shonan-gate.jpg
 ---
 
-The 39th Fujisawa City Circle Federation Art Exhibition will be held from 1 December (Tue) to 6 December (Sun) at the Fujisawa Citizens Gallery on the sixth floor of ODAKYU Shonan GATE, 21-1 Minamifujisawa. It features art by 14 groups, from paintings to Buddhist statues.
+The 39th Fujisawa City Circle Federation Art Exhibition will be held from 1 December (Tue) to 6 December (Sun) at the Fujisawa Citizens Gallery on the sixth floor of [ODAKYU Shonan GATE](https://www.odakyu-sc.com/shonan-gate/){:target="_blank" rel="noopener noreferrer"}, 21-1 Minamifujisawa. It features art by 14 groups, from paintings to Buddhist statues.
 

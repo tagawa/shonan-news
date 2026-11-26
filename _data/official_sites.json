@@ -591,6 +591,34 @@
     }
   },
   {
+    "ja": ["宇都母知神社"], 
+    "en": ["Utsumochi Shrine", "Utsumochi Jinja", "Utsumochi-jinja", "Utsumochi-jinja Shrine", "Utsumochijinja Shrine"], 
+    "url": "https://utsumochi-jinja.com/",
+    "geo": "35.3921,139.4216",
+    "photo": {
+      "file": "utsumochi-shrine.jpg",
+      "width": 1280,
+      "height": 806,
+      "author": "Thirteen-fri",
+      "licence": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Utsumochi-jinjya_1.JPG"
+    }
+  },
+  {
+    "ja": ["ODAKYU湘南GATE"], 
+    "en": ["Odakyu Shonan Gate", "Odakyu Gate"], 
+    "url": "https://www.odakyu-sc.com/shonan-gate/",
+    "geo": "35.3375,139.4876",
+    "photo": {
+      "file": "odakyu-shonan-gate.jpg",
+      "width": 1280,
+      "height": 854,
+      "author": "泳げないウミガメ",
+      "licence": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ODAKYU%E6%B9%98%E5%8D%97GATE_20220402.jpg"
+    }
+  },
+  {
     "ja": ["イシックス馬入のお花畑"], 
     "en": ["Isix Flower Field", "Isix Banyu Flower Field"], 
     "url": "https://isix-ohanabatake.com/",

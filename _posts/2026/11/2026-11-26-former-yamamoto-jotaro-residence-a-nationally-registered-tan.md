@@ -10,9 +10,9 @@ source_name: タウンニュース（鎌倉）
 event_date: '2026-11-28'
 town: Kamakura
 lede: The usually closed Former Yamamoto Jotaro Residence will open to the public
-  on 28 and 29 November (Sun) in Hase, Kamakura.
+  on 28 (Sat) and 29 November (Sun) in Hase, Kamakura.
 guid: guid:https://www.townnews.co.jp/0602/2026/11/26/863624.html
 ---
 
-The modern sukiya-style building, now the Reigenkaku at the Kamakura Renseijo of Shinkyo-kyo, will be specially opened in conjunction with the Shonan Teien Culture Festival 2026. It is at 3-2-11 Hase.
+The modern sukiya-style building, now the Reigenkaku at the Kamakura Renseijo of Shinreikyo, will be specially opened in conjunction with the Shonan Teien Culture Festival 2026. It is at 3-2-11 Hase.
 

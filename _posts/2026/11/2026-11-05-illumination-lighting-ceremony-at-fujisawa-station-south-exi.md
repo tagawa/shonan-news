@@ -15,5 +15,5 @@ lede: The 'Fujisawa Station South Exit Illumination Twilight 2026' will begin on
 guid: link:https://shonan.keizai.biz/headline/3614/
 ---
 
-The illumination will begin on 28 November, and a ceremony marking the lighting will be held that day in the first-floor storefront space at ODAKYU Shonan GATE in Fujisawa. Radio Shonan will also have a live public broadcast.
+The illumination will begin on 28 November, and a ceremony marking the lighting will be held that day in the first-floor storefront space at [ODAKYU Shonan GATE](https://www.odakyu-sc.com/shonan-gate/){:target="_blank" rel="noopener noreferrer"} in Fujisawa. Radio Shonan will also have a live public broadcast.
 

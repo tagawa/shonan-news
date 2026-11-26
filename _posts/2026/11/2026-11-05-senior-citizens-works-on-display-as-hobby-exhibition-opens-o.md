@@ -12,6 +12,7 @@ lede: Yume Club Fujisawa’s hobby exhibition will open on the 17th (Tue) at Fuj
   Civic Gallery in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/05/860628.html
 place_photo: odakyu-shonan-gate.jpg
+venue_url: https://www.odakyu-sc.com/shonan-gate/
 ---
 
 The exhibition, organized by Yume Club Fujisawa, the Fujisawa City Federation of Senior Citizens’ Clubs, will be held at Fujisawa Civic Gallery on the sixth floor of [ODAKYU Shonan GATE](https://www.odakyu-sc.com/shonan-gate/){:target="_blank" rel="noopener noreferrer"}. It will run through the 22nd (Sun).

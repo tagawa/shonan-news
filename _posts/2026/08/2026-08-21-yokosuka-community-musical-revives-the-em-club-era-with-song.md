@@ -10,6 +10,7 @@ lede: Yokosuka's community musical group SUKAミュー staged performances Augus
   at Yokosuka City Cultural Hall, celebrating their 25th anniversary.
 guid: guid:https://www.townnews.co.jp/0501/2026/08/14/848617.html
 place_photo: yokosuka-cultural-hall.jpg
+venue_url: https://yokosuka-bunka.info/
 ---
 
 

@@ -12,6 +12,7 @@ town: Chigasaki
 lede: A mental training lecture for children through seniors will be held on 24 October
   (Sat) at Chigasaki City Working Citizens Hall in Shineicho.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/16/857087.html
+venue_url: https://www.chigasaki-kinro.jp/
 ---
 
 The 'Strongest Mental Training' lecture will be held from 10 a.m. to 11 a.m. at [Chigasaki City Working Citizens Hall](https://www.chigasaki-kinro.jp/){:target="_blank" rel="noopener noreferrer"}, at 13-32 Shineicho, Chigasaki. It is intended for children through seniors.

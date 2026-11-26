@@ -11,6 +11,7 @@ lede: A mini-lecture by the Home Caregivers’ Association Hohoemi no Kai will b
   on the 20th (Tue) at Fujisawa City Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/16/857597.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 The mini-lecture by the Home Caregivers’ Association Hohoemi no Kai, represented by Kimiko Mano, will take place in Room 4-4 on the fourth floor of [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}’s main building. The group is currently accepting participants.

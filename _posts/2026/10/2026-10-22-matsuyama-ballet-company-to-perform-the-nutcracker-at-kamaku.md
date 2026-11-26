@@ -13,6 +13,7 @@ place_photo: kamakura-performing-arts-center.jpg
 lede: The Matsuyama Ballet Company will perform 'The Nutcracker' on 12 December (Sat)
   at Kamakura Arts Center's Main Hall.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/22/858551.html
+venue_url: https://kamakura-kpac.jp/
 ---
 
 The performance will open its doors at 1:45 p.m. and begin at 2:30 p.m. Tickets start at 3,000 yen.

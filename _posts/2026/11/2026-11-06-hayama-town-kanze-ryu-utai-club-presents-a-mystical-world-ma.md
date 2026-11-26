@@ -12,6 +12,7 @@ town: Hayama
 lede: A Noh performance by the Hayama Town Kanze-ryu Utai Club was held on 31 October
   at the Hayama Town Welfare and Cultural Hall.
 guid: guid:https://www.townnews.co.jp/0503/2026/11/06/860579.html
+venue_url: https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html
 ---
 
 The performance was part of the Hayama Town Cultural Festival. This year, the organizers used AI-created illustrations as part of an effort to make the performance easier for anyone to understand and enjoy.

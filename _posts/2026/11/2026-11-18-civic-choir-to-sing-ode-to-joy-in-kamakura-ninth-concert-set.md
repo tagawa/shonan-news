@@ -11,6 +11,7 @@ town: Kamakura
 lede: The annual 'Ninth' concert will be held on 20 December (Sun) at Kamakura Geijutsu-kan.
 guid: guid:https://www.townnews.co.jp/0602/2026/11/18/862778.html
 place_photo: kamakura-performing-arts-center.jpg
+venue_url: https://kamakura-kpac.jp/
 ---
 
 

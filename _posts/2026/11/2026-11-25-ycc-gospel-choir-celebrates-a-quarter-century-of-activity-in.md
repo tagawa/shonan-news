@@ -14,6 +14,7 @@ place_photo: yokosuka-cultural-hall.jpg
 lede: YCC Gospel Choir’s 25th anniversary Jubilee Concert will take place on 12 December
   (Sat) at Yokosuka City Cultural Hall in Fukadadai.
 guid: guid:https://www.townnews.co.jp/0501/2026/11/25/863856.html
+venue_url: https://yokosuka-bunka.info/
 ---
 
 The choir, based in Yokosuka, will hold its Jubilee Concert at the cultural hall’s Main Hall, at Fukadadai 50.

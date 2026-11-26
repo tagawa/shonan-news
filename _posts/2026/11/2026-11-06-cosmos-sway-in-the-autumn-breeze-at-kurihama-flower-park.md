@@ -10,6 +10,7 @@ place_photo: kurihama-flower-park.jpg
 lede: Cosmos flowers are blooming at 'Kurihama Flower Park' in Shinmeicho, Yokosuka
   City.
 guid: guid:https://www.townnews.co.jp/0501/2026/11/06/860591.html
+venue_url: https://www.kanagawaparks.com/kurihama/
 ---
 
 '[Kurihama Flower Park](https://www.kanagawaparks.com/kurihama/){:target="_blank" rel="noopener noreferrer"}' in Shinmeicho 1, Yokosuka City, is in bloom, delighting visitors. About 1 million delicate white and pink flowers are coloring the landscape in autumn hues.

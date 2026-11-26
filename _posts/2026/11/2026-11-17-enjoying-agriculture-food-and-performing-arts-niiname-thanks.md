@@ -13,6 +13,7 @@ place_photo: kandai-park.jpg
 lede: 'The ''Niiname Thanksgiving Festival: Wa plus Agriculture'' will be held on
   the 23rd at Tsujidokandai Park, also known as C-X Park, in Tsujido.'
 guid: guid:https://www.townnews.co.jp/0601/2026/11/17/862306.html
+venue_url: https://fujisawa-park.com/kandai/?lcp_page0=1
 ---
 
 The event, where visitors can eat, play and dance while experiencing Japanese culture, will be held on Monday the 23rd at [Tsujidokandai Park](https://fujisawa-park.com/kandai/?lcp_page0=1){:target="_blank" rel="noopener noreferrer"}, also known as C-X Park, in Tsujido.

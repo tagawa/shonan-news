@@ -12,6 +12,7 @@ place_photo: hirashin-hiratsuka-hall.jpg
 lede: The 32nd Shonan Hiratsuka Ninth Gathering will be held on 13 December (Sun)
   at Hirashin Hiratsuka Culture and Arts Hall in Hiratsuka.
 guid: guid:https://www.townnews.co.jp/0605/2026/11/06/860537.html
+venue_url: https://hiratsuka.hall-info.jp/
 ---
 
 The 32nd Shonan Hiratsuka Ninth Gathering will take place at the hall’s Main Hall at 16-1 Mitsukecho, with the performance starting at 2 p.m. and doors opening at 1:15 p.m.

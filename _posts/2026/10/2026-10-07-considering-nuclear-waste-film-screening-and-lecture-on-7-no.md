@@ -11,6 +11,7 @@ town: Chigasaki
 lede: A film screening and lecture about 'nuclear waste' will be held on 7 November
   (Sat) at Chigasaki City Working Citizens Hall in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/07/856236.html
+venue_url: https://www.chigasaki-kinro.jp/
 ---
 
 The event will take place in the sixth-floor training room of [Chigasaki City Working Citizens Hall](https://www.chigasaki-kinro.jp/){:target="_blank" rel="noopener noreferrer"}. It will consider radioactive waste from nuclear power plants.

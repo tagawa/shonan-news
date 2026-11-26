@@ -12,6 +12,7 @@ lede: A seminar on matching farmers with welfare facilities was held on 17 Septe
   at Fujisawa City Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/02/855445.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 The 'Agriculture-Welfare Collaboration Startup Meeting' was held on 17 September to match farmers seeking workers with welfare facilities seeking work locations.

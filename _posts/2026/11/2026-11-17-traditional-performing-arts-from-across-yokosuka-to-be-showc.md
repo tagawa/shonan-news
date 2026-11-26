@@ -13,6 +13,7 @@ lede: The 37th Yokosuka Folk Performing Arts Festival will be held on 22 Novembe
   (Sun) at Yokosuka City Cultural Hall in Fukadadai.
 guid: guid:https://www.townnews.co.jp/0501/2026/11/17/862551.html
 place_photo: yokosuka-cultural-hall.jpg
+venue_url: https://yokosuka-bunka.info/
 ---
 
 

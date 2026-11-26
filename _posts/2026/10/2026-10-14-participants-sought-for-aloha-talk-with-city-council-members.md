@@ -13,6 +13,7 @@ lede: '''Aloha Talk,'' an exchange of views between Chigasaki city council membe
   and residents, will be held on 14 November (Sat) at Chigasaki City Hall.'
 guid: guid:https://www.townnews.co.jp/0603/2026/10/14/857368.html
 place_photo: chigasaki-city-hall.jpg
+venue_url: https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html
 ---
 
 The event's theme is 'Let's Talk with Council Members About Chigasaki!, Chigasaki Today and Its Future.' It will take place in Room A of the Chigasaki City Council's Plenary Conference Room.

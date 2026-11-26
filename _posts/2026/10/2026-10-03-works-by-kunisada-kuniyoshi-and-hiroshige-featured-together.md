@@ -13,6 +13,7 @@ lede: An exhibition featuring works by Kunisada, Kuniyoshi and Hiroshige is on v
   through 3 November (Tue) at the Fujisawa Ukiyo-e Museum in Tsujidokandai.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/02/855449.html
 place_photo: fujisawa-ukiyoe-museum.jpg
+venue_url: https://fujisawa-ukiyoekan.net/f/home-en/
 ---
 
 The exhibition, titled 'The Story of the Fifty-Three Stations of the Tokaido: Kunisada, Kuniyoshi and Hiroshige', is currently being held at the [Fujisawa Ukiyo-e Museum](https://fujisawa-ukiyoekan.net/f/home-en/){:target="_blank" rel="noopener noreferrer"} in Tsujidokandai. It runs through 3 November (Tue).

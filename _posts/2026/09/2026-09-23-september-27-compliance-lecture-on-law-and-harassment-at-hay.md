@@ -11,6 +11,7 @@ event_date: '2026-09-27'
 lede: Hayama Machizukuri Kyokai will hold a 'Compliance Lecture' on 27 September (Sun)
   at Hayama Welfare and Culture Hall in Horiuchi.
 guid: guid:https://www.townnews.co.jp/0503/2026/09/23/854413.html
+venue_url: https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html
 ---
 
 Hayama Machizukuri Kyokai will host 'Activities o continue Compliance Lecture' on 27 September (Sun) from 1:00 PM to 3:00 PM in the main conference room of [Hayama Welfare and Culture Hall](https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html){:target="_blank" rel="noopener noreferrer"}, located at Horiuchi 2220. The event will cover legal matters and harassment basics and is free to attend; the description is cut off before finishing eligibility details.

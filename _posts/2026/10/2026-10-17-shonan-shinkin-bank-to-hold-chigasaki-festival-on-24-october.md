@@ -13,6 +13,7 @@ lede: The 'Chigasaki Festival,' hosted by Shonan Shinkin Bank, will be held on 2
   October (Sat) at the plaza in front of Chigasaki City Hall.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/17/857938.html
 place_photo: chigasaki-city-hall.jpg
+venue_url: https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html
 ---
 
 The festival will take place on 24 October (Sat) from 10 a.m. to 3 p.m. Admission is free, and Chigasaki City is co-hosting the event.

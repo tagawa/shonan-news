@@ -13,6 +13,7 @@ place_photo: kamakura-performing-arts-center.jpg
 lede: The 24th Blossom Art Exhibition will be held from 29 October (Thu) at Kamakura
   Arts Center in Ofuna.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/14/857450.html
+venue_url: https://kamakura-kpac.jp/
 ---
 
 Organized by the BlossomArt Association, the exhibition will run for three days, from 29 October (Thu) to 31 October (Sat), at Gallery 2 of [Kamakura Arts Center](https://kamakura-kpac.jp/){:target="_blank" rel="noopener noreferrer"}.

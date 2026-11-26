@@ -12,6 +12,7 @@ thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjO3I-_yn81
 lede: Machifes Hayama will feature performances and other activities on 29 November
   (Sun) at the Hayama Town Welfare and Culture Hall.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-5523290537104865433
+venue_url: https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html
 ---
 
 The event will showcase exhibits by 35 groups active in Hayama, along with karate performances, shigin poetry recitation, dance, music, a film screening, workshops and food. It will run from 10 a.m. to 4 p.m.; contact the Hayama Town Development Association at 046 (876) 0421.

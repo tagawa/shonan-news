@@ -13,6 +13,7 @@ place_photo: manshoji-temple.jpg
 lede: Manshoji Temple in Oyabe, Yokosuka, will hold its annual special cultural-property
   viewing on 3 November.
 guid: guid:https://www.townnews.co.jp/0501/2026/10/28/859706.html
+venue_url: https://manshoji.com
 ---
 
 [Manshoji Temple](https://manshoji.com){:target="_blank" rel="noopener noreferrer"}, which enshrines Miura Daisuke Yoshiaki, who laid the foundations for the Miura clan's rise, will hold its annual special cultural-property viewing on Culture Day. A monk band and flea market are also planned.

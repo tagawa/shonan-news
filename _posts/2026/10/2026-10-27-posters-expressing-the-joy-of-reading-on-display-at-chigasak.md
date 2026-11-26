@@ -12,6 +12,7 @@ place_photo: chigasaki-city-library.jpg
 lede: A children’s and students’ poster exhibition is on display through 18 November
   (Wed) at Chigasaki City Library in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/27/859468.html
+venue_url: https://chigamu.jp/en/point/detail/173/
 ---
 
 The 2026 Chigasaki City Children’s and Students’ Reading Week Poster Exhibition is being held in the second-floor exhibition hall of [Chigasaki City Library](https://chigamu.jp/en/point/detail/173/){:target="_blank" rel="noopener noreferrer"}, at 1-4-55 Higashikaigankita, through 18 November (Wed).

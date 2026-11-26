@@ -11,6 +11,7 @@ lede: Yokosuka City presented a letter of appreciation to Daiwa Lease Co., Ltd. 
   2 October for its 5 million yen donation.
 guid: guid:https://www.townnews.co.jp/0501/2026/10/14/856771.html
 place_photo: mikasa-park.jpg
+venue_url: https://www.kanagawaparks.com/mikasa/
 ---
 
 On 2 October, Yokosuka City presented a letter of appreciation to Daiwa Lease Co., Ltd., which donated 5 million yen to the city using the corporate hometown tax program. The company is involved in work at [Mikasa Park](https://www.kanagawaparks.com/mikasa/){:target="_blank" rel="noopener noreferrer"} in Inaokacho, Yokosuka City.

@@ -11,6 +11,7 @@ lede: The Shonan Fujisawa Parenting Support Messe will connect parents and child
   support groups on 3 October (Sat) at the Fujisawa City Hall Annex.
 guid: guid:https://www.townnews.co.jp/0601/2026/09/28/854611.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 The Shonan Fujisawa Parenting Support Messe will be held on 3 October (Sat) at the [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"} Annex, bringing together people raising children and child-rearing support groups. The event will feature a variety of spaces related to child-rearing.

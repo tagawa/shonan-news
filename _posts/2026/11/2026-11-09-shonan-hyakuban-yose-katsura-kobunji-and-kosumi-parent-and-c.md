@@ -13,6 +13,7 @@ place_photo: hirashin-hiratsuka-hall.jpg
 lede: The Shonan Hyakuban Yose 'Katsura Kobunji and Kosumi Parent-and-Child Show'
   will be held on 14 November (Sat) at Hirashin Hiratsuka Cultural Arts Hall in Hiratsuka.
 guid: guid:https://www.townnews.co.jp/0605/2026/11/09/861212.html
+venue_url: https://hiratsuka.hall-info.jp/
 ---
 
 The rakugo performance will take place on 14 November (Sat) in the multipurpose hall at [Hirashin Hiratsuka Cultural Arts Hall](https://hiratsuka.hall-info.jp/){:target="_blank" rel="noopener noreferrer"}. Doors open at 3 p.m., and the show starts at 3:30 p.m.

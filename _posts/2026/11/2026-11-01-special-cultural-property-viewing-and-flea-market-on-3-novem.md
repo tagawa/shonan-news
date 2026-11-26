@@ -13,6 +13,7 @@ thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFPNJKo5eK
 lede: Manshoji will open normally closed cultural properties to the public and hold
   a flea market on 3 November (Tue, public holiday) at the temple in Yokosuka.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-5956231890641301764
+venue_url: https://manshoji.com
 ---
 
 Visitors will be able to view the Important Cultural Property statue of Miura Yoshiaki, along with the 'Cloud Dragon' painting and 'Horai Garden.' The event will run from 9:00 a.m. to 3:00 p.m. inside [Manshoji](https://manshoji.com){:target="_blank" rel="noopener noreferrer"}’s main hall and treasure hall; admission is 700 yen, free for elementary school children and younger, while the flea market and food truck area is free.

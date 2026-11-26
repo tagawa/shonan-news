@@ -12,6 +12,7 @@ label: safety
 lede: A joint signing ceremony for a disaster cooperation agreement was held on 14
   September at Hayama Town Welfare and Culture Hall in Horiuchi, Hayama Town.
 guid: link:http://zushi-hayama.keizai.biz/headline/1100/
+venue_url: https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html
 ---
 
 The Zushi City Social Welfare Council, Hayama Town Social Welfare Council, and Zushi Hayama Junior Chamber signed an agreement on cooperation during disasters and other situations. The joint signing ceremony took place at [Hayama Town Welfare and Culture Hall](https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html){:target="_blank" rel="noopener noreferrer"} in Horiuchi, Hayama Town.

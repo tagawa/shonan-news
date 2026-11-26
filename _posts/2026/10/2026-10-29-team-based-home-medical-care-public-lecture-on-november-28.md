@@ -12,6 +12,7 @@ lede: A public lecture on team-based home medical care will be held on 28 Novemb
   (Sat) at Fujisawa City Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/29/859679.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 The third public lecture of fiscal 2026, titled ‘Team-Based Home Medical Care: Connecting Medical Care and Nursing Care for a Life True to Yourself,’ will be held in meeting rooms 5-1 and 5-2 on the fifth floor of [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}.

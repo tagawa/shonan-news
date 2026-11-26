@@ -12,6 +12,7 @@ image_url: https://images.keizai.biz/shonan_keizai/headline/1795064221.jpg
 lede: The Chigasaki Bread Festival 2026 was held on 14 November at the plaza in front
   of Chigasaki City Hall.
 guid: link:https://shonan.keizai.biz/headline/3629/
+venue_url: https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html
 ---
 
 The outdoor market featured bakeries and other shops from Chigasaki and surrounding areas selling sweets and related foods. It drew 3,500 visitors in clear weather.

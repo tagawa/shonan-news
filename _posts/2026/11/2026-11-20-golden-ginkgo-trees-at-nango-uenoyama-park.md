@@ -11,6 +11,7 @@ town: Hayama
 lede: Ginkgo trees began turning vivid gold on 11 November at Nango Uenoyama Park
   in Nagae.
 guid: guid:https://www.townnews.co.jp/0503/2026/11/20/862674.html
+venue_url: https://www.town.hayama.lg.jp/soshiki/shougaigakushuu/2/1/1540.html
 ---
 
 As autumn deepened, ginkgo trees at [Nango Uenoyama Park](https://www.town.hayama.lg.jp/soshiki/shougaigakushuu/2/1/1540.html){:target="_blank" rel="noopener noreferrer"}, at 1888-1 Nagae, began turning a vivid golden color and delighting visitors. The photo was taken on 11 November.

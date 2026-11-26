@@ -12,6 +12,7 @@ place_photo: zushi-bunka-plaza.jpg
 lede: Atelier 12 held an exhibition of works on 7 and 8 November at Zushi Cultural
   Plaza.
 guid: guid:https://www.townnews.co.jp/0503/2026/11/20/862666.html
+venue_url: https://www.bunka-plazahall.com/
 ---
 
 Atelier 12, a clinical art group based in Zushi, held an exhibition on 7 and 8 November at [Zushi Cultural Plaza](https://www.bunka-plazahall.com/){:target="_blank" rel="noopener noreferrer"}. The venue displayed distinctive works created by participants aged 4 to 92.

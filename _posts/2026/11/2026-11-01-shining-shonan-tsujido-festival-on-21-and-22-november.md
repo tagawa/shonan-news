@@ -12,6 +12,7 @@ thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkOA3X5uh7
 lede: The Shining Shonan Tsujido Festival will take place on 21 November (Sat) and
   22 November (Sun) at Shonan Mall Fill in Tsujido.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-4208995875350215401
+venue_url: https://www.shonan-fill.com/
 ---
 
 The festival will feature hula, hip-hop, cheerleading and festival drumming performances, along with food from kitchen trucks. The Shonan Motor Show will display 11 popular cars, and admission is free.

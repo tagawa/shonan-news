@@ -12,6 +12,7 @@ place_photo: enoshima-aquarium.jpg
 lede: A naming ceremony for 'Aqua,' a male bottlenose dolphin born in June, was held
   on 3 November at Enoshima Aquarium.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/07/861017.html
+venue_url: https://www.enosui.com/en/
 ---
 
 The male bottlenose dolphin born at [Enoshima Aquarium](https://www.enosui.com/en/){:target="_blank" rel="noopener noreferrer"} (Enosui) in June was named 'Aqua.' The ceremony was held at the aquarium on 3 November, and the dolphin was named by Ayako Numakura, who lives in Kanagawa Prefecture.

@@ -12,6 +12,7 @@ lede: Fujisawa City’s Disaster Prevention Fair will be held on 18 October (Sun
   Fujisawa City Hall and its surroundings.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/16/857595.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 The Fujisawa City Disaster Prevention Fair will take place from 10 a.m. to 2 p.m. on 18 October (Sun) at [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}, 1-1 Asahicho, and its surroundings. It aims to give residents hands-on experience with disaster preparedness and raise awareness.

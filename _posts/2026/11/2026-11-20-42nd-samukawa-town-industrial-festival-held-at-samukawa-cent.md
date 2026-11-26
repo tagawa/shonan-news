@@ -13,6 +13,7 @@ place_photo: samukawa-arena.jpg
 lede: The 42nd Samukawa Town Industrial Festival was held on 15 November at Samukawa
   Central Park and two other venues in Samukawa Town.
 guid: guid:https://www.townnews.co.jp/0603/2026/11/20/862643.html
+venue_url: https://samukawa-sougoutaiikukan.com/
 ---
 
 The annual festival was held at Samukawa Central Park, [Shinko Sports Samukawa Arena](https://samukawa-sougoutaiikukan.com/){:target="_blank" rel="noopener noreferrer"}, and Samukawa Town Civic Center. Rain fell on the day.

@@ -9,6 +9,7 @@ source_name: タウンニュース（茅ヶ崎・寒川）
 lede: A lecture for aspiring founders will be held August 27 at Chigasaki Workers'
   Civic Hall in Shinsakae-cho.
 guid: guid:https://www.townnews.co.jp/0603/2026/08/14/848802.html
+venue_url: https://www.chigasaki-kinro.jp/
 ---
 
 The [Chigasaki Workers' Civic Hall](https://www.chigasaki-kinro.jp/){:target="_blank" rel="noopener noreferrer"} (新栄町13の32) will host the "Chigasaki Startup Support Lecture" on August 27, Thursday, from 6:00 p.m. to 8:00 p.m. The event is aimed at people considering starting a business and will feature talks by experienced entrepreneurs. Participation details and any application requirements were not specified in the brief notice.

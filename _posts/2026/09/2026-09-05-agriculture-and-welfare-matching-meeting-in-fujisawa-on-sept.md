@@ -10,6 +10,7 @@ lede: A matching event linking farmers in need of workers with welfare facilitie
   seeking work opportunities will be held September 17 at Fujisawa City Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/09/04/851487.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 The "Agriculture and Welfare Collaboration Start-up Meeting" will take place September 17 (Thursday) in meeting room 5-3 on the fifth floor of [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"} main building. The event aims to match farmers who need labor with welfare facilities and similar organizations looking for places for their clients to work. Participants will exchange information about needs and opportunities to promote local employment and collaboration between agriculture and social welfare providers.

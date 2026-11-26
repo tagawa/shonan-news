@@ -12,6 +12,7 @@ lede: The Medicine and Health Week event will be held on 18 October (Sun) at Fuj
   City Hall’s main building in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/02/855443.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 The event, organized by the Fujisawa City Pharmacists Association, chaired by Kazunobu Murakami, will take place on 18 October (Sun) on the third and seventh floors of [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}’s main building. Admission is free.

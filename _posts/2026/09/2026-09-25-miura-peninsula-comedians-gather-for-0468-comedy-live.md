@@ -11,6 +11,7 @@ lede: A comedy live by the Miura Peninsula-linked group '0468 Style' will take p
   on October 10 (Sat) at Yokosuka City Cultural Hall's medium hall in Yokosuka.
 guid: guid:https://www.townnews.co.jp/0501/2026/09/25/854314.html
 place_photo: yokosuka-cultural-hall.jpg
+venue_url: https://yokosuka-bunka.info/
 ---
 
 

@@ -10,6 +10,7 @@ lede: Yokosuka City launched an industry-academia-government partnership to supp
   youth finding jobs with local companies at a new base inside the Yokosuka Industrial Community Plaza in Honcho.
 guid: guid:https://www.townnews.co.jp/0501/2026/09/04/851330.html
 place_photo: yokosuka-industrial-community-plaza.jpg
+venue_url: https://www.yokosuka-sanpla.jp/english/
 ---
 
 Yokosuka City has begun an initiative partnering with a correspondence high school support campus and the Yokosuka Chamber of Commerce and Industry to encourage young people to take jobs with companies in the city. The city set up a base inside the [Yokosuka Industrial Community Plaza](https://www.yokosuka-sanpla.jp/english/){:target="_blank" rel="noopener noreferrer"} in Honcho to run outreach services, use the support school's curriculum for career education, and coordinate employer visits and matching. The program aims to strengthen ties between schools, businesses, and local government to boost employment opportunities for the younger generation within Yokosuka.

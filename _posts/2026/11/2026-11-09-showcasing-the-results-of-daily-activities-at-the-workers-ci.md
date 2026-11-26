@@ -12,6 +12,7 @@ town: Chigasaki
 lede: The Workers’ Civic Hall Festival will be held on November 23 (Mon, public holiday)
   at Chigasaki Workers’ Civic Hall in Shineicho.
 guid: guid:https://www.townnews.co.jp/0603/2026/11/09/861254.html
+venue_url: https://www.chigasaki-kinro.jp/
 ---
 
 The festival will take place in Room A of the sixth-floor training rooms at [Chigasaki Workers’ Civic Hall](https://www.chigasaki-kinro.jp/){:target="_blank" rel="noopener noreferrer"}, at 13-32 Shineicho. It will begin at noon on Labor Thanksgiving Day, with doors opening at 11:30 a.m.

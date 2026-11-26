@@ -13,6 +13,7 @@ lede: Fujisawa Police Station presented a letter of appreciation to a staff memb
   at Fujisawa City Hall's Citizen Service Center for preventing fraud losses.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/30/859757.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 On the 20th, Fujisawa Police Station Chief Jiro Asada presented a letter of appreciation to the My Number staff member at the city’s Citizen Service Center. The staff member acted on 18 September to prevent a special fraud scheme.

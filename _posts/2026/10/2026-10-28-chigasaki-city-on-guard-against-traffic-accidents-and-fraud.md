@@ -14,6 +14,7 @@ lede: The Traffic Safety and Crime Prevention Citizens' United Promotion Rally w
   held on 16 October at Chigasaki City Hall's Annex Building in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/28/859536.html
 place_photo: chigasaki-city-hall.jpg
+venue_url: https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html
 ---
 
 The rally took place in the community hall on the sixth floor of [Chigasaki City Hall](https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html){:target="_blank" rel="noopener noreferrer"}'s Annex Building. Its first session featured people who regularly work on traffic safety and crime prevention, and Walga Shonan also distributed flyers.

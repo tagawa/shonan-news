@@ -12,6 +12,7 @@ lede: The 42nd Samukawa Town Industrial Festival will be held on 15 November (Su
   at three venues in Samukawa Town.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/30/859588.html
 place_photo: samukawa-arena.jpg
+venue_url: https://samukawa-sougoutaiikukan.com/
 ---
 
 The annual event will take place at Samukawa Central Park, [Shinko Sports Samukawa Arena](https://samukawa-sougoutaiikukan.com/){:target="_blank" rel="noopener noreferrer"}, and Samukawa Town Residents' Center.

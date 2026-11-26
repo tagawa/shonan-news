@@ -12,6 +12,7 @@ lede: A traffic safety poster exhibition by Fujisawa elementary and junior high 
   students opened on 30 October (Fri) at Terrace Mall Shonan.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/30/859741.html
 place_photo: terrace-mall-shonan.jpg
+venue_url: https://shonan.terracemall.com/
 ---
 
 The 'Fujisawa City Elementary and Junior High School Traffic Safety Poster Exhibition' features works submitted by students in the city calling for traffic safety and accident prevention. It began on 30 October (Fri) on the fourth floor of [Terrace Mall Shonan](https://shonan.terracemall.com/){:target="_blank" rel="noopener noreferrer"}.

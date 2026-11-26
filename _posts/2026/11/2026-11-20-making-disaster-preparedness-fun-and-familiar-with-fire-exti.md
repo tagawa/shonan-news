@@ -14,6 +14,7 @@ place_photo: zushi-bunka-plaza.jpg
 lede: '''ZUSHI BOUSAI FESTIVAL'' will be held on 22 November (Sun) at the Festival
   Park of Zushi Cultural Plaza Civic Exchange Center in Zushi.'
 guid: guid:https://www.townnews.co.jp/0503/2026/11/20/862664.html
+venue_url: https://www.bunka-plazahall.com/
 ---
 
 The first 'ZUSHI BOUSAI FESTIVAL,' an interactive event for learning about disaster preparedness in an enjoyable way, will be held on 22 November (Sun). It will include fire-extinguishing experiences and emergency food for sale.

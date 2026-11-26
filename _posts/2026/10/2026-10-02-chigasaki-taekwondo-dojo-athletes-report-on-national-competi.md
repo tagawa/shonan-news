@@ -12,6 +12,7 @@ lede: On 20 August, athletes from Chigasaki Taekwondo Dojo visited Chigasaki Cit
   Hall to report on their performances at a national competition.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/02/855273.html
 place_photo: chigasaki-city-hall.jpg
+venue_url: https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html
 ---
 
 The athletes, who belong to Chigasaki Taekwondo Dojo in Wakamatsucho, visited [Chigasaki City Hall](https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html){:target="_blank" rel="noopener noreferrer"} on 20 August and reported to Mayor Sato Hikaru on their performances at a national competition. Koizumi Ai, 18, competed in the 37th All Japan Taekwondo Championships.

@@ -11,6 +11,7 @@ town: Kamakura
 lede: The Kamakura UNESCO Association will hold its Senegal-themed cooking event on
   3 December (Thu) in the kitchen on the second floor of Kamakura City Welfare Center.
 guid: guid:https://www.townnews.co.jp/0602/2026/11/19/861890.html
+venue_url: https://www.city.kamakura.kanagawa.jp/fukushi/soumu/center.html
 ---
 
 The event is part of an initiative to deepen international understanding through cooking dishes from other countries. The Senegal edition will be the 27th installment and the 25th country featured.

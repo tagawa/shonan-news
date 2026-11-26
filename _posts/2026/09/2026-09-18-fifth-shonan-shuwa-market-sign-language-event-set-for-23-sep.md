@@ -11,6 +11,7 @@ lede: '''The fifth Shonan Shuwa Market'' will be held 23 September at the plaza 
   front of Chigasaki City Hall to connect deaf and hearing communities.'
 guid: guid:https://www.townnews.co.jp/0603/2026/09/18/853268.html
 place_photo: chigasaki-city-hall.jpg
+venue_url: https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html
 ---
 
 An event called 'the fifth Shonan Shuwa Market' will take place on 23 September at the plaza in front of [Chigasaki City Hall](https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html){:target="_blank" rel="noopener noreferrer"}, aiming to build a bridge between deaf and hearing people through sign language. The market runs from 11:00 in the morning to 17:00 in the afternoon and will feature many stalls. Organizers plan activities and interactions to promote mutual understanding and communication using sign language. Admission information and specific stall details were not provided in the brief notice.

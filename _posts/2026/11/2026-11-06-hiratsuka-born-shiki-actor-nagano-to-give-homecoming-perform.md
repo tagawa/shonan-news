@@ -13,6 +13,7 @@ place_photo: hirashin-hiratsuka-hall.jpg
 lede: 'Nagano will perform ‘Shape of Sounds: Memories of the Stars’ on 5 December
   (Sat) at Hirashin Hiratsuka Cultural Arts Hall in Hiratsuka.'
 guid: guid:https://www.townnews.co.jp/0605/2026/11/06/860556.html
+venue_url: https://hiratsuka.hall-info.jp/
 ---
 
 Stage actor Nagano, 40, who is from Hiratsuka, will perform ‘Shape of Sounds: Memories of the Stars’ at the hall on 5 December (Sat).

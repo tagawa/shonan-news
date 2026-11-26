@@ -11,6 +11,7 @@ lede: Five Lions Clubs carried out their second support effort for Kumamoto at S
   Mall Fill on the 4th.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/09/856564.html
 place_photo: shonan-mall-fill.jpg
+venue_url: https://www.shonan-fill.com/
 ---
 
 About 50 members of five Lions Clubs in Fujisawa, Fujisawa LC, Fujisawa Shonan LC, Fujisawa Chuo LC, Fujisawa Life LC and Fujisawa Acty LC, were at [Shonan Mall Fill](https://www.shonan-fill.com/){:target="_blank" rel="noopener noreferrer"} on the 4th. The report describes the effort as their second support effort for Kumamoto.

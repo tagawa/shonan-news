@@ -11,6 +11,7 @@ thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj51s1SjCrm
 lede: The Fujisawa City Pharmacists Association will hold a self-care event on 18
   October at Fujisawa City Hall.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-549183359023772971
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 The event will run from 10 a.m. to 3 p.m. on the 3rd and 7th floors of [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"}’s main building, with pharmacist experiences, medication consultations, education consultations and lectures. Admission is free; contact the Fujisawa City Pharmacists Association at 0466 (22) 8664.

@@ -12,6 +12,7 @@ thumb_url: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYUowlrQik
 lede: Honolulu Meets will take place on 8 November (Sun) at the plaza in front of
   Chigasaki City Hall and other venues in Chigasaki.
 guid: guid:tag:blogger.com,1999:blog-4455448106422886136.post-3587273572945185130
+venue_url: https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html
 ---
 
 The event will feature Hawaiian food and goods vendors, hula and music on a special stage, and sports exchanges with Hawaiian guests through jogging and basketball. Admission is free, and the event will go ahead in the rain, though some activities may be canceled.

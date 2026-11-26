@@ -13,6 +13,7 @@ image_url: https://images.keizai.biz/zushi-hayama_keizai/headline/1793597404.jpg
 lede: Zushi civic theater group Nanjamonja will stage its 50th production, 'Seven
   Grave Friends,' from 6 to 8 November at Sazanami Hall in Zushi.
 guid: link:https://zushi-hayama.keizai.biz/headline/1112/
+venue_url: https://www.bunka-plazahall.com/
 ---
 
 The performances will take place at Sazanami Hall, [Zushi Cultural Plaza](https://www.bunka-plazahall.com/){:target="_blank" rel="noopener noreferrer"}, in Zushi. The play's theme is grave friends.

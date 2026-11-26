@@ -13,6 +13,7 @@ place_photo: hirashin-hiratsuka-hall.jpg
 lede: The Hiratsuka Health Seminar 2026 will take place on 21 November (Sat) at Hirashin
   Hiratsuka Cultural and Arts Hall in Mitsukecho.
 guid: guid:https://www.townnews.co.jp/0605/2026/11/06/860545.html
+venue_url: https://hiratsuka.hall-info.jp/
 ---
 
 The seminar, hosted by the Hiratsuka Kita Rotary Club, will be held from 2 p.m. to 4 p.m. at [Hirashin Hiratsuka Cultural and Arts Hall](https://hiratsuka.hall-info.jp/){:target="_blank" rel="noopener noreferrer"}, 16-1 Mitsukecho. The club's president is Yutaka Nakamura.

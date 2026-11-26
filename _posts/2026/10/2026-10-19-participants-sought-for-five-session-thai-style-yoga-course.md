@@ -12,6 +12,7 @@ town: Chigasaki
 lede: A five-session Thai-style yoga course will be held from 19 November (Thu) to
   17 December (Thu) at Chigasaki City Working Citizens Hall in Shineicho, Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/19/858103.html
+venue_url: https://www.chigasaki-kinro.jp/
 ---
 
 The 'Ruesi Datton Thai-style Yoga Experience Course' will take place at [Chigasaki City Working Citizens Hall](https://www.chigasaki-kinro.jp/){:target="_blank" rel="noopener noreferrer"}, at 13-32 Shineicho. It will run every Thursday for five sessions, from 19 November (Thu) to 17 December (Thu).

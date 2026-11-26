@@ -10,6 +10,7 @@ place_photo: fujisawa-city-hall.jpg
 lede: The final presentation for a high school workshop was held on the 7th at Fujisawa
   City Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/19/862943.html
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 The workshop, for high school students, combined community planning and programming and used a 3D city model of Fujisawa. About 20 students in five teams from Fujisawa Shoryo High School’s commerce department took part in the final presentation.

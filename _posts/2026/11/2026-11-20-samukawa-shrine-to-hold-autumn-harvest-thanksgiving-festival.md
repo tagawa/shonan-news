@@ -13,6 +13,7 @@ place_photo: samukawa-jinja.jpg
 lede: Samukawa Shrine in Miyayama will hold its annual Niiname-sai harvest thanksgiving
   festival on 23 November (Mon, public holiday).
 guid: guid:https://www.townnews.co.jp/0603/2026/11/20/862650.html
+venue_url: https://samukawajinjya.jp/en/
 ---
 
 The festival, which gives thanks for the abundant autumn harvest, will begin at 10 a.m. Offerings will also be accepted.

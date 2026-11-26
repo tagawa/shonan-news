@@ -13,6 +13,7 @@ place_photo: hirashin-hiratsuka-hall.jpg
 lede: Shonan Beauty College held an entrance ceremony for 28 correspondence-course
   students on 20 October at Hirashin Hiratsuka Cultural Arts Hall.
 guid: guid:https://www.townnews.co.jp/0605/2026/11/07/860462.html
+venue_url: https://hiratsuka.hall-info.jp/
 ---
 
 Shonan Beauty College, a hair-stylist training school in Akashicho, Hiratsuka, held the ceremony on 20 October. The school, whose principal is Takao Ide, welcomed 28 students to its correspondence course.

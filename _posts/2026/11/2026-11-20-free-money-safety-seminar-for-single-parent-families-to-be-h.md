@@ -13,6 +13,7 @@ lede: A free money-safety seminar for single-parent families will be held on 5 D
   (Sat) at the Yokosuka Industrial Community Plaza in Shioiri and online.
 guid: guid:https://www.townnews.co.jp/0501/2026/11/20/863034.html
 place_photo: yokosuka-industrial-community-plaza.jpg
+venue_url: https://www.yokosuka-sanpla.jp/english/
 ---
 
 The seminar, titled 'A Money-Safety Seminar for Single Parents,' is for parents in single-parent families. It will be held free of charge at the [Yokosuka Industrial Community Plaza](https://www.yokosuka-sanpla.jp/english/){:target="_blank" rel="noopener noreferrer"} in Honcho 3-27, a one-minute walk from Keikyu Shioiri Station, and online.

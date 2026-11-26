@@ -13,6 +13,7 @@ image_url: https://images.keizai.biz/shonan_keizai/headline/1793861246.jpg
 lede: '''Suiyuten,'' a calligraphy exhibition, will open on 24 December at Chigasaki
   Civic Cultural Hall in Chigasaki.'
 guid: link:https://shonan.keizai.biz/headline/3616/
+venue_url: https://www.chigasaki-hall.jp/
 ---
 
 'Suiyuten' will open on 24 December at [Chigasaki Civic Cultural Hall](https://www.chigasaki-hall.jp/){:target="_blank" rel="noopener noreferrer"}, 1 Chigasaki, Chigasaki City. The exhibition will include collaborative works by a teacher and student.

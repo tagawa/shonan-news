@@ -11,6 +11,7 @@ lede: A presentation on dementia care practices was held on 13 September at Chig
   City Hall’s main building.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/16/857419.html
 place_photo: chigasaki-city-hall.jpg
+venue_url: https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html
 ---
 
 The presentation was hosted by the social welfare corporation Reijukai, based in Nango, Chigasaki. It was titled 'Practice Presentations in Dementia Care' and concerned supporting peace of mind in the daily lives of people with dementia and their families.

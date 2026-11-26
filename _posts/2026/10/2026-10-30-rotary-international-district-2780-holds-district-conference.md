@@ -13,6 +13,7 @@ place_photo: kamakura-performing-arts-center.jpg
 lede: Rotary International District 2780 held its district conference on 10 and 11
   October at Kamakura Park Hotel and Kamakura Performing Arts Center in Kamakura.
 guid: guid:https://www.townnews.co.jp/0602/2026/10/30/859812.html
+venue_url: https://kamakura-kpac.jp/
 ---
 
 The two-day conference brought together District 2780, which comprises 66 clubs in Kanagawa Prefecture, excluding Yokohama and Kawasaki, with approximately 2,400 members. The venues were Kamakura Park Hotel and [Kamakura Performing Arts Center](https://kamakura-kpac.jp/){:target="_blank" rel="noopener noreferrer"}.

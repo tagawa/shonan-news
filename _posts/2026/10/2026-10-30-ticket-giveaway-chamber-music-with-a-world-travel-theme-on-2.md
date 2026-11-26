@@ -13,6 +13,7 @@ place_photo: hirashin-hiratsuka-hall.jpg
 lede: A chamber music concert in the ‘Chic Music Lovers’ series will take place on
   21 November (Sat) at Hirashin Hiratsuka Cultural Arts Hall.
 guid: guid:https://www.townnews.co.jp/0605/2026/10/30/859665.html
+venue_url: https://hiratsuka.hall-info.jp/
 ---
 
 The concert, which has a ‘world travel’ theme, will be presented by the hall’s music ambassador, Masanori Kato. It is scheduled to begin at 3 p.m. at [Hirashin Hiratsuka Cultural Arts Hall](https://hiratsuka.hall-info.jp/){:target="_blank" rel="noopener noreferrer"}.

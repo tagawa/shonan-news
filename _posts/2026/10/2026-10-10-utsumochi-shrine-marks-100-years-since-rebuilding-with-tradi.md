@@ -10,6 +10,7 @@ lede: A ceremony marking 100 years since the shrine hall was rebuilt was held on
   4th at Utsumochi Shrine in Uchimodori, northwestern Fujisawa City.
 guid: guid:https://www.townnews.co.jp/0601/2026/10/09/856582.html
 place_photo: utsumochi-shrine.jpg
+venue_url: https://utsumochi-jinja.com/
 ---
 
 About 200 people, including those involved and invited guests, attended the ceremony. They celebrated the milestone while viewing the shrine hall, which had undergone repairs, with traditional dance marking the occasion.

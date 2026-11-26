@@ -13,6 +13,7 @@ image_url: https://images.keizai.biz/shonan_keizai/headline/1795062265.jpg
 lede: '''NT Shonan 2026,'' a maker exhibition and networking event, was held on 7
   November at Robolink in Fujisawa.'
 guid: link:https://shonan.keizai.biz/headline/3628/
+venue_url: https://www.pref.kanagawa.jp/osirase/0604/robolink/
 ---
 
 'NT Shonan 2026,' an event showcasing maker projects and encouraging exchange in the Shonan region, was held on 7 November at [Robolink](https://www.pref.kanagawa.jp/osirase/0604/robolink/){:target="_blank" rel="noopener noreferrer"}, a hub for robotics companies in Fujisawa. It featured 30 exhibits, including homemade robots and electronics projects.

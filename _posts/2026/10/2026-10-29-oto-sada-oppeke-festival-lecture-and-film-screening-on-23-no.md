@@ -12,6 +12,7 @@ place_photo: chigasaki-kan.jpg
 lede: A lecture and film screening related to the Oto-Sada Oppeke Festival will take
   place on 23 November at Chigasakikan in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/10/29/859715.html
+venue_url: https://www.city.chigasaki.kanagawa.jp/bunka_rekishi/shiteibunkazai/1006259.html
 ---
 
 The festival celebrates the achievements of actor Otojiro Kawakami and his wife, Sada Yacco, who had a home at Takasago Ryokuchi in Chigasaki. The related event, at [Chigasakikan](https://www.city.chigasaki.kanagawa.jp/bunka_rekishi/shiteibunkazai/1006259.html){:target="_blank" rel="noopener noreferrer"}, includes a lecture and a screening of a revived play called "Monna Vanna".

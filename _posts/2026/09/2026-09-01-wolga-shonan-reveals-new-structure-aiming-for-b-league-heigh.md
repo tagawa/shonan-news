@@ -10,6 +10,7 @@ lede: Wolga Shonan held a new-structure announcement at Fujisawa City Hall on th
   25th in Fujisawa.
 guid: guid:https://www.townnews.co.jp/0601/2026/08/28/850587.html
 place_photo: fujisawa-city-hall.jpg
+venue_url: https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html
 ---
 
 Wolga Shonan, a men's professional basketball team based in Fujisawa, Chigasaki, Atsugi and Samukawa, held a new-structure announcement at [Fujisawa City Hall](https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html){:target="_blank" rel="noopener noreferrer"} on the 25th. Branded the "Torch Declaration," the event outlined the club's renewed organization and ambitions following its predecessor team. The presentation emphasized community ties across the three cities and one town and the club's aim to climb to the top of Japan's B.League.

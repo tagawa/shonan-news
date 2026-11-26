@@ -13,6 +13,7 @@ town: Chigasaki
 lede: A Christmas concert featuring the 'Three Great Ave Marias' will be held on 11
   December (Fri) at Chigasaki Civic Cultural Hall's Main Hall.
 guid: guid:https://www.townnews.co.jp/0601/2026/11/20/862637.html
+venue_url: https://www.chigasaki-hall.jp/
 ---
 
 The concert will feature winter classics, including the 'Three Great Ave Marias' by Bach, Schubert and Caccini. Tickets will also be offered as a giveaway.

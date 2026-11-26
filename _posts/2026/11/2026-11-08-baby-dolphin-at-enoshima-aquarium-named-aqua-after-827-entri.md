@@ -12,6 +12,7 @@ image_url: https://images.keizai.biz/shonan_keizai/headline/1794021871.jpg
 lede: A naming ceremony for a baby dolphin was held on 3 November at Enoshima Aquarium
   in Katasekaigan, Fujisawa.
 guid: link:https://shonan.keizai.biz/headline/3618/
+venue_url: https://www.enosui.com/en/
 ---
 
 The bottlenose dolphin, born in June through artificial insemination, was named 'Aqua' at the ceremony, chosen from 827 entries.

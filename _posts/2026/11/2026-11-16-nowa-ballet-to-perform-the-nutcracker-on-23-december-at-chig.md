@@ -12,6 +12,7 @@ town: Chigasaki
 lede: Nowa Ballet will present the full-length ballet 'The Nutcracker' on 23 December
   (Wed) at Chigasaki Civic Cultural Hall in Chigasaki.
 guid: guid:https://www.townnews.co.jp/0603/2026/11/16/862238.html
+venue_url: https://www.chigasaki-hall.jp/
 ---
 
 The performance is organized by Nowa Ballet Company, led by Hitomi Nowa, which has a history of more than 70 years in Shonan.

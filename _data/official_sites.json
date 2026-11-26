@@ -3,6 +3,7 @@
     "ja": ["ソレイユの丘"], 
     "en": ["Soleil Hill"], 
     "url": "https://soleil-park.jp/en/",
+    "geo": "35.1964,139.6116",
     "photo": {
       "file": "soleil-hill.jpg",
       "width": 1280,
@@ -15,6 +16,7 @@
     "ja": ["神台公園"], 
     "en": ["Kandai Park", "Tsujidokandai Park"],
     "url": "https://fujisawa-park.com/kandai/?lcp_page0=1",
+    "geo": "35.3404,139.4467",
     "photo": {
       "file": "kandai-park.jpg",
       "width": 1280,
@@ -24,11 +26,12 @@
       "licence": "CC BY-SA 4.0"
     }
   },
-  {"ja": ["茅ヶ崎市勤労市民会"], "en": ["Chigasaki City Workers' Civic Hall", "Chigasaki Workers' Civic Hall", "Chigasaki Workers’ Civic Hall", "Chigasaki City Working Citizens Hall", "Chigasaki Working Citizens Hall", "Chigasaki City Kinro Shimin Kaikan", "Chigasaki Kinro Shimin Kaikan"], "url": "https://www.chigasaki-kinro.jp/"},
+  {"ja": ["茅ヶ崎市勤労市民会"], "en": ["Chigasaki City Workers' Civic Hall", "Chigasaki Workers' Civic Hall", "Chigasaki Workers’ Civic Hall", "Chigasaki City Working Citizens Hall", "Chigasaki Working Citizens Hall", "Chigasaki City Kinro Shimin Kaikan", "Chigasaki Kinro Shimin Kaikan"], "url": "https://www.chigasaki-kinro.jp/", "geo": "35.3326,139.4039"},
   {
     "ja": ["横須賀市自然・人文博物館", "横須賀市自然人文博物館", "横須賀市博物館", "横須賀博物館"], 
     "en": ["Yokosuka City Museum of Nature and Culture", "Yokosuka City Museum"], 
     "url": "https://www.museum.yokosuka.kanagawa.jp/",
+    "geo": "35.2745,139.6738",
     "photo": {
       "file": "yokosuka-city-museum.jpg",
       "width": 1280,
@@ -41,12 +44,14 @@
   {
     "ja": ["茅ヶ崎市民文化会館", "茅ケ崎市民文化会館"], 
     "en": ["Chigasaki Civic Hall", "Chigasaki Civic Cultural Hall", "Chigasaki City Cultural Hall", "Chigasaki Civic Cultural Center", "Chigasaki Civic Cultural Centre"], 
-    "url": "https://www.chigasaki-hall.jp/"
+    "url": "https://www.chigasaki-hall.jp/",
+    "geo": "35.3351,139.4041"
   },
   {
     "ja": ["鶴岡八幡宮"], 
     "en": ["Tsurugaoka Hachimangu"], 
     "url": "https://www.hachimangu.or.jp/en/",
+    "geo": "35.3252,139.5562",
     "photo": {
       "file": "tsurugaoka-hachimangu.jpg",
       "width": 1280,
@@ -59,6 +64,7 @@
     "ja": ["新江ノ島水族館", "新江の島水族館", "えのすい"], 
     "en": ["Enoshima Aquarium", "Shin-Enoshima Aquarium", "New Enoshima Aquarium", "Enosui"], 
     "url": "https://www.enosui.com/en/",
+    "geo": "35.3101,139.4794",
     "photo": {
       "file": "enoshima-aquarium.jpg", 
       "width": 1280, 
@@ -72,6 +78,7 @@
     "ja": ["横須賀美術館"], 
     "en": ["Yokosuka Museum of Art"], 
     "url": "https://www.yokosuka-moa.jp/en/",
+    "geo": "35.2597,139.7380",
     "photo": {
       "file": "yokosuka-museum-of-art.jpg",
       "width": 1280,
@@ -85,6 +92,7 @@
     "ja": ["横須賀芸術劇場", "よこすか芸術劇場"], 
     "en": ["Yokosuka Arts Theatre", "Yokosuka Arts Theater"], 
     "url": "https://www.yokosuka-arts.or.jp/",
+    "geo": "35.2813,139.6631",
     "photo": {
       "file": "yokosuka-arts-theatre.jpg",
       "width": 1280,
@@ -98,6 +106,7 @@
     "ja": ["寒川神社"], 
     "en": ["Samukawa-jinja Shrine", "Samukawa Shrine", "Samukawa Jinja", "Samukawa-jinja", "Samukawajinja"], 
     "url": "https://samukawajinjya.jp/en/",
+    "geo": "35.3789,139.3831",
     "photo": {
       "file": "samukawa-jinja.jpg", 
       "width": 1280, 
@@ -111,6 +120,7 @@
     "ja": ["寒川アリーナ", "寒川総合体育館"], 
     "en": ["Shinko Sports Samukawa Arena", "Samukawa General Gymnasium"], 
     "url": "https://samukawa-sougoutaiikukan.com/",
+    "geo": "35.3753,139.3849",
     "photo": {
       "file": "samukawa-arena.jpg",
       "width": 1280,
@@ -124,6 +134,7 @@
     "ja": ["逗子文化プラザ"], 
     "en": ["Zushi Bunka Plaza Hall", "Zushi Bunka Plaza Sazanami Hall", "Zushi Bunka Plaza Nagisa Hall", "Zushi Bunka Plaza", "Zushi Cultural Plaza Hall", "Zushi Cultural Plaza", "Zushi Culture Plaza"], 
     "url": "https://www.bunka-plazahall.com/",
+    "geo": "35.2950,139.5822",
     "photo": {
       "file": "zushi-bunka-plaza.jpg",
       "width": 1280,
@@ -136,6 +147,7 @@
     "ja": ["コッキング苑"], 
     "en": ["Enoshima Samuel Cocking Garden", "Samuel Cocking Garden"], 
     "url": "https://enoshima-seacandle.com/",
+    "geo": "35.2997,139.4792",
     "photo": {
       "file": "samuel-cocking-garden.jpg",
       "width": 1280,
@@ -148,6 +160,7 @@
     "ja": ["平塚文化芸術ホール", "平塚市文化芸術ホール"], 
     "en": ["Hirashin Hiratsuka Hall of Culture and Arts", "Hirashin Hiratsuka Cultural Arts Hall", "Hirashin Hiratsuka Cultural and Arts Hall", "Hirashin Hiratsuka Culture and Arts Hall", "Hirashin Hall"], 
     "url": "https://hiratsuka.hall-info.jp/",
+    "geo": "35.3299,139.3432",
     "photo": {
       "file": "hirashin-hiratsuka-hall.jpg", 
       "width": 1280, 
@@ -174,6 +187,7 @@
     "ja": ["テラスモール"], 
     "en": ["Terrace Mall Shonan", "Terrace Mall"], 
     "url": "https://shonan.terracemall.com/",
+    "geo": "35.3386,139.4463",
     "photo": {
       "file": "terrace-mall-shonan.jpg",
       "width": 1280,
@@ -187,6 +201,7 @@
     "ja": ["観音崎公園"], 
     "en": ["Kannonzaki Park", "Cape Kannonzaki"], 
     "url": "https://www.kanagawa-park.or.jp/kannonzaki/",
+    "geo": "35.2560,139.7393",
     "photo": {
       "file": "kannonzaki-park.jpg",
       "width": 1280,
@@ -214,6 +229,7 @@
     "ja": ["鎌倉芸術館"], 
     "en": ["Kamakura Performing Arts Center", "Kamakura Performing Arts Centre", "Kamakura Arts Center", "Kamakura Arts Centre", "Kamakura Geijutsu-kan", "Kamakura Geijutsukan"],
     "url": "https://kamakura-kpac.jp/",
+    "geo": "35.3527,139.5384",
     "photo": {
       "file": "kamakura-performing-arts-center.jpg", 
       "width": 1280, 
@@ -227,6 +243,7 @@
     "ja": ["大船フラワーセンター", "フラワーセンター大船植物園"], 
     "en": ["Ofuna Flower Center", "Ofuna Flower Centre"], 
     "url": "https://www.fcofuna-kanagawa.jp/",
+    "geo": "35.3481,139.5209",
     "photo": {
       "file": "ofuna-flower-center.jpg",
       "width": 1280,
@@ -239,6 +256,7 @@
     "ja": ["ヴェルニー公園"], 
     "en": ["Verny Park"], 
     "url": "https://www.kanagawaparks.com/verny/",
+    "geo": "35.2834,139.6590",
     "photo": {
       "file": "verny-park.jpg",
       "width": 1280,
@@ -252,6 +270,7 @@
     "ja": ["建長寺"], 
     "en": ["Kenchoji Temple", "Kencho-ji Temple", "Kenchoji", "Kencho-ji", "Kencho Temple"], 
     "url": "https://www.kenchoji.com/",
+    "geo": "35.3311,139.5523",
     "photo": {
       "file": "kenchoji-temple.jpg",
       "width": 1280,
@@ -264,6 +283,7 @@
     "ja": ["しおさい博物館"], 
     "en": ["Hayama Shiosai Museum"], 
     "url": "https://www.town.hayama.lg.jp/soshiki/shougaigakushuu/2/1701.html",
+    "geo": "35.2641,139.5779",
     "photo": {
       "file": "hayama-shiosai-museum.jpg",
       "width": 1280,
@@ -277,6 +297,7 @@
     "ja": ["茅ヶ崎市博物館", "茅ケ崎市博物館"], 
     "en": ["Chigasaki City Museum", "Chigasaki Museum"], 
     "url": "https://chigamu.jp/en/",
+    "geo": "35.3634,139.4125",
     "photo": {
       "file": "chigasaki-city-museum.jpg",
       "width": 1280,
@@ -290,6 +311,7 @@
     "ja": ["満昌寺"], 
     "en": ["Manshoji Temple", "Manshōji Temple", "Manshoji", "Mansho-ji", "Mansho-ji Temple", "Mansho Temple"], 
     "url": "https://manshoji.com",
+    "geo": "35.2407,139.6669",
     "photo": {
       "file": "manshoji-temple.jpg", 
       "width": 1280, 
@@ -303,6 +325,7 @@
     "ja": ["湘南T-SITE"], 
     "en": ["Shonan T-SITE", "Shōnan T-SITE"], 
     "url": "https://store.tsite.jp/shonan/",
+    "geo": "35.3349,139.4638",
     "photo": {
       "file": "shonan-t-site.jpg", 
       "width": 1280, 
@@ -316,6 +339,7 @@
     "ja": ["湘南台公園"], 
     "en": ["Shonandai Park", "Shōnandai Park"], 
     "url": "https://www.city.fujisawa.kanagawa.jp/kouen/kyoiku/leisure/koen/fujisawashi/shonandai/",
+    "geo": "35.3972,139.4712",
     "photo": {
       "file": "shonandai-park.jpg", 
       "width": 1280, 
@@ -329,6 +353,7 @@
     "ja": ["茅ヶ崎市図書館", "茅ヶ崎図書館"], 
     "en": ["Chigasaki City Library", "Chigasaki Library"], 
     "url": "https://chigamu.jp/en/point/detail/173/",
+    "geo": "35.3264,139.4059",
     "photo": {
       "file": "chigasaki-city-library.jpg", 
       "width": 1280, 
@@ -342,6 +367,7 @@
     "ja": ["茅ヶ崎館"], 
     "en": ["Chigasaki-kan", "Chigasakikan"], 
     "url": "https://www.city.chigasaki.kanagawa.jp/bunka_rekishi/shiteibunkazai/1006259.html",
+    "geo": "35.3205,139.4012",
     "photo": {
       "file": "chigasaki-kan.jpg", 
       "width": 1280, 
@@ -355,6 +381,7 @@
     "ja": ["鎌倉中央公園"], 
     "en": ["Kamakura Central Park"], 
     "url": "https://kamakura-park.com/go/central_park/",
+    "geo": "35.3347,139.5292",
     "photo": {
       "file": "kamakura-central-park.jpg",
       "width": 1280,
@@ -367,6 +394,7 @@
     "ja": ["茅ヶ崎市役所"], 
     "en": ["Chigasaki City Hall"], 
     "url": "https://www.city.chigasaki.kanagawa.jp/shisetsu_info/1054012/1054013.html",
+    "geo": "35.3339,139.4037",
     "photo": {
       "file": "chigasaki-city-hall.jpg",
       "width": 1280,
@@ -379,6 +407,7 @@
     "ja": ["藤沢市役所"],
     "en": ["Fujisawa City Hall"],
     "url": "https://www.city.fujisawa.kanagawa.jp/kouhou/shise/gaiyo/madoguchi/shiyakusho.html",
+    "geo": "35.3389,139.4911",
     "photo": {
       "file": "fujisawa-city-hall.jpg",
       "width": 1280,
@@ -405,6 +434,7 @@
     "ja": ["くりはま花の国"], 
     "en": ["Kurihama Flower Park", "Kurihama Flower Country"], 
     "url": "https://www.kanagawaparks.com/kurihama/",
+    "geo": "35.2212,139.7019",
     "photo": {
       "file": "kurihama-flower-park.jpg",
       "width": 1280,
@@ -417,6 +447,7 @@
     "ja": ["横須賀市文化会館"], 
     "en": ["Yokosuka City Cultural Hall", "Yokosuka Cultural Hall"], 
     "url": "https://yokosuka-bunka.info/",
+    "geo": "35.2746,139.6723",
     "photo": {
       "file": "yokosuka-cultural-hall.jpg",
       "width": 1280,
@@ -430,6 +461,7 @@
     "ja": ["江島神社", "江ノ島神社"], 
     "en": ["Enoshima Shrine", "Enoshima-jinja"], 
     "url": "http://enoshimajinja.or.jp/",
+    "geo": "35.3003,139.4798",
     "photo": {
       "file": "enoshima-shrine.jpg",
       "width": 1280,
@@ -442,17 +474,20 @@
   {
     "ja": ["鎌倉市福祉センター"], 
     "en": ["Kamakura City Welfare Center", "Kamakura Welfare Center", "Kamakura City Welfare Centre", "Kamakura Welfare Centre"], 
-    "url": "https://www.city.kamakura.kanagawa.jp/fukushi/soumu/center.html"
+    "url": "https://www.city.kamakura.kanagawa.jp/fukushi/soumu/center.html",
+    "geo": "35.3173,139.5463"
   },
   {
     "ja": ["笛田リサイクルセンター"], 
     "en": ["Fueda Recycling Center", "Fueda Recycle Center", "Fueda Recycling Centre", "Fueda Recycle Centre"], 
-    "url": "https://rarara-kamakura.sakura.ne.jp/"
+    "url": "https://rarara-kamakura.sakura.ne.jp/",
+    "geo": "35.3328,139.5072"
   },
   {
     "ja": ["湘南モールフィル"], 
     "en": ["Shonan Mall Fill", "Shonan Fill Mall"], 
     "url": "https://www.shonan-fill.com/",
+    "geo": "35.3388,139.4646",
     "photo": {
       "file": "shonan-mall-fill.jpg",
       "width": 1280,
@@ -464,17 +499,20 @@
   {
     "ja": ["ロボリンク"], 
     "en": ["Robolink"], 
-    "url": "https://www.pref.kanagawa.jp/osirase/0604/robolink/"
+    "url": "https://www.pref.kanagawa.jp/osirase/0604/robolink/",
+    "geo": "35.3397,139.4883"
   },
   {
     "ja": ["圓福寺", "円福寺"], 
     "en": ["Enpukuji", "Enpuku-ji", "Enpukuji Temple", "Enpuku-ji Temple", "Enpuku Temple"], 
-    "url": "http://www.miura7.com/1enpukuji.htm"
+    "url": "http://www.miura7.com/1enpukuji.htm",
+    "geo": "35.1669,139.6585"
   },
   {
     "ja": ["藤澤浮世絵館", "藤沢浮世絵館"], 
     "en": ["Fujisawa Ukiyo-e Museum", "Fujisawa Ukiyoe Museum"], 
     "url": "https://fujisawa-ukiyoekan.net/f/home-en/",
+    "geo": "35.3406,139.4477",
     "photo": {
       "file": "fujisawa-ukiyoe-museum.jpg",
       "width": 1280,
@@ -488,6 +526,7 @@
     "ja": ["湘南鎌倉総合病院"], 
     "en": ["Shonan Kamakura General Hospital", "Shonan Kamakura Hospital"], 
     "url": "https://www.skgh.jp/english/",
+    "geo": "35.3445,139.5141",
     "photo": {
       "file": "shonan-kamakura-general-hospital.jpg",
       "width": 1280,
@@ -500,6 +539,7 @@
     "ja": ["横須賀市産業交流プラザ"], 
     "en": ["Yokosuka Industrial Community Plaza", "Yokosuka City Industrial Community Plaza"],
     "url": "https://www.yokosuka-sanpla.jp/english/",
+    "geo": "35.2813,139.6626",
     "photo": {
       "file": "yokosuka-industrial-community-plaza.jpg",
       "width": 1280,
@@ -513,6 +553,7 @@
     "ja": ["三笠公園"], 
     "en": ["Mikasa Park"], 
     "url": "https://www.kanagawaparks.com/mikasa/",
+    "geo": "35.2854,139.6740",
     "photo": {
       "file": "mikasa-park.jpg",
       "width": 1280,
@@ -526,6 +567,7 @@
     "ja": ["逗子アリーナ", "逗子市立体育館"], 
     "en": ["Zushi Arena"], 
     "url": "https://www.city.zushi.kanagawa.jp/sports/arena/3000006.html",
+    "geo": "35.3000,139.5899",
     "photo": {
       "file": "zushi-arena.jpg",
       "width": 1280,
@@ -538,12 +580,14 @@
   {
     "ja": ["南郷上ノ山公園", "南郷上の山公園"], 
     "en": ["Nango Uenoyama Park", "Nango-Uenoyama Park"], 
-    "url": "https://www.town.hayama.lg.jp/soshiki/shougaigakushuu/2/1/1540.html"
+    "url": "https://www.town.hayama.lg.jp/soshiki/shougaigakushuu/2/1/1540.html",
+    "geo": "35.2851,139.6021"
   },
   {
     "ja": ["葉山町福祉文化会館"], 
     "en": ["Hayama Town Welfare and Cultural Hall", "Hayama Town Welfare Cultural Hall", "Hayama Welfare and Cultural Hall", "Hayama Welfare Cultural Hall", "Hayama Town Welfare and Culture Hall", "Hayama Welfare and Culture Hall"], 
-    "url": "https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html"
+    "url": "https://www.town.hayama.lg.jp/soshiki/fukushi/kaikan/1584.html",
+    "geo": "35.2728,139.5871"
   },
   {
     "ja": ["腰越アートストリート"], 

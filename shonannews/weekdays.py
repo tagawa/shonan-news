@@ -35,14 +35,20 @@ def source_weekdays(source, reference):
     return stated
 
 
+def _has_weekday(text, start, end):
+    # A parenthesis after the date, or a weekday's name directly before it.
+    return bool(re.match(r"\s*\(", text[end:]) or WEEKDAY_BEFORE.search(text[:start]))
+
+
 def restore_weekdays(text, source, reference):
     for (month, day), weekday in source_weekdays(source, reference).items():
         name = MONTHS[month - 1]
         matches = list(re.finditer(rf"(?<!\d)(?:{day} {name}|{name} {day})(?!\d)", text))
-        # Twice in one field is left alone, as is a date that already has a weekday: a
-        # parenthesis after it, or a weekday's name directly before it.
-        if (len(matches) != 1 or re.match(r"\s*\(", text[matches[0].end():])
-                or WEEKDAY_BEFORE.search(text[:matches[0].start()])):
+        if not matches:
+            # The first day of a compressed range, "28 and 29 November", "from 3 to 25 December".
+            matches = list(re.finditer(rf"(?<![\d(]){day}(?= (?:and|to) \d{{1,2}} {name}\b)", text))
+        # Twice in one field is left alone, as is a date that already has a weekday.
+        if len(matches) != 1 or _has_weekday(text, matches[0].start(), matches[0].end()):
             continue
         end = matches[0].end()
         text = f"{text[:end]} ({weekday}){text[end:]}"

@@ -47,9 +47,14 @@ def restore_weekdays(text, source, reference):
         if not matches:
             # The first day of a compressed range, "28 and 29 November", "from 3 to 25 December".
             matches = list(re.finditer(rf"(?<![\d(]){day}(?= (?:and|to) \d{{1,2}} {name}\b)", text))
+        if not matches:
+            # The second day of a pair whose first carries the month, "December 5 (Sat) and 19".
+            matches = list(re.finditer(
+                rf"(?:\b{name} \d{{1,2}}|(?<!\d)\d{{1,2}} {name})(?: \([^)]*\))? (?:and|to) ({day})(?!\d)", text))
         # Twice in one field is left alone, as is a date that already has a weekday.
-        if len(matches) != 1 or _has_weekday(text, matches[0].start(), matches[0].end()):
+        group = 1 if matches and matches[0].re.groups else 0
+        if len(matches) != 1 or _has_weekday(text, matches[0].start(group), matches[0].end(group)):
             continue
-        end = matches[0].end()
+        end = matches[0].end(group)
         text = f"{text[:end]} ({weekday}){text[end:]}"
     return text

@@ -8,6 +8,7 @@ source_url: https://www.townnews.co.jp/0605/2026/11/27/863648.html
 source_title: デフ五輪メダリストが授業　幼稚部・小学部の子どもたちが参加
 source_name: タウンニュース（平塚・大磯・二宮・中井）
 event_date: '2026-11-18'
+label: sport
 town: Hiratsuka
 lede: On 18 November, a judo exchange event with Tokyo Deaflympics representatives
   was held at Hiratsuka School for the Deaf.

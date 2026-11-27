@@ -13,5 +13,5 @@ lede: From 4 December (Fri) to 13 December (Sun), the 'Yugyo no Hikari' illumina
 guid: guid:https://www.townnews.co.jp/0601/2026/11/27/863939.html
 ---
 
-The 'Yugyo no Hikari' illumination event will be held at the Jishu sect’s head temple, Yugyoji Temple, in Nishitomi, from 4 December (Fri) to 13 December (Sun), lighting the grounds in a fantastical display. The temple’s autumn is symbolised by a historic site with a tradition spanning more than 700 years.
+The 'Yugyo no Hikari' illumination event will be held at the Jishu sect’s head temple, Yugyoji Temple, in Nishitomi, from 4 December (Fri) to 13 December (Sun), lighting the grounds in a fantastical display. The temple has a tradition of more than 700 years.
 

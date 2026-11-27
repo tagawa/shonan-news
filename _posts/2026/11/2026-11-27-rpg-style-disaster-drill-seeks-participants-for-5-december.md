@@ -14,5 +14,5 @@ lede: An RPG-style disaster drill is scheduled for 5 December (Sat) around South
 guid: guid:https://www.townnews.co.jp/0603/2026/11/27/863661.html
 ---
 
-The ‘RPG-style disaster drill: Overcome one challenge after another and escape the tsunami!’ will take place around Southern Beach Chigasaki, including near C at 3-12986-25 Nakakaigan, Chigasaki. Participants are being recruited.
+The ‘RPG-style disaster drill: Overcome one challenge after another and escape the tsunami!’ will take place around Southern Beach Chigasaki, including C no Atari at 3-12986-25 Nakakaigan, Chigasaki. Participants are being recruited.
 

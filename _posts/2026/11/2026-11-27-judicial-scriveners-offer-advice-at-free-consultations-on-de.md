@@ -10,7 +10,7 @@ event_date: '2026-12-05'
 town: Fujisawa
 lede: The Kanagawa Prefectural Judicial Scriveners Association Shonan Branch will
   hold free in-person consultations at Fujisawa Meiten Building on December 5 (Sat)
-  and 19.
+  and 19 (Sat).
 guid: guid:https://www.townnews.co.jp/0601/2026/11/27/863945.html
 ---
 

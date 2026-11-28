@@ -15,5 +15,5 @@ lede: The Santa Project is accepting books for children at child welfare institu
 guid: guid:https://www.townnews.co.jp/0603/2026/11/28/864059.html
 ---
 
-The project’s reception is open through 17 December (Thu) at Hasegawa Bookstore Nespa Chigasaki in Motomachi 1-1 and another location near the south exit station.
+The project’s reception is open through 17 December (Thu) at Hasegawa Bookstore Nespa Chigasaki in Motomachi 1-1 and a second store by the station’s south exit.
 
